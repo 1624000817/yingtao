@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<article class="Child_Index">
+	<div class="iSlider_wrapper iSlider_banner"></div>
+
+	<div class="M1_slider_wrap">
+		<div class="iSlider_wrapper iSlider_theme"></div>
+	</div>
+
+	<div class="Child_shows SpecialOffers2_show Child_Index_shows">
+		<div class="Child_moreSample">
+			<a href="">
+				<b>
+					<em><i class="iconfont icon-xiaohai">&#xe6bf;</i></em>
+					<span><small>body<br>series</small></span>
+				</b>
+				婴儿系列 <span>More</span>
+			</a>
+		</div>
+		<div class="Sample_lists">
+			<div class="Sample_list">
+				<a href="">
+					<img data-echo="img/child4.jpg" alt="">
+				</a>
+			</div>
+			<div class="Sample_list">
+				<a href="">
+					<img data-echo="img/child5.jpg" alt="">
+				</a>
+			</div>
+			<div class="Sample_list">
+				<a href="">
+					<img data-echo="img/child6.jpg" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="Child_shows SpecialOffers2_show Child_Index_shows">
+		<div class="Child_moreSample">
+			<a href="">
+				<b>
+					<em><i class="iconfont icon-ertong">&#xe61b;</i></em>
+					<span><small>Children`s<br>series</small></span>
+				</b>
+				儿童系列 <span>More</span>
+			</a>
+		</div>
+		<div class="Sample_lists">
+			<div class="Sample_list">
+				<a href="">
+					<img data-echo="img/child4.jpg" alt="">
+				</a>
+			</div>
+			<div class="Sample_list">
+				<a href="">
+					<img data-echo="img/child5.jpg" alt="">
+				</a>
+			</div>
+			<div class="Sample_list">
+				<a href="">
+					<img data-echo="img/child6.jpg" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="Child_shows SpecialOffers2_show Child_Index_shows">
+		<div class="Child_moreSample">
+			<a href="">
+				<b>
+					<em><i class="iconfont icon-yunfu">&#xe725;</i></em>
+					<span><small>Pregnant<br>women</small></span>
+				</b>
+				孕妇系列 <span>More</span>
+			</a>
+		</div>
+		<div class="Sample_lists">
+			<div class="Sample_list">
+				<a href="">
+					<img data-echo="img/child4.jpg" alt="">
+				</a>
+			</div>
+			<div class="Sample_list">
+				<a href="">
+					<img data-echo="img/child5.jpg" alt="">
+				</a>
+			</div>
+			<div class="Sample_list">
+				<a href="">
+					<img data-echo="img/child6.jpg" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="Child_shows SpecialOffers2_show Child_Index_shows">
+		<div class="Child_moreSample">
+			<a href="">
+				<b>
+					<em><i class="iconfont icon-yijiasankou">&#xe613;</i></em>
+					<span><small>Parent<br>child</small></span>
+				</b>
+				亲子系列 <span>More</span>
+			</a>
+		</div>
+		<div class="Sample_lists">
+			<div class="Sample_list">
+				<a href="">
+					<img data-echo="img/child4.jpg" alt="">
+				</a>
+			</div>
+			<div class="Sample_list">
+				<a href="">
+					<img data-echo="img/child5.jpg" alt="">
+				</a>
+			</div>
+			<div class="Sample_list">
+				<a href="">
+					<img data-echo="img/child6.jpg" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="Child_Index_navBanner" data-echo-background="img/child12.jpg">
+		<div class="Child_Index_nblists">
+			<a href="">
+				<span>
+					<i class="iconfont icon-riqi">&#xe610;</i>
+					<b></b>
+				</span>
+				预约
+			</a>
+			<a href="">
+				<span>
+					<i class="iconfont icon-mxsj">&#xe600;</i>
+					<b></b>
+				</span>
+				到店
+			</a>
+			<a href="">
+				<span>
+					<i class="iconfont icon-paishe">&#xe630;</i>
+					<b></b>
+				</span>
+				拍摄
+			</a>
+			<a href="">
+				<span>
+					<i class="iconfont icon-tupian">&#xe6d4;</i>
+					<b></b>
+				</span>
+				选片
+			</a>
+			<a href="">
+				<span>
+					<i class="iconfont icon-liwu1">&#xe862;</i>
+				</span>
+				取照
+			</a>
+		</div>
+	</div>
+	<a href="" class="Child_index_adver">
+		<img data-echo="img/child11.jpg" alt="">
+	</a>
+</article>
+
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider_v2.js"></script>
+<script src="js/islider.animate.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+
+
+<script>
+
+$(function(){
+
+var tuan = new G();
+
+echo.init({
+	domElement: 'M2_customers',
+	offset: 100,
+	throttle: 100,
+	unload: false
+})
+
+echo.init({
+	domElement: 'M2_samples',
+	offset: 100,
+	throttle: 100,
+	unload: false
+})
+
+
+
+var banner_data = [{
+	  content: '<a href="" style="background-image:url(img/banner1.jpg)"></a>'
+	},{
+	  content: '<a href="" data-img="img/banner2.jpg"></a>'
+	},{
+	  content: '<a href="" data-img="img/banner3.jpg"></a>'
+	}]
+var banner = new iSlider({
+	type: 'dom',
+	data: banner_data,
+	dom: $('.iSlider_banner')[0],
+	isLooping: true,
+	fixPage: false,
+	plugins: [['dot', {locate:'relative'}]],
+	onslidechanged: function(i){
+		var obj = $('.iSlider_banner .islider-active a')
+		if(typeof obj.attr('style') == 'object'){
+			var img = obj.attr('data-img')
+			var currentImg = new Image()
+			var $loading = $('<div class="loading"><b></b><b></b><b></b><b></b><b></b></div>')
+			currentImg.src = img
+			obj.parent().append($loading)
+			console.log(i)
+			banner_data[i].content = banner_data[i].content.replace('></a>',' style="background-image:url('+img+')"></a>')
+			currentImg.onload = function(){
+				setTimeout(function(){
+					$loading.remove()
+					obj.attr('style','background-image:url('+img+')')
+				},200)
+			}	
+		}
+
+	}
+})
+new iSlider({
+	data: [
+	{
+	  content: '<a href="" style="background-image:url(http://ww1.sinaimg.cn/large/54a1cbf4gw1eye7z1a8alj20ku0dwjtq.jpg)"></a>'
+	},{
+	  content: '<a href="" style="background-image:url(http://ww3.sinaimg.cn/large/54a1cbf4gw1eyc70eg6zfj20ku0gf0x7.jpg)"></a>'
+	},{
+	  content: '<a href="" style="background-image:url(http://ww3.sinaimg.cn/large/54a1cbf4gw1ew16vmd87lj20g40emmyd.jpg)"></a>'
+	}],
+	dom: $('.iSlider_theme')[0],
+	type: 'dom',
+	animateType: 'depth',
+	isLooping: true,
+	fixPage: false,
+	isAutoplay: true,
+	plugins: [['dot', {locate:'relative'}]]
+})
+
+
+})
+</script>
+
+</body>
+</html>

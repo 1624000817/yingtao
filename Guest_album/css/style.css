@@ -1,0 +1,88 @@
+﻿body,button, input, select, textarea, h1, h2, h3, h4, h5, h6{
+	font-family:sans-serif;
+	font-weight:100;
+	font-size:24px
+	}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary{
+    display:block;
+	}
+*, *:before, *:after{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+	}
+body,figure,p{
+	margin:0
+	}
+a{
+	text-decoration:none
+	}
+button,a{
+	-webkit-tap-highlight-color:rgba(0,0,0,0)
+	}
+ul{
+	padding:0
+	}
+body{
+	background-color:#f7f7f7;
+	}
+li{
+	list-style:none;
+	}
+img{
+	width: 100%;
+	display: block;
+}
+article{
+	position:relative;
+	margin:auto;
+	width:640px;
+	background: #fff;
+	}
+article > section{
+	overflow:hidden;
+	width: 100%;
+	}
+.hidden{
+	overflow:hidden
+	}
+section > div{
+	-webkit-transform-style:preserve-3d;
+	}
+figure > img{
+	max-width:100%;
+	vertical-align:middle
+	}
+
+.Guest_top{
+	height: 336px;
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.Guest_top b{
+	font-size: 45px;
+	color: #fff;
+	position: absolute;
+	margin: auto;
+	left: 0 ;
+	right: 0;
+	bottom: 80px;
+	text-align: center;
+}
+.Guest_top span{
+	color: #fff;
+	position: absolute;
+}
+.Guest_top .boy{
+	right:350px;
+	bottom: 55px
+}
+.Guest_top .girl{
+	left: 325px;
+	bottom: 55px
+}
+.Guest_list{
+	padding: 0 22px;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+
+</head>
+<body>
+<article class="Child_Sample2">
+	<div class="Sample_banner">
+		<a href=""><img data-echo="img/child7.jpg" alt=""></a>
+		<div class="Child_make">
+			<span>
+				<i class="iconfont icon-mengbaochaotong">&#xe60d;</i>
+			</span>
+			<div class="Child_mesg">
+				<div>
+					<b>冰雪奇缘</b>
+					<p>STYLE:儿童系列&nbsp/&nbsp/ADD:&nbsp儿童馆</p>
+				</div>
+				<a href="">立即预约</a>
+			</div>
+		</div>
+	</div>
+	<div class="Child_shows">
+		<div class="Child_show">
+			<a href="">
+				<img data-echo="img/child1.jpg" alt="">
+			</a>
+			<a href="">
+				<img data-echo="img/child2.jpg" alt="">
+			</a>
+			<a href="">
+				<img data-echo="img/child3.jpg" alt="">
+			</a>
+		</div>
+		<div class="Child_moreSample">
+			<a href="">
+				更多样片 <span>More</span>
+			</a>
+		</div>
+		<div class="Sample_lists">
+			<div class="Sample_list">
+				<a href="">
+					<img data-echo="img/child4.jpg" alt="">
+				</a>
+				<div class="Sample_list_font">
+					<span>
+						<i class="iconfont icon-yijiasankou">&#xe613;</i>
+					</span>
+					<b>午后花园</b>
+					<p>亲子系列/迪奥花园</p>
+				</div>
+			</div>
+			<div class="Sample_list">
+				<a href="">
+					<img data-echo="img/child5.jpg" alt="">
+				</a>
+				<div class="Sample_list_font">
+					<span>
+						<i class="iconfont icon-xiaohai">&#xe6bf;</i>
+					</span>
+					<b>可爱萌宝</b>
+					<p>婴儿系列/儿童馆</p>
+				</div>
+			</div>
+			<div class="Sample_list">
+				<a href="">
+					<img data-echo="img/child6.jpg" alt="">
+				</a>
+				<div class="Sample_list_font">
+					<span>
+						<i class="iconfont icon-xiaohai">&#xe6bf;</i>
+					</span>
+					<b>可爱萌宝</b>
+					<p>婴儿系列/儿童馆</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+<script type="text/javascript">
+	new G()
+</script>
+</html>

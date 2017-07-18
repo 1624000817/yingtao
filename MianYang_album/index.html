@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<title>送给xxxx</title>
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<script>
+var phoneWidth = parseInt(window.screen.width)
+var phoneScale = phoneWidth/640
+var ua = navigator.userAgent
+if (/Android (\d+\.\d+)/.test(ua)){
+var version = parseFloat(RegExp.$1)
+if(version>2.3){
+document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">')
+}else{
+document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">')
+}
+} else {
+document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">')
+}
+</script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="/views/default/js/YTalert.js"></script>
+
+</head>
+
+
+
+<body>
+</div>
+<article>
+	<figure class="photo p_1" style="background-image: url(img/banner.jpg);">
+			<div style="background-image: url(img/d_10.jpg);" class="photo_banner"></div>
+			<div class="photo_person">
+				<h1>【喜羊羊客片欣赏】</h1>
+				<h1>献给Body兜兜</h1>
+			</div>
+	</figure>
+	<section id="swipe">
+		<a href=""><img src="img/1.jpg" alt=""></a>
+		<a href=""><img src="img/2.jpg" alt=""></a>
+		<a href=""><img src="img/2.jpg" alt=""></a>
+		<a href=""><img src="img/2.jpg" alt=""></a>
+		<a href=""><img src="img/2.jpg" alt=""></a>
+		<a href=""><img src="img/2.jpg" alt=""></a>
+	</section>
+	<section id="Album_introduction">
+		<a href=""><img src="img/3.jpg" alt=""></a>
+	</section>
+</article>
+
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script> 
+</head>
+<body>
+<article class="WX_v3_detail">
+	<img data-echo="img/banner6.jpg" alt="">
+	<div class="WX_v3_pice">
+		<div>洱海&nbsp;&&nbsp:双廊&nbsp;二选一</div>
+		<span>￥<b>9666</b> <a>28888</a></span>
+	</div>
+	<div class="WX_v3_commend WX_v3_explain">
+		<h1>套系说明</h1>
+		<div>
+			<p>全程首席团队1对1贴心服务</p>
+			<p>提供拍摄当天外景车辆费用</p>
+		</div>
+	</div>
+	<a href="" class="WX_v3_appointment">
+		<i class="iconfont icon-liwu">&#xe616;</i>
+		<div>在线预约独享9666</div>
+		<span>立即预约</span>
+	</a>
+	<img data-echo="img/banner8.jpg" alt="">
+	<img data-echo="img/dahai.jpg" alt="">
+	<img data-echo="img/shuilu.jpg" alt="">
+	<img data-echo="img/times.jpg" alt="">
+	<img data-echo="img/banner7.jpg" alt="">
+	
+	<div class="WX_v3_commend WX_v3_comList">
+		<h1>你可能还喜欢</h1>
+		<span>
+			<img data-echo-background="img/pic5.jpg" alt="">
+			<h2>
+				<b>济州岛特惠套餐&nbsp探寻的季节</b>
+				<p>￥<b>5980</b><a>28888</a></p>
+			</h2>
+		</span>
+		<span>
+			<img data-echo-background="img/pic3.jpg" alt="">
+			<h2>
+				<b>人间天堂&nbsp分界洲旅拍圣地</b>
+				<p>￥<b>9980</b><a>28888</a></p>
+			</h2>
+		</span>
+	</div>
+</article>
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+<script type="text/javascript">
+	new G()
+</script>
+</html>

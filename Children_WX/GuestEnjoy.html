@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<article class="Children_WX_GuestEnjoy">
+	<div class="Children_WX_GuestEnjoy_list">
+		<div>
+			<a href="">
+				<img data-echo="img/child2.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+			</a>
+			<div class="GuestEnjoy_list_explain">
+				<h1>小公主-亚楠</h1>
+				<p>ADD&nbsp:&nbsp迪奥花园&nbsp/&nbsp儿童系列</p>
+				<p>AGE&nbsp:&nbsp2-4岁</p>
+				<div class="GuestEnjoy_list_date">
+					<b>MON</b><br>
+					<a href="">26</a>
+				</div>
+				<span class="GuestEnjoy_collect">
+					<i class="iconfont icon-shoucang">&#xe66d;</i>
+					<i class="iconfont icon-aixin">&#xe6f1;</i>
+					<span>已收藏</span>
+				</span>
+				<span class="GuestEnjoy_relay">
+					<i class="iconfont icon-zhuanfa">&#xe634;</i>
+				</span>
+			</div>
+		</div>
+		<div>
+			<a href="">
+				<img data-echo="img/child5.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+			</a>
+			<div class="GuestEnjoy_list_explain">
+				<h1>小公主-亚楠</h1>
+				<p>ADD&nbsp:&nbsp迪奥花园&nbsp/&nbsp儿童系列</p>
+				<p>AGE&nbsp:&nbsp2-4岁</p>
+				<div class="GuestEnjoy_list_date">
+					<b>MON</b><br>
+					<a href="">26</a>
+				</div>
+				<span class="GuestEnjoy_collect">
+					<i class="iconfont icon-shoucang">&#xe66d;</i>
+					<i class="iconfont icon-aixin">&#xe6f1;</i>
+					<span>已收藏</span>
+				</span>
+				<span class="GuestEnjoy_relay">
+					<i class="iconfont icon-zhuanfa">&#xe634;</i>
+				</span>
+			</div>
+		</div>
+	</div>
+</article>
+
+
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+
+
+
+$(function(){
+
+var tuan = new G();
+
+echo.init({
+	domElement: 'M2_customers',
+	offset: 100,
+	throttle: 100,
+	unload: false
+})
+
+echo.init({
+	domElement: 'M2_samples',
+	offset: 100,
+	throttle: 100,
+	unload: false
+})
+//收藏
+$(".icon-aixin").hide();
+$(".GuestEnjoy_collect").on("click",function(){
+		if(!$(this).is(".active")){
+			$(this).addClass("active");
+			$(this).children(".icon-shoucang").hide();
+			$(this).children(".icon-aixin").show();
+		}
+		$(this).children("span").addClass("click");
+	})
+//分享
+  $('.GuestEnjoy_relay').on('click',function(e){
+    e.preventDefault();
+    var url = $(this).attr('data-url');
+    var title = $(this).attr('data-title');
+    window.open('http://www.jiathis.com/share?url='+ url +'&title='+ encodeURIComponent(title));
+  });
+
+})
+</script>
+
+</body>
+</html>

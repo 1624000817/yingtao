@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<article class="Children_WX_GuestDetail">
+	<div class="GuestDetail_banner">
+		<a href=""><img data-echo="img/child14.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a>
+		<div class="Daily_visitor">
+			<span>每日客照</span>
+			<h1>小公主-亚楠</h1>
+			<p>ADD&nbsp:迪奥花园&nbsp/&nbsp儿童系列</p>
+			<p>AGE&nbsp:&nbsp2-4岁</p>
+			<div class="GuestEnjoy_list_date">
+				<b>MON</b><br>
+				<a href="">26</a>
+			</div>
+		</div>
+	</div>
+	<div class="GuestDetail_photoList">
+		<a href=""><img data-echo="img/child13.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a>
+		<a href=""><img data-echo="img/child5.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a>
+		<a href=""><img data-echo="img/child15.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a>
+	</div>
+	<a href="" class="Children_WX_submit">
+		<div>
+			<span>
+				<img data-echo="img/in-love.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+				立即预约
+			</span>
+		</div>
+	</a>
+	<div class="GuestDetail_more">
+		<h1>更多客照</h1>
+		<p>每日客照&nbsp记录幸福</p>
+		<div>
+		<div class="GuestDetail_more_list">
+			<a href="">
+				<img data-echo="img/child13.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+			</a>
+			<div class="GuestDetail_more_explain">
+				<h1>小王子&nbsp-&nbsp允周</h1>
+				<p>婴儿系列&nbsp新梦空间&nbsp满月</p>
+			</div>
+		</div>
+		<div class="GuestDetail_more_list">
+			<a href="">
+				<img data-echo="img/child3.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+			</a>
+			<div class="GuestDetail_more_explain">
+				<h1>公主&nbsp-&nbsp一依</h1>
+				<p>儿童系列&宝莱坞&nbsp6岁</p>
+			</div>
+		</div>
+		<div class="GuestDetail_more_list">
+			<a href="">
+				<img data-echo="img/child1.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+			</a>
+			<div class="GuestDetail_more_explain">
+				<h1>小王子&nbsp-&nbsp允周</h1>
+				<p>婴儿系列&nbsp新梦空间&nbsp满月</p>
+			</div>
+		</div>
+		<div class="GuestDetail_more_list">
+			<a href="">
+				<img data-echo="img/child4.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+			</a>
+			<div class="GuestDetail_more_explain">
+				<h1>公主&nbsp-&nbsp一依</h1>
+				<p>儿童系列&宝莱坞&nbsp6岁</p>
+			</div>
+		</div>
+		<div class="GuestDetail_more_list">
+			<a href="">
+				<img data-echo="img/child1.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+			</a>
+			<div class="GuestDetail_more_explain">
+				<h1>小王子&nbsp-&nbsp允周</h1>
+				<p>婴儿系列&nbsp新梦空间&nbsp满月</p>
+			</div>
+		</div>
+		<div class="GuestDetail_more_list">
+			<img data-echo="img/sad.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+			<p>真遗憾<br>没有更多客照啦</p>
+		</div>
+	</div>
+	</div>
+</article>
+
+
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+
+
+
+$(function(){
+
+var tuan = new G();
+
+echo.init({
+	domElement: 'M2_customers',
+	offset: 100,
+	throttle: 100,
+	unload: false
+})
+
+echo.init({
+	domElement: 'M2_samples',
+	offset: 100,
+	throttle: 100,
+	unload: false
+})
+
+//分享
+  $('.relay_btn').on('click',function(e){
+    e.preventDefault();
+    var url = $(this).attr('data-url');
+    var title = $(this).attr('data-title');
+    window.open('http://www.jiathis.com/share?url='+ url +'&title='+ encodeURIComponent(title));
+  });
+
+
+})
+</script>
+
+</body>
+</html>

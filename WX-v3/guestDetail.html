@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script> 
+</head>
+<body>
+<article class="WX_v3_detail">
+	<div class="WX_v3_first">
+		<img data-echo="img/pic5.jpg" alt="">
+		<h1>
+			<p>MR.LIU&MRS.XU</p>
+			<div>
+				<span class="WX_v3_spot">
+				<i class="iconfont icon-xin1">&#xe607;</i>
+					love
+				</span>
+				<p>夜之魅&nbsp;光影浮年</p>
+				<p>STYLE:&nbsp;雅致系列&nbsp;ADD:&nbsp;韩国馆&nbsp;2017.05.08</p>
+			</div>
+		</h1>
+	</div>
+	<img data-echo="img/detail2.jpg" alt="">
+	<img data-echo="img/detail3.jpg" alt="">
+	<a href="">
+		<img data-echo="img/detail4.jpg" alt="">
+	</a>
+	<a href="" class="none">
+		<img data-echo="img/detail5.jpg" alt="">
+	</a>
+	<img data-echo="img/detail6.jpg" alt="">
+	<div class="submit">
+		<a href="">立即预约</a>
+	</div>
+	<div class="WX_v3_commend">
+		<h1>你可能还喜欢</h1>
+		<span>
+			<img data-echo-background="img/pic5.jpg" alt="">
+			<h2>
+				<b>MR.LI & MRS.JIN</b>
+				<p>2017-05-07</p>
+			</h2>
+		</span>
+		<span>
+			<img data-echo-background="img/pic3.jpg" alt="">
+			<h2>
+				<b>MR.CHEN & MRS.XU</b>
+				<p>2017-05-07</p>
+			</h2>
+		</span>
+		<span>
+			<img data-echo-background="img/pic2.jpg" alt="">
+			<h2>
+				<b>MR.HUANG & MRS.JIN</b>
+				<p>2017-05-07</p>
+			</h2>
+		</span>
+		<span>
+			<img data-echo-background="img/banner2.jpg" alt="">
+			<h2>
+				<b>MR.LI & MRS.JIN</b>
+				<p>2017-05-07</p>
+			</h2>
+		</span>
+	</div>
+	<div class="WX_v3_advertisement">
+		<img data-echo="img/adver.jpg" alt="">
+	</div>
+</article>
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+<script type="text/javascript">
+	new G()
+	$(".WX_v3_spot").on("click",function(){
+
+		if(!$(this).is(".active")){
+			$(".WX_v3_spot").addClass("active")
+		}
+	})
+</script>
+</html>

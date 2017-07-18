@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<article class="Child_SpecialOffers">
+	<div class="SpecialOffers_banner">
+		<a href="" class="C_banner">
+			<img data-echo="img/banner_1.jpg" alt="">
+		</a>
+		<div>
+			<a href="">最新活动</a>
+			<p>向&nbsp“优粉”&nbsp说声：谢谢！&nbsp优趣正价宝宝照免</p>
+		</div>
+	</div>
+	<div class="SpecialOffers_banner">
+		<a href="" class="C_banner">
+			<img data-echo="img/banner_1.jpg" alt="">
+		</a>
+		<div>
+			<a href="">最新活动</a>
+			<p>参与双节聚惠PARTY&nbsp订购全家福&nbsp强钜惠豪礼</p>
+		</div>
+	</div>
+	<div class="SpecialOffers_banner">
+		<a href="" class="C_banner">
+			<img data-echo="img/banner_1.jpg" alt="">
+		</a>
+		<div>
+			<a href="">最新活动</a>
+			<p>向&nbsp“优粉”&nbsp说声：谢谢！&nbsp优趣正价宝宝照免</p>
+		</div>
+	</div>
+	<div class="SpecialOffers_banner">
+		<a href="" class="C_banner">
+			<img data-echo="img/banner_1.jpg" alt="">
+		</a>
+		<div>
+			<a href="">最新活动</a>
+			<p>向&nbsp“优粉”&nbsp说声：谢谢！&nbsp优趣正价宝宝照免</p>
+		</div>
+	</div>
+</article>
+
+
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+
+
+
+$(function(){
+
+var tuan = new G();
+
+echo.init({
+	domElement: 'M2_customers',
+	offset: 100,
+	throttle: 100,
+	unload: false
+})
+
+echo.init({
+	domElement: 'M2_samples',
+	offset: 100,
+	throttle: 100,
+	unload: false
+})
+
+
+
+})
+</script>
+
+</body>
+</html>

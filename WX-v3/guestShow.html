@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+	<article>
+		<nav class="WX_v3_nav">
+			<a class="on">全部客照</a>
+			<a>优雅韩式</a>
+			<a>奢华欧式</a>
+			<a>知性法式</a>
+			<a>喜庆中式</a>
+		</nav>
+		<div class="WX_v3_preview">
+			<div id="magazine">
+				<div class="WX_v3_photoList">
+					<a href="" style="background-image:url(img/pic1.jpg);"></a>
+				</div>
+				<div class="WX_v3_photoList">
+		            <a href="" style="background-image:url(img/pic2.jpg);"></a>
+		        </div>
+		        <div class="WX_v3_photoList">
+		            <a href="" style="background-image:url(img/pic3.jpg);"></a>
+		        </div>
+		        <div class="WX_v3_photoList">
+		            <a href="" style="background-image:url(img/pic4.jpg);"></a>
+		        </div>
+		        <div class="WX_v3_photoList">
+		            <a href="" style="background-image:url(img/pic5.jpg);"></a>
+		        </div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="WX-v3-thumbnail" id="thumbnail">
+			<div class="active" data-echo-background="img/pic1.jpg"></div>
+			<div data-echo-background="img/pic2.jpg"></div>
+			<div data-echo-background="img/pic3.jpg"></div>
+			<div data-echo-background="img/pic4.jpg"></div>
+			<div data-echo-background="img/pic5.jpg"></div>
+		</div>
+		<div class="clear"></div>
+		 <!--  文字 -->
+	   <div class="WX_v3_font">
+	      <div class="love">
+	        <i class="iconfont icon-xin"></i>
+	        <span>+1</span>
+	      </div>
+	      <b class="WX-v3_number">0</b>
+	      <h4>MR.WANG&MRS._I</h4>
+	      <p>四月第三季客照欣赏</p>
+	      <p>2017 04 43</p>
+	   </div>
+</article>
+
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script> 
+<script src="js/turn.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#magazine').turn({
+		    display: 'single',
+		    gradients: true,
+		    acceleration: true,
+		    elevation:200,
+		    duration:2000
+  		})
+		new G();
+  		$('#magazine').turn('peel', 'br');
+  		$("#magazine").bind("turned", function(event, page, view) {
+  			var page=page-1;
+  			$('#magazine').turn('peel', 'br');
+		$('.WX-v3-thumbnail div').siblings('div').removeClass('active').eq(page).addClass('active');
+		});
+		$('.WX-v3-thumbnail div').each(function () {  
+			   $(this).on("click",function(){
+			   	var WX_I=$(this).index();
+			   $(this).addClass("active").siblings("div").removeClass("active");
+			   $("#magazine").turn("page", WX_I+1);
+			})
+	  	})
+	  	 $(document).ready(function() {
+			$(".love i").on("click",function(){
+				$(".love span").addClass("click");
+				var zan=parseInt($(".WX_v3_font .WX-v3_number").text());
+				if(zan==0){
+					zan++;
+					$(".WX_v3_font .WX-v3_number").text(zan);
+					$(".WX_v3_font .WX-v3_number").css("color","pink");
+				}else{
+					$(".WX_v3_font .WX-v3_number").text("1");
+				}
+			})
+		});
+	})
+</script>
+</body>
+</html>

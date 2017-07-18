@@ -1,0 +1,523 @@
+@font-face {
+	font-family: 'huakang';
+	src: url('http://product.tphoto.cn/public/theme/1701/font//huakang.eot');
+	src: url('http://product.tphoto.cn/public/theme/1701/font//huakang.eot?#font-spider') format('embedded-opentype'), url('http://product.tphoto.cn/public/theme/1701/font//huakang.woff') format('woff'), url('http://product.tphoto.cn/public/theme/1701/font//huakang.ttf') format('truetype'), url('http://product.tphoto.cn/public/theme/1701/font//huakang.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'yalan';
+	src: url('http://product.tphoto.cn/public/theme/1701/font//hshinyalanregularregular.eot');
+	src: url('http://product.tphoto.cn/public/theme/1701/font//hshinyalanregularregular.eot?#font-spider') format('embedded-opentype'), url('http://product.tphoto.cn/public/theme/1701/font//hshinyalanregularregular.woff') format('woff'), url('http://product.tphoto.cn/public/theme/1701/font//hshinyalanregularregular.ttf') format('truetype'), url('http://product.tphoto.cn/public/theme/1701/font//hshinyalanregularregular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'future';
+	src: url('http://product.tphoto.cn/public/theme/1701/font//Futura Heavy BT.eot');
+	src: url('http://product.tphoto.cn/public/theme/1701/font//Futura Heavy BT.eot?#font-spider') format('embedded-opentype'), url('http://product.tphoto.cn/public/theme/1701/font//Futura Heavy BT.woff') format('woff'), url('http://product.tphoto.cn/public/theme/1701/font//Futura Heavy BT.ttf') format('truetype'), url('http://product.tphoto.cn/public/theme/1701/font//Futura Heavy BT.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'FZmiddle';
+	src: url('http://product.tphoto.cn/public/theme/1701/font//FZmiddle_GBK.eot');
+	src: url('http://product.tphoto.cn/public/theme/1701/font//FZmiddle_GBK.eot?#font-spider') format('embedded-opentype'), url('http://product.tphoto.cn/public/theme/1701/font//FZmiddle_GBK.woff') format('woff'), url('http://product.tphoto.cn/public/theme/1701/font//FZmiddle_GBK.ttf') format('truetype'), url('http://product.tphoto.cn/public/theme/1701/font//FZmiddle_GBK.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.fontfamfir {
+	font-family:huakang
+}
+p {
+	margin:0
+}
+.nshowcase {
+	width:100%
+}
+.nshowcase .scw {
+	width:1068px;
+	margin:0 auto;
+}
+.nshowcase .sct {
+	height:480px;
+	text-align:center;
+	border-top:1px solid #fff;
+}
+.nshowcase .sct p {
+	margin:0 auto;
+}
+.nshowcase .sct .sctfir {
+	width:888px;
+	height:100px;
+	line-height:100px;
+	margin:136px auto 10px;
+	font-size:98px;
+	font-weight:700;
+	color:#c9161c;
+	font-family:future;
+}
+.nshowcase .sct .sctsec {
+	width:708px;
+	height:150px;
+	line-height:68px;
+	font-size:58px;
+	color:#212121;
+}
+.nshowcase .sct .sctthir {
+	width:392px;
+	height:30px;
+	background-color:#ffd048;
+	color:#212121;
+	font-size:15px;
+	line-height:30px;
+}
+.nshowcase .sct div {
+	width:0;
+	height:16px;
+	border-left:1px solid #575757;
+	margin:4px auto 0;
+}
+.nshowcase .scnav dl {
+	margin-top:0;
+	margin-bottom:20px;
+	text-align:center;
+}
+.nshowcase .scnav dl dt {
+	width:142px;
+	height:48px;
+	border-top:13px solid #c61819;
+	font-size:26px;
+	color:#3c3c3c;
+	padding-top:25px;
+	float:left;
+	font-family:yalan;
+}
+.nshowcase .scnav dl dt a {
+	display:block;
+	width:100%;
+	height:100%;
+}
+.nshowcase .scnav dl dt.traveldt {
+	border-top:13px solid #4f4f4f
+}
+.nshowcase .scnav dl dd {
+	width:152px;
+	height:90px;
+	margin:0;
+	border-top:1px solid #9f9f9f;
+	border-left:1px solid #9f9f9f;
+	display:block;
+	float:left
+}
+.nshowcase .scnav dl dd div {
+	width:100%;
+	height:78px;
+	border-top:12px solid transparent;
+	font-size:20px;
+	color:#393939;
+	transition:all .5s;
+	-webkit-transition:all .5s;
+	-moz-transition:all .5s;
+	-ms-transition:all .5s;
+	-o-transition:all .5s
+}
+.nshowcase .scnav dl dd div p {
+	margin:0
+}
+.nshowcase .scnav dl dd div p:first-child {
+	font-size:14px;
+	height:18px;
+	color:#d17921;
+	margin:18px auto 0;
+	font-family:FZmiddle
+}
+.nshowcase .scnav dl dd div p:last-child {
+	font-family:huakang;
+	color:#1b1b1b
+}
+.nshowcase .scbanar {
+	width:100%;
+	height:608px;
+	position:relative;
+	margin-top:30px
+}
+.nshowcase .scbanart {
+	width:1400px;
+	height:100%;
+	position:relative;
+	z-index:1;
+	margin:0 auto;
+}
+.nshowcase .scbanart img:first-child {
+	width: 1400px;
+	height: 504px;
+}
+.nshowcase .scbanart span {
+	width:0;
+	height:0;
+	display:block;
+	margin:22px auto 8px;
+	padding:2px 16px;
+	background-color:#fff
+}
+.nshowcase .scbabarbg {
+	width:100%;
+	height:430px;
+	background-color:#e26c6c;
+	position:absolute;
+	left:0;
+	bottom:0
+}
+.nshowcase .section {
+	margin-top:58px
+}
+.nshowcase .section li {
+	width:252px;
+	height:501px;
+	margin:0 7px 78px;
+	float:left;
+	position:relative;
+	overflow:hidden
+}
+.nshowcase .section li div {
+	width:100%;
+	height:42px;
+	margin:12px 0 18px
+}
+.nshowcase .section li .secview {
+	width:246px;
+	height:44px;
+	font-size:12px;
+	background-color:#c1775a;
+	border:1px solid #af6d55;
+	margin:0 auto;
+	line-height:44px;
+	color:#fff;
+	text-align:center
+}
+.nshowcase .section li div .secnamel {
+	width:149px;
+	text-align:left
+}
+.nshowcase .section li div .secnamer {
+	width:100px;
+	margin-right:3px;
+	text-align:right
+}
+.nshowcase .section li .secname span {
+	display:block
+}
+.nshowcase .section li .secname span.photoname {
+	font-size:14px;
+	line-height:12px;
+	color:#656565
+}
+.nshowcase .section li .secname span.photonamesec {
+	letter-spacing:-.3px;
+	font-size:12px;
+	margin-top:2px
+}
+.nshowcase .section li .secname span.chiname {
+	font-size:21px;
+	line-height:30px;
+	color:#000
+}
+.nshowcase .section li .secname span.diresign {
+	width:10px;
+	height:12px;
+	font-size:14px;
+	line-height:9px;
+	text-align:center;
+	margin-top:8px;
+	margin-right:4px;
+	display:inline-block;
+	border-radius:50%;
+	background-color:#060606;
+	color:#fff;
+	padding-left:2px
+}
+.nshowcase .section li em {
+	background:#e06e56 url(http://sz.52099.cn/images/show-me-more.png) no-repeat scroll center center;
+	display:block;
+	height:376px;
+	left:-247px;
+	overflow:hidden;
+	position:absolute;
+	top:3px;
+	width:240px;
+	opacity:.8;
+	filter:alpha(opacity=80);
+	zoom:1;
+	transition:all .3s;
+	-webkit-transition:all .3s;
+	-moz-transition:all .3s;
+	-ms-transition:all .3s;
+	-o-transition:all .3s
+}
+.nshowcase .section li:hover em {
+	left:6px
+}
+.nshowcase .scnav dl dd.korea.active div {
+	border-top:12px solid #c9cbbe
+}
+.nshowcase .scnav dl dd.korea:hover div {
+	border-top:12px solid #c9cbbe
+}
+.koreapage.nshowcase .section li .secview {
+	background-color:#c9cbbe;
+	border:1px solid #bebfb9
+}
+.koreapage.nshowcase .section li:hover .secview {
+	background-color:#b9bbb0
+}
+.nshowcase .section li.koreapage .secview {
+	background-color:#c9cbbe;
+	border:1px solid #bebfb9
+}
+.nshowcase .section li.koreapage:hover .secview {
+	background-color:#b9bbb0
+}
+.nshowcase .section li.koreapage a img {
+	width: 252px;
+	height: 382px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.nshowcase .scnav dl dd.european.active div {
+	border-top:12px solid #e9b176
+}
+.nshowcase .scnav dl dd.european:hover div {
+	border-top:12px solid #e9b176
+}
+.europeanpage.nshowcase .section li .secview {
+	background-color:#e9b176;
+	border:1px solid #c7a075
+}
+.europeanpage.nshowcase .section li:hover .secview {
+	background-color:#d9a671
+}
+.nshowcase .section li.europeanpage .secview {
+	background-color:#e9b176;
+	border:1px solid #c7a075
+}
+.nshowcase .section li.europeanpage:hover .secview {
+	background-color:#d9a671
+}
+.nshowcase .scnav dl dd.hanging.active div {
+	border-top:12px solid #8aa97d
+}
+.nshowcase .scnav dl dd.hanging:hover div {
+	border-top:12px solid #8aa97d
+}
+.hangingpage.nshowcase .section li .secview {
+	background-color:#8baa81;
+	border:1px solid #859683
+}
+.hangingpage.nshowcase .section li:hover .secview {
+	background-color:#7e9875
+}
+.nshowcase .section li.hangingpage .secview {
+	background-color:#8baa81;
+	border:1px solid #859683
+}
+.nshowcase .section li.hangingpage:hover .secview {
+	background-color:#7e9875
+}
+.nshowcase .scnav dl dd.purelove.active div {
+	border-top:12px solid #e2b5b2
+}
+.nshowcase .scnav dl dd.purelove:hover div {
+	border-top:12px solid #e2b5b2
+}
+.purelovepage.nshowcase .section li .secview {
+	background-color:#e1b6b0;
+	border:1px solid #be9e9f
+}
+.purelovepage.nshowcase .section li:hover .secview {
+	background-color:#d2ada7
+}
+.nshowcase .section li.purelovepage .secview {
+	background-color:#e1b6b0;
+	border:1px solid #be9e9f
+}
+.nshowcase .section li.purelovepage:hover .secview {
+	background-color:#d2ada7
+}
+.nshowcase .scnav dl dd.oriental.active div {
+	border-top:12px solid #ca1420
+}
+.nshowcase .scnav dl dd.oriental:hover div {
+	border-top:12px solid #ca1420
+}
+.orientalpage.nshowcase .section li .secview {
+	background-color:#c9161c;
+	border:1px solid #c7a075
+}
+.orientalpage.nshowcase .section li:hover .secview {
+	background-color:#b11431
+}
+.nshowcase .section li.orientalpage .secview {
+	background-color:#c9161c;
+	border:1px solid #c7a075
+}
+.nshowcase .section li.orientalpage:hover .secview {
+	background-color:#b11431
+}
+.nshowcase .scnav dl dd.shooting.active div {
+	border-top:12px solid #88ceff
+}
+.nshowcase .scnav dl dd.shooting:hover div {
+	border-top:12px solid #88ceff
+}
+.shootingpage.nshowcase .section li .secview {
+	background-color:#8bcdff;
+	border:1px solid #80bae8
+}
+.shootingpage.nshowcase .section li:hover .secview {
+	background-color:#7cb9e6
+}
+.nshowcase .section li.shootingpage .secview {
+	background-color:#8bcdff;
+	border:1px solid #80bae8
+}
+.nshowcase .section li.shootingpage:hover .secview {
+	background-color:#7cb9e6
+}
+.nshowcase .scnav dl dd.postoral.active div {
+	border-top:12px solid #b2cb89
+}
+.nshowcase .scnav dl dd.postoral:hover div {
+	border-top:12px solid #b2cb89
+}
+.postoralpage.nshowcase .section li .secview {
+	background-color:#b2cb8a;
+	border:1px solid #9faa8a
+}
+.postoralpage.nshowcase .section li:hover .secview {
+	background-color:#9fb77d
+}
+.nshowcase .section li.postoralpage .secview {
+	background-color:#b2cb8a;
+	border:1px solid #9faa8a
+}
+.nshowcase .section li.postoralpage:hover .secview {
+	background-color:#9fb77d
+}
+.nshowcase .scnav dl dd.forest.active div {
+	border-top:12px solid #a4dbc8
+}
+.nshowcase .scnav dl dd.forest:hover div {
+	border-top:12px solid #a4dbc8
+}
+.forestpage.nshowcase .section li .secview {
+	background-color:#a5dac8;
+	border:1px solid #9eb9b0
+}
+.forestpage.nshowcase .section li:hover .secview {
+	background-color:#a0d2c1
+}
+.nshowcase .section li.forestpage .secview {
+	background-color:#a5dac8;
+	border:1px solid #9eb9b0
+}
+.nshowcase .section li.forestpage:hover .secview {
+	background-color:#a0d2c1
+}
+.nshowcase .scnav dl dd.thecity.active div {
+	border-top:12px solid #0080db
+}
+.nshowcase .scnav dl dd.thecity:hover div {
+	border-top:12px solid #0080db
+}
+.thecitypage.nshowcase .section li .secview {
+	background-color:#0081dc;
+	border:1px solid #1666a1
+}
+.thecitypage.nshowcase .section li:hover .secview {
+	background-color:#0174c5
+}
+.nshowcase .section li.thecitypage .secview {
+	background-color:#0081dc;
+	border:1px solid #1666a1
+}
+.nshowcase .section li.thecitypage:hover .secview {
+	background-color:#0174c5
+}
+.nshowcase .scnav dl dd.thegarden.active div {
+	border-top:12px solid #e3cedf
+}
+.nshowcase .scnav dl dd.thegarden:hover div {
+	border-top:12px solid #e3cedf
+}
+.cardenpage.nshowcase .section li .secview {
+	background-color:#e5cce1;
+	border:1px solid #cdb6c6
+}
+.cardenpage.nshowcase .section li:hover .secview {
+	background-color:#d5bed0
+}
+.nshowcase .section li.cardenpage .secview {
+	background-color:#e5cce1;
+	border:1px solid #cdb6c6
+}
+.nshowcase .section li.cardenpage:hover .secview {
+	background-color:#d5bed0
+}
+.nshowcase .scnav dl dd.william.active div {
+	border-top:12px solid #be7a57
+}
+.nshowcase .scnav dl dd.william:hover div {
+	border-top:12px solid #be7a57
+}
+.williampage.nshowcase .section li .secview {
+	background-color:#c1775a;
+	border:1px solid #996454
+}
+.williampage.nshowcase .section li:hover .secview {
+	background-color:#a3664a
+}
+.nshowcase .section li.williampage .secview {
+	background-color:#c1775a;
+	border:1px solid #996454
+}
+.nshowcase .section li.williampage:hover .secview {
+	background-color:#a3664a
+}
+.nshowcase .scnav dl dd.sanya.active div {
+	border-top:12px solid #60ade1
+}
+.nshowcase .scnav dl dd.sanya:hover div {
+	border-top:12px solid #60ade1
+}
+.sanyapage.nshowcase .section li .secview {
+	background-color:#61ace3;
+	border:1px solid #4e91c5
+}
+.sanyapage.nshowcase .section li:hover .secview {
+	background-color:#529bd0
+}
+.nshowcase .section li.sanyapage .secview {
+	background-color:#61ace3;
+	border:1px solid #4e91c5
+}
+.nshowcase .section li.sanyapage:hover .secview {
+	background-color:#529bd0
+}
+.william p:first-child {
+	word-spacing:0px;
+	letter-spacing: -1px;
+	font-size:13px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.nshowcase .scnav dl dd div p:first-child {
+	letter-spacing: 1px;
+	font-family: Helvetica;
+}
+.nshowcase .scnav dl dd.william p:first-child {
+	word-spacing:0px;
+	letter-spacing: -1px;
+	font-size:13px;
+}
+}

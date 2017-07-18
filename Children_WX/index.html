@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<article class="Children_WX_Index">
+	<div class="Children_WX_Index_top">
+		<a href="" class="Children_WX_IndexBaner" data-echo-background="img/child25.jpg">
+			<a href="" class="Children_WX_Index_down">
+				<b></b>
+			</a>
+		</a>
+		<div class="Children_WX_IndexBanner_nav">
+			<h1>NICOKIDS</h1>
+			<p>去用心發現孩子的世界，记錄每壹個孩子，自己的樣子。</p>
+			<div class="Children_WX_Index_wrie"></div>
+			<div class="Children_WX_IndexNav">
+				<a href="#Children_WX_Index_works">
+					<span>
+						<i class="iconfont icon-xiangji">&#xe600;</i>
+					</span>
+					<p>查看客照</p>
+				</a>
+				<a href="#Children_WX_Index_sence">
+					<span>
+						<i class="iconfont icon-tuxiangchulileiiconshuchu08">&#xe65a;</i>
+					</span>
+					<p>查看样照</p>
+				</a>
+				<a href="#Children_WX_Index_set">
+					<span>
+						<i class="iconfont icon-msnui-gift">&#xe69d;</i>
+					</span>
+					<p>查看套系</p>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div id="Children_WX_Index_set" class="Children_WX_Index_set">
+		<div class="Set_top">
+			<h1>套系</h1>
+			<p>特惠套系&nbsp多种选择</p>
+			<a href="">more</a>
+		</div>
+		<div class="iSlider_wrapper iSlider_banner"></div>
+
+		<div class="M1_slider_wrap">
+			<div class="iSlider_wrapper iSlider_theme"></div>
+		</div>
+	</div>
+	<div id="Children_WX_Index_works" class="Children_WX_Index_set">
+		<div class="Set_top">
+			<h1>客照</h1>
+			<p>特惠客照&nbsp记录幸福</p>
+			<a href="">more</a>
+		</div>
+		<div class="Children_WX_GuestEnjoy_list">
+			<div>
+				<a href="">
+					<img data-echo="img/child2.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+				</a>
+				<div class="GuestEnjoy_list_explain">
+					<h1>小公主-亚楠</h1>
+					<p>ADD&nbsp:&nbsp迪奥花园&nbsp/&nbsp儿童系列</p>
+					<p>AGE&nbsp:&nbsp2-4岁</p>
+				</div>
+			</div>
+			<div>
+				<a href="">
+					<img data-echo="img/child5.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+				</a>
+				<div class="GuestEnjoy_list_explain">
+					<h1>小公主-亚楠</h1>
+					<p>ADD&nbsp:&nbsp迪奥花园&nbsp/&nbsp儿童系列</p>
+					<p>AGE&nbsp:&nbsp2-4岁</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="Children_WX_Index_sence" class="Children_WX_Index_set">
+		<div class="Set_top">
+			<h1>场景</h1>
+			<p>独家场景&nbsp可爱梦幻</p>
+			<a href="">more</a>
+		</div>
+		<a href="" class="Children_sence_banner">
+			<img data-echo="img/child4.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+		</a>
+		<div class="sence">
+			<h1>复古小镇</h1>
+			<p>这里是场景介绍&nbsp吧啦吧啦</p>
+		</div>
+	</div>
+	<a href="">
+		<img data-echo="img/child26.JPG" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+	</a>
+
+</article>
+
+
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider_v2.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+
+<script>
+
+
+$(function(){
+
+var tuan = new G();
+
+echo.init({
+	domElement: 'M2_customers',
+	offset: 100,
+	throttle: 100,
+	unload: false
+})
+
+echo.init({
+	domElement: 'M2_samples',
+	offset: 100,
+	throttle: 100,
+	unload: false
+});
+
+
+
+
+
+//收藏
+$(".GuestEnjoy_collect").on("click",function(){
+		if(!$(this).is(".active")){
+			$(".GuestEnjoy_collect").addClass("active")
+		}
+	})
+//分享
+  $('.GuestEnjoy_relay').on('click',function(e){
+    e.preventDefault();
+    var url = $(this).attr('data-url');
+    var title = $(this).attr('data-title');
+    window.open('http://www.jiathis.com/share?url='+ url +'&title='+ encodeURIComponent(title));
+  });
+
+  var banner_data = [{
+	  content: '<a href="" style="background-image:url(img/banner1.jpg)"></a>'
+	},{
+	  content: '<a href="" data-img="img/banner2.jpg"></a>'
+	},{
+	  content: '<a href="" data-img="img/banner3.jpg"></a>'
+	}]
+
+var banner = new iSlider({
+	type: 'dom',
+	data: banner_data,
+	dom: $('.iSlider_banner')[0],
+	isLooping: true,
+	fixPage: false,
+	plugins: [['dot', {locate:'relative'}]],
+	onslidechanged: function(i){
+		var obj = $('.iSlider_banner .islider-active a')
+		if(typeof obj.attr('style') == 'object'){
+			var img = obj.attr('data-img')
+			var currentImg = new Image()
+			var $loading = $('<div class="loading"><b></b><b></b><b></b><b></b><b></b></div>')
+			currentImg.src = img
+			obj.parent().append($loading)
+			console.log(i)
+			banner_data[i].content = banner_data[i].content.replace('></a>',' style="background-image:url('+img+')"></a>')
+			currentImg.onload = function(){
+				setTimeout(function(){
+					$loading.remove()
+					obj.attr('style','background-image:url('+img+')')
+				},200)
+			}	
+		}
+
+	}
+})
+new iSlider({
+	data: [
+	{
+	  content: '<a href="" style="background-image:url(http://ww1.sinaimg.cn/large/54a1cbf4gw1eye7z1a8alj20ku0dwjtq.jpg)"><div class="Set_namePrice"><div class="Set_name"><h1>FACE&nbsp大头照</h1><p>简儿不减&nbsp纯净&nbsp无杂质</p></div><div class="Set_price"><del>￥：1733</del><br><sup>￥</sup><span>1390</span></div></div></a>'
+	},{
+	  content: '<a href="" style="background-image:url(http://ww3.sinaimg.cn/large/54a1cbf4gw1eyc70eg6zfj20ku0gf0x7.jpg)"><div class="Set_namePrice"><div class="Set_name"><h1>FACE&nbsp大头照</h1><p>简儿不减&nbsp纯净&nbsp无杂质</p></div><div class="Set_price"><del>￥：1733</del><br><sup>￥</sup><span>1390</span></div></div></a>'
+	},{
+	  content: '<a href="" style="background-image:url(http://ww3.sinaimg.cn/large/54a1cbf4gw1ew16vmd87lj20g40emmyd.jpg)"><div class="Set_namePrice"><div class="Set_name"><h1>FACE&nbsp大头照</h1><p>简儿不减&nbsp纯净&nbsp无杂质</p></div><div class="Set_price"><del>￥：1733</del><br><sup>￥</sup><span>1390</span></div></div></a>'
+	}],
+	dom: $('.iSlider_theme')[0],
+	type: 'dom',
+	animateType: 'depth',
+	isLooping: true,
+	fixPage: false,
+	isAutoplay: false,
+	plugins: [['dot', {locate:'relative'}]]
+})
+
+
+})
+</script>
+
+</body>
+</html>

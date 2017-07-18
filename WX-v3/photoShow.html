@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<article>
+	<ul class="WX_v3_iSlide">
+		<li>
+			<a href="">本季热推</a>
+			<span>纵使世间万人美</span>
+		</li>
+		<li>
+			<a href="">最新创作</a>
+			<span>创新不止</span>
+		</li>
+		<li>
+			<a href="">时尚系列</a>
+			<span>打造最美的婚纱照</span>
+		</li>
+		<li>
+			<a href="">纪实系列</a>
+			<span>边走边拍&nbsp自由散拍</span>
+		</li>
+		<li>
+			<a href="">欧美系列</a>
+			<span>边走边拍&nbsp自由散拍</span>
+		</li>
+		<li>
+			<a href="">韩国系列</a>
+			<span>用镜头记录你们的爱</span>
+		</li>
+		<li class="active">
+			<a href="">雅致系列</a>
+			<span>边走边拍&nbsp自由散拍</span>
+		</li>
+		<li>
+			<a href="">高端定制</a>
+			<span>用镜头记录你们</span>
+		</li>
+	</ul>
+	<ul class="WX_v3_content">
+		<li>
+			<div class="pic">
+				<a href="">
+					<img data-echo="img/banner1.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+				</a>
+			</div>
+			<div class="font">
+				<p>独家记忆</p>
+				<b><span>STYLE:</span>雅致系列&nbsp;<span>ADD:</span>韩国馆</b>
+			</div>
+		</li>
+		<li>
+			<div class="pic">
+				<a href="">
+					<img data-echo="img/banner2.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+				</a>
+			</div>
+			<div class="font">
+				<p>小幸运</p>
+				<b><span>STYLE:</span>雅致系列&nbsp;<span>ADD:</span>韩国馆</b>
+			</div>
+		</li>
+		<li>
+			<div class="pic">
+				<a href="">
+					<img data-echo="img/banner3.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+				</a>
+			</div>
+			<div class="font">
+				<p>独家记忆</p>
+				<b><span>STYLE:</span>雅致系列&nbsp;<span>ADD:</span>韩国馆</b>
+			</div>
+		</li>
+	</ul>
+</article>
+
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script type="text/javascript">
+new G()
+</script>
+</body>
+</html>
