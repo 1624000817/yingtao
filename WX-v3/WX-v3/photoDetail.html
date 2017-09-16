@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/color.css">
+
+</head>
+<body>
+<article class="WX_v3_detail WX_v3_yangzhao">
+	<div class="WX_v3_snapshot">
+		<img data-echo="img/kuaizhao.png" alt="">
+		<div class="recommend">
+			<span>
+			<i class="iconfont icon-zhaopian">&#xe64b;</i><br/>
+			PHOTO
+			</span>
+			<h1>自然风伊春系列</h1>
+			<p>STYLE:&nbsp;雅致系列&nbsp;&nbsp;ADD:&nbsp;韩国馆</p>
+		</div>
+	</div>
+	<img data-echo="img/banner1.jpg" alt="">
+	<div class="WX_v3_photo_List">
+		<img data-echo="img/zhanshi.jpg" alt="">
+	</div>
+	<img data-echo="img/datu.jpg" alt="">
+	<img data-echo="img/banner1.jpg" alt="">
+	
+	<div class="submit">
+		<a href="">立即预约</a>
+	</div>
+	<div class="WX_v3_commend">
+		<h1>你可能还喜欢</h1>
+		<a href="">
+			<img data-echo-background="img/pic5.jpg" alt="">
+			<h2>
+				<b>【欧若拉系列】</b>
+				<p>春风十里，&nbsp;不如你</p>
+			</h2>
+		</a>
+		<a href="">
+			<img data-echo-background="img/pic3.jpg" alt="">
+			<h2>
+				<b>【欧若拉系列】</b>
+				<p>春风十里，&nbsp;不如你</p>
+			</h2>
+		</a>
+		<a href="">
+			<img data-echo-background="img/pic2.jpg" alt="">
+			<h2>
+				<b>【欧若拉系列】</b>
+				<p>春风十里，&nbsp;不如你</p>
+			</h2>
+		</a>
+		<a href="">
+			<img data-echo-background="img/banner2.jpg" alt="">
+			<h2>
+				<b>【欧若拉系列】</b>
+				<p>春风十里，&nbsp;不如你</p>
+			</h2>
+		</a>
+	</div>
+	<div class="WX_v3_advertisement">
+		<a href=""><img data-echo="img/pic2.jpg" alt=""></a>
+	</div>
+</article>
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+<script type="text/javascript">
+	new G()
+</script>
+</html>

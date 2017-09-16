@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+</head>
+<body>
+<article class="Perfect_feast">
+	<!-- banner -->
+	<div class="iSlider_wrapper iSlider_banner" id="jewelry"></div>
+	<!-- 预约 -->
+	<div class="jewelry_order MarginBottom">
+		<a href="">
+			<h1>温州绵阳珠宝</h1>
+			<div>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<span>222条评论</span>
+			</div>
+			<p>
+			人均: ￥49063
+			<span><small>最高返利10%</small></span>
+			</p>
+		</a>
+		<a href="">
+			<div>在线预定</div>
+		</a>
+	</div>
+	<!-- 优惠信息 -->
+	<div class="favourable">
+		<div>
+			<a href="">优惠信息</a>
+			<a href="">领取礼包<i class="iconfont icon-gengduo">&#xe600;</i></a>
+		</div>
+		<p>
+			<a href="">[到店礼]</a>
+			赠送925纯银情侣对戒
+		</p>
+		<p>
+			<a href="">[到店礼]</a>
+			珍珠耳钉一对
+		</p>
+	</div>
+	<div class="Detail">
+		<div class="Detail_list">
+			<a href="">
+				<i class="iconfont icon-xiangqing">&#xe61c;</i>
+				珠宝定制详情介绍
+			</a>
+			<a href=""><i class="iconfont icon-gengduo">&#xe600;</i></a>
+		</div>
+		<div class="Detail_list">
+			<a href="">
+				<i class="iconfont icon-dizhi">&#xe716;</i>
+				温州市鹿城区五马街119号
+			</a>
+			<a href=""><i class="iconfont icon-gengduo">&#xe600;</i></a>
+		</div>
+		<div class="Detail_list">
+			<a href="">
+				<i class="iconfont icon-iconfontcolor39">&#xe683;</i>
+				0577-88171682
+			</a>
+			<a href=""><i class="iconfont icon-gengduo">&#xe600;</i></a>
+		</div>
+	</div>
+	<!-- 案例展示 -->
+	<div class="case_show">
+		<div class="title">
+			<a href="">优惠信息</a>
+			<a href="">查看全部<i class="iconfont icon-gengduo">&#xe600;</i></a>
+		</div>
+		<div class="show">
+			<a href="">
+				<div style="background-image: url(img/zuanjie1.jpg);">
+					<span>88张</span>
+				</div>
+				<p>基础款</p>
+			</a>
+			<a href="">
+				<div style="background-image: url(img/zuanjie2.jpg);">
+					<span>88张</span>
+				</div>
+				<p>定制款A</p>
+			</a>
+			<a href="">
+				<div style="background-image: url(img/zuanjie3.jpg);">
+					<span>88张</span>
+				</div>
+				<p>定制款B</p>
+			</a>
+			<a href="">
+				<div style="background-image: url(img/zuanjie1.jpg);">
+					<span>88张</span>
+				</div>
+				<p>定制款B</p>
+			</a>
+		</div>
+	</div>
+
+	<!-- 用户点评 -->
+	<div class="favourable username">
+		<div class="first">
+			<a href="">用户点评</a>
+			<a href="">查看全部<i class="iconfont icon-gengduo">&#xe600;</i></a>
+		</div>
+		<div class="headPhoto" style="background-image: url(img/touxiang.jpg)">
+			<span><small>Lv6</small></span>
+		</div>
+		<div class="review">
+			<div>
+				<b>易烊千玺</b>
+				<span>1月24日</span>
+			</div>
+			<div class="start">
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<span><b>￥</b>38000/元</span>
+			</div>
+			<p>跟老公看婚戒和钻戒好久了，之前跑遍了所有大牌店，无奈对于我们来说还是预算太贵了没有性价比高的钻。去大牌店都只是先看裸钻，没有挑戒托的样子，服务人员也没有很热心去看婚博会订婚纱照的时候，有机会去了绵阳珠宝，服务员可</p>
+		</div>
+	</div>
+	<!-- 问大家 -->
+	<div class="favourable ask_you">
+		<div class="first">
+			<a href="">问大家</a>
+			<a href="">查看全部问题178<i class="iconfont icon-gengduo">&#xe600;</i></a>
+		</div>
+		<div class="question">
+			<div>问</div>
+			<div>
+				<p>钻戒款式多吗?可以免费补碎钻吗?</p>
+				<a href="">55个回答</a>
+			</div>
+		</div>
+		<div class="question answer">
+			<div>答</div>
+			<div>
+				<p>钻戒款式多吗?可以免费补碎钻吗?</p>
+			</div>
+		</div>
+	</div>
+	<!-- 签到 -->
+	<div class="signIn">
+		<div>
+			<a href="">
+				<i class="iconfont icon-qiandao">&#xe66a;</i>
+				签到
+			</a>
+			<a href="">
+				<i class="iconfont icon-dianhua">&#xe613;</i>
+				在线预约
+			</a>
+		</div>
+		<a href="">查看档期</a>
+		<a href="">点评</a>
+	</div>
+	<!-- 脚部 -->
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="i_gift_2"><sup class="WX_V3_badge">22</sup></i>活动</a>
+			<a href=""><i class="i_reserve"><sup class="WX_V3_badge">8</sup></i>预约</a>
+			<a href=""><i class="i_assistant"><sup class="WX_V3_badge"></sup></i>助手</a>
+			<a href=""><i class="i_my"><sup class="WX_V3_badge"></sup></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+
+	<div v-show="weddingDate.isShow" style="display:none">
+		<wedding-date-component v-bind:data="weddingDate" ref="wedding" v-on:wedding="submitFn"></wedding-date-component>
+	</div>
+
+</article>
+
+<script src="js/vue.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script src="js/require.js"></script>
+<script>
+var v3 = new V3();
+
+$(function(){
+
+var banner_data = [{
+	  content: '<a href="javascript:;" style="background-image:url(img/banner1.jpg)"><div><i class="iconfont icon-xin3">&#xe603;</i>收藏</div></a>'
+	},{
+	  content: '<a href="" style="background-image:url(img/banner2.jpg)"><div><i class="iconfont icon-xin3">&#xe603;</i>收藏</div></a>'
+	}]
+
+	
+var banner = new iSlider({
+	type: 'dom',
+	data: banner_data,
+	dom: $('.iSlider_banner')[0],
+	isLooping: true,
+	fixPage: false,
+	plugins: [['dot', {locate:'relative'}]],
+	onslidechanged: function(i){
+		var obj = $('.iSlider_banner .islider-active a')
+		if(typeof obj.attr('style') == 'object'){
+			var img = obj.attr('data-img')
+			var currentImg = new Image()
+			var $loading = $('<div class="loading"><b></b><b></b><b></b><b></b><b></b></div>')
+			currentImg.src = img
+			obj.parent().append($loading)
+			console.log(i)
+			banner_data[i].content = banner_data[i].content.replace('></a>',' style="background-image:url('+img+')"></a>')
+			currentImg.onload = function(){
+				setTimeout(function(){
+					$loading.remove()
+					obj.attr('style','background-image:url('+img+')')
+				},200)
+			}	
+		}
+
+	}
+})
+
+
+
+
+})
+
+
+
+</script>
+</body>
+</html>

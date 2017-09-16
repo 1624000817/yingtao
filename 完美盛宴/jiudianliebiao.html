@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<article class="Perfect_feast">
+	<div id="hotel_list">
+		<section class="hotel_list">
+			<div v-bind:class={"active":tabCurrent==0} v-on:click="taskTabFn(0)"><a>离我最近<i class="iconfont icon-xiala">&#xe653;</i></a></div>
+			<div v-bind:class={"active":tabCurrent==1} v-on:click="taskTabFn(1)"><a>所有酒店<i class="iconfont icon-xiala">&#xe653;</i></a></div>
+			<div v-bind:class={"active":tabCurrent==2} v-on:click="taskTabFn(2)"><a>智能排序<i class="iconfont icon-xiala">&#xe653;</i></a></div>
+		</section>
+		
+	</div>
+	<template v-for="item in taskListFn">
+			<div class="hotel_lists">
+				<a href="" class="first" >
+
+					<a class="banner" v-bind:href="item.url" v-bind:style="{'background-image':'url('+item.pic+')'}">
+						<i v-if="item.originalPoints" v-bind:style="{'background-image':'url('+item.icon+')'}">
+							<small>HOT</small>
+						</i>
+						<i v-if="item.badge" v-bind:style="{'background-image':'url('+item.icon+')'}">
+							<small>NEW</small>
+						</i>
+					</a>
+
+					<div>
+						<h1>
+							<b>{{item.name}}</b>
+							<span v-if="item.originalPoints">
+								<a href="" class="li"><small>{{item.li}}</small></a>
+								<a href="" class="fan"><small>{{item.fan}}</small></a>
+								<a href="" class="fu"><small>{{item.fu}}</small></a>
+							</span>
+							<span v-else>
+								<a href="" class="fan"><small class="iconfont icon-xin1">&#xe636;</small></a>
+								<a href="" id="preference">{{item.select}}</a>
+							</span>
+						</h1>
+						<span>{{item.price}}</span>
+						<p>
+							<a href="">{{item.place}}</a>
+							<a href="">容纳<span>40</span>桌 <span>4</span>个案例 <span>12</span>条评论</a>
+						</p>
+						<div>
+							<span  v-if="item.originalPoints">
+								<a href="" class="fu"><small>{{item.fu}}</small></a>
+								<a href="" class="fan"><small>{{item.fan}}</small></a>
+							</span>
+							<span v-else>
+								<a href="" class="fan"><small class="iconfont icon-xin1">&#xe636;</small></a>
+							</span>
+							<b>{{item.activice}}</b>
+						</div>
+					</a>
+				</div>
+		
+		</template>
+
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="i_gift_2"><sup class="WX_V3_badge">22</sup></i>活动</a>
+			<a href=""><i class="i_reserve"><sup class="WX_V3_badge">8</sup></i>预约</a>
+			<a href=""><i class="i_assistant"><sup class="WX_V3_badge"></sup></i>助手</a>
+			<a href=""><i class="i_my"><sup class="WX_V3_badge"></sup></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+</article>
+
+
+
+
+<script src="js/vue.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/echo.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/app.js"></script>
+<script src="js/require.js"></script>
+<script>
+var v3 = new V3();
+
+var taskData = {
+	"tabCurrent": 0,
+	"taskList": [
+		{
+		"name": "LAVIN玫瑰里(外滩店)",
+		"url":"a",
+		"pic":"img/banner1.jpg",
+		"icon":"img/aa.png",
+		"type": "ongoing",
+		"originalPoints": true,
+		"badge": false,
+		"price":"￥3980-10099/桌",
+		"place":"婚礼会所 杨浦区",
+		"activice":"在线支付每桌立减800元，满额返现",
+		"li":"礼",
+		"fan":"返",
+		"fu":"付"
+		},
+		{
+		"pic":"img/banner1.jpg",
+		"icon":"img/aa.png",
+		"name": "圣拉维一站式婚礼会馆",
+		"type": "ongoing",
+		"originalPoints": true,
+		"badge": true,
+		"price":"￥3980-10099/桌",
+		"place":"婚礼会所 杨浦区",
+		"activice":"在线支付每桌立减800元，满额返现",
+		"li":"礼",
+		"fan":"返",
+		"fu":"付"
+		},
+		{
+		"pic":"img/banner1.jpg",
+		"icon":"img/aa.png",
+		"name": "玫瑰婚典壹号婚礼会馆",
+		"originalPoints": true,
+		"badge": true,
+		"color": "009e73",
+		"price":"￥3980-10099/桌",
+		"place":"婚礼会所 杨浦区",
+		"activice":"在线支付每桌立减800元，满额返现",
+		"li":"礼",
+		"fan":"返",
+		"fu":"付"
+		},
+		{
+		"pic":"img/banner1.jpg",
+		"name": "上海四季酒店",
+		"type": "completed",
+		"originalPoints": false,
+		"badge": false,
+		"color": "43a0ff",
+		"price":"￥3980-10099/桌",
+		"place":"婚礼会所 杨浦区",
+		"activice":"在线支付每桌立减800元，满额返现",
+		"select":"优选"
+		},
+		{
+		"pic":"img/banner1.jpg",
+		"name": "上海浦东喜来登自由酒店",
+		"type": "completed",
+		"originalPoints": false,
+		"badge": false,
+		"price":"￥3980-10099/桌",
+		"place":"婚礼会所 杨浦区",
+		"activice":"在线支付每桌立减800元，满额返现",
+		"select":"优选"
+		},
+		{
+		"pic":"img/banner1.jpg",
+		"name": "龙之梦万丽酒店请青餐厅",
+		"type": "completed",
+		"originalPoints": false,
+		"badge": false,
+		"price":"￥3980-10099/桌",
+		"place":"婚礼会所 杨浦区",
+		"activice":"在线支付每桌立减800元，满额返现",
+		"select":"优选"
+		}
+		]
+};
+var	APP = new Vue({
+	el: 'article',
+	data: taskData,
+	computed: {
+		taskListFn: function() { 
+			var self = this;
+			return this.taskList.filter(function(d) {
+				if(self.tabCurrent == 0){
+					return true;
+				}
+				if(self.tabCurrent == 1){
+					return d.type == 'ongoing';
+				}
+				if(self.tabCurrent == 2){
+					return d.type == 'completed';
+				}
+			})
+
+		}
+	},
+	methods: {
+		taskTabFn: function(e){
+			this.tabCurrent = e
+		}
+
+	}
+});
+
+</script>
+</body>
+</html>

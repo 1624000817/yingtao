@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<article class="Perfect_feast">
+	<div class="header">
+		<b>金玉良缘宴</b>
+		<sub>￥10099/桌</sub>
+		<i class="iconfont icon-shangla">&#xe63e;</i>
+		<i class="iconfont icon-xiala hidden">&#xe653;</i>
+	</div> 
+	<div class="header_list">
+	 	<div class="iSlider_wrapper iSlider_banner"></div>
+
+	 	<div class="menu_list">
+	 		<div class="menu"><a href="">MENU</a></div>
+			<h1>A套餐</h1>
+			<a href="">红抱喜临门</a>
+			<a href="">凤凰展彩堂</a>
+			<a href="">金球辉影照</a>
+			<a href="">丽影瑶池舞</a>
+			<a href="">情深双高飞</a>
+			<a href="">龙鱼永得水</a>
+			<a href="">信心相互印</a>
+			<a href="">银燕抱福来</a>
+			<a href="">喜鹊报佳音</a>
+			<a href="">永结喜同心</a>
+			<a href="">百年偕好合</a>
+			<a href="">良辰添美景</a>
+	 	</div>
+	</div>
+	<div class="header">
+		<b>山盟海誓宴</b>
+		<sub>￥10099/桌</sub>
+		<i class="iconfont icon-shangla hidden">&#xe63e;</i>
+		<i class="iconfont icon-xiala">&#xe653;</i>
+	</div> 
+	<div class="header_list">
+	 	<div class="iSlider_wrapper iSlider_banner"></div>
+
+	 	<div class="menu_list">
+	 		<div class="menu"><a href="">MENU</a></div>
+			<h1>b套餐</h1>
+			<a href="">红抱喜临门</a>
+			<a href="">凤凰展彩堂</a>
+			<a href="">金球辉影照</a>
+			<a href="">丽影瑶池舞</a>
+			<a href="">情深双高飞</a>
+			<a href="">龙鱼永得水</a>
+			<a href="">信心相互印</a>
+			<a href="">银燕抱福来</a>
+			<a href="">喜鹊报佳音</a>
+			<a href="">永结喜同心</a>
+			<a href="">百年偕好合</a>
+			<a href="">良辰添美景</a>
+	 	</div>
+	</div>
+	<div class="header">
+		<b>天长地久宴</b>
+		<sub>￥10099/桌</sub>
+		<i class="iconfont icon-shangla hidden">&#xe63e;</i>
+		<i class="iconfont icon-xiala">&#xe653;</i>
+	</div> 
+	<div class="header_list">
+	 	<div class="iSlider_wrapper iSlider_banner"></div>
+
+	 	<div class="menu_list">
+	 		<div class="menu"><a href="">MENU</a></div>
+			<h1>c套餐</h1>
+			<a href="">红抱喜临门</a>
+			<a href="">凤凰展彩堂</a>
+			<a href="">金球辉影照</a>
+			<a href="">丽影瑶池舞</a>
+			<a href="">情深双高飞</a>
+			<a href="">龙鱼永得水</a>
+			<a href="">信心相互印</a>
+			<a href="">银燕抱福来</a>
+			<a href="">喜鹊报佳音</a>
+			<a href="">永结喜同心</a>
+			<a href="">百年偕好合</a>
+			<a href="">良辰添美景</a>
+	 	</div>
+	</div>
+	<div class="menu_footer">
+		<a href="">
+			<i class="iconfont icon-iconfontcolor39">&#xe683;</i>
+			来电咨询
+		</a>
+		<a href="">预约看点</a>
+	</div>
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="iconfont icon-cin2">&#xe628;</i>结婚助手</a>
+			<a href=""><i class="iconfont icon-heibanblackboard9">&#xe91d;</i>微信墙</a>
+			<a href=""><i class="i_my"></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+
+	
+
+</article>
+
+<script src="js/vue.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script src="js/require.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+<script>
+
+$(".header_list:gt(0)").hide();
+$(".header").click(function(){
+	$(this).children('.icon-xiala').toggleClass('hidden');
+    $(this).children('.icon-shangla').toggleClass('hidden');
+	if($(this).next(".header_list").css("display")=="none"){
+		$(this).next(".header_list").show();
+	}else{
+		$(this).next(".header_list").hide();
+		$(this).next(".header_list div").removeClass("iSlider_banner");
+	}
+});
+
+var v3 = new V3();
+$(function(){
+
+var banner_data = [{
+	  content: '<a href="" style="background-image:url(img/caidan.jpg)"></a>'
+	},{
+	  content: '<a href="" style="background-image:url(img/banner2.jpg)"></a>'
+	}]
+var banner = new iSlider({
+	type: 'dom',
+	data: banner_data,
+	dom: $('.iSlider_banner')[0],
+	isLooping: true,
+	fixPage: false,
+	plugins: [['dot', {locate:'relative'}]],
+	onslidechanged: function(i){
+		var obj = $('.iSlider_banner .islider-active a')
+		if(typeof obj.attr('style') == 'object'){
+			var img = obj.attr('data-img')
+			var currentImg = new Image()
+			var $loading = $('<div class="loading"><b></b><b></b><b></b><b></b><b></b></div>')
+			currentImg.src = img
+			obj.parent().append($loading)
+			console.log(i)
+			banner_data[i].content = banner_data[i].content.replace('></a>',' style="background-image:url('+img+')"></a>')
+			currentImg.onload = function(){
+				setTimeout(function(){
+					$loading.remove()
+					obj.attr('style','background-image:url('+img+')')
+				},200)
+			}	
+		}
+
+	}
+})
+
+var banner2 = new iSlider({
+	type: 'dom',
+	data: banner_data,
+	dom: $('.iSlider_banner')[1],
+	isLooping: true,
+	fixPage: false,
+	plugins: [['dot', {locate:'relative'}]],
+	onslidechanged: function(i){
+		var obj = $('.iSlider_banner .islider-active a')
+		if(typeof obj.attr('style') == 'object'){
+			var img = obj.attr('data-img')
+			var currentImg = new Image()
+			var $loading = $('<div class="loading"><b></b><b></b><b></b><b></b><b></b></div>')
+			currentImg.src = img
+			obj.parent().append($loading)
+			console.log(i)
+			banner_data[i].content = banner_data[i].content.replace('></a>',' style="background-image:url('+img+')"></a>')
+			currentImg.onload = function(){
+				setTimeout(function(){
+					$loading.remove()
+					obj.attr('style','background-image:url('+img+')')
+				},200)
+			}	
+		}
+
+	}
+})
+var banner3 = new iSlider({
+	type: 'dom',
+	data: banner_data,
+	dom: $('.iSlider_banner')[2],
+	isLooping: true,
+	fixPage: false,
+	plugins: [['dot', {locate:'relative'}]],
+	onslidechanged: function(i){
+		var obj = $('.iSlider_banner .islider-active a')
+		if(typeof obj.attr('style') == 'object'){
+			var img = obj.attr('data-img')
+			var currentImg = new Image()
+			var $loading = $('<div class="loading"><b></b><b></b><b></b><b></b><b></b></div>')
+			currentImg.src = img
+			obj.parent().append($loading)
+			console.log(i)
+			banner_data[i].content = banner_data[i].content.replace('></a>',' style="background-image:url('+img+')"></a>')
+			currentImg.onload = function(){
+				setTimeout(function(){
+					$loading.remove()
+					obj.attr('style','background-image:url('+img+')')
+				},200)
+			}	
+		}
+
+	}
+})
+})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<article>
+	<figure class="WX_V3_task_center_header">
+		<img src="img/task_center_header.png">
+		<table>
+			<td><i class="i_sign c_ffc000"></i></td>
+			<td>连续签到3天有惊喜！<span>已成功签到{{sign.day}}天</span></td>
+			<td><a v-on:click="sign.isShow=true">立即签到</a></td>
+		</table>
+	</figure>
+
+	<section class="WX_V3_task_center_menu">
+		<table>
+			<td v-bind:class={"active":tabCurrent==0} v-on:click="taskTabFn(0)"><a>任务总列表</a></td>
+			<td v-bind:class={"active":tabCurrent==1} v-on:click="taskTabFn(1)"><a>进行中任务</a></td>
+			<td v-bind:class={"active":tabCurrent==2} v-on:click="taskTabFn(2)"><a>已完成任务</a></td>
+		</table>
+
+		<template v-for="item in taskListFn">
+			<a href="">
+				<div><i v-bind:class="[item.icon,'b_'+item.color]"></i><span v-if="item.badge" class="WX_V3_badge {{item.badge}}">{{item.badge}}</span>{{item.name}}</div>
+				<div>
+					<label v-bind:class="'c_'+item.color">
+						<span v-bind:class="'b_'+item.color">{{item.btnTitle}}</span>
+						<span><i class="i_money2"></i>+{{item.points}}<del v-if="item.originalPoints">+{{item.originalPoints}}</del></span>
+					</label>
+				</div>
+			</a>
+		</template>
+	</section>
+
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="i_gift_2"><sup class="WX_V3_badge">22</sup></i>活动</a>
+			<a href=""><i class="i_reserve"><sup class="WX_V3_badge">8</sup></i>预约</a>
+			<a href=""><i class="i_assistant"><sup class="WX_V3_badge"></sup></i>助手</a>
+			<a href=""><i class="i_my"><sup class="WX_V3_badge"></sup></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+
+	<div v-show="sign.isShow" style="display:none">
+		<wedding-sign-component v-bind:data="sign"></wedding-date-component>
+	</div>
+
+
+	<div v-show="customer.isShow" style="display:none">
+		<customer-auth-component v-bind:data="customer" v-on:customer="customerFn"></customer-auth-component>
+	</div>
+
+
+
+</article>
+
+
+
+
+<script src="js/vue.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/echo.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/app.js"></script>
+<script src="js/require.js"></script>
+<script>
+var v3 = new V3();
+
+var taskData = {
+	"sign": {
+		banner: 'img/daily_sign_bg.png',
+		isShow: false,
+		day: 1,
+		points: 1980,
+		plus: [5,15,35],
+		btnTitle: '去赚积分',
+		pointsName: '金币',
+		btnUrl: ''
+	},
+	"customer": {
+		isShow: true,
+		name: '',
+		mobile: '',
+		date: ''
+	},
+	"tabCurrent": 0,
+	"taskList": [
+	{
+	"icon": "i_personal",
+	"name": "完善信息",
+	"btnTitle": "立即参与",
+	"type": "ongoing",
+	"state": "join",
+	"points": 10000,
+	"originalPoints": false,
+	"badge": false,
+	"color": "43a0ff"
+	},
+	{
+	"icon": "i_v",
+	"name": "客户认证",
+	"btnTitle": "立即参与",
+	"type": "ongoing",
+	"state": "join",
+	"points": 1000,
+	"originalPoints": false,
+	"badge": false,
+	"color": "fd7545"
+	},
+	{
+	"icon": "i_invitation_2",
+	"name": "首次邀请",
+	"btnTitle": "立即领取",
+	"type": "ongoing",
+	"state": "join",
+	"points": 1000,
+	"originalPoints": 500,
+	"badge": "NEW",
+	"color": "009e73"
+	},
+	{
+	"icon": "i_invitation_1",
+	"name": "邀请任务",
+	"btnTitle": "立即参与",
+	"type": "completed",
+	"state": "join",
+	"points": 1000,
+	"originalPoints": false,
+	"badge": false,
+	"color": "43a0ff"
+	},
+	{
+	"icon": "i_share",
+	"name": "分享任务",
+	"btnTitle": "正在进行",
+	"type": "completed",
+	"state": "join",
+	"points": 1000,
+	"originalPoints": false,
+	"badge": false,
+	"color": "ffc31d"
+	},
+	{
+	"icon": "i_vip",
+	"name": "会员尊享",
+	"btnTitle": "正在进行",
+	"type": "completed",
+	"state": "join",
+	"points": 1000,
+	"originalPoints": false,
+	"badge": false,
+	"color": "ffc31d"
+	}
+]};
+
+var	APP = new Vue({
+	el: 'article',
+	data: taskData,
+	components: {
+		'wedding-sign-component': weddingSignComponent,
+		'customer-auth-component': customerAuthComponent
+	},
+	computed: {
+		taskListFn: function() { //筛选不同状态任务
+			var self = this;
+			return this.taskList.filter(function(d) {
+				if(self.tabCurrent == 0){
+					return true;
+				}
+				if(self.tabCurrent == 1){
+					return d.type == 'ongoing';
+				}
+				if(self.tabCurrent == 2){
+					return d.type == 'completed';
+				}
+			})
+
+		}
+	},
+	methods: {
+		taskTabFn: function(e){
+			this.tabCurrent = e
+		},
+		customerFn: function(d) { //客户认证
+			console.log(d)
+
+
+			if (!/^(13[0-9]|15[0-9]|18[0-9]|14[0-9]|17[0-9])\d{8}$/.test(d.mobile)) {
+				return WXalert('请输入正确的手机号码');
+			}
+			$.post('/', {
+				name: d.name,
+				mobile: d.mobile
+
+			})
+
+
+		}
+
+	}
+});
+
+</script>
+</body>
+</html>

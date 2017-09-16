@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<article class="Perfect_feast" id="my">
+	<figure class="WX_V3_center_header">
+		<table>
+			<td><img src="img/touxiang.jpg"></td>
+			<td>万年狐狸精十妹<br><a href="">铜牌会员<i class="i_arrow_right"></i></a></td>
+			<td><a href=""><i class="iconfont icon-geren">&#xe60c;</i> 1980</a></td>
+		</table>		
+	</figure>
+	<section class="WX_V3_center_nav">
+		<a href=""><i class="iconfont icon-xing">&#xe605;</i>收藏夹</a>
+		<a href=""><i class="iconfont icon-fukuan">&#xe694;<sup>6</sup></i>待付款</a>
+		<a href=""><i class="iconfont icon-dianping">&#xe652;<sup>9</sup></i>待点评</a>
+		<a href=""><i class="iconfont icon-liulan">&#xe701;</i>最近浏览</a>
+	</section>
+
+	<section class="WX_V3_center_menu">
+		<a href="" interval>
+			<div><i class="iconfont icon-qiaodao1">&#xe709;</i>我的订单</div>
+			<div><i class="i_arrow_right"></i></div>
+		</a>
+		<a href="">
+			<div><i class="iconfont icon-tuikuan">&#xe681;</i>退款售后</div>
+			<div><i class="i_arrow_right"></i></div>
+		</a>
+
+	
+		<a href="" interval>
+			<div>
+				<i class="iconfont icon-qiaquan">&#xe606;</i>我的卡券
+				<span class="WX_V3_badge new"><small>NEW</small></span>
+			</div>
+			<div>5张<i class="i_arrow_right"></i></div>
+			</a>
+		<a href="">
+			<div><i class="iconfont icon-jifen">&#xe630;</i>我的积分</div>
+			<div>1980<i class="i_arrow_right"></i></div>
+		</a>
+		<a href="" interval>
+			<div><i class="iconfont icon-lianxi">&#xe641;</i>联系客服</div>
+			<div><i class="i_arrow_right"></i></div>
+		</a>
+	</section>
+ 	
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="iconfont icon-cin2">&#xe628;</i>结婚助手</a>
+			<a href=""><i class="iconfont icon-heibanblackboard9">&#xe91d;</i>微信墙</a>
+			<a href=""><i class="i_my"></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+
+	
+
+</article>
+
+<script src="js/vue.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script>
+var v3 = new V3();
+
+
+</script>
+</body>
+</html>

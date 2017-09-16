@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link rel="stylesheet" type="text/css" href="http://h5.yingtaoyun.com/yingtao/wx/1708/css/footer.css">
+<link href="css/wedding.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_389364_glhtcb8ilajxajor.css">
+
+</head>
+<body>
+<article>
+	<div  class="WX_wedding_productPage">
+		<div class="product_banner">
+
+			<div class="product_big" 
+			style="background-image:url(img/banner8.jpg)">
+				<h3>#全部旅拍#</h3>
+				<p>自由旅拍之系列</p>
+			</div>
+			<div class="thumbnail">
+				<a href=""
+				 class="active" 
+				 data-name="全部">全部</a>
+				<a href=""				
+				 data-name="background-image:url(img/banner14.jpg)" 
+				 style="background-image:url(img/banner14.jpg)"></a>
+				<a href="" 
+
+				data-name="background-image:url(img/banner23.jpg)" 
+				style="background-image:url(img/banner23.jpg)"></a>
+				<a href="" 
+				
+				data-name="background-image:url(img/banner10.jpg)" 
+				style="background-image:url(img/banner10.jpg)"></a>
+			</div>
+		</div>
+	
+			<a href="">
+				<div class="product_list" style="background-image:url(img/banner17.jpg)">
+					<p>田园系列-自由旅拍</p>
+				</div>
+			</a>
+		</div>
+
+	<section class="WX_V3_poweredby">© Powered by 樱桃互动</section>
+	<div class="YT_Children_WX_footer">
+		<a href="" class="active"><i class="iconfont icon-shouye"></i>首页</a>
+		<a href=""><i class="iconfont icon-huodong1"></i>活动</a>
+		<a href=""><i class="iconfont icon-yuyue"></i>预约</a>
+		<a href=""><i class="iconfont icon-xiaozhushoukuaijie"></i>助手</a>
+		<a href=""><i class="iconfont icon-wode"></i>我的</a>
+	</div>
+
+</article>
+
+<script src="js/vue.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+<script type="text/javascript">
+	new G()
+
+</script>
+</html>

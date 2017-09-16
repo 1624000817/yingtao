@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<article>
+	<section class="WX_V3_task_center_menu">
+		<table>
+			<td v-bind:class={"active":tabCurrent==0} v-on:click="mallTabFn(0)"><a>积分商城</a></td>
+			<td v-bind:class={"active":tabCurrent==1} v-on:click="mallTabFn(1)"><a>兑换纪录</a></td>
+			<td v-bind:class={"active":tabCurrent==2} v-on:click="mallTabFn(2)"><a>我的</a></td>
+		</table>
+	</section>
+
+
+	<div v-show="tabCurrent==0">
+		<section class="iSlider_wrapper iSlider_banner"></section>
+
+		<section class="WX_V3_mall_group">
+			<header>钻石会员专享</header>
+			<div>
+				<a href="">
+					<figure>
+						<div data-echo-background="img/mall_1.png"></div>
+						<figcaption>新娘婚礼包<span><i class="i_data"></i> 1998积分 <del>2890</del></span></figcaption>
+					</figure>
+				</a>
+				<a href="">
+					<figure>
+						<div data-echo-background="img/mall_1.png"></div>
+						<figcaption>新娘婚礼包<span><i class="i_data"></i> 1998积分 <del>2890</del></span></figcaption>
+					</figure>
+				</a>
+			</div>
+		</section>
+
+		<figure class="WX_V3_banner"><a href=""><img data-echo="img/banner_5.jpg"></a></figure>
+
+		<section class="WX_V3_mall_group">
+			<header>为您推荐</header>
+			<div>
+				<a href="">
+					<figure>
+						<div data-echo-background="img/mall_1.png"></div>
+						<figcaption>新娘婚礼包<span><i class="i_data"></i> 1998积分 <del>2890</del></span></figcaption>
+					</figure>
+				</a>
+				<a href="">
+					<figure>
+						<div data-echo-background="img/mall_1.png"></div>
+						<figcaption>新娘婚礼包<span><i class="i_data"></i> 1998积分 <del>2890</del></span></figcaption>
+					</figure>
+				</a>
+				<a href="">
+					<figure>
+						<div data-echo-background="img/mall_1.png"></div>
+						<figcaption>新娘婚礼包<span><i class="i_data"></i> 1998积分 <del>2890</del></span></figcaption>
+					</figure>
+				</a>
+				<a href="">
+					<figure>
+						<div data-echo-background="img/mall_1.png"></div>
+						<figcaption>新娘婚礼包<span><i class="i_data"></i> 1998积分 <del>2890</del></span></figcaption>
+					</figure>
+				</a>
+			</div>
+		</section>
+	</div>
+
+
+	<div v-show="tabCurrent==1">
+		<section class="WX_V3_mall_order">
+			<div>
+				<table>
+					<tr><td>订单编号：1008 1231 1230</td><td>2017-05-17 14:30</td></tr>
+					<tr>
+						<td>
+							<img data-echo="img/mall_1.png">
+							<div>
+								特价喜糖盒！<br>
+								婚礼喜糖大礼包盒A组<br>
+								<label class="WX_V3_level_5"><i data-echo-background="img/level_5.png"></i>8.5折</label>
+							</div>
+						</td>
+						<td><b>1998</b>积分<del>2890</del></td>
+					</tr>
+					<tr>
+						<td colspan="2"><label><i class="i_ok_o"></i> 订单已完成</label></td>
+					</tr>
+				</table>
+			</div>
+
+			<div>
+				<table>
+					<tr><td>订单编号：1008 1231 1230</td><td>2017-05-17 14:30</td></tr>
+					<tr>
+						<td>
+							<img data-echo="img/mall_1.png">
+							<div>
+								特价喜糖盒！<br>
+								婚礼喜糖大礼包盒A组<br>
+								<label class="WX_V3_level_5"><i data-echo-background="img/level_5.png"></i>8.5折</label>
+							</div>
+						</td>
+						<td><b>1998</b>积分<del>2890</del></td>
+					</tr>
+					<tr>
+						<td colspan="2"><a>取消订单</a><a>立即支付</a></td>
+					</tr>
+				</table>
+			</div>
+
+		</section>
+	</div>
+
+
+	<div v-show="tabCurrent==2">
+		<figure class="WX_V3_mall_my_header">
+			<table>
+				<td><img src="img/avatar.jpg"></td>
+				<td>
+					万年狐狸精十妹<br><a class="WX_V3_level_3"> 钻石会员<i class="i_arrow_right"></i></a>
+					<label class="WX_V3_level_5"><i data-echo-background="img/level_5.png"></i>8.5折</label>
+				</td>
+			</table>
+		</figure>
+
+		<section class="WX_V3_center_menu WX_V3_mall_menu">
+			<a href="" interval><div><i class="i_data c_ffc000"></i>我的积分</div><div><span class="c_ffc000">1980</span><i class="i_arrow_right"></i></div></a>
+			<a v-on:click="address.isShow=true"><div><i class="i_invitation c_ff7394"></i>我的地址</div><div>上海市徐汇区桂平路418号A座<i class="i_arrow_right"></i></div></a>
+			<a href="" interval><div><i class="i_gift c_ff73e3"></i>任务中心<span class="WX_V3_badge new">NEW</span></div><div>领任务 得积分<i class="i_arrow_right"></i></div></a>
+			<a href=""><div><i class="i_ticket c_9173ff"></i>邀请新人</div><div>新人签约立即获得500积分<i class="i_arrow_right"></i></div></a>
+			<a href="" interval><div><i class="i_heart c_ff7394"></i>结婚助手<span class="WX_V3_badge hot">HOT</span></div><div>相册、请柬、预算、微信墙<i class="i_arrow_right"></i></div></a>
+			<a href=""><div><i class="i_gift c_73c2ff"></i>最新活动<span class="WX_V3_badge new">NEW</span></div><div>美丽女人节千人团购<i class="i_arrow_right"></i></div></a>
+			<a href=""><div><i class="i_vip c_ffc000"></i>会员尊享</div><div>海量积分等您领取<i class="i_arrow_right"></i></div></a>
+		</section>
+
+	</div>
+
+
+
+	<div v-show="address.isShow" style="display:none">
+		<address-component v-bind:data="address" v-on:address="addressFn"></address-component>
+	</div>
+
+
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="i_gift_2"><sup class="WX_V3_badge">22</sup></i>活动</a>
+			<a href=""><i class="i_reserve"><sup class="WX_V3_badge">8</sup></i>预约</a>
+			<a href=""><i class="i_assistant"><sup class="WX_V3_badge"></sup></i>助手</a>
+			<a href=""><i class="i_my"><sup class="WX_V3_badge"></sup></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+
+</article>
+
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/vue.min.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/zepto.min.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/echo.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/app.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/require.js"></script>
+<script>
+var v3 = new V3();
+
+var banner_data = [{
+	  content: '<a href="" style="background-image:url(img/banner_1_1.jpg)"></a>'
+	},{
+	  content: '<a href="" data-img="img/banner_1_2.jpg"></a>'
+	},{
+	  content: '<a href="" data-img="img/banner_1_3.jpg"></a>'
+	}];
+
+
+requirejs.config({
+    baseUrl: 'http://h5.yingtaoyun.com/yingtao/wx/v3/js'
+});
+
+require(['iSlider'], function(iSlider) {
+	require(['iSlider.plugin.dot'], function() {
+		new iSlider({
+			type: 'dom',
+			data: banner_data,
+			dom: $('.iSlider_banner')[0],
+			isLooping: true,
+			fixPage: false,
+			plugins: [['dot', {locate:'relative'}]],
+			onslidechanged: function(i){
+				var obj = $('.iSlider_banner .islider-active a')
+				if(typeof obj.attr('style') == 'object'){
+					var img = obj.attr('data-img')
+					var currentImg = new Image()
+					var $loading = $('<div class="loading"><b></b><b></b><b></b><b></b><b></b></div>')
+					currentImg.src = img
+					obj.parent().append($loading)
+					banner_data[i].content = banner_data[i].content.replace('></a>',' style="background-image:url('+img+')"></a>')
+					currentImg.onload = function(){
+						setTimeout(function(){
+							$loading.remove()
+							obj.attr('style','background-image:url('+img+')')
+						},200)
+					}	
+				}
+
+			}
+		});
+	});
+});
+
+var	APP = new Vue({
+	el: 'article',
+	data: {
+		tabCurrent: 2,
+		address: {
+			isShow: false,
+			isManage: false,
+			addressForm: {
+				isShow: false,
+				sex: 'women'
+			},
+			address: [{
+				"id": 1,
+				"address": "漕河泾孵化中心A座503-505",
+				"name": "张三",
+				"sex": "女士",
+				"mobile": "13912345678"
+			},{
+				"id": 2,
+				"address": "漕河泾孵化中心A座503-505",
+				"name": "张三",
+				"sex": "先生",
+				"mobile": "13912345678"
+			},{
+				"id": 3,
+				"address": "漕河泾孵化中心A座503-505",
+				"name": "张三",
+				"sex": "先生",
+				"mobile": "13912345678"
+			}]
+		}
+	},
+	components: {
+		'address-component': addressComponent
+	},
+	methods: {
+		mallTabFn: function(e){
+			this.tabCurrent = e
+		},
+		addressFn: function(d){
+			console.log(d.addressForm)
+			$.post('/', d.addressForm, function() {
+
+			})
+		}
+
+	}
+});
+
+</script>
+</body>
+</html>

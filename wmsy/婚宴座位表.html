@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="http://h5.yingtaoyun.com/yingtao/wx/v3/css/app.css" rel="stylesheet">
+</head>
+<body>
+<article>
+	<section class="WX_V3_seat">
+		<section v-show="tables.length==0" class="WX_V3_seat_not_added" style="display:none">
+			<div>
+				<img src="img/seat.png">
+				<p>您还未添加婚宴座位表</p>
+				<a v-on:click="newTable"><i class="i_add"></i> 立即添加</a>
+			</div>
+			<footer>
+				提示:<br>
+				为了更方便您录入宾客，您可以<br>
+				1.登录樱桃互动官方网站 yingtaoyun.cn<br>
+				2.进入微信墙栏目，选择座位<br>
+				3.录入宾客名单<br>
+				<i class="i_share"></i> 创建好之后记得分享哦。
+			</footer>
+		</section>
+		
+
+		<section v-show="tables.length!=0" class="WX_V3_tables" style="display:none">
+			<header><form action="." v-on:submit.prevent="submitFn"><input type="search" v-model="seatSearch.name" ref="searchInput" placeholder=" "><label><i class="i_search"></i> <span>输入名字查座位</span></label><i v-on:click.prevent="searchClear" class="i_close"></i><a v-on:click.prevent="searchClear(0)">取消</a></form></header>
+
+			<section>
+				<div v-if="isSearch && !isNoFind" v-for="(item,index) in searchFn" v-on:click="itemEdit(item,index)" class="WX_V3_tables_item">
+					<header><a>第{{item.name}}桌<small v-if="item.desc!=''">({{item.desc}})</small></a></header>
+					<blockquote v-html="item.guest"></blockquote>
+				</div>
+
+				<div v-if="!isSearch" v-for="(item,index) in tablesFn" v-on:click="itemEdit(item,index)" class="WX_V3_tables_item">
+					<header><a>第{{item.name}}桌<small v-if="item.desc!=''">({{item.desc}})</small></a><a v-on:click.stop="itemDel(item,index)"><i class="i_trash"></i></a></header>
+					<a v-if="item.guest==''"><i class="i_edit"></i> 编辑</a>
+					<blockquote>{{item.guest}}</blockquote>
+				</div>
+
+				<div v-if="isSearch && isNoFind" class="no_find">
+					<img src="img/seat.png">
+					<p>未找到相关宾客</p>
+				</div>
+			</section>
+
+			<a v-if="!isSearch" v-on:click="newTable" class="table_add_btn modal_blur"><i class="i_add"></i> 加一桌</a>
+		</section>
+
+
+
+
+
+
+		<section v-show="tableForm.isShow" class="WX_V3_day_flow_modal WX_V3_day_flow_item_modal WX_V3_table_modal modal_blur">
+			<div>
+				<i v-on:click="tableForm.isShow=false" class="i_close"></i>
+				<table>
+					<caption>第{{tableForm.name}}桌</caption>
+					<tr><th>桌名</th><td><input v-model="tableForm.desc" type="text" placeholder="如新郎同事桌"></td></tr>
+					<tr><th>宾客</th><td><textarea v-model="tableForm.guest" placeholder="姓名之间请用“空格”分开"></textarea></td></tr>
+				</table>
+				<button v-if="" v-on:click="itemSave"><i class="i_ok_o"></i> 保存</button>
+			</div>
+		</section>
+
+
+
+
+
+	</section>
+
+
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="i_gift_2"><sup class="WX_V3_badge">22</sup></i>活动</a>
+			<a href=""><i class="i_reserve"><sup class="WX_V3_badge">8</sup></i>预约</a>
+			<a href=""><i class="i_assistant"><sup class="WX_V3_badge"></sup></i>助手</a>
+			<a href=""><i class="i_my"><sup class="WX_V3_badge"></sup></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+
+</article>
+
+
+
+
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/vue.min.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/zepto.min.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/echo.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/app.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/require.js"></script>
+<script>
+var v3 = new V3();
+
+var	APP = new Vue({
+	el: 'article',
+	data: {
+		isSearch: false,
+		isNoFind: false,
+		seatSearch: {
+			name: ''
+		},
+		tableForm: {
+			isShow: false
+		},
+		tables: [{
+			"id": 1,
+			"desc": "同事桌",
+			"guest": "我的啊实打实大我"
+		},{
+			"id": 2,
+			"desc": "同学桌",
+			"guest": "10 12 10"
+		},{
+			"id": 3,
+			"desc": "亲属桌",
+			"guest": "789"
+		},{
+			"id": 4,
+			"desc": "同学桌",
+			"guest": "10"
+		},{
+			"id": 5,
+			"desc": "同学桌",
+			"guest": "大"
+		},{
+			"id": 4,
+			"desc": "同学桌",
+			"guest": "10"
+		},{
+			"id": 5,
+			"desc": "同学桌",
+			"guest": "大家"
+		},{
+			"id": 4,
+			"desc": "同学桌",
+			"guest": "10"
+		},{
+			"id": 5,
+			"desc": "同学桌",
+			"guest": "大"
+		}]
+	},
+	computed: {
+		tablesFn: function(){
+			var self = this;
+			this.tables.map(function(v,i){
+				v.name = self.numToZh(i+1);
+			});
+			return this.tables;
+		},
+		searchFn: function(){
+			var self = this;
+			var reg = new RegExp('('+ self.seatSearch.name +')','g');
+
+			this.seatSearch.newTables = this.copyArr(this.tables);
+			this.seatSearch.newTables = this.seatSearch.newTables.filter(function(d){
+				if(self.seatSearch.name.match(/\s/g)){
+					return false;
+				}
+				if(d.guest.match(reg)){
+					d.guest = d.guest.replace(reg,'<b>$1</b>');
+					return true;
+				}
+			});
+			if(this.seatSearch.newTables.length != 0){
+				this.isNoFind = false;
+				return this.seatSearch.newTables;
+			}
+
+			if(this.isSearch){
+				this.isNoFind = true;
+			}
+
+		}
+	},
+	watch: {
+		seatSearch: {
+			handler: function(val, oldval){
+				this.isSearch = val.name == ''? false:true;
+			},
+			deep: true
+		}
+	},
+	methods: {
+		submitFn: function(e){
+			this.isSearch = true;
+		},
+		searchClear: function(e){
+			if(e == 0){
+				this.isSearch = false;
+				return this.$refs.searchInput.blur();
+			}
+
+			this.seatSearch.name='';
+			this.$refs.searchInput.focus();
+		},
+		copyArr: function(arr) {
+			return arr.map((e) => {
+				if (typeof e === 'object') {
+					return Object.assign({}, e)
+				} else {
+					return e
+				}
+			})
+		},
+		numToZh: function(number) {
+			var units = '个十百',
+				chars = '零一二三四五六七八九',
+				a = (number + '').split(''),
+				s = [];
+			for (var i = 0, j = a.length - 1; i <= j; i++) {
+				if (j == 1 || j == 5 || j == 9) {
+					if (i == 0) {
+						if (a[i] != '1') s.push(chars.charAt(a[i]));
+					} else {
+						s.push(chars.charAt(a[i]));
+					}
+				} else {
+					s.push(chars.charAt(a[i]));
+				}
+				if (i != j) {
+					s.push(units.charAt(j - i));
+				}
+			}
+			return s.join('').replace(/零([个十百])/g, function(m, d, b) {
+				b = units.indexOf(d);
+				if (b != -1) {
+					if (a[j - b] == '0') return '零'
+				}
+				return '';
+			}).replace(/零+/g, '零').replace(/[零]$/, '');
+			return number;
+		},
+		itemEdit: function(e,i){
+			this.tableForm.isNew = false;
+			this.tableForm.isShow = true;
+			this.tableForm.active = e;
+			this.tableForm.index = i;
+			this.tableForm.id = e.id;
+			this.tableForm.name = e.name;
+			this.tableForm.desc = e.desc;
+			this.tableForm.guest = e.guest;
+		},
+		itemDel: function(e,i){
+			WXconfirm('确定要删除这张桌子吗？',function(){
+				APP.tables.splice(i,1);
+				console.log(e.id)
+			})
+		},
+		itemSave: function(){
+			if(this.tableForm.isNew){
+				this.tables.push({
+					"name": this.tableForm.name,
+					"desc": this.tableForm.desc,
+					"guest": this.tableForm.guest,
+					"isShow": true
+				});
+
+			}else{
+				this.tableForm.active.desc = this.tableForm.desc;
+				this.tableForm.active.guest = this.tableForm.guest;
+				console.log(this.tableForm.id)
+
+			}
+
+			this.tableForm.isShow = false;
+		},
+		newTable: function(){
+			this.tableForm.isShow = true;
+			this.tableForm.isNew = true;
+			this.tableForm.name = this.numToZh(this.tables.length+1);
+			this.tableForm.desc = '';
+			this.tableForm.guest = '';
+		}
+
+	}
+});
+
+</script>
+</body>
+</html>

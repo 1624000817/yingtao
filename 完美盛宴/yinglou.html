@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+</head>
+<body>
+<article class="Perfect_feast">
+	<!-- banner -->
+	<div class="iSlider_wrapper iSlider_banner" id="jewelry"></div>
+	<!-- 预约 -->
+	<div class="jewelry_order MarginBottom">
+		<a href="">
+			<h1>温州全城热恋婚纱摄影</h1>
+			<div>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<span>222条评论</span>
+			</div>
+			<p>
+			人均: ￥4063
+			<span><small>最高返利10%</small></span>
+			</p>
+		</a>
+		<a href="">
+			<div>在线预定</div>
+		</a>
+	</div>
+	<!-- 优惠信息 -->
+	<div class="favourable">
+		<div>
+			<a href="">优惠信息</a>
+			<a href="">领取礼包<i class="iconfont icon-gengduo">&#xe600;</i></a>
+		</div>
+		<p>
+			<a href="">[到店礼]</a>
+			限量英伦风BB熊
+		</p>
+		<p>
+			<a href="">[订单礼]</a>
+			5200元结婚礼包
+		</p>
+	</div>
+	<div class="Detail">
+		<div class="Detail_list">
+			<a href="">
+				<i class="iconfont icon-xiangqing">&#xe61c;</i>
+				影楼详情介绍
+			</a>
+			<a href=""><i class="iconfont icon-gengduo">&#xe600;</i></a>
+		</div>
+		<div class="Detail_list">
+			<a href="">
+				<i class="iconfont icon-dizhi">&#xe716;</i>
+				人民路新中国影都售票厅旁第二间
+			</a>
+			<a href=""><i class="iconfont icon-gengduo">&#xe600;</i></a>
+		</div>
+		<div class="Detail_list">
+			<a href="">
+				<i class="iconfont icon-iconfontcolor39">&#xe683;</i>
+				0577-88171682
+			</a>
+			<a href=""><i class="iconfont icon-gengduo">&#xe600;</i></a>
+		</div>
+	</div>
+	<!-- 案例展示 -->
+	<div class="case_show">
+		<div class="title">
+			<a href="">案例展示 (20)</a>
+			<a href="">查看全部<i class="iconfont icon-gengduo">&#xe600;</i></a>
+		</div>
+		<div class="show">
+			<a href="">
+				<div style="background-image: url(img/zhanshi13.jpeg);">
+					<span>88张</span>
+				</div>
+				<p>表白</p>
+			</a>
+			<a href="">
+				<div style="background-image: url(img/zhanshi14.jpeg);">
+					<span>36张</span>
+				</div>
+				<p>恋恋时光</p>
+			</a>
+			<a href="">
+				<div style="background-image: url(img/zhanshi15.jpeg);">
+					<span>23张</span>
+				</div>
+				<p>沙橙滋味</p>
+			</a>
+			<a href="">
+				<div style="background-image: url(img/zhanshi16.jpeg);">
+					<span>66张</span>
+				</div>
+				<p>婚纱</p>
+			</a>
+		</div>
+	</div>
+	<!-- 精选套餐 -->
+	<div class="choice_package" id="wedding">
+		<div class="title">
+			<a href="">精选套餐 (5)</a>
+			<a href="">查看16个精选套餐<i class="iconfont icon-gengduo">&#xe600;</i></a>
+		</div>
+		<div class="pic_list">
+			<a href="" class="choice_package_pic" style="background-image: url(img/taocan7.jpeg);"></a>
+			<a href="">
+				<p>
+				秘境特惠套系
+				<span><small>本季热推</small></span>
+				</p>
+				<p>摄影师: 资深 | 造型: 5套 | 精修: 32张</p>
+				<p>
+					<b>￥ 9990</b>
+					<del>￥21880</del>
+					<span>已售166</span>
+				</p>
+			</a>
+		</div>
+		<div class="pic_list">
+			<a href="" class="choice_package_pic" style="background-image: url(img/taocan8.jpeg);"></a>
+			<a href="">
+				<p>
+				梦幻森林主题套餐
+				<span><small>本季热推</small></span>
+				</p>
+				<p>摄影师: 首席 | 造型: 5套 | 精修: 38张</p>
+				<p>
+					<b>￥ 18900</b>
+					<del>￥24000</del>
+					<span>已售598</span>
+				</p>
+			</a>
+		</div>
+		<div class="pic_list">
+			<a href="" class="choice_package_pic" style="background-image: url(img/taocan9.jpeg);"></a>
+			<a href="">
+				<p>
+				济州岛-苏丹咖啡塔旅拍
+				<span><small>限时特惠</small></span>
+				</p>
+				<p>摄影师: 总监 | 造型: 5套 | 精修: 40张</p>
+				<p>
+					<b>￥ 4299</b>
+					<del>￥13980</del>
+					<span>已售598</span>
+				</p>
+			</a>
+		</div>
+	</div>
+	<!-- 服务团队 -->
+	<div class="case_show">
+		<div class="title">
+			<a href="">服务团队</a>
+			<a href="">查看全部<i class="iconfont icon-gengduo">&#xe600;</i></a>
+		</div>
+		<div class="show" id="hunshalifu">
+			<a href="">
+				<div style="background-image: url(img/zhanshi5.jpg);"></div>
+				<p>DANE 邵单骑</p>
+				<p>摄影总监</p>
+			</a>
+			<a href="">
+				<div style="background-image: url(img/zhanshi6.jpg);"></div>
+				<p>婳婳</p>
+				<p>资深化妆师</p>
+			</a>
+			<a href="">
+				<div style="background-image: url(img/zhanshi7.jpg);"></div>
+				<p>海枫</p>
+				<p>婚礼主持</p>
+			</a>
+			<a href="">
+				<div style="background-image: url(img/zhanshi8.jpg);"></div>
+				<p>海枫</p>
+				<p>婚礼主持</p>
+			</a>
+		</div>
+	</div>
+	<!-- 用户点评 -->
+	<div class="favourable username">
+		<div class="first">
+			<a href="">用户点评</a>
+			<a href="">查看全部<i class="iconfont icon-gengduo">&#xe600;</i></a>
+		</div>
+		<div class="headPhoto" style="background-image: url(img/touxiang.jpg)">
+			<span><small>Lv6</small></span>
+		</div>
+		<div class="review">
+			<div>
+				<b>易烊千玺</b>
+				<span>1月24日</span>
+			</div>
+			<div class="start">
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<span><b>￥</b>38000/元</span>
+			</div>
+			<p>首先销售很热情，总店的肖mm总是很负责的沟通，从开始到最后，有问必答，各类问你题都及时解决。在南京路店下单，宋姐接待，介绍了各类产品，订了套餐精修40张，五套造型。拍摄前一天晚开始跟摄影师，化妆师建群联系</p>
+		</div>
+	</div>
+	<!-- 问大家 -->
+	<div class="favourable ask_you">
+		<div class="first">
+			<a href="">问大家</a>
+			<a href="">查看全部问题178<i class="iconfont icon-gengduo">&#xe600;</i></a>
+		</div>
+		<div class="question">
+			<div>问</div>
+			<div>
+				<p>你好，请问你们这里拍可以拍法式风格+美人鱼风格一起拍吗？</p>
+				<a href="">55个回答</a>
+			</div>
+		</div>
+		<div class="question answer">
+			<div>答</div>
+			<div>
+				<p>你好，可以的。我们全场的服装是不分区任选的，你可以</p>
+			</div>
+		</div>
+	</div>
+	<!-- 签到 -->
+	<div class="signIn">
+		<div>
+			<a href="">
+				<i class="iconfont icon-qiandao">&#xe66a;</i>
+				签到
+			</a>
+			<a href="">
+				<i class="iconfont icon-dianhua">&#xe613;</i>
+				在线预约
+			</a>
+		</div>
+		<a href="">查看档期</a>
+		<a href="">点评</a>
+	</div>
+	<!-- 脚部 -->
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="i_gift_2"><sup class="WX_V3_badge">22</sup></i>活动</a>
+			<a href=""><i class="i_reserve"><sup class="WX_V3_badge">8</sup></i>预约</a>
+			<a href=""><i class="i_assistant"><sup class="WX_V3_badge"></sup></i>助手</a>
+			<a href=""><i class="i_my"><sup class="WX_V3_badge"></sup></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+
+	<div v-show="weddingDate.isShow" style="display:none">
+		<wedding-date-component v-bind:data="weddingDate" ref="wedding" v-on:wedding="submitFn"></wedding-date-component>
+	</div>
+
+</article>
+
+<script src="js/vue.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script src="js/require.js"></script>
+<script>
+var v3 = new V3();
+
+var APP = new Vue({
+	el: 'article',
+	data: {
+		weddingDate: {
+			countDown: '26',
+			isShow: false,
+			iosSelect:'',
+			loading: true
+		}
+	},
+	components: {
+		'wedding-date-component': weddingDateComponent
+	},
+	methods: {
+		weddingFn: function() {
+			this.$refs.wedding.weddingFn()
+		},
+		submitFn: function(d){
+			console.log(d)
+		}
+	},
+	mounted: function(){
+		v3.countUp(this.weddingDate.countDown, function(num) {
+			APP.weddingDate.countDown = num;
+		});
+	}
+});
+$(function(){
+
+var banner_data = [{
+	  content: '<a href="" style="background-image:url(img/banner7.jpeg)"><div><i class="iconfont icon-xin">&#xe607;</i>收藏</div></a>'
+	},{
+	  content: '<a href="" style="background-image:url(img/banner5.png)"><div><i class="iconfont icon-xin">&#xe607;</i>收藏</div></a>'
+	},{
+	  content: '<a href="" style="background-image:url(img/banner2.jpg)"><div><i class="iconfont icon-xin">&#xe607;</i>收藏</div></a>'
+	}]
+var banner = new iSlider({
+	type: 'dom',
+	data: banner_data,
+	dom: $('.iSlider_banner')[0],
+	isLooping: true,
+	fixPage: false,
+	plugins: [['dot', {locate:'relative'}]],
+	onslidechanged: function(i){
+		var obj = $('.iSlider_banner .islider-active a')
+		if(typeof obj.attr('style') == 'object'){
+			var img = obj.attr('data-img')
+			var currentImg = new Image()
+			var $loading = $('<div class="loading"><b></b><b></b><b></b><b></b><b></b></div>')
+			currentImg.src = img
+			obj.parent().append($loading)
+			console.log(i)
+			banner_data[i].content = banner_data[i].content.replace('></a>',' style="background-image:url('+img+')"></a>')
+			currentImg.onload = function(){
+				setTimeout(function(){
+					$loading.remove()
+					obj.attr('style','background-image:url('+img+')')
+				},200)
+			}	
+		}
+
+	}
+})
+
+
+
+
+})
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_389364_uvlx3smbwgop3nmi.css">
+</head>
+<body>
+<article class="YT_Children_WX_showDetail">
+	<div class="header">
+		<a href="" style="background-image:url(img/child4.jpeg)"></a>
+		<div class="header_detail">
+			<a href="">
+				<p class="name">每日客照</p>
+				<h1>Alena Kopas</h1>
+				<p>落入凡尘的天使</p>
+				<p>ADD: 莫奈的花园</p>
+			</a>
+			<a href="">
+				<span>26</span>/Aug
+			</a>
+		</div>
+	</div>
+	<div class="pic_list">
+		<a href=""><img src="img/child6.jpeg" alt=""></a>
+		<a href=""><img src="img/child7.jpeg" alt=""></a>
+		<a href=""><img src="img/child8.jpeg" alt=""></a>
+		<a href=""><img src="img/child9.jpeg" alt=""></a>
+		<a href="" class="order">立即预约</a>
+	</div>
+	<div class="show_more">
+		<div class="more_header">
+			<h1>更多客照</h1>
+			<p>每日客照 记录每一瞬间</p>
+		</div>
+		<div class="more_pic_list">
+			<a href="">
+				<div style="background-image: url(img/child3.jpeg);"></div>
+				<p>Chromasia</p>
+			</a>
+			<a href="">
+				<div style="background-image: url(img/child2.jpeg);"></div>
+				<p>Pur love</p>
+			</a>
+			<a href="">
+				<div style="background-image: url(img/child1.jpeg);"></div>
+				<p>Adorable</p>
+			</a>
+			<a href="">
+				<div style="background-image: url(img/child3.jpeg);"></div>
+				<p>Chromasia</p>
+			</a>
+			<a href="">
+				<div><span>＋</span>Sorry</div>
+				<p>没有更多客照了</p>
+				<p><small>No more photos</small></p>
+			</a>
+		</div>
+	</div>
+	<section class="WX_V3_poweredby">© Powered by 樱桃互动</section>
+	<div class="YT_Children_WX_footer">
+		<a href="" class="active"><i class="iconfont icon-shouye"></i>首页</a>
+		<a href=""><i class="iconfont icon-huodong"></i>活动</a>
+		<a href=""><i class="iconfont icon-yuyue"></i>预约</a>
+		<a href=""><i class="iconfont icon-bangzhushouce"></i>助手</a>
+		<a href=""><i class="iconfont icon-wode"></i>我的</a>
+	</div>
+</article>
+
+
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+
+
+
+$(function(){
+
+var tuan = new G();
+
+echo.init({
+	domElement: 'M2_customers',
+	offset: 100,
+	throttle: 100,
+	unload: false
+})
+
+echo.init({
+	domElement: 'M2_samples',
+	offset: 100,
+	throttle: 100,
+	unload: false
+})
+/*收藏*/
+$(".icon-shoucang").hide();
+$(".collect").on("click",function(e){
+		 e.preventDefault(); 
+		if(!$(this).is(".active")){
+			$(this).addClass("active");
+			$(this).children(".icon-xinxing").hide();
+			$(this).children(".icon-shoucang").show();
+		}
+		$(this).children("b").addClass("click");
+	})
+//分享
+  $('.share').on('click',function(e){
+    e.preventDefault();
+    var url = $(this).attr('data-url');
+    var title = $(this).attr('data-title');
+    window.open('http://www.jiathis.com/share?url='+ url +'&title='+ encodeURIComponent(title));
+  });
+
+
+})
+</script>
+
+</body>
+</html>

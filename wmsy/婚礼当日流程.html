@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="http://h5.yingtaoyun.com/yingtao/wx/v3/css/app.css" rel="stylesheet">
+</head>
+<body>
+<article>
+	<section class="WX_V3_day_flow">
+		<header>请转发给帮忙的亲朋好友，方便查阅...<i class="i_share_2"></i></header>
+		<div class="schedule_add_btn"><a v-on:click="newClass"><i class="i_add"></i> 创建新的流程分类</a></div>
+		<section class="WX_V3_day_flow_group">
+			<section v-for="(item,idx) in sortedSchedule" class="WX_V3_day_flow_item">
+				<header>{{item.title}}<span><a v-on:click="itemsEdit(item,idx)">编辑</a>|<a v-on:click="itemsDel(item,idx)">删除</a></span></header>
+				<ul>
+					<template v-for="(item,index) in item.schedule">
+						<li v-on:click="mattersFn(item)"><div>{{item.time}}</div><div>{{item.matters}}</div><div>{{item.personnel}}</div><div v-on:click.stop="itemEdit(item,index,idx)"><i class="i_edit"></i></div></li>
+						<li v-if="item.isShow" class="table">
+							<table>
+								<tr><th>时间</th><td>{{item.time}}</td></tr>
+								<tr><th>事宜</th><td>{{item.matters}}</td></tr>
+								<tr><th>人员</th><td>{{item.personnel}}</td></tr>
+							</table>
+						</li>
+					</template>
+				</ul>
+				<footer><i v-on:click="newSchedule(item,idx)" class="i_add"></i></footer>
+			</section>
+		</section>
+
+		<section v-show="dayFlowForm.isShow" class="WX_V3_day_flow_modal modal_blur">
+			<div>
+				<i v-on:click="dayFlowForm.isShow=false" class="i_close"></i>
+				<table>
+					<caption>输入流程名称</caption>
+					<tr><td><input v-model="dayFlowForm.title" type="text"></td></tr>
+					<tr>
+						<td>
+							<button v-on:click="itemsSave"><i class="i_ok_o"></i> 保存</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+
+		<section v-show="dayFlowItemForm.isShow" class="WX_V3_day_flow_modal WX_V3_day_flow_item_modal modal_blur">
+			<div>
+				<i v-on:click="dayFlowItemForm.isShow=false" class="i_close"></i>
+				<table>
+					<caption>创建新的流程</caption>
+					<tr><th>时间</th><td><input v-model="dayFlowItemForm.time" type="time"></td></tr>
+					<tr><th>事宜</th><td><textarea v-model="dayFlowItemForm.matters"></textarea></td></tr>
+					<tr><th>人员</th><td><input v-model="dayFlowItemForm.personnel" type="text"></td></tr>
+				</table>
+				<button v-if="!dayFlowItemForm.isNew" v-on:click="itemDel"><i class="i_close"></i> 删除</button>
+				<button v-if="" v-on:click="itemSave"><i class="i_ok_o"></i> 保存</button>
+			</div>
+		</section>
+
+
+
+
+	</section>
+
+
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="i_gift_2"><sup class="WX_V3_badge">22</sup></i>活动</a>
+			<a href=""><i class="i_reserve"><sup class="WX_V3_badge">8</sup></i>预约</a>
+			<a href=""><i class="i_assistant"><sup class="WX_V3_badge"></sup></i>助手</a>
+			<a href=""><i class="i_my"><sup class="WX_V3_badge"></sup></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+
+</article>
+
+
+
+
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/vue.min.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/zepto.min.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/echo.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/app.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/require.js"></script>
+<script>
+var v3 = new V3();
+
+var	APP = new Vue({
+	el: 'article',
+	data: {
+		dayFlowForm: {
+			isShow: false,
+			title: ''
+		},
+		dayFlowItemForm: {
+			isShow: false,
+			time: ''
+		},
+		dayFlow: [{
+				"title": "新人准备流程",
+				"schedule": [{
+					"time": "08:25",
+					"matters": "婚车到位，婚车装饰到位婚车到位，婚车装饰到位婚车到位，婚车装饰到位婚车到位，婚车装饰到位",
+					"personnel": "小王,小张",
+					"isShow": false
+				},{
+					"time": "06:03",
+					"matters": "婚车到位，婚车装饰到位婚车到位，婚车装饰到位婚车到位，婚车装饰到位婚车到位，婚车装饰到位",
+					"personnel": "小王,小张",
+					"isShow": false
+				},{
+					"time": "16:40",
+					"matters": "婚车到位，婚车装饰到位婚车到位，婚车装饰到位婚车到位，婚车装饰到位婚车到位，婚车装饰到位",
+					"personnel": "小王,小张",
+					"isShow": false
+				}]
+			}, {
+				"title": "新人准备流程",
+				"schedule": [{
+					"time": "06:00",
+					"matters": "婚车到位，婚车装饰到位",
+					"personnel": "小王,小张",
+					"isShow": false
+				}]
+			}
+		]
+	},
+	computed: {
+		sortedSchedule: function(){
+			this.dayFlow.map(function(v){
+				v.schedule.sort(function(a, b){
+					var a = a.time,
+					b = b.time;
+					return a < b ? -1 : a > b ? 1 : 0;
+				});
+			});
+			return this.dayFlow;
+		}
+	},
+	methods: {
+		newClass: function(){
+			this.dayFlowForm.isShow = true;
+			this.dayFlowForm.isNew = true;
+			this.dayFlowForm.title = '';
+		},
+		itemsDel: function(e,i){
+			WXconfirm('确定删除该流程分类吗？',function(){
+				APP.dayFlow.splice(i, 1);
+			})
+		},
+		itemsEdit: function(e,i){
+			this.dayFlowForm.isShow = true;
+			this.dayFlowForm.index = i;
+			this.dayFlowForm.title = e.title;
+		},
+		itemsSave: function(){
+			if(this.dayFlowForm.isNew){
+				this.dayFlow.splice(0,0,{
+					title: this.dayFlowForm.title,
+					schedule: []
+				});
+				this.dayFlowForm.isNew = false;
+			}else{
+				this.dayFlow[this.dayFlowForm.index].title = this.dayFlowForm.title;
+			}
+			this.dayFlowForm.isShow = false;
+		},
+		mattersFn: function(e){
+			e.isShow =! e.isShow;
+		},
+		itemEdit: function(e,i,o){
+			this.dayFlowItemForm.isNew = false;
+			this.dayFlowItemForm.isShow = true;
+			this.dayFlowItemForm.active = e;
+			this.dayFlowItemForm.index = i;
+			this.dayFlowItemForm.idx = o;
+			this.dayFlowItemForm.time = e.time;
+			this.dayFlowItemForm.matters = e.matters;
+			this.dayFlowItemForm.personnel = e.personnel;
+		},
+		itemDel: function(){
+			WXconfirm('确定删除该流程吗？',function(){
+				APP.dayFlow[APP.dayFlowItemForm.idx].schedule.splice(APP.dayFlowItemForm.index,1);
+				APP.dayFlowItemForm.isShow = false;
+			})
+		},
+		itemSave: function(){
+			if(this.dayFlowItemForm.isNew){
+				this.dayFlow[this.dayFlowItemForm.idx].schedule.push({
+					"time": this.dayFlowItemForm.time,
+					"matters": this.dayFlowItemForm.matters,
+					"personnel": this.dayFlowItemForm.personnel,
+					"isShow": true
+				});
+
+			}else{
+				this.dayFlowItemForm.active.time = this.dayFlowItemForm.time;
+				this.dayFlowItemForm.active.matters = this.dayFlowItemForm.matters;
+				this.dayFlowItemForm.active.personnel = this.dayFlowItemForm.personnel;
+			}
+
+			this.dayFlowItemForm.isShow = false;
+		},
+		newSchedule: function(e,i){
+			this.dayFlowItemForm.idx = i;
+			this.dayFlowItemForm.isShow = true;
+			this.dayFlowItemForm.isNew = true;
+			this.dayFlowItemForm.time = new Date().toString().split(' ')[4].replace(/:\d{2}$/,'');
+			this.dayFlowItemForm.matters = '';
+			this.dayFlowItemForm.personnel = '';
+		}
+
+	}
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿/* 脚部 */
+.WX_V3_poweredby {
+    padding: .566667rem 0 0;
+    margin-bottom: 2.7rem;
+    text-align: center;
+    color: #b7b7b7;
+    font-size: 0.5rem;
+    font-weight: 300;
+    background-color: #e5e5e5;
+}
+.YT_Children_WX_footer{
+	display: table;
+	width: 100%;
+	height: 2.666667rem;
+	background-color: #393b4f;
+	position: fixed;
+	bottom: 0;
+}
+.YT_Children_WX_footer a{
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	width: 20%;
+	color: #fff;
+	font-size: 0.469333rem;
+	position: relative;
+}
+.YT_Children_WX_footer a i{
+	display: block;
+	font-size:0.853333rem;
+	margin-bottom: 0.213333rem;
+}
+.YT_Children_WX_footer .active::after{
+	content: "";
+	width: 0;
+	height: 0;
+	border-right: 0.213333rem solid transparent;
+	border-left: 0.213333rem solid transparent;
+	border-top: 0.213333rem solid transparent;
+	border-bottom: 0.213333rem solid #fff;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -0.149333rem;
+}

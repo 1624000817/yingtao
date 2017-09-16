@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<article>
+	<section class="WX_V3_activity_center">
+		<figure>
+			<a href="">
+				<sup data-t="未参与"><i class="i_superscript"></i></sup>
+				<img data-echo="img/invitation_header.png">
+				<figcaption>
+					<label>进行中</label><b>婚博会兑换活动</b>
+					<time><i class="i_time"></i>2天5小时3分后截止</time>
+					<span><i class="i_data"></i>赠送28积分</span>
+				</figcaption>
+			</a>
+		</figure>
+
+		<figure class="end">
+			<sup data-t="未参与"><i class="i_superscript"></i></sup>
+			<img data-echo="img/invitation_header.png">
+			<figcaption>
+				<label>已结束</label><b>婚博会兑换活动</b>
+				<time><i class="i_time"></i>此次活动已截止</time>
+				<span><i class="i_data"></i>赠送28积分</span>
+			</figcaption>
+		</figure>
+
+		<figure>
+			<sup data-t="已参加"><i class="i_superscript"></i></sup>
+			<img data-echo="img/invitation_header.png">
+			<figcaption>
+				<label>进行中</label><b>婚博会兑换活动</b>
+				<time><i class="i_time"></i>2天5小时3分后截止</time>
+				<span><i class="i_data"></i>已领28积分</span>
+			</figcaption>
+		</figure>
+
+
+	</section>
+
+
+
+
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="i_gift_2"><sup class="WX_V3_badge">22</sup></i>活动</a>
+			<a href=""><i class="i_reserve"><sup class="WX_V3_badge">8</sup></i>预约</a>
+			<a href=""><i class="i_assistant"><sup class="WX_V3_badge"></sup></i>助手</a>
+			<a href=""><i class="i_my"><sup class="WX_V3_badge"></sup></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+</article>
+
+
+
+
+<script src="js/vue.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script src="js/require.js"></script>
+<script>
+var v3 = new V3();
+
+
+</script>
+</body>
+</html>

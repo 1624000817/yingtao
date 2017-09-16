@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<article>
+	<section class="WX_V3_coupon_validation_info">
+		<div>
+			<table>
+				<caption>婚博会500元优惠券<p>券号<b>10086－12315－12306</b></p></caption>
+				<tr>
+					<td>
+						期限：2017.05.07 - 2018.09.04<br>
+						姓名：易大力<br>
+						手机：13812345678
+					</td>
+					<td><img src="img/avatar.jpg">万年狐狸精</td>
+				</tr>
+			</table>
+		</div>
+	</section>
+
+	<section class="WX_V3_select_roles_form WX_V3_invitation_form WX_V3_coupon_validation_form">
+		<form>
+			<div></div>
+			<div>
+				<i class="i_name"></i><input v-model="name" type="text" placeholder="请输入您的称呼">
+				<i class="i_mobile"></i><input v-model="mobile" type="tel" placeholder="请输入您的手机">
+				<i class="i_note"></i><textarea v-model="note" type="note" placeholder="请输入您的备注"></textarea>
+			</div>
+			<button v-on:click.prevent="invitationForm">立即验证</button>
+		</form>
+	</section>
+
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+</article>
+
+
+
+
+<script src="js/vue.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script src="js/require.js"></script>
+<script>
+var v3 = new V3();
+
+var	APP = new Vue({
+	el: 'article',
+	data: {
+		"name": '',
+		"mobile": '',
+		"note": ''
+	},
+	computed: {
+	},
+	methods: {
+		invitationForm: function() {
+			if (!/^(13[0-9]|15[0-9]|18[0-9]|14[0-9]|17[0-9])\d{8}$/.test(this.mobile)) {
+				return WXalert('请输入正确的手机号码');
+			}
+
+			$.post('/', {
+				name: this.name,
+				mobile: this.mobile
+			}, function() {
+
+			})
+		}
+	}
+});
+
+</script>
+</body>
+</html>

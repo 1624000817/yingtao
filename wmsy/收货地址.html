@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="http://h5.yingtaoyun.com/yingtao/wx/v3/css/app.css" rel="stylesheet">
+</head>
+<body>
+<article>
+	<section class="WX_V3_address">
+		<header>
+			我的收货地址
+			<a v-on:click="isManage=!isManage">
+				<template v-if="isManage"><i class="i_ok_o"></i> 完成</template>
+				<template v-else><i class="i_set"></i> 管理</template>
+			</a>
+		</header>
+
+		<section class="WX_V3_tables">
+			<section>
+				<div v-for="(item,index) in address" v-on:click="itemEdit(item,index)" class="WX_V3_tables_item">
+					<header><a>{{item.address}}</a><span v-show="isManage"><a v-on:click.stop="itemEdit(item,index)">编辑</a> | <a v-on:click.stop="itemDel(item,index)">删除</a></span></header>
+					<div>{{item.name}}<span>{{item.sex}}</span>{{item.mobile}}</div>
+				</div>
+			</section>
+
+			<a v-on:click="newAddress" v-show="!isManage" class="table_add_btn modal_blur"><i class="i_add"></i> 新增收货地址</a>
+		</section>
+
+
+		<section v-show="addressForm.isShow" class="WX_V3_day_flow_modal WX_V3_day_flow_item_modal modal_blur">
+			<div>
+				<i v-on:click="addressForm.isShow=false" class="i_close"></i>
+				<header>{{addressForm.isNew?"新增收货地址":"编辑收货地址"}}</header>
+				<table>
+					<tr><th>姓名</th><td><input v-model="addressForm.name" type="text" placeholder=""></td></tr>
+					<tr class="WX_V3_select_roles_form">
+						<th>性别</th>
+						<td>
+							<input v-model="addressForm.sex" type="radio" value="女士" id="women"><label for="women"><img src="img/women.png">女士</label>
+							<input v-model="addressForm.sex" type="radio" value="先生" id="men"><label for="men"><img src="img/men.png">先生</label>
+						</td>
+					</tr>
+					<tr><th>电话</th><td><input v-model="addressForm.mobile" type="phone" placeholder=""></td></tr>
+					<tr><th>地址</th><td><input v-model="addressForm.address" type="text" placeholder=""></td></tr>
+				</table>
+				<button v-if="" v-on:click="itemSave"><i class="i_ok_o"></i> 保存</button>
+			</div>
+		</section>
+	</section>
+
+
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="i_gift_2"><sup class="WX_V3_badge">22</sup></i>活动</a>
+			<a href=""><i class="i_reserve"><sup class="WX_V3_badge">8</sup></i>预约</a>
+			<a href=""><i class="i_assistant"><sup class="WX_V3_badge"></sup></i>助手</a>
+			<a href=""><i class="i_my"><sup class="WX_V3_badge"></sup></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+
+</article>
+
+
+
+
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/vue.min.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/zepto.min.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/echo.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/app.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/require.js"></script>
+<script>
+var v3 = new V3();
+
+var	APP = new Vue({
+	el: 'article',
+	data: {
+		isManage: false,
+		addressForm: {
+			isShow: false,
+			sex: 'women'
+		},
+		address: [{
+			"id": 1,
+			"address": "漕河泾孵化中心A座503-505",
+			"name": "张三",
+			"sex": "女士",
+			"mobile": "13912345678"
+		},{
+			"id": 2,
+			"address": "漕河泾孵化中心A座503-505",
+			"name": "张三",
+			"sex": "先生",
+			"mobile": "13912345678"
+		},{
+			"id": 3,
+			"address": "漕河泾孵化中心A座503-505",
+			"name": "张三",
+			"sex": "先生",
+			"mobile": "13912345678"
+		}]
+	},
+	methods: {
+		postFn: function(obj){
+			obj.id = this.addressForm.id;
+			console.log(obj)
+			$.post('/',obj,function(){
+
+			})
+		},
+		itemEdit: function(e,i){
+			if(this.isManage){
+				this.addressForm.isShow = true;
+			}
+			this.addressForm.isNew = false;
+			this.addressForm.active = e;
+			this.addressForm.index = i;
+			this.addressForm.id = e.id;
+			this.addressForm.name = e.name;
+			this.addressForm.sex = e.sex;
+			this.addressForm.mobile = e.mobile;
+			this.addressForm.address = e.address;
+		},
+		itemDel: function(e,i){
+			this.addressForm.id = e.id;
+			WXconfirm('确定要删除该地址吗？',function(){
+				APP.address.splice(i,1);
+				APP.postFn({
+					del: true
+				});
+
+			})
+		},
+		itemSave: function(){
+			if(this.addressForm.isNew){
+				this.address.push({
+					"name": this.addressForm.name,
+					"sex": this.addressForm.sex,
+					"mobile": this.addressForm.mobile,
+					"address": this.addressForm.address,
+					"isShow": true
+				});
+			}else{
+				this.addressForm.active.name = this.addressForm.name;
+				this.addressForm.active.sex = this.addressForm.sex;
+				this.addressForm.active.mobile = this.addressForm.mobile;
+				this.addressForm.active.address = this.addressForm.address;
+			}
+
+			this.addressForm.isShow = false;
+
+			this.postFn({
+				"name": this.addressForm.name,
+				"sex": this.addressForm.sex,
+				"mobile": this.addressForm.mobile,
+				"address": this.addressForm.address,
+				"isNew": this.addressForm.isNew
+			});
+
+		},
+		newAddress: function(){
+			this.addressForm.isShow = true;
+			this.addressForm.isNew = true;
+			this.addressForm.name = '';
+			this.addressForm.sex = 'women';
+			this.addressForm.mobile = '';
+			this.addressForm.address = '';
+		}
+
+	}
+});
+
+</script>
+</body>
+</html>

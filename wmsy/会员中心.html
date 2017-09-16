@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<article>
+	<figure class="WX_V3_member_center_header">
+		<b></b><b></b><b></b><b></b>
+		<div style="background-image:url('img/member_center_header.png')">
+			<h1><i class="i_vip"></i><img src="img/avatar.jpg">钻石会员</h1>
+			<table>
+				<td>成长值<span>10086</span></td>
+				<td>当前积分<span>1980</span></td>
+				<td>当前折扣<span>9折</span></td>
+			</table>
+			<figcaption><a href="">[钻石会员特惠]998积分兑换小熊电热饭盒<i class="i_arrow_right"></i></a></figcaption>
+		</div>
+	</figure>
+	<section class="WX_V3_member_center_nav">
+		<a href=""><img src="img/member_center_nav_1.png"></a>
+		<a href=""><img src="img/member_center_nav_2.png"></a>
+	</section>
+
+	<figure class="WX_V3_banner">
+		<img src="img/banner_3.jpg">
+	</figure>
+
+	<section class="WX_V3_task_center_menu">
+		<table>
+			<td v-bind:class={"active":tabCurrent==0} v-on:click="memberTabFn(0)"><a>成长值解读</a></td>
+			<td v-bind:class={"active":tabCurrent==1} v-on:click="memberTabFn(1)"><a>成长值明细</a></td>
+		</table>
+	</section>
+
+	<section v-if="tabCurrent==0" class="WX_V3_growth_wrap">
+		<header><i class="i_help"></i> 什么是成长值</header>
+		<div>
+			<blockquote>
+				成长值是会员通过消费，接取任务，参加活动所获得的，
+				每获得1个积分即可累计1点成长值，累计成长值总额决定
+				您的会员级别。
+				积分商城兑换商品只消耗积分不消耗成长值。
+			</blockquote>
+
+			<div class="level_table">
+				<header>会员等级对照表</header>
+				<table>
+					<tr><th>会员等级</th><th>所需成长值</th><th>积分商城折扣</th></tr>
+					<tr><td><img data-echo="img/level_1.png"> 注册会员</td><td>0</td><td>无</td>
+					<tr><td><img data-echo="img/level_2.png"> 铜牌会员</td><td>100</td><td>9.8</td>
+					<tr><td><img data-echo="img/level_3.png"> 银牌会员</td><td>1000</td><td>9.5</td>
+					<tr><td><img data-echo="img/level_4.png"> 金牌会员</td><td>5000</td><td>9</td>
+					<tr><td><img data-echo="img/level_5.png"> 钻石会员</td><td>100000</td><td>8.5</td>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<section v-if="tabCurrent==1" class="WX_V3_growth_wrap">
+		<div>
+			<div class="level_table">
+				<header>我的成长值明细</header>
+				<table>
+					<tr><th>时间</th><th>来源</th><th>成长值</th></tr>
+					<tr><td>2017.07.01</td><td>0</td><td>无</td>
+					<tr><td>2017.07.01</td><td>100</td><td>9.8</td>
+					<tr><td>2017.07.01</td><td>1000</td><td>9.5</td>
+					<tr><td>2017.07.01</td><td>5000</td><td>9</td>
+					<tr><td>2017.07.01</td><td>100000</td><td>8.5</td>
+				</table>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+	<section class="WX_V3_growth_wrap">
+		<header><i class="i_help"></i> 如何获得</header>
+	</section>
+
+	<section class="WX_V3_center_menu">
+		<a href=""><div><i class="i_personal c_ffa573"></i>我的签约</div><div>签约即可获得1000积分<i class="i_arrow_right"></i></div></a>
+		<a v-on:click="sign.isShow=true"><div><i class="i_sign c_ffa573"></i>每日签到</div><div>签到送10积分<i class="i_arrow_right"></i></div></a>
+		<a href=""><div><i class="i_task c_ff7394"></i>任务中心</div><div>领任务 得积分<i class="i_arrow_right"></i></div></a>
+		<a href=""><div><i class="i_invitation c_ff7394"></i>邀请新人</div><div>新人签约即可获得500积分<i class="i_arrow_right"></i></div></a>
+		<a href="" interval><div><i class="i_gift c_9173ff"></i>最新活动<span class="WX_V3_badge new">NEW</span></div><div>美丽女人节千人团购<i class="i_arrow_right"></i></div></a>
+	</section>
+
+
+
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="i_gift_2"><sup class="WX_V3_badge">22</sup></i>活动</a>
+			<a href=""><i class="i_reserve"><sup class="WX_V3_badge">8</sup></i>预约</a>
+			<a href=""><i class="i_assistant"><sup class="WX_V3_badge"></sup></i>助手</a>
+			<a href=""><i class="i_my"><sup class="WX_V3_badge"></sup></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+
+	<div v-show="sign.isShow" style="display:none">
+		<wedding-sign-component v-bind:data="sign"></wedding-date-component>
+	</div>
+
+</article>
+
+<script src="js/vue.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script src="js/require.js"></script>
+<script>
+var v3 = new V3();
+
+var	APP = new Vue({
+	el: 'article',
+	data: {
+		tabCurrent: 0,
+		sign: {
+			isShow: false,
+			day: 2,
+			points: 1980,
+			plus: [5,15,35],
+			btnTitle: '去赚积分',
+			btnUrl: ''
+		}
+	},
+	components: {
+		'wedding-sign-component': weddingSignComponent
+	},
+	computed: {
+	},
+	methods: {
+		memberTabFn: function(e){
+			this.tabCurrent = e
+		}
+	}
+});
+
+</script>
+</body>
+</html>

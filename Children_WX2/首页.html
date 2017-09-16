@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_389364_ksu7xanfav2t9.css">
+</head>
+<body>
+<article class="YT_Children_WX_index">
+	<div class="index_banner_all">
+		<a href="" class="index_banner" style="background-image:url(img/banner5.jpeg)"></a>
+		<div class="index_banner_right">
+			<a href="#YT_Children_WX_show">
+				<p>查看客照</p>
+				<span>Guest photos</span>
+			</a>
+			<a href="#YT_Children_WX_sample">
+				<p>查看样照</p>
+				<span>Sample</span>
+			</a>
+			<a href="#YT_Children_WX_set">
+				<p>查看套系</p>
+				<span>Series</span>
+			</a>
+		</div>
+		<div class="index_banner_bottom">
+			<b>Bill Geka</b>
+			<p>樱桃互动</p>
+			<div class="welcome">
+				<span>Welcome to read</span>
+			</div>
+		</div>
+	</div>
+	<!-- 客照 -->
+	<div id="YT_Children_WX_show" class="YT_Children_WX_index_show">
+		<div class="index_show_header">
+			客照<span>特惠客照&nbsp你的选择</span>
+		</div>
+		<div class="index_pic_list">
+			<a href="" style="background-image: url(img/child4.jpeg);"></a>
+			<a href="" style="background-image: url(img/child2.jpeg);"></a>
+			<a href="">
+				<div>+<span>more</span></div>
+				<p>更多客照</p>
+				<p class="last">Other guest photos</p>
+			</a>
+		</div>
+	</div>
+	<!-- 样照 -->
+	<div id="YT_Children_WX_sample" class="YT_Children_WX_index_show">
+		<div class="index_show_header">
+			样照<span>独家样照&nbsp大气端庄</span>
+		</div>
+		<div class="index_pic_list">
+			<a href="" style="background-image: url(img/child14.jpeg);"></a>
+			<a href="" style="background-image: url(img/child13.jpeg);"></a>
+			<a href="" style="background-image: url(img/child12.jpeg);"></a>
+			<a href="">
+				<div>+<span>more</span></div>
+				<p>更多客照</p>
+				<p class="last">Other guest photos</p>
+			</a>
+		</div>
+	</div>
+	<!-- 套系 -->
+	<div id="YT_Children_WX_set" class="YT_Children_WX_index_show">
+		<div class="index_show_header">
+			套系<span>特惠特系&nbsp多种选择</span>
+		</div>
+		<div class="index_pic_list">
+			<a href="">
+				<div style="background-image: url(img/banner4.jpg);"></div>
+				<div class="detail">
+					<div>
+						<b>Magda</b>
+						<p>落入凡尘的天使</p>
+					</div>
+					<div>
+						<del>￥:000</del>
+						<span><sup>￥</sup>000</span>
+					</div>
+				</div>
+			</a>
+			<a href="">
+				<div style="background-image: url(img/child14.jpeg);"></div>
+				<div class="detail">
+					<div>
+						<b>Magda</b>
+						<p>落入凡尘的天使</p>
+					</div>
+					<div>
+						<del>￥:000</del>
+						<span><sup>￥</sup>000</span>
+					</div>
+				</div>
+			</a>
+			<a href="">
+				<div>
+				+
+				<span>more</span>
+				<p>更多套系</p>
+				<p class="last">Other series</p>
+				</div>
+				
+			</a>
+		</div>
+	</div>
+	<a href=""><img src="img/banner6.jpg" alt=""></a>
+		 <section class="WX_V3_offer">
+		  <div class="wrap">
+		    <table>
+		      <tr>
+		        <th class="name">
+		         宝宝多大了？
+		        <td>
+		          <label class="active">满月</label>
+		          <label class="">100天</label>
+		          <label class="">1-3岁</label>
+		          <label class="">4-8岁</label>
+		          <label class="">大儿童</label></td>
+		      </tr>
+		      <tr>
+		        <th class="name">
+		          风格喜好？
+		        <td>
+		          <label class="active">韩式</label>
+		          <label class="">森系</label>
+		          <label class="">自然</label>
+		          <label class="">欧美</label>
+		          </td>
+		     	</tr>
+
+				<tr class="none">
+					<td>家长姓名</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text">
+					</td>
+					<td class="parent">
+						
+						<div><i class="iconfont icon-nansheng"></i>宝爸</div>
+						<div class="first active"><i class="iconfont icon-nvsheng"></i>宝妈</div>
+					</td>
+				</tr>
+				<tr class="none">
+					<td>联系方式</td>
+				</tr>
+				<tr class="all">
+					<td>
+						<input type="text">
+					</td>
+				</tr>
+		    </table>
+		    
+		  <button type="button">获取报价</button>
+			  </section> 
+
+
+	<section class="WX_V3_poweredby">© Powered by 樱桃互动</section>
+	<div class="YT_Children_WX_footer">
+		<a href="" class="active"><i class="iconfont icon-shouye"></i>首页</a>
+		<a href=""><i class="iconfont icon-huodong"></i>活动</a>
+		<a href=""><i class="iconfont icon-yuyue"></i>预约</a>
+		<a href=""><i class="iconfont icon-bangzhushouce"></i>助手</a>
+		<a href=""><i class="iconfont icon-wode"></i>我的</a>
+	</div>
+</article>
+
+
+
+
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider_v2.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/app.js "></script>
+
+<script>
+
+
+$(function(){
+
+var tuan = new G();
+
+echo.init({
+	domElement: 'M2_customers',
+	offset: 100,
+	throttle: 100,
+	unload: false
+})
+
+echo.init({
+	domElement: 'M2_samples',
+	offset: 100,
+	throttle: 100,
+	unload: false
+});
+
+
+$("td label").on("click",function(){
+	$(this).addClass("active").siblings("label").removeClass("active")
+})
+$(".parent div").on("click",function(){
+	$(this).addClass("active").siblings("div").removeClass("active")
+})
+ 
+})
+</script>
+
+</body>
+</html>

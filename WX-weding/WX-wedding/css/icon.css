@@ -1,0 +1,202 @@
+@font-face{
+  font-family: 'V3';
+  src:url('http://h5.yingtaoyun.com/yingtao/wx/1709/font/v3.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  }
+
+[class^="i_"], [class*=" i_"]{
+    font-family:'V3' !important;
+    speak:none;
+    font-style:normal;
+    font-weight:normal;
+    font-variant:normal;
+    text-transform:none;
+    line-height:1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+.i_trash:before {
+  content: "\e93b";
+}
+.i_share_2:before {
+  content: "\e939";
+}
+.i_superscript:before {
+  content: "\e937";
+}
+.i_note:before {
+  content: "\e933";
+}
+.i_mobile:before {
+  content: "\e934";
+}
+.i_name:before {
+  content: "\e935";
+}
+.i_used:before {
+  content: "\e932";
+}
+.i_expired:before {
+  content: "\e931";
+}
+.i_help:before {
+  content: "\e92f";
+}
+.i_share:before {
+  content: "\e92d";
+}
+.i_personal:before {
+  content: "\e92e";
+}
+.i_invitation_2:before {
+  content: "\e929";
+}
+.i_invitation_1:before {
+  content: "\e92a";
+}
+.i_v:before {
+  content: "\e92b";
+}
+.i_candy:before {
+  content: "\e92c";
+}
+.i_ok_o:before {
+  content: "\e927";
+}
+.i_edit:before {
+  content: "\e918";
+}
+.i_car:before {
+  content: "\e919";
+}
+.i_makeup:before {
+  content: "\e91a";
+}
+.i_wedding_dress:before {
+  content: "\e91b";
+}
+.i_camera:before {
+  content: "\e91c";
+}
+.i_unlock:before {
+  content: "\e91d";
+}
+.i_hotel:before {
+  content: "\e91e";
+}
+.i_plane:before {
+  content: "\e91f";
+}
+.i_balloon:before {
+  content: "\e920";
+}
+.i_video:before {
+  content: "\e921";
+}
+.i_microphone:before {
+  content: "\e922";
+}
+.i_locking:before {
+  content: "\e923";
+}
+.i_add:before {
+  content: "\e924";
+}
+.i_video_camera:before {
+  content: "\e925";
+}
+.i_jewellery:before {
+  content: "\e926";
+}
+.i_mall:before {
+  content: "\e917";
+}
+.i_gift_3:before {
+  content: "\e914";
+}
+.i_money:before {
+  content: "\e915";
+}
+.i_file:before {
+  content: "\e916";
+}
+.i_gift_2:before {
+  content: "\e90d";
+}
+.i_home:before {
+  content: "\e90f";
+}
+.i_my:before {
+  content: "\e910";
+}
+.i_reserve:before {
+  content: "\e911";
+}
+.i_assistant:before {
+  content: "\e912";
+}
+.i_ok:before {
+  content: "\e90c";
+}
+.i_set:before {
+  content: "\e90b";
+}
+.i_heart:before {
+  content: "\e900";
+}
+.i_shopping_cart:before {
+  content: "\e901";
+}
+.i_vip:before {
+  content: "\e902";
+}
+.i_ticket:before {
+  content: "\e903";
+}
+.i_gift:before {
+  content: "\e904";
+}
+.i_sign:before {
+  content: "\e905";
+}
+.i_task:before {
+  content: "\e906";
+}
+.i_fav:before {
+  content: "\e907";
+}
+.i_data:before {
+  content: "\e908";
+}
+.i_problem:before {
+  content: "\e909";
+}
+.i_invitation:before {
+  content: "\e90a";
+}
+.i_close:before {
+  content: "\e913";
+}
+.i_time:before {
+  content: "\e936";
+}
+.i_more:before {
+  content: "\e938";
+}
+.i_arrow_right:before {
+  content: "\e90e";
+}
+.i_map_marker:before {
+  content: "\e930";
+}
+.i_money2:before {
+  content: "\e928";
+}
+.i_search:before {
+  content: "\e93a";
+}
+.i_horn:before {
+  content: "\e93c";
+}

@@ -1,0 +1,54 @@
+﻿.icon-xin:before {
+	color: $webcolor1;
+	} 
+.WX_v3_iSlide li.active{
+	background: $webcolor1;
+}
+.WX_v3_content li .font p{
+	color:$webcolor1;
+}
+.WX_v3_detail .WX_v3_first h1 div span{
+	background-color: $webcolor1;
+}
+.WX_v3_detail .submit a{
+	background-color: $webcolor1;
+}
+.WX_v3_snapshot .recommend span{
+	background-color: $webcolor1;
+}
+.icon-liwu{
+	color: $webcolor1;
+}
+.WX_v3_detail .WX_v3_appointment span{
+	background: $webcolor1;
+}
+.WX_v3_Indexnav .Indexnav_list ._round{
+	background: $webcolor1
+}
+.WX_v3_more .more_top:after{
+	background-color: $webcolor1;
+}
+.WX_v3_package li .package_information b{
+	color: $webcolor1;
+}
+.WX_v3_detail .WX_v3_commend:after{
+	background-color: $webcolor1;
+}
+.WX_v3_nav .on{
+	color: $webcolor1;
+}
+.WX_v3_nav .on:after{
+ 	border-bottom: 0.106667rem solid $webcolor1;
+}
+.WX-v3-thumbnail .active{
+	outline:0.064rem solid $webcolor1;
+}
+.WX_v3_pice span{
+	color: $webcolor1;
+}
+.WX_v3_tuijian .WX_v3_show p span{
+	color: $webcolor1;
+}
+.WX_V3_offer button{
+	background-color: $webcolor1;
+}

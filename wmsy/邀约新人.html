@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<article>
+	<figure class="WX_V3_select_roles_header">
+		<img src="img/invitation_header.png">
+	</figure>
+
+
+	<section class="WX_V3_task_center_menu WX_V3_invitation_menu">
+		<table>
+			<td v-bind:class={"active":tabCurrent==0} v-on:click="invitationTabFn(0)"><a>邀约新人</a></td>
+			<td v-bind:class={"active":tabCurrent==1} v-on:click="invitationTabFn(1)"><a>我的邀约<sup class="WX_V3_badge">22</sup></a></td>
+		</table>
+	</section>
+
+
+	<section v-if="tabCurrent==0" class="WX_V3_select_roles_form WX_V3_invitation_form">
+		<form>
+			<div>
+				<table>
+					<td><input v-model="sex" type="radio" value="women" id="women"><label for="women"><img src="img/women.png">新娘</label></td>
+					<td>或</td>
+					<td><input v-model="sex" type="radio" value="men" id="men"><label for="men"><img src="img/men.png">新郎</label></td>
+				</table>
+			</div>
+
+			<div>
+				<i class="i_name"></i><input v-model="name" type="text" placeholder="请输入您的称呼">
+				<i class="i_mobile"></i><input v-model="mobile" type="tel" placeholder="请输入您的手机">
+				<i class="i_note"></i><textarea v-model="note" type="note" placeholder="请输入您的备注"></textarea>
+			</div>
+			<button v-on:click.prevent="invitationForm">立即推荐</button>
+		</form>
+	</section>
+
+
+	<section v-if="tabCurrent==1" class="WX_V3_growth_wrap WX_V3_invitation_table">
+		<div>
+			<div class="level_table">
+				<table>
+					<tr><th>姓名</th><th>推荐时间</th><th>当前状态</th><th>积分奖励</th></tr>
+					<tr><td>张三</td><td>2017.07.01</td><td class="c_73c2ff">邀约中</td><td>0</td>
+					<tr><td>张三</td><td>2017.07.01</td><td class="c_73c2ff">门店</td><td>0</td>
+					<tr><td>张三</td><td>2017.07.01</td><td class="c_999">无效</td><td>0</td>
+					<tr><td>张三</td><td>2017.07.01</td><td class="c_ffa573">已签约</td><td>+500</td>
+					<tr><td>张三</td><td>2017.07.01</td><td class="c_ffa573">已签约</td><td>+500</td>
+				</table>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="i_gift_2"><sup class="WX_V3_badge">22</sup></i>活动</a>
+			<a href=""><i class="i_reserve"><sup class="WX_V3_badge">8</sup></i>预约</a>
+			<a href=""><i class="i_assistant"><sup class="WX_V3_badge"></sup></i>助手</a>
+			<a href=""><i class="i_my"><sup class="WX_V3_badge"></sup></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+</article>
+
+
+
+
+<script src="js/vue.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script src="js/require.js"></script>
+<script>
+var v3 = new V3();
+
+var	APP = new Vue({
+	el: 'article',
+	data: {
+		"tabCurrent": 0,
+		"name": '',
+		"mobile": '',
+		"note": '',
+		"sex": 'women'
+	},
+	computed: {
+	},
+	methods: {
+		invitationTabFn: function(e){
+			this.tabCurrent = e
+		},
+		invitationForm: function() {
+			if (!/^(13[0-9]|15[0-9]|18[0-9]|14[0-9]|17[0-9])\d{8}$/.test(this.mobile)) {
+				return WXalert('请输入正确的手机号码');
+			}
+
+			$.post('/', {
+				name: this.name,
+				mobile: this.mobile
+			}, function() {
+
+			})
+		}
+	}
+});
+
+</script>
+</body>
+</html>

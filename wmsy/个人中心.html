@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app_children.css" rel="stylesheet">
+</head>
+<body>
+<article>
+	<figure class="WX_V3_center_header">
+		<table>
+			<td><img src="img/avatar.jpg"></td>
+			<td>万年狐狸精十妹<br><a href=""><i class="i_data"></i> 1980<i class="i_arrow_right"></i></a></td>
+			<td><a href=""><i class="i_personal"></i> 888888</a></td>
+			<!-- <td><a href=""><i class="i_set"></i> 设置<i class="i_arrow_right"></i></a></td> -->
+		</table>		
+	</figure>
+	<section class="WX_V3_center_nav">
+		<a v-on:click="myPoints"><i class="i_data"><sub class="WX_V3_badge">698</sub></i>我的积分</a>
+		<a href=""><i class="i_shopping_cart"></i>积分商城</a>
+		<a v-on:click="signFn"><i class="i_sign"></i>每日签到</a>
+		<a v-on:click="earnPoints.isShow=true"><i class="i_problem"></i>玩赚积分</a>
+	</section>
+
+	<section class="WX_V3_center_menu">
+		<a href="" interval><div><i class="i_task c_ffa573"></i>任务中心</div><div>领任务 得积分<i class="i_arrow_right"></i></div></a>
+		<a href=""><div><i class="i_invitation c_ff7394"></i>邀请新人</div><div>新人签约即可获得500积分<i class="i_arrow_right"></i></div></a>
+		<a href="" interval><div><i class="i_heart c_ff73e3"></i>结婚助手<span class="WX_V3_badge hot">HOT</span></div><div>相册、请柬、预算、微信墙<i class="i_arrow_right"></i></div></a>
+		<a href="" interval><div><i class="i_gift c_9173ff"></i>最新活动<span class="WX_V3_badge new">NEW</span></div><div>美丽女人节千人团购<i class="i_arrow_right"></i></div></a>
+		<a href=""><div><i class="i_vip c_ffc000"></i>会员尊享</div><div>海量积分等您领取<i class="i_arrow_right"></i></div></a>
+		<a href="" interval><div><i class="i_ticket c_73c2ff"></i>我的卡券</div><div>10张<i class="i_arrow_right"></i></div></a>
+		<a href="" interval><div><i class="i_sign c_ffa573"></i>我的预约</div><div>已确认<i class="i_arrow_right"></i></div></a>
+		<a href=""><div><i class="i_ok c_00d027"></i>我的订单</div><div>已签约<i class="i_arrow_right"></i></div></a>
+		<a href=""><div><i class="i_fav c_e4c100"></i>我的收藏</div><div><i class="i_arrow_right"></i></div></a>
+	</section>
+
+<!-- 	<section class="WX_V3_pagination">
+		<ul class="pagination">
+			<li class="active"><a href="/show.html?p=1">1</a></li>
+			<li><a href="/show.html?p=2">2</a></li>
+			<li><a href="/show.html?p=3">3</a></li>
+			<li><a href="/show.html?p=2" class="next">NEXT</a></li>
+		</ul>
+	</section>
+ -->	
+ 	<section class="WX_V3_pagination">
+		<pages-component v-bind:data="pagesTwo"></pages-component>
+	</section>
+
+
+
+
+
+
+
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="i_gift_2"><sup class="WX_V3_badge">22</sup></i>活动</a>
+			<a href=""><i class="i_reserve"><sup class="WX_V3_badge">8</sup></i>预约</a>
+			<a href=""><i class="i_assistant"><sup class="WX_V3_badge"></sup></i>助手</a>
+			<a href=""><i class="i_my"><sup class="WX_V3_badge"></sup></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+
+	<div v-show="sign.isShow" style="display:none">
+		<wedding-sign-component v-bind:data="sign"></wedding-date-component>
+	</div>
+
+	<div v-show="roles.isShow" style="display:none">
+		<select-roles-component v-bind:data="roles" v-on:roles="rolesFn"></select-roles-component>
+	</div>
+
+
+	<div v-show="earnPoints.isShow" style="display:none">
+		<earn-points-component v-bind:data="earnPoints"></earn-points-component>
+	</div>
+
+	
+	<div v-show="list.isShow" style="display:none">
+		<list-component v-bind:data="list"></list-component>
+	</div>
+
+
+
+
+
+</article>
+
+<script src="js/vue.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script src="js/require.js"></script>
+<script>
+var v3 = new V3();
+
+var WX_V3 = {
+	pagesFn: function(d){
+		if(d.type == 2){
+			return console.log(d)
+		}
+		var list = {
+			data: [{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "0"
+			},{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "0"
+			},{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "1"
+			},{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "1"
+			},{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "1"
+			}],
+			pages: {
+				current: 1,
+				showItem: 3,
+				allpage: 10
+			}
+		};
+
+		APP.list.data = list.data;
+	}
+};
+
+
+//列表分页组件
+var listComponent = {
+	props: ['data'],
+	template: '\
+		<section class="WX_V3_earn_points">\
+			<div>\
+				<i class="i_close" v-on:click.prevent="data.isShow=false"></i>\
+				<blockquote>\
+					<section class="WX_V3_growth_wrap">\
+						<div>\
+							<div class="level_table">\
+								<table>\
+									<tr><th>时间</th><th>来源</th><th>成长值</th></tr>\
+									<tr v-for="item in data.data"><td>{{item.time}}</td><td>{{item.source}}</td><td>{{item.value}}</td>\
+								</table>\
+							</div>\
+						</div>\
+					</section>\
+					<section class="WX_V3_pagination"><pages-component v-bind:data="data.pages"></pages-component></section>\
+				</blockquote>\
+			</div>\
+		</section>',
+	components: {
+		'pages-component': pagesComponent
+	}
+};
+
+
+
+
+var	APP = new Vue({
+	el: 'article',
+	data: {
+		pagesTwo: {
+			type:2,
+			current:1,
+			showItem:5,
+			allpage:13
+		},
+		list: {
+			isShow: false,
+			data: [{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "1"
+			},{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "1"
+			},{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "1"
+			},{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "1"
+			},{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "1"
+			}],
+			pages: {
+				current: 1,
+				showItem: 3,
+				allpage: 10
+			}
+		},
+		earnPoints: {
+			isShow: false,
+			content: ''
+		},
+		sign: {
+			banner: 'img/children/daily_sign_bg.png',
+			isShow: false,
+			day: 2,
+			points: 1980,
+			plus: [5,15,35],
+			btnTitle: '去赚积分',
+			pointsName: '金币',
+			btnUrl: ''
+		},
+		roles: {
+			name: '123123',
+			mobile: '',
+			sex: 'women',
+			women: ['新娘','img/women.png'],
+			men: ['新郎','img/men.png'],
+			isShow: false,
+			isPopup: true,
+			url: '',
+			tips: '温馨提示：完成注册立即送100积分，积分可进行抽奖积分可进行抽奖'
+		}
+	},
+	components: {
+		'wedding-sign-component': weddingSignComponent,
+		'select-roles-component': selectRolesComponent,
+		'earn-points-component': earnPointsComponent,
+		'pages-component': pagesComponent,
+		'list-component': listComponent
+	},
+	methods: {
+		myPoints: function() { //每日签到
+			this.roles.isShow = true;
+			this.roles.url = 'http://baidu.com';
+		},
+		signFn: function() { //每日签到
+
+			//this.roles.isShow = true;
+			this.sign.isShow = true;
+			//this.roles.url = 'http://dasda.com';
+
+		},
+		rolesFn: function(d) { //选择角色
+			console.log(d)
+
+
+			if (!/^(13[0-9]|15[0-9]|18[0-9]|14[0-9]|17[0-9])\d{8}$/.test(d.mobile)) {
+				return WXalert('请输入正确的手机号码');
+			}
+			$.post('/', {
+				name: d.name,
+				mobile: d.mobile
+
+			})
+
+
+		}
+	}
+});
+
+
+</script>
+</body>
+</html>

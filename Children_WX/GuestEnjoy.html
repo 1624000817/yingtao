@@ -27,18 +27,16 @@
 <link href="css/app.css" rel="stylesheet">
 </head>
 <body>
-<article class="Children_WX_GuestEnjoy">
+<article class="Children_WX_GuestEnjoy" style="min-height: 20rem">
 	<div class="Children_WX_GuestEnjoy_list">
 		<div>
-			<a href="">
-				<img data-echo="img/child2.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
-			</a>
+			<a href="" style="background-image: url(img/child2.jpg);"></a>
 			<div class="GuestEnjoy_list_explain">
 				<h1>小公主-亚楠</h1>
 				<p>ADD&nbsp:&nbsp迪奥花园&nbsp/&nbsp儿童系列</p>
 				<p>AGE&nbsp:&nbsp2-4岁</p>
 				<div class="GuestEnjoy_list_date">
-					<b>MON</b><br>
+					<b>MON</b>
 					<a href="">26</a>
 				</div>
 				<span class="GuestEnjoy_collect">
@@ -52,15 +50,73 @@
 			</div>
 		</div>
 		<div>
-			<a href="">
-				<img data-echo="img/child5.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
-			</a>
+			<a href="" style="background-image: url(img/child2.jpg);"></a>
 			<div class="GuestEnjoy_list_explain">
 				<h1>小公主-亚楠</h1>
 				<p>ADD&nbsp:&nbsp迪奥花园&nbsp/&nbsp儿童系列</p>
 				<p>AGE&nbsp:&nbsp2-4岁</p>
 				<div class="GuestEnjoy_list_date">
-					<b>MON</b><br>
+					<b>MON</b>
+					<a href="">26</a>
+				</div>
+				<span class="GuestEnjoy_collect">
+					<i class="iconfont icon-shoucang">&#xe66d;</i>
+					<i class="iconfont icon-aixin">&#xe6f1;</i>
+					<span>已收藏</span>
+				</span>
+				<span class="GuestEnjoy_relay">
+					<i class="iconfont icon-zhuanfa">&#xe634;</i>
+				</span>
+			</div>
+		</div>
+		<div>
+			<a href="" style="background-image: url(img/child2.jpg);"></a>
+			<div class="GuestEnjoy_list_explain">
+				<h1>小公主-亚楠</h1>
+				<p>ADD&nbsp:&nbsp迪奥花园&nbsp/&nbsp儿童系列</p>
+				<p>AGE&nbsp:&nbsp2-4岁</p>
+				<div class="GuestEnjoy_list_date">
+					<b>MON</b>
+					<a href="">26</a>
+				</div>
+				<span class="GuestEnjoy_collect">
+					<i class="iconfont icon-shoucang">&#xe66d;</i>
+					<i class="iconfont icon-aixin">&#xe6f1;</i>
+					<span>已收藏</span>
+				</span>
+				<span class="GuestEnjoy_relay">
+					<i class="iconfont icon-zhuanfa">&#xe634;</i>
+				</span>
+			</div>
+		</div>
+		<div>
+			<a href="" style="background-image: url(img/child5.jpg);"></a>
+			<div class="GuestEnjoy_list_explain">
+				<h1>小公主-亚楠</h1>
+				<p>ADD&nbsp:&nbsp迪奥花园&nbsp/&nbsp儿童系列</p>
+				<p>AGE&nbsp:&nbsp2-4岁</p>
+				<div class="GuestEnjoy_list_date">
+					<b>MON</b>
+					<a href="">26</a>
+				</div>
+				<span class="GuestEnjoy_collect">
+					<i class="iconfont icon-shoucang">&#xe66d;</i>
+					<i class="iconfont icon-aixin">&#xe6f1;</i>
+					<span>已收藏</span>
+				</span>
+				<span class="GuestEnjoy_relay">
+					<i class="iconfont icon-zhuanfa">&#xe634;</i>
+				</span>
+			</div>
+		</div>
+		<div>
+			<a href="" style="background-image: url(img/child5.jpg);"></a>
+			<div class="GuestEnjoy_list_explain">
+				<h1>小公主-亚楠</h1>
+				<p>ADD&nbsp:&nbsp迪奥花园&nbsp/&nbsp儿童系列</p>
+				<p>AGE&nbsp:&nbsp2-4岁</p>
+				<div class="GuestEnjoy_list_date">
+					<b>MON</b>
 					<a href="">26</a>
 				</div>
 				<span class="GuestEnjoy_collect">
@@ -85,7 +141,7 @@
 <script src="js/iSlider.plugin.dot.js"></script>
 <script src="js/echo.js"></script>
 <script src="js/app.js"></script>
-
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script> 
 <script>
 
 
@@ -107,9 +163,47 @@ echo.init({
 	throttle: 100,
 	unload: false
 })
+
+$(".Children_WX_GuestEnjoy_list").on("touchmove",function(){
+		var viewW =$(".Children_WX_GuestEnjoy_list").width();
+        var contentW =$(".Children_WX_GuestEnjoy_list").get(0).scrollWidth; 
+		var L=$(".Children_WX_GuestEnjoy_list").scrollLeft();
+		var datainit=[
+			{"src":"child1.jpg"},
+			{"src":"child2.jpg"}
+		];
+		if(contentW-viewW<(L+1)) { 
+			fun(datainit)
+		}
+		
+	
+})
+function fun(datainit){
+	$.each(datainit,function(n,val){
+
+		var str='<a href="">'
+		+'<img data-echo-background="img/'+val.src+'"'+'src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">'
+		+'</a><div class="GuestEnjoy_list_explain">'
+		+'<h1>小公主-亚楠</h1>'
+		+'<p>ADD&nbsp:&nbsp迪奥花园&nbsp/&nbsp儿童系列</p>'
+		+'<p>AGE&nbsp:&nbsp2-4岁</p><div class="GuestEnjoy_list_date">'
+		+'<b>MON</b><a href="">'
+		+'26</a></div><span class="GuestEnjoy_collect">'
+		+'<i class="iconfont icon-shoucang">&#xe66d;</i><i class="iconfont icon-aixin">'
+		+'&#xe6f1;</i><span>'
+		+'已收藏</span></span>'
+		+'<span class="GuestEnjoy_relay"><i class="iconfont icon-zhuanfa">'
+		+'&#xe634;</i></span>'
+		+'</div></div>'
+		var ODiv=$("<div>").html(str);
+		ODiv.appendTo($(".Children_WX_GuestEnjoy_list"));
+		});
+}
+
+
 //收藏
-$(".icon-aixin").hide();
-$(".GuestEnjoy_collect").on("click",function(){
+ $(".icon-aixin").hide();
+$(".Children_WX_GuestEnjoy_list").on("click",".GuestEnjoy_collect",function(){
 		if(!$(this).is(".active")){
 			$(this).addClass("active");
 			$(this).children(".icon-shoucang").hide();
@@ -117,8 +211,9 @@ $(".GuestEnjoy_collect").on("click",function(){
 		}
 		$(this).children("span").addClass("click");
 	})
+
 //分享
-  $('.GuestEnjoy_relay').on('click',function(e){
+  $('.Children_WX_GuestEnjoy_list').on('click',".GuestEnjoy_relay",function(e){
     e.preventDefault();
     var url = $(this).attr('data-url');
     var title = $(this).attr('data-title');

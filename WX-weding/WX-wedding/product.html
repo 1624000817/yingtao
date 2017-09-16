@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link rel="stylesheet" type="text/css" href="http://h5.yingtaoyun.com/yingtao/wx/1708/css/footer.css">
+<link href="css/wedding.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_389364_glhtcb8ilajxajor.css">
+
+</head>
+<body>
+<article>
+	<div  class="WX_wedding_productPage">
+		<div class="product_banner">
+
+			<div class="product_big" 
+			style="background-image:url(img/banner8.jpg)">
+				<h3>#全部旅拍#</h3>
+				<p>自由旅拍之系列</p>
+			</div>
+			<div class="thumbnail">
+				<a href="javascript:;"
+				 v-bind:class={"active":tabCurrent==0} 
+				 v-on:click="taskTabFn(0)" 
+				 data-name="全部">全部</a>
+				<a href="javascript:;"
+				 v-bind:class={"active":tabCurrent==1} 
+				 v-on:click="taskTabFn(1)" 
+				 data-name="background-image:url(img/banner14.jpg)" 
+				 style="background-image:url(img/banner14.jpg)"></a>
+				<a href="javascript:;" 
+				v-bind:class={"active":tabCurrent==2} 
+				v-on:click="taskTabFn(2)" 
+				data-name="background-image:url(img/banner23.jpg)" 
+				style="background-image:url(img/banner23.jpg)"></a>
+				<a href="javascript:;" 
+				v-bind:class={"active":tabCurrent==3} 
+				v-on:click="taskTabFn(3)" 
+				data-name="background-image:url(img/banner10.jpg)" 
+				style="background-image:url(img/banner10.jpg)"></a>
+			</div>
+		</div>
+		<template v-for="item in taskListFn">
+			<div class="product_list" v-bind:style="{'background-image':'url('+item.pic+')'}">
+				<p>{{item.name}}</p>
+			</div>
+		</template>
+		</div>
+
+	<section class="WX_V3_poweredby">© Powered by 樱桃互动</section>
+	<div class="YT_Children_WX_footer">
+		<a href="" class="active"><i class="iconfont icon-shouye"></i>首页</a>
+		<a href=""><i class="iconfont icon-huodong1"></i>活动</a>
+		<a href=""><i class="iconfont icon-yuyue"></i>预约</a>
+		<a href=""><i class="iconfont icon-xiaozhushoukuaijie"></i>助手</a>
+		<a href=""><i class="iconfont icon-wode"></i>我的</a>
+	</div>
+
+</article>
+
+<script src="js/vue.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+<script type="text/javascript">
+	new G()
+
+
+var taskData = {
+	"tabCurrent": 0,
+	"taskList": [
+		{
+		"pic":"img/banner17.jpg",
+		"name":"田园系列-自由旅拍",
+		"type": "countryside",
+		"originalPoints": true,
+		"badge": false,
+		
+		},
+		{
+		"pic":"img/banner10.jpg",
+		"name":"海系列-自由旅拍",
+		"type": "sea",
+		"originalPoints": true,
+		"badge": true,
+		
+		},
+		{
+		"pic":"img/banner14.jpg",
+		"name":"城市系列-自由旅拍",
+		"type": "city",
+		"originalPoints": true,
+		"badge": true,
+		
+		},
+		{
+		"pic":"img/banner23.jpg",
+		"name":"田园系列-自由旅拍",
+		"type": "countryside",
+		"originalPoints": false,
+		"badge": false,
+		
+		},
+		{
+		"pic":"img/banner24.jpg",
+		"name":"海系列-自由旅拍",
+		"type": "sea",
+		"originalPoints": false,
+		"badge": false,
+		},
+		{
+		"pic":"img/banner8.jpg",
+		"name":"城市系列系列-自由旅拍",
+		"type": "city",
+		"originalPoints": false,
+		"badge": false,
+		
+		}
+		]
+};
+var	APP = new Vue({
+	el: 'article',
+	data: taskData,
+	computed: {
+		taskListFn: function() { 
+			var self = this;
+			return this.taskList.filter(function(d) {
+				if(self.tabCurrent == 0){
+					$(".product_big h3").html("#全部旅拍#")
+					$(".product_big p").html("自由旅拍之系列")
+					return true;
+				}
+				if(self.tabCurrent == 1){
+					$(".product_big h3").html("#城市旅拍#")
+					$(".product_big p").html("厦门-自由旅拍之城市系列")
+					return d.type == 'city';
+					
+				}
+				if(self.tabCurrent == 2){
+					$(".product_big h3").html("#海洋旅拍#")
+					$(".product_big p").html("青岛-自由旅拍之海系列")
+					return d.type == 'sea';
+				}
+				if(self.tabCurrent == 3){
+					$(".product_big h3").html("#田园旅拍#")
+					$(".product_big p").html("大理-自由旅拍之田园系列")
+					return d.type == 'countryside';
+				}
+			})
+
+		}
+	},
+	methods: {
+		taskTabFn: function(e){
+			this.tabCurrent = e;
+			var src=$(this).attr("style");
+		}
+
+	}
+});
+
+$(".thumbnail a").on("click",function(){
+	var src=$(this).attr("data-name");
+	if(src=="全部"){
+		$(".product_big").attr("style","background-image:url(img/banner8.jpg)")
+	}else{
+		$(".product_big").attr("style",src);
+	}
+	
+})
+	
+</script>
+</html>

@@ -1,0 +1,1560 @@
+﻿
+ @font-face{
+  font-family: 'V3';
+  src:url('http://h5.yingtaoyun.com/yingtao/wx/1709/font/v3.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  }
+
+[class^="i_"], [class*=" i_"]{
+    font-family:'V3' !important;
+    speak:none;
+    font-style:normal;
+    font-weight:normal;
+    font-variant:normal;
+    text-transform:none;
+    line-height:1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+.i_trash:before {
+  content: "\e93b";
+}
+.i_share_2:before {
+  content: "\e939";
+}
+.i_superscript:before {
+  content: "\e937";
+}
+.i_note:before {
+  content: "\e933";
+}
+.i_mobile:before {
+  content: "\e934";
+}
+.i_name:before {
+  content: "\e935";
+}
+.i_used:before {
+  content: "\e932";
+}
+.i_expired:before {
+  content: "\e931";
+}
+.i_help:before {
+  content: "\e92f";
+}
+.i_share:before {
+  content: "\e92d";
+}
+.i_personal:before {
+  content: "\e92e";
+}
+.i_invitation_2:before {
+  content: "\e929";
+}
+.i_invitation_1:before {
+  content: "\e92a";
+}
+.i_v:before {
+  content: "\e92b";
+}
+.i_candy:before {
+  content: "\e92c";
+}
+.i_ok_o:before {
+  content: "\e927";
+}
+.i_edit:before {
+  content: "\e918";
+}
+.i_car:before {
+  content: "\e919";
+}
+.i_makeup:before {
+  content: "\e91a";
+}
+.i_wedding_dress:before {
+  content: "\e91b";
+}
+.i_camera:before {
+  content: "\e91c";
+}
+.i_unlock:before {
+  content: "\e91d";
+}
+.i_hotel:before {
+  content: "\e91e";
+}
+.i_plane:before {
+  content: "\e91f";
+}
+.i_balloon:before {
+  content: "\e920";
+}
+.i_video:before {
+  content: "\e921";
+}
+.i_microphone:before {
+  content: "\e922";
+}
+.i_locking:before {
+  content: "\e923";
+}
+.i_add:before {
+  content: "\e924";
+}
+.i_video_camera:before {
+  content: "\e925";
+}
+.i_jewellery:before {
+  content: "\e926";
+}
+.i_mall:before {
+  content: "\e917";
+}
+.i_gift_3:before {
+  content: "\e914";
+}
+.i_money:before {
+  content: "\e915";
+}
+.i_file:before {
+  content: "\e916";
+}
+.i_gift_2:before {
+  content: "\e90d";
+}
+.i_home:before {
+  content: "\e90f";
+}
+.i_my:before {
+  content: "\e910";
+}
+.i_reserve:before {
+  content: "\e911";
+}
+.i_assistant:before {
+  content: "\e912";
+}
+.i_ok:before {
+  content: "\e90c";
+}
+.i_set:before {
+  content: "\e90b";
+}
+.i_heart:before {
+  content: "\e900";
+}
+.i_shopping_cart:before {
+  content: "\e901";
+}
+.i_vip:before {
+  content: "\e902";
+}
+.i_ticket:before {
+  content: "\e903";
+}
+.i_gift:before {
+  content: "\e904";
+}
+.i_sign:before {
+  content: "\e905";
+}
+.i_task:before {
+  content: "\e906";
+}
+.i_fav:before {
+  content: "\e907";
+}
+.i_data:before {
+  content: "\e908";
+}
+.i_problem:before {
+  content: "\e909";
+}
+.i_invitation:before {
+  content: "\e90a";
+}
+.i_close:before {
+  content: "\e913";
+}
+.i_time:before {
+  content: "\e936";
+}
+.i_more:before {
+  content: "\e938";
+}
+.i_arrow_right:before {
+  content: "\e90e";
+}
+.i_map_marker:before {
+  content: "\e930";
+}
+.i_money2:before {
+  content: "\e928";
+}
+.i_search:before {
+  content: "\e93a";
+}
+.i_horn:before {
+  content: "\e93c";
+}
+@font-face {
+  font-family: 'iconfont'; 
+  src: url('http://at.alicdn.com/t/font_389364_flzcxy8o30zcwhfr.eot');
+  src: url('http://at.alicdn.com/t/font_389364_flzcxy8o30zcwhfr.eot?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_389364_flzcxy8o30zcwhfr.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_389364_flzcxy8o30zcwhfr.ttf') format('truetype'),
+  url('http://at.alicdn.com/t/font_389364_flzcxy8o30zcwhfr.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:0.64rem;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html{
+	font-size:20px;
+	}
+@media only screen and (min-width: 401px){
+	html{
+		font-size:25.875px;
+		}
+}
+@media only screen and (min-width: 428px){
+	html{
+		font-size:26.75px;
+		}
+}
+@media only screen and (min-width: 481px){
+	html{
+		font-size:30px; 
+		}
+}
+@media only screen and (min-width: 569px){
+	html{
+		font-size:35px; 
+		}
+}
+@media only screen and (min-width: 641px){
+	html{
+		font-size:40px; 
+		}
+}
+@media only screen and (min-width: 1200px){
+	html{
+		font-size:50px!important; 
+		}
+	article{
+		margin:auto;
+		max-width:800px;
+		}
+}
+
+body,button, input, select, textarea, h1, h2, h3, h4, h5, h6{
+	font-weight:300;
+	font-size:0.512rem;
+	color:#3a3a3a;
+	-webkit-text-size-adjust:none;
+	text-rendering:optimizelegibility;
+	-webkit-font-smoothing:antialiased;
+	}
+*, *:before, *:after{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+	}
+::-webkit-scrollbar{
+	display:none;
+	}
+body,figure,p,ul,ol,h2{
+	margin:0
+	}
+html,body,article{
+	min-height:27.2rem;
+	}
+article{
+	overflow:hidden;
+	}
+a{
+	text-decoration:none
+	}
+button,a{
+	-webkit-tap-highlight-color:rgba(0,0,0,0)
+	}
+ul,ol{
+	padding:0
+	}
+i{
+	font-size:1.05rem;
+	}
+body{
+	background-color:#1b1b1f;
+	}
+@supports (-webkit-backdrop-filter:blur(10px)){
+.ReactModal__Overlay,.G_btn_bottom,.G_pay{
+	-webkit-backdrop-filter:blur(10px);
+	}
+}
+
+.islider-outer{
+	position:relative;
+	height:100%;
+	overflow:hidden;
+	}
+.islider-outer > li{
+	position:absolute;
+	list-style:none;
+	overflow:hidden;
+	display:-webkit-box;
+	display:box;
+	-webkit-box-pack:center;
+	box-pack:center;
+	-webkit-box-align:center;
+	box-align:center;
+	}
+.iSlider_wrapper{
+	margin-bottom:0.213333rem;
+	position:relative;
+	width:16.0rem;
+	height:11.52rem;
+	}
+.iSlider_wrapper ul li a{
+	position:relative;
+	z-index:1;
+	display:block;
+	width:16.0rem;
+	height:11.52rem;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
+	}
+.islider-dot-wrap{
+    position:absolute;
+    bottom:0.555556rem;
+    z-index:1;
+    width:100%;
+    text-align:center;
+    font-size:0;
+	}
+.iSlider_theme .islider-dot-wrap{
+	padding-top:0.5rem;
+	bottom:0;
+	height:0.75rem;
+	display: none
+	}
+.islider-dot{
+	display:inline-block;
+	margin:0 0.213333rem;
+	width:0.32rem;
+	height:0.32rem;
+	list-style:none;
+	background-color:transparent;
+	border: 1px solid #c6c3bc;
+	border-radius:50%
+	}
+.islider-dot.active{
+	width: 0.32rem;
+	height: 0.106667rem;
+	background-color:#fc6294;
+	border-color: transparent;
+	}
+.iSlider_theme{
+	margin:0 auto 0.5rem;
+	width:14.0rem;
+	height:10.625rem;
+	}
+.iSlider_theme .islider-outer{
+	width:14.0rem;
+	height:10.125rem;
+	overflow:visible;
+	}
+.iSlider_theme ul li{
+	padding:0 0.5rem;
+	height:11.125rem;
+	}
+.iSlider_theme ul li a{
+	width:13rem;
+	height:10.125rem;
+	box-shadow: 0 0 0.426667rem #000100
+	}
+
+.Dialog-confirmContent{
+	padding:0.5rem;
+	min-width:7.5rem;
+	text-align:center;
+	white-space:pre-wrap;
+	color:#555;
+	line-height:1.4;
+	font-size:0.533333rem;
+	border-bottom:1px solid #eee
+	}
+.Dialog-confirmActions{
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-ms-flex-pack:distribute;
+	justify-content:space-around
+	}
+.Dialog-confirmActions button{
+	padding:0.25rem 0.5rem;
+	width:100%;
+	font-size:0.533333rem;
+	background-color:#fff;
+	border:0;
+	}
+.Dialog-cancelButton{
+	color:#999
+	}
+.Dialog-okButton{
+	color:#22ac38
+	}
+.Dialog-closeButton{
+	position:absolute;
+	top:0;
+	right:0;
+	width:0.625rem;
+	height:0.625rem;
+	color:#999
+	}
+.ReactModal__Content{
+	width:auto;
+	min-width:4.6875rem;
+	-webkit-transform:translate3d(-50%,-50%,0);
+	transform:translate3d(-50%,-50%,0);
+	position:absolute;
+	top:50%;
+	left:50%;
+	bottom:auto;
+	right:auto;
+	overflow:auto;
+	background-color:#fff;
+	border-radius:0.078125rem;
+	}
+.Dialog-confirmActions button:nth-child(2){
+	border:0;
+	border-left:1px solid #eee;
+	}
+.ReactModal__Content.Dialog-uncentered{
+	-webkit-transform:translate3d(-50%,0,0);
+	transform:translate3d(-50%,0,0);
+	top:50%
+	}
+.ReactModal__Overlay{
+	position:fixed;
+	z-index:1000000001;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:rgba(0,0,0,.5)
+	}
+.ReactModal__Overlay--after{
+	opacity:1;
+	-webkit-transition:all .15s ease-out;
+	transition:all .15s ease-out
+	}
+.ReactModal__Overlay--before-close{
+	opacity:0
+	}
+
+
+ul{
+	list-style: none;
+}
+.clear{
+	clear: both;
+}
+/* 脚部 */
+.YT_Children_WX_footer{
+	background-color: transparent;
+	background: -webkit-linear-gradient(top, rgba(44,44,50,0.65) 0%,rgba(44,44,50,1) 100%);
+background: linear-gradient(to bottom ,rgba(44,44,50,0.65) 0%,rgba(44,44,50,1) 100%);
+z-index: 9;
+
+}
+.YT_Children_WX_footer a.active::after{
+	display: none;
+}
+.YT_Children_WX_footer a{
+	color: #919191;
+}
+.YT_Children_WX_footer a.active{
+	color: #fff;
+}
+.YT_Children_WX_footer a.active i{
+	color: #ff2828;
+}
+
+
+/*客照*/
+.WX_wedding_showPage{
+	background-color: #1b1b1f;
+	padding:0.64rem 1.28rem  0.64rem 1.28rem;
+}
+
+.WX_wedding_showPage .bottom{
+	padding: 0.426667rem 0.64rem;
+	background-color: #fff; 
+	text-align: center;
+	position: relative;
+
+	height: 8.533333rem;
+}
+.WX_wedding_showPage .bottom h3{
+	font-size: 0.896rem;
+	color: #000;
+	font-weight: 400;
+}
+.WX_wedding_showPage .bottom p{
+	font-size:0.512rem;
+	color: #101010
+}
+.WX_wedding_showPage .bottom i{
+	display: block;
+	font-size: 1.066667rem;
+	color: #ff2828;
+	margin-top: 1.066667rem;
+	margin-bottom: 0.213333rem;
+}
+.WX_wedding_showPage .bottom span{
+	font-size: 0.469333rem;
+	color: #969696;
+}
+
+.WX_wedding_showPage .bottom.active i{
+	-webkit-animation:a_z .5s linear forwards;
+}
+@-webkit-keyframes a_z{
+60%{
+	-webkit-transform:translate3d(0,0,0) scaleX(1.3) scaleY(1.3);
+	}
+to{
+	opacity:1;
+	-webkit-transform:translate3d(0,0,0) scaleX(1) scaleY(1);
+	}
+}
+
+.swiper-button-prev,.swiper-button-next{
+	font-size:0.96rem;
+	color:#fff;
+	top: 30% !important;
+	
+}
+.swiper-button-prev{
+	left: 4px;
+}
+.swiper-button-next{
+	text-align: right;
+	right: 4px;
+}
+
+.swiper-button-prev::before{
+	content: '\e669';
+	font-family: "iconfont";
+	color: #fff;
+	position: absolute;
+	left: 0
+}
+.swiper-button-next::before{
+	content: '\e619';
+	font-family: "iconfont";
+	color: #fff;
+	position: absolute;
+	right: 0
+}
+.swiper-slide{
+	width: 100.05% !important;
+	overflow: hidden;
+}
+.swiper-slide a{
+	display: block;
+	width:99%;
+	height:12.906667rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+.swiper-slide a .detail{
+	width: 100%;
+	height: 3.2rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	 background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
+padding-top: 0.426667rem
+}
+.swiper-slide a .detail span{
+	display: inline-block;
+}
+.swiper-slide a .detail .left{
+	font-size: 1.6rem;
+	color: #ff2828;
+	margin-right: 0.426667rem;
+	margin-left: 0.853333rem;
+	position: relative;
+}
+.swiper-slide a .detail .left::after{
+	content: "";
+	width: 0.042667rem;
+	height: 1.237333rem;
+	background-color: rgba(255,255,255,.8);
+	position: absolute;
+	right: -0.213333rem;
+	top:0.213333rem;
+}
+.swiper-slide a .detail span p{
+	font-size: 0.597333rem;
+	color: #fff
+}
+/*套系页*/
+.WX_wedding_setPage{
+  background-color: #1b1b1f;
+  padding: 0.576rem 1.066667rem;
+}
+.WX_wedding_setPage .setPage_list{
+	width: 100%;
+	height: auto;
+	background: #24242b;
+	box-shadow: 0 0 0.426667rem #131316;
+	overflow: hidden;
+}
+.WX_wedding_setPage .setPage_list:not(:last-child){
+	margin-bottom: 0.597333rem;
+}
+.WX_wedding_setPage .setPage_list a{
+	display: block;
+	width: 100%;
+	height: 7.36rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.WX_wedding_setPage .list_detail{
+	padding: 0.426667rem 1.066667rem 0.426667rem 0.64rem;
+}
+.WX_wedding_setPage .list_detail>*{
+	width: 100%;
+	display: table;
+}
+.WX_wedding_setPage .list_detail>*>*{
+	display: table-cell;
+	vertical-align: middle;
+}
+.WX_wedding_setPage .list_detail .title{
+	font-size: 0.853333rem;
+  	color: #fff;
+  	position: relative;
+  	left: -0.213333rem;
+}
+.WX_wedding_setPage .list_detail .price{
+	font-size: 1.024rem;
+	color: #ff2828;
+	text-align: right;
+	font-weight: 500;
+}
+
+.WX_wedding_setPage .list_detail .price sup{
+	font-size: 0.512rem;
+}
+.WX_wedding_setPage .list_date{
+	font-size: 0.384rem;
+  color:rgba(255,255,255,.5);
+}
+.WX_wedding_setPage .list_date del{
+	text-align: right;
+}
+
+/*预订价格*/
+.WX_wedding_setPage .list_detail .orderPrice{
+	text-align: right;
+	color: #ff2828;
+	font-size: 0.64rem;
+
+}
+
+/* 样照 */
+.WX_wedding_productPage{
+	background: #1b1b1f;
+	padding-bottom: 0.426667rem
+}
+.WX_wedding_productPage .product_banner{
+	width: 100%;
+	height:9.173333rem;
+	position: relative;
+	margin-bottom: 1.28rem;
+	text-align: center;
+}
+
+.WX_wedding_productPage .product_big::before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background:rgba(0,0,0,.5);
+	z-index: 1
+}
+.WX_wedding_productPage .product_big h3{
+	font-size: 0.853333rem;
+	color: #fff;
+	position: relative;
+	z-index:3;
+	margin:0;
+	padding:1.066667rem 0 0.213333rem 0;
+}
+.WX_wedding_productPage .product_big p{
+	font-size: 0.512rem;
+	color: rgba(255,255,255,.5);
+	position: relative;
+	z-index:3;
+	padding:0;
+}
+.WX_wedding_productPage .product_big{
+	width: 100%;
+	height: 8.746667rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+}
+
+.WX_wedding_productPage  .thumbnail{
+	display: block;
+	width: 100%;
+	height: 4.466667rem;
+	position: absolute;
+	bottom: 0.213333rem;
+	z-index: 2;
+	padding-left: 1.109333rem;
+    overflow-x: scroll;
+    white-space: nowrap;
+
+}
+.WX_wedding_productPage .thumbnail a{
+	display: inline-block;
+	width: 5.546667rem;
+	height: 4.266667rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	vertical-align: middle;
+	text-align: center;
+	color: #fff;
+	line-height: 4.266667rem;
+	font-size: 0.853333rem;
+	background-color: #000
+}
+.WX_wedding_productPage .thumbnail a:not(:last-child){
+	margin-right: 0.725333rem;
+}
+.WX_wedding_productPage .thumbnail a::before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background:rgba(0,0,0,.5);
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.WX_wedding_productPage .thumbnail .active::before{
+	background-color: transparent;
+}
+.WX_wedding_productPage .thumbnail .active::after{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height:0.042667rem;
+	background-color: #ff2828;
+	left: 0;
+	bottom: -0.170667rem;
+}
+.product_list{
+	width: 13.76rem;
+	height: 10.346667rem;
+	margin:0 auto;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.product_list:not(:last-child){
+	margin-bottom: 0.426667rem
+}
+.product_list p{
+	position: absolute;
+	width: 100%;
+  height: 3.52rem;
+   background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
+  color: #fff;
+  text-align: center;
+  line-height: 4.693333rem;
+  position: absolute;
+  bottom: 0;
+  font-size: 0.682667rem;
+
+}
+
+/* 活动 */
+.WX_wedding_activetPage{
+	background-color: #1b1b1f
+}
+.WX_wedding_activetPage .activeList{
+	width: 100%;
+	height: auto;
+}
+.WX_wedding_activetPage .active_banner{
+	display: block;
+	width: 100%;
+	height: 8.426667rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.WX_wedding_activetPage .active_detail{
+	height: 2.666667rem;
+	background-color: #1b1b1f;
+	position: relative;
+}
+.WX_wedding_activetPage .active_detail .detail_box{
+	width: 12.48rem;
+	height: 3.626667rem;
+	background-color: #24242b;
+	position: absolute;
+	left: 50%;
+	margin-left: -6.229333rem;
+	top: -1.493333rem;
+	text-align: center;
+	box-shadow: 0 0 0.426667rem #131316
+}
+.WX_wedding_activetPage .detail_box .on{
+	width: 1.92rem;
+	height: 0.64rem;
+	line-height:0.746667rem;
+	background-color: #ff2828;
+	color: #fff;
+	margin:0.512rem auto 0 auto;
+	text-align: center;
+	font-size: 0.426667rem;
+}
+.WX_wedding_activetPage .detail_box h3{
+	margin:0.32rem 0 0.213333rem 0;
+	font-size: 0.768rem;
+	color: #fff;
+}
+.WX_wedding_activetPage .detail_box p{
+	font-size:0.384rem;
+	color: rgba(255,255,255,.5);
+}
+
+/* 首页 */
+.WX_wedding_index{
+	background-color: #1b1b1f
+}
+.WX_wedding_index .banner{
+	width: 100%;
+	height: 8.533333rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.WX_wedding_index .nav{
+	width: 100%;
+	height: 2.773333rem;
+	line-height: 2.773333rem;
+	white-space: nowrap;
+	overflow-x: scroll;
+	background-color: #000000;
+	padding-left: 1.386667rem;
+}
+.WX_wedding_index .nav a{
+	display: inline-block;
+	height:2.709333rem;
+	color: #444;
+	font-size: 0.597333rem;
+	position: relative;
+}
+.WX_wedding_index .nav a:not(:last-child){
+	margin-right: 1.066667rem;
+}
+.WX_wedding_index .nav .active::after{
+	content: "";
+	width: 100%;
+	height: 0.064rem;
+	background-color: #ff2828;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.WX_wedding_index .title{
+	width: 100%;
+	height: 2.133333rem;
+	display: table;
+	background-color: #1b1b1f;
+	padding: 0 0.469333rem 0 0.682667rem;
+}
+.WX_wedding_index .title a{
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 0.512rem;
+	color: #767678
+}
+.WX_wedding_index .title a.more{
+	width: 2.133333rem;
+	text-align: right;
+}
+.WX_wedding_index .iSlider_theme ul li a{
+	position: relative;
+}
+.WX_wedding_index .iSlider_theme ul li a::before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background:rgba(0,0,0,1);
+}
+.WX_wedding_index .iSlider_theme ul .islider-active a:before{
+	background:rgba(0,0,0,.4);
+}
+.WX_wedding_index .iSlider_theme ul li a .bottom{
+	width: 100%;
+	height: 1.6rem;
+	position: absolute;
+	bottom: 0.64rem;
+	padding-left: 1.066667rem;
+}
+.WX_wedding_index .iSlider_theme ul li a .bottom .name{
+	font-size: 0.853333rem;
+	color: #fff;
+	margin-left: -0.426667rem;
+}
+.WX_wedding_index .iSlider_theme ul li a .bottom p{
+	font-size: 0.341333rem;
+	color: rgba(255,255,255,.5);
+	margin-top: 0.213333rem;
+}
+
+
+/*#accordion .iSlider_theme,#accordion .iSlider_theme ul{
+	width: 11.306667rem;
+	margin: 0;
+}
+#accordion .iSlider_theme ul li{
+	padding: 0;
+
+}
+#accordion .iSlider_theme ul li a{
+	width: 11.306667rem;
+	height: 9.6rem
+}
+.iSlider_theme ul li a li{
+	height: 9.6rem;
+	background-position: center;
+	background-repeat:no-repeat;
+	background-size:cover;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.WX_wedding_index .accordion{
+  width: 100%;
+  height: auto;
+}
+.WX_wedding_index .accordion ul{
+  display: block;
+  width: 100%;
+  height: 9.557333rem;
+  white-space: nowrap;
+  background-color: #1b1b1f;
+  overflow-x: scroll;
+}
+.WX_wedding_index .accordion ul li{ 
+  display: inline-block;    
+  width:2.133333rem; 
+  height:9.557333rem; 
+  transition: all 0.5s;
+ position:relative;
+  overflow:hidden; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}  
+.WX_wedding_index .accordion ul a:first-child li{
+	width: 10.816rem;
+}
+.WX_wedding_index .accordion ul a:not(:last-child){
+  margin-right: 0.32rem;
+}
+.WX_wedding_index .accordion ul:hover a li{
+	width:2.133333rem; 
+}
+/*.WX_wedding_index .accordion ul a li:hover{
+	width: 10.816rem; 
+}*/
+.WX_wedding_index .accordion ul li .date{
+  width: 1.92rem;
+  height: 1.706667rem;
+  background-color: #24242b;
+  border-radius: 0 0.853333rem 0.853333rem 0;
+  position: relative;
+  top: 0.426667rem;
+  padding: 0.213333rem 0 0 0.213333rem;
+}
+.WX_wedding_index .accordion ul li .date .day{
+  display: block;
+  font-size:0.768rem;
+  color: #ff2828;
+  line-height:0.768rem
+}
+.WX_wedding_index .accordion ul li .date .month{
+  display: block;
+  font-size:0.384rem;
+  color: #fff;
+  transform: scale(.9);
+}
+.WX_wedding_index .sample_special .banner{
+	display: block;
+	width: 100%;
+	height: 7.786667rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover; 
+}
+.WX_wedding_index .sample_special .bottom{
+	width: 100%;
+	height: 3.84rem;
+	background-color: #1b1b1f;
+	position: relative;
+}
+.WX_wedding_index .sample_special .bottom .detail{
+	width: 14.72rem;
+	height: 3.626667rem;
+	position: absolute;
+	left: 50%;
+	margin-left: -7.36rem;
+	top: -0.426667rem;
+	background-color: #24242b;
+	text-align: center;
+	padding-top: 0.64rem;
+	box-shadow: 0 0 0.213333rem #131316;
+}
+.WX_wedding_index .sample_special .bottom .detail .color{
+	display: block;
+	color: #be2729;
+	font-size: 0.512rem;
+	}
+.WX_wedding_index .sample_special .bottom .detail h3{
+	font-size: 0.768rem;
+	color: #fff;
+	margin: 0;
+}
+.WX_wedding_index .sample_special .bottom .detail p{
+	width: 100%;
+	height:0.533333rem;
+	color:rgba(255,255,255,.5);
+	position: relative;
+}
+.WX_wedding_index .sample_special .bottom .detail p small{
+	display: block;
+	position: absolute;
+	left: 50%;
+	white-space: nowrap;
+	font-size: 0.64rem;
+	transform: translate3d(-50%,0,0) scale(.5);
+}
+.WX_wedding_index .quote_title{
+	width: 100%;
+	height: 1.386667rem;
+	padding-left: 0.853333rem;
+	background-color: #1b1b1f;
+	font-size: 0.512rem;
+	color: rgba(255,255,255,.8);
+}
+.WX_wedding_index .quote_title i{
+	margin-right: 0.426667rem;
+	color: #ff2828
+}
+.WX_V3_offer *{
+	display: block;
+	width: 100%
+}
+
+.WX_V3_offer tr th{
+	text-align: left;
+	padding-left:0.853333rem;
+	height: 1.706667rem;
+	background-color: #24242b;
+	color: #fff;
+	line-height: 1.706667rem;
+	font-size: 0.64rem;
+	font-weight: normal;
+}
+.WX_V3_offer tr th i{
+	display: inline !important;
+}
+.WX_V3_offer tr th small{
+	display: inline;
+}
+.WX_V3_offer tr td{
+	padding: 0.64rem 0.853333rem 0 0.853333rem;
+	background-color: #1b1b1f;
+}
+.WX_V3_offer tr td label{
+	display: inline-block;
+	width: 4.053333rem;
+	height: 1.493333rem;
+	border-radius: 0.213333rem;
+	text-align: center;
+	line-height: 1.493333rem;
+	border: 1px solid rgba(255,255,255,.5);
+	margin:0 0.853333rem 0.64rem 0;
+	font-size: 0.512rem;
+	color: #fff;
+}
+.WX_V3_offer tr td label:nth-child(3n){
+	margin-right:0;
+}
+.WX_V3_offer tr td label.active{
+	border-color: #ff2828
+}
+.WX_V3_offer button{
+	width: 14.293333rem;
+	height: 2.026667rem;
+	background-color: #ff2828;
+	margin: 0 auto 0.426667rem auto;
+	border: none;
+	font-size: 0.768rem;
+	color: #fff;
+	border-radius: 0.32rem;
+}
+
+/* 套系内页 */
+.WX_wedding_setDetail{
+	background: #18181c;
+}
+.WX_wedding_setDetail .setDetail_banner{
+	width: 100%;
+	height: auto;
+	background-color: #24242b;
+	box-shadow: 0 0 0.213333rem #131316;
+	margin-bottom: 0.533333rem;
+}
+.WX_wedding_setDetail .setDetail_banner a{
+	display: block;
+	width: 100%;
+	height: 8.32rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.WX_wedding_setDetail .banner_detail{
+	width: 100%;
+	height: auto;
+	padding: 0.682667rem;
+}
+.WX_wedding_setDetail .banner_detail h3{
+	font-size: 0.896rem;
+	color: #fff;
+	margin:0;
+	margin-left: -0.32rem;
+}
+.WX_wedding_setDetail .banner_detail .price{
+	width: 100%;
+	height: 1.493333rem;
+	display: table;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+	margin-bottom: 0.384rem;
+}
+
+
+
+
+.WX_wedding_setDetail .banner_detail .price>*{
+	display: table-cell;
+	vertical-align: middle;
+}
+.WX_wedding_setDetail .banner_detail .price .left{
+	font-size: 0.512rem;
+	color: rgba(255,255,255,.5)
+}
+.WX_wedding_setDetail .banner_detail .price .left span{
+	display: inline-block;
+	width: 1.706667rem;
+	height: 0.64rem;
+	background-color: #ff2828;
+	border-radius: 0 0.32rem 0.32rem 0.213333rem;
+	position: relative;
+	top:0.149333rem
+}
+.WX_wedding_setDetail .banner_detail .price .left span::after{
+	content: "";
+	width: 0.213333rem;
+	height: 0.213333rem;
+	border-radius: 50%;
+	background-color: #24242b;
+	position: absolute;
+	top: 50%;
+	margin-top: -0.106667rem;
+	right:0.106667rem
+}
+.WX_wedding_setDetail .banner_detail .price .left span small{
+	display: block;
+	position: absolute;
+	font-size: 0.64rem;
+	white-space: nowrap;
+	left: 0;
+	top: 50%;
+	transform: translate3d(-15%,-50%,0) scale(0.5);
+
+}
+.WX_wedding_setDetail .banner_detail .price .right{
+	text-align: right;
+	color: #ff2828;
+	font-size: 1.237333rem;
+}
+.WX_wedding_setDetail .banner_detail .price .right sup{
+	font-size: 0.597333rem;
+}
+
+.WX_wedding_setDetail .banner_detail .price #orderPrice{
+	font-size: 0.64rem;
+	text-align: left;	
+}
+
+
+
+
+
+.WX_wedding_setDetail .banner_detail p{
+	font-size: 0.512rem;
+	color: rgba(255,255,255,.5);
+	line-height: 0.853333rem
+}
+.WX_wedding_setDetail .banner_detail .order{
+	width: 100%;
+	height: 1.6rem;
+	background-color: #ff2828;
+	color: #fff;
+	font-size: 0.768rem;
+	text-align: center;
+	line-height: 1.6rem;
+	margin-top: 0.682667rem;
+}
+.WX_wedding_setDetail a img{
+	display: block;
+	width: 100%;
+}
+.WX_wedding_setDetail .bottom_order{
+	display: block;
+	width: 14.72rem;
+	height: 1.6rem;
+	line-height: 1.6rem;
+	text-align: center;
+	margin: 0.533333rem auto;
+	color: #ff2828;
+	border:1px solid #ff2828;
+	font-size: 0.768rem;
+}
+/*活动内页*/
+.WX_wedding_activetDetail{
+	background-color: #1b1b1f;
+}
+.WX_wedding_activetDetail .activetDetail_banner a{
+	display: block;
+	width: 100%;
+	height: 9.344rem;
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.WX_wedding_activetDetail .activetDetail_banner .bannerDetail{
+	height: 5.546667rem;
+	background-color: #1b1b1f;
+	position: relative;
+}
+.WX_wedding_activetDetail .bannerDetail .detail{
+	width: 14.72rem;
+	height: auto;
+	position: absolute;
+	left: 50%;
+	margin-left: -7.36rem;
+	top: -1.429333rem;
+	background-color: #24242b;
+	text-align: center;
+	padding-top: 0.32rem;
+	box-shadow: 0 0 0.213333rem #141416
+}
+.WX_wedding_activetDetail .bannerDetail .detail h3{
+	margin: 0;
+	font-size: 0.896rem;
+	color: #fff;
+	line-height: 2.133333rem
+}
+.WX_wedding_activetDetail .bannerDetail .detail p{
+	font-size: 0.512rem;
+	color: rgba(255,255,255,.7);
+	line-height: 0.853333rem
+}
+.WX_wedding_activetDetail .bannerDetail .detail a{
+	width: 100%;
+	height: 1.813333rem;
+	background-color: #ff2828;
+	text-align: center;
+	line-height: 1.813333rem;
+	color: #fff;
+	font-size: 0.768rem;
+	margin-top: 0.533333rem;
+}
+.WX_wedding_activetDetail a img{
+	display: block;
+	width: 100%;
+}
+.WX_wedding_activetDetail .bottom_order{
+	display: block;
+	width: 14.72rem;
+	height: 1.6rem;
+	line-height: 1.6rem;
+	text-align: center;
+	margin: 0.533333rem auto;
+	color: #ff2828;
+	border:1px solid #ff2828;
+	font-size: 0.768rem;
+}
+/*套系内页*/
+.WX_wedding_productDetail{
+	background-color: #1b1b1f;
+}
+.WX_wedding_productDetail .productDetail_banner{
+	height: 13.013333rem;
+	background-color: #1b1b1f;
+	position: relative;
+}
+.WX_wedding_productDetail .product_big{
+	display: block;
+	height: 9.6rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+	position: relative;
+}
+.WX_wedding_productDetail .product_big::before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: -webkit-linear-gradient(rgba(27,27,31,0) 0%, rgba(27,27,31,1) 100%);
+	background: -o-linear-gradient(rgba(27,27,31,0) 0%, rgba(27,27,31,1) 100%);
+	background: linear-gradient(rgba(27,27,31,0) 0%, rgba(27,27,31,1) 100%);
+	position: absolute;
+	left: 0;
+	top: 0
+}
+.WX_wedding_productDetail .banner_detail{
+	width: 14.506667rem;
+	height: 6.186667rem;
+	margin: 0 auto;
+	background-color: #24242b;
+	position: absolute;
+	left:0;
+	right: 0;
+	bottom:0.746667rem;
+	padding: 0.64rem;
+	box-shadow: 0 0 0.213333rem #141416
+}
+.WX_wedding_productDetail .banner_detail .pic{
+	display: inline-block;
+	width: 6.72rem;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	vertical-align: middle;
+}
+.WX_wedding_productDetail .banner_detail div{
+	width:6.293333rem;
+	height: 100%;
+	display: inline-block;
+	text-align: right;
+	padding-top:2.56rem;
+	color: rgba(255,255,255,.7);
+	font-size: 0.512rem;
+	vertical-align: middle;
+}
+.WX_wedding_productDetail .banner_detail div b{
+	display: block;
+	color: #fff;
+	font-size: 0.896rem;
+	font-weight: normal;
+	margin-bottom: 0.213333rem
+}
+.WX_wedding_productDetail a img{
+	display: block;
+	width: 100%
+}
+.WX_wedding_productDetail a.last img{
+	margin-bottom: 0.853333rem
+}
+
+/*客照内页*/
+.WX_wedding_showdDetail{
+	background-color: #1b1b1f;
+}
+.WX_wedding_showdDetail .showdDetail_banner{
+	width: 100%;
+	height: auto;
+}
+.WX_wedding_showdDetail .showdDetail_banner a{
+	display: block;
+	width: 100%;
+	height: 12.48rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.WX_wedding_showdDetail .showdDetail_banner a::before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: -webkit-linear-gradient(rgba(27,27,31,0) 0%, rgba(27,27,31,1) 100%);
+	background: -o-linear-gradient(rgba(27,27,31,0) 0%, rgba(27,27,31,1) 100%);
+	background: linear-gradient(rgba(27,27,31,0) 0%, rgba(27,27,31,1) 100%);
+}
+.WX_wedding_showdDetail .showdDetail_banner .banner_detail{
+	padding: 0 1.066667rem 0.64rem 1.066667rem;
+}
+.WX_wedding_showdDetail .banner_detail h3{
+	margin: 0 0 0.533333rem 0;
+	padding-bottom: 0.533333rem;
+	font-size: 0.896rem;
+	color: #fff;
+	border-bottom: 1px solid rgba(255,255,255,.5)
+}
+.WX_wedding_showdDetail .thumb i{
+	display: inline-block;
+	color: #ff2828
+}
+.WX_wedding_showdDetail .thumb span{
+	font-size: 0.64rem;
+	color: #c5c5c6
+}
+.WX_wedding_showdDetail .thumb b{
+	font-size: 0.64rem;
+	color: #8d8d8f;
+	margin-left: 1.386667rem;
+	font-weight: normal;
+}
+.WX_wedding_showdDetail .thumb.active i{
+	display: inline-block;
+	-webkit-animation:a_z .5s linear forwards;
+}
+
+@-webkit-keyframes a_z{
+60%{
+	-webkit-transform:translate3d(0,0,0) scaleX(1.3) scaleY(1.3);
+	}
+to{
+	opacity:1;
+	-webkit-transform:translate3d(0,0,0) scaleX(1) scaleY(1);
+	}
+}
+.WX_wedding_showdDetail .banner_detail p{
+	font-size: 0.512rem;
+	color: #a4a4a5;
+	line-height: 0.853333rem
+}
+.WX_wedding_showdDetail a img{
+	display: block;
+	width: 100%
+}
+.WX_wedding_showdDetail a.last img{
+	margin-bottom: 0.853333rem
+}
+/* 底部滚动 */
+.footer_scroll{
+	width: 100%;
+	height: 6.4rem;
+	padding-left: 0.64rem;
+	margin-bottom:0.64rem;
+	position: relative;
+}
+.footer_scroll>*{
+	float: left;
+}
+.footer_scroll .check{
+	width: 3.84rem;
+	height: 100%;
+	background-color: #ff2828;
+	position: absolute;
+	left:0.64rem;
+	top: 0;
+	z-index: 5;
+	padding: 1.066667rem 0 0 0.533333rem;
+	color: #fff;
+	font-size: 0.64rem;
+}
+.footer_scroll .check .more{
+	margin-bottom:1.6rem;
+}
+.footer_scroll .scroll_box{
+	width: 100%;
+	height: 100%;
+	white-space: nowrap;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	padding-left: 3.84rem;
+}
+.footer_scroll .scroll_box a{
+	display: inline-block;
+	width: 8.533333rem;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-right: -0.170667rem;
+	position: relative;
+}
+.footer_scroll .scroll_box a p{
+	width: 100%;
+	font-size: 0.682667rem;
+	color: #fff;
+	height: 1.493333rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	line-height: 1.493333rem;
+	text-align: center;
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+}
+
+
+.WX_V3_poweredby{
+	color: #fff;
+	background-color: #1b1b1f
+}

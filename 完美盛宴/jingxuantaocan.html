@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_375272_owhfbd9bq4c84cxr.css">
+<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+</head>
+<body>
+<article class="Perfect_goodsList Perfect_feast"">
+	<div class="title">精选套餐</div>
+	<div class="choice_package  case_choice_package" id="wedding">
+		<div class="pic_list">
+			<a href="" class="choice_package_pic" style="background-image: url(img/taocan4.jpg);"></a>
+			<a href="">
+				<p>
+				唐顿庄园
+				<span><small>人气爆款</small></span>
+				</p>
+				<p>摄影师: 首席 | 造型: 5套 | 精修: 70张</p>
+				<p>
+					<b>￥ 10980</b>
+					<del>￥16980</del>
+					<span>已售166</span>
+				</p>
+			</a>
+		</div>
+		<div class="pic_list">
+			<a href="" class="choice_package_pic" style="background-image: url(img/taocan5.jpg);"></a>
+			<a href="">
+				<p>
+				锦瑟
+				<span><small>本季热推</small></span>
+				</p>
+				<p>摄影师: 资深 | 造型: 5套 | 精修: 55张</p>
+				<p>
+					<b>￥ 18900</b>
+					<del>￥24000</del>
+					<span>已售598</span>
+				</p>
+			</a>
+		</div>
+		<div class="pic_list">
+			<a href="" class="choice_package_pic" style="background-image: url(img/taocan6.jpg);"></a>
+			<a href="">
+				<p>
+				静谧丛林
+				<span><small>本季热推</small></span>
+				</p>
+				<p>摄影师: 总监 | 造型: 5套 | 精修: 80张</p>
+				<p>
+					<b>￥ 4299</b>
+					<del>￥13980</del>
+					<span>已售598</span>
+				</p>
+			</a>
+		</div>
+	</div>
+
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="iconfont icon-cin2">&#xe628;</i>结婚助手</a>
+			<a href=""><i class="iconfont icon-heibanblackboard9"></i>微信墙</a>
+			<a href=""><i class="i_my"></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+
+</article>
+
+<script src="js/zepto.min.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script src="js/require.js"></script>
+<script>
+var v3 = new V3();
+
+
+
+
+</script>
+</body>
+</html>

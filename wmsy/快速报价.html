@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<article>
+
+	<offer-component v-bind:data="offer" v-on:offer="postFn"></offer-component>
+
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="i_gift_2"><sup class="WX_V3_badge">22</sup></i>活动</a>
+			<a href=""><i class="i_reserve"><sup class="WX_V3_badge">8</sup></i>预约</a>
+			<a href=""><i class="i_assistant"><sup class="WX_V3_badge"></sup></i>助手</a>
+			<a href=""><i class="i_my"><sup class="WX_V3_badge"></sup></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+</article>
+
+
+
+
+<script src="js/vue.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script src="js/require.js"></script>
+<script>
+var v3 = new V3();
+
+var	APP = new Vue({
+	el: 'article',
+	data: {
+		offer: {
+			"banner": "img/offer_header.png",
+			"btnTitle": "获取报价",
+			"offerData": [{
+				"name": ["c_ff7394","i_wedding_dress","礼服", "dress"],
+				"items": [
+					["男女各三套", true],
+					["男女各四套", false],
+					["男女各五套", false]
+				],
+				"type": 1
+			}, {
+				"name": ["c_58b6ff","i_balloon","风格", "style"],
+				"items": [
+					["韩式", true],
+					["个性", false],
+					["法式", false]
+				],
+				"type": 1
+			}, {
+				"name": ["c_ff414e","i_fav","外景", "location"],
+				"items": [
+					["厦门", true],
+					["三亚", false]
+				],
+				"type": 0
+
+			}, {
+				"name": ["c_ff7394","i_fav","相册", "Photo"],
+				"items": [
+					["1本", true],
+					["2本", false]
+				],
+				"type": 0
+
+			}],
+			"offerInput": [{
+				"name": ["c_ff7394","i_wedding_dress","某某1", "dress"],
+				"id": "a"
+			}, {
+				"name": ["c_ff7394","i_wedding_dress","某某2", "dress"],
+				"id": "b"
+			}]
+		}
+	},
+	components: {
+		'offer-component': offerComponent
+	},
+	methods: {
+		postFn: function(arr) { //报价提交
+			console.log(arr)
+
+			$.post('/', {
+				data: arr
+			}, function() {
+
+
+			})
+		}
+	}
+});
+
+</script>
+</body>
+</html>

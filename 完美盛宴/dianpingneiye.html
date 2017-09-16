@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_375272_0nlpjvfgd2uo9a4i.css">
+<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+<link href="http://www.jq22.com/jquery/bootstrap-3.3.4.css" rel="stylesheet">
+<script src="http://www.jq22.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/star-rating.js" type="text/javascript"></script>
+</head>
+<body>
+<article class="Perfect_feast">
+	<div class="reviewPage">
+		<div class="header">
+			<a href="">取消</a>
+			<a href="">111</a>
+			<a href=""><span>发表</span></a>
+		</div>
+		<div class="reviewPage_content">
+			<div class="top">
+				<div>
+					<span class="all">总体</span>
+					<div class="container">
+					    <input id="input-21a" value="0" name="photo[]" type="number" class="rating" min=0 max=5 step=1 data-size="xl" >
+					</div>  
+				</div>
+			</div>
+			<textarea name="" id="feedbackcontent" placeholder="评价下摄影师造型师、服装师、拍摄基地和服务等，帮助更多的会员做出明智选择哦！"
+			onkeydown="checkMaxInput(this)"  
+            onkeyup="checkMaxInput(this)" onfocus="checkMaxInput(this)" onblur="checkMaxInput(this,)"></textarea>
+			<div class="word_number">加油，还差<span>30</span>个字!</div>
+		</div>
+		<div class="Upload_photo">
+			<a href=""><i class="iconfont icon-shangchuantupian"></i></a>
+			<a href="">
+				<h3>上传照片</h3>
+				<p>3张以上有机会<span>赢100积分</span></p>
+			</a>
+			<div class="sortable">
+				<figure style="background-image: url(img/banner2.jpg);"></figure>
+				<figure style="background-image: url(img/banner2.jpg);"></figure>
+				<figure style="background-image: url(img/banner2.jpg);"></figure>
+		</div>
+		
+		<div class="cost">
+			<span>费用</span>
+			<label for="">￥</label>
+			<input type="text" placeholder="请输入消费金额">
+		</div>
+		<div class="cost">
+			<span>@好友</span>
+			<i class="iconfont icon-gengduo"></i>
+		</div>
+	</div>
+	
+	<!-- 脚部 -->
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="iconfont icon-cin2">&#xe628;</i>结婚助手</a>
+			<a href=""><i class="iconfont icon-heibanblackboard9"></i>微信墙</a>
+			<a href=""><i class="i_my"></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+
+
+</article>
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script src="js/require.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script>
+	var v3 = new V3();
+	var number=30;
+	function checkMaxInput(obj){
+		var T=$("#feedbackcontent").val().length;
+		var n=parseInt(number-T);
+		if(n<=0){
+			$(".word_number span").text("0");
+		}else{
+			$(".word_number span").text(n);
+		}
+	}
+
+	//星星的个数
+	$(".container").on("click",function(){
+		var T=$("#input-21a").val();
+	}) 
+	
+
+
+</script>
+</body>
+</html>

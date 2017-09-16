@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+</head>
+<body>
+<article class="Perfect_feast">
+	<!-- banner -->
+	<div class="iSlider_wrapper iSlider_banner"></div>
+	
+	<!-- 选择 -->
+	<div class="index_tabs">
+		<a href="">
+			<div>
+				<i class="iconfont icon-xiangji">&#xe615;</i>
+			</div>
+			<span>婚纱摄影</span>
+		</a>
+		<a href="">
+			<div>
+				<i class="iconfont icon-jiudian">&#xe686;</i>
+			</div>
+			<span>婚宴酒店</span>
+		</a>
+		<a href="">
+			<div>
+				<i class="iconfont icon-dangao">&#xe65d;</i>
+			</div>
+			<span>婚庆礼仪</span>
+		</a>
+		<a href="">
+			<div>
+				<i class="iconfont icon-lifu">&#xe614;</i>
+			</div>
+			<span>婚纱礼服</span>
+		</a>
+	</div>
+	<div class="index_tabs" id="index_tabs">
+		<a href="">
+			<div>
+				<i class="iconfont icon-zuanshi">&#xe68e;</i>
+			</div>
+			<span>珠宝首饰</span>
+		</a>
+		<a href="">
+			<div>
+				<i class="iconfont icon-tangguo">&#xe601;</i>
+			</div>
+			<span>喜铺糖果</span>
+		</a>
+		<a href="">
+			<div>
+				<i class="iconfont icon-heiban">&#xe609;</i>
+			</div>
+			<span>微信墙</span>
+		</a>
+		<a href="">
+			<div>
+				<i class="iconfont icon-aixin1">&#xe620;</i>
+				<span><small>Free</small></span>
+			</div>
+			<span>结婚助手</span>
+		</a>
+	</div>
+	<!-- 品质优选 -->
+	<div class="all_scroll">
+		<p><span>品质优选</span></p>
+		<div class="all_scroll_detail">
+			<a href="">
+				<div class="pic" style="background-image: url(img/pinzhi1.jpg)"></div>
+				<div class="pic_suggest">
+					<div class="pic_suggest_name">
+						<span>宁波乐玛</span>
+						<span>婚纱摄影</span>
+					</div>
+					<div class="pic_suggest_price">
+						
+						<span class="price">人均￥4999</span>
+					</div>
+				</div>
+			</a>
+			<a href="">
+				<div class="pic" style="background-image: url(img/pinzhi2.jpg)"></div>
+				<div class="pic_suggest">
+					<div class="pic_suggest_name">
+						<span>宁波乐玛</span>
+						<span>婚纱摄影</span>
+					</div>
+					<div class="pic_suggest_price">
+						
+						<span class="price">人均￥4999</span>
+					</div>
+				</div>
+			</a>
+			<a href="">
+				<div class="pic" style="background-image: url(img/pinzhi1.jpg)"></div>
+				<div class="pic_suggest">
+					<div class="pic_suggest_name">
+						<span>宁波乐玛</span>
+						<span>婚纱摄影</span>
+					</div>
+					<div class="pic_suggest_price">
+						
+						<span class="price">人均￥4999</span>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<!-- 猜你喜欢 -->
+	<div class="all_Lovely">
+		<p>猜你喜欢</p>
+		<a href="">
+			<div style="background-image: url(img/xihuan1.jpeg);"></div>
+			<div class="Lovely_detail">
+				<!-- <div class="Lovely_set">
+					<span>宁波乐玛</span>
+					<span>文字</span>
+				</div>
+				<div class="Lovely_set">
+					<span>婚纱摄影</span>
+					<span class="price">￥4999</span>
+				</div> -->
+				 <div class="Lovely_set">
+					<h1>全城热恋</h1>
+					<h1>秘境特惠套系</h1>
+					<p>
+						<span>
+							<i class="iconfont icon-xing">&#xe605;</i>
+							<i class="iconfont icon-xing">&#xe605;</i>
+							<i class="iconfont icon-xing">&#xe605;</i>
+							<i class="iconfont icon-xing">&#xe605;</i>
+							<i class="iconfont icon-xing">&#xe605;</i>
+						</span>
+						<span><small>婚纱摄影</small></span>
+						<span><small>￥6799</small></span>
+					</p>
+				</div>
+				<div class="Lovely_price">
+					<b><sup>￥</sup>8990</b>
+					<span>￥<del>12990</del></span>
+					<!-- <i><small>已售166</small></i> -->
+				</div> 
+			</div>
+		</a>
+		<a href="">
+			<div style="background-image: url(img/xihuan2.jpg);"></div>
+			<div class="Lovely_detail">
+				<!-- <div class="Lovely_set">
+					<span>宁波乐玛</span>
+					<span>文字</span>
+				</div>
+				<div class="Lovely_set">
+					<span>婚纱摄影</span>
+					<span class="price">￥4999</span>
+				</div> -->
+				<div class="Lovely_set">
+					<h1>全城热恋</h1>
+					<h1>秘境特惠套系</h1>
+					<p>
+						<span>
+							<i class="iconfont icon-xing">&#xe605;</i>
+							<i class="iconfont icon-xing">&#xe605;</i>
+							<i class="iconfont icon-xing">&#xe605;</i>
+							<i class="iconfont icon-xing">&#xe605;</i>
+							<i class="iconfont icon-xing">&#xe605;</i>
+						</span>
+						<span><small>婚纱摄影</small></span>
+						<span><small>￥6799</small></span>
+					</p>
+				</div>
+				<div class="Lovely_price">
+					<b><sup>￥</sup>8990</b>
+					<span>￥<del>12990</del></span>
+					<!-- <i><small>已售166</small></i> -->
+				</div>
+			</div>
+		</a>
+		<a href="">
+			<div style="background-image: url(img/xihuan1.jpeg);"></div>
+			<div class="Lovely_detail">
+				<!-- <div class="Lovely_set">
+					<span>宁波乐玛</span>
+					<span>文字</span>
+				</div>
+				<div class="Lovely_set">
+					<span>婚纱摄影</span>
+					<span class="price">￥4999</span>
+				</div> -->
+				 <div class="Lovely_set">
+					<h1>全城热恋</h1>
+					<h1>秘境特惠套系</h1>
+					<p>
+						<span>
+							<i class="iconfont icon-xing">&#xe605;</i>
+							<i class="iconfont icon-xing">&#xe605;</i>
+							<i class="iconfont icon-xing">&#xe605;</i>
+							<i class="iconfont icon-xing">&#xe605;</i>
+							<i class="iconfont icon-xing">&#xe605;</i>
+						</span>
+						<span><small>婚纱摄影</small></span>
+						<span><small>￥6799</small></span>
+					</p>
+				</div>
+				<div class="Lovely_price">
+					<b><sup>￥</sup>8990</b>
+					<span>￥<del>12990</del></span>
+					<!-- <i><small>已售166</small></i> -->
+				</div>
+			</div>
+		</a>
+		<a href="">
+			<div style="background-image: url(img/xihuan1.jpeg);"></div>
+			<div class="Lovely_detail">
+				<!-- <div class="Lovely_set">
+					<span>宁波乐玛</span>
+					<span>文字</span>
+				</div>
+				<div class="Lovely_set">
+					<span>婚纱摄影</span>
+					<span class="price">￥4999</span>
+				</div> -->
+				 <div class="Lovely_set">
+					<h1>全城热恋</h1>
+					<h1>秘境特惠套系</h1>
+					<p>
+						<span>
+							<i class="iconfont icon-xing">&#xe605;</i>
+							<i class="iconfont icon-xing">&#xe605;</i>
+							<i class="iconfont icon-xing">&#xe605;</i>
+							<i class="iconfont icon-xing">&#xe605;</i>
+							<i class="iconfont icon-xing">&#xe605;</i>
+						</span>
+						<span><small>婚纱摄影</small></span>
+						<span><small>￥6799</small></span>
+					</p>
+				</div>
+				<div class="Lovely_price">
+					<b><sup>￥</sup>8990</b>
+					<span>￥<del>12990</del></span>
+					<!-- <i><small>已售166</small></i> -->
+				</div>
+			</div>
+		</a>
+	</div>
+	<!-- 底部banner -->
+	<a href="" class="bottom_banner" style="background-image: url(img/fb.jpg);"></a>
+	<!-- 脚部 -->
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="i_gift_2"><sup class="WX_V3_badge">22</sup></i>活动</a>
+			<a href=""><i class="i_reserve"><sup class="WX_V3_badge">8</sup></i>预约</a>
+			<a href=""><i class="i_assistant"><sup class="WX_V3_badge"></sup></i>助手</a>
+			<a href=""><i class="i_my"><sup class="WX_V3_badge"></sup></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+
+	<div v-show="weddingDate.isShow" style="display:none">
+		<wedding-date-component v-bind:data="weddingDate" ref="wedding" v-on:wedding="submitFn"></wedding-date-component>
+	</div>
+
+</article>
+
+<script src="js/vue.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script src="js/require.js"></script>
+<script>
+var v3 = new V3();
+
+var APP = new Vue({
+	el: 'article',
+	data: {
+		weddingDate: {
+			countDown: '26',
+			isShow: false,
+			iosSelect:'',
+			loading: true
+		}
+	},
+	components: {
+		'wedding-date-component': weddingDateComponent
+	},
+	methods: {
+		weddingFn: function() {
+			this.$refs.wedding.weddingFn()
+		},
+		submitFn: function(d){
+			console.log(d)
+		}
+	},
+	mounted: function(){
+		v3.countUp(this.weddingDate.countDown, function(num) {
+			APP.weddingDate.countDown = num;
+		});
+	}
+});
+$(function(){
+
+var banner_data = [{
+	  content: '<a href="" style="background-image:url(img/banner1.jpg)"></a>'
+	},{
+	  content: '<a href="" style="background-image:url(img/banner2.jpg)"></a>'
+	}]
+var banner = new iSlider({
+	type: 'dom',
+	data: banner_data,
+	dom: $('.iSlider_banner')[0],
+	isLooping: true,
+	fixPage: false,
+	plugins: [['dot', {locate:'relative'}]],
+	onslidechanged: function(i){
+		var obj = $('.iSlider_banner .islider-active a')
+		if(typeof obj.attr('style') == 'object'){
+			var img = obj.attr('data-img')
+			var currentImg = new Image()
+			var $loading = $('<div class="loading"><b></b><b></b><b></b><b></b><b></b></div>')
+			currentImg.src = img
+			obj.parent().append($loading)
+			console.log(i)
+			banner_data[i].content = banner_data[i].content.replace('></a>',' style="background-image:url('+img+')"></a>')
+			currentImg.onload = function(){
+				setTimeout(function(){
+					$loading.remove()
+					obj.attr('style','background-image:url('+img+')')
+				},200)
+			}	
+		}
+
+	}
+})
+
+
+
+
+})
+
+
+
+</script>
+</body>
+</html>

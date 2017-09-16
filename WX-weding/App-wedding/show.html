@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="http://h5.yingtaoyun.com/yingtao/wx/1708/css/footer.css">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_389364_glhtcb8ilajxajor.css">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_394257_8fdbbcrlazxxyldi.css">
+<link href="http://h5.yingtaoyun.com/yingtao/mb/1709/css/wedding.css" rel="stylesheet">
+</head>
+<style>
+.swiper-container {
+    width: 100%;
+   border-radius: 0.213333rem;
+    color: #fff;
+    overflow: hidden;
+}  
+
+</style>
+<body>
+<article>
+	<div class="WX_wedding_showPage">
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide">
+		        	<a href="" style="background-image: url(img/banner1.png);">
+						<div class="detail">
+							<span class="left">03</span>
+							<span class="right">
+								<p>Aug.</p>
+								<p>Thursday</p>
+							</span>
+						</div>
+		        	</a>
+					<div class="bottom">
+						<h3>小黄人&皮卡丘</h3>
+						<p>“回到生命的最初，你是我唯一的选择，<br>多了单纯，少了故事，拥有你就是我最大的满足。”</p>
+						<i class="iconfont icon-xin"></i>
+						<span class="number">68</span>
+					</div>
+		        </div>
+		        <div class="swiper-slide">
+					<a href="" style="background-image: url(img/banner2.png);">
+						<div class="detail">
+							<span class="left">03</span>
+							<span class="right">
+								<p>Aug.</p>
+								<p>Thursday</p>
+							</span>
+						</div>
+					</a>
+					<div class="bottom">
+						<h3>小黄人&皮卡丘</h3>
+						<p>“回到生命的最初，你是我唯一的选择，<br>多了单纯，少了故事，拥有你就是我最大的满足。”</p>
+						<i class="iconfont icon-xin"></i>
+						<span class="number">68</span>
+					</div>
+		        </div>
+		        <div class="swiper-slide">
+					<a href="" style="background-image: url(img/banner16.png);">
+						<div class="detail">
+							<span class="left">03</span>
+							<span class="right">
+								<p>Aug.</p>
+								<p>Thursday</p>
+							</span>
+						</div>
+					</a>
+					<div class="bottom">
+						<h3>小黄人&皮卡丘</h3>
+						<p>“回到生命的最初，你是我唯一的选择，<br>多了单纯，少了故事，拥有你就是我最大的满足。”</p>
+						<i class="iconfont icon-xin"></i>
+						<span class="number">68</span>
+					</div>
+		        </div>
+		    </div>
+		   
+		   
+		    
+		</div>
+		 <div class="swiper-button-prev">&lt;</div>
+		 <div class="swiper-button-next">&gt;</div>
+	</div>
+
+	<section class="WX_V3_poweredby">© Powered by 樱桃互动</section>
+	<div class="YT_Children_WX_footer">
+		<a href="" class="active"><i class="iconfont icon-shouye"></i>首页</a>
+		<a href=""><i class="iconfont icon-huodong1"></i>活动</a>
+		<a href=""><i class="iconfont icon-yuyue"></i>预约</a>
+		<a href=""><i class="iconfont icon-xiaozhushoukuaijie"></i>助手</a>
+		<a href=""><i class="iconfont icon-wode"></i>我的</a>
+	</div>
+
+</article>
+
+
+<script src="js/zepto.min.js"></script>
+
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+</body>
+
+<script>        
+  var mySwiper = new Swiper ('.swiper-container', {
+    loop: true,
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+  })        
+  </script>
+<script type="text/javascript">
+	new G()
+
+
+//点赞
+	
+	$("body").on("click",".bottom",function(){
+		if(!$(this).is(".active")){
+			$(this).addClass("active");
+			var H=parseInt($(this).children(".number").html())+1;
+			$(this).children(".number").html(H)
+		}
+	})
+
+	
+	
+</script>
+</html>

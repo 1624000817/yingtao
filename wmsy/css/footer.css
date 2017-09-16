@@ -1,0 +1,52 @@
+﻿@import url(icon.css);
+
+.WX_V3_footer nav{
+	z-index:1000;
+	position:fixed;
+	bottom:0;
+	left:0;
+	display:table;
+	width:100%;
+	background:-webkit-linear-gradient(top,rgba(242,242,242,.9) 0%,rgba(255,255,255,.9) 47%,rgba(248,248,248,.9) 100%);
+	background:linear-gradient(to bottom,rgba(242,242,242,.9) 0%,rgba(255,255,255,.9) 47%,rgba(248,248,248,.9) 100%);
+
+    }
+.WX_V3_footer nav a{
+	display:table-cell;
+	width:1%;
+	height:2.517333rem;
+	text-align:center;
+	color:#aaa;
+	font-size:0.469333rem;
+	font-weight:500;
+	vertical-align:middle;
+    }
+.WX_V3_footer nav a.active{
+	color:#fd7545;
+	}
+.WX_V3_footer nav i{
+	display:block;
+	margin:0 auto 0.426667rem;
+	font-size:0.896rem;
+	vertical-align:middle;
+	}
+.WX_V3_footer nav .WX_V3_badge{
+	position:absolute;
+	margin-left:-0.256rem;
+	background-color:#fd7545;
+	}
+.WX_V3_footer nav .WX_V3_badge:empty{
+	margin-left:0;
+	}
+
+.WX_V3_poweredby{
+	padding:.566667rem 0 0;
+	margin-bottom:3rem;
+	text-align:center;
+	color:#b7b7b7;
+	font-size:0.5rem;
+	font-weight:300;
+	}
+.WX_V3_poweredby a{
+	color:#7b7b7b;
+	}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+
+</head>
+<body>
+<article class="Children_WX_Sample">
+	<div class="Children_WX_Sample_list">
+		<div>
+			<a href="" class="on">
+				<p>婴儿系列</p>
+			</a>
+			<a href="">
+				<p>儿童系列</p>
+			</a>
+			<a href="">
+				<p>孕妇系列</p>
+			</a>
+			<a href="">
+				<p>家庭系列</p>
+			</a>
+			<a href="">
+				<p>婴儿系列</p>
+			</a>
+		</div>
+	</div>
+
+	<div class="M1_slider_wrap">
+		<div class="iSlider_wrapper iSlider_theme"></div>
+	</div>
+	
+</article>
+
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider_v2.js"></script>
+<script src="js/islider.animate.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+
+
+<script>
+
+
+$(function(){
+
+var tuan = new G();
+
+echo.init({
+	domElement: 'M2_customers',
+	offset: 100,
+	throttle: 100,
+	unload: false
+})
+
+echo.init({
+	domElement: 'M2_samples',
+	offset: 100,
+	throttle: 100,
+	unload: false
+})
+	
+
+var banner=new iSlider({
+	data: [
+	{
+	  content: '<a href="" style="background-image:url(http://ww1.sinaimg.cn/large/54a1cbf4gw1eye7z1a8alj20ku0dwjtq.jpg)"><div>lala</div></a>'
+	},{
+	  content: '<a href="" style="background-image:url(http://ww3.sinaimg.cn/large/54a1cbf4gw1eyc70eg6zfj20ku0gf0x7.jpg)"><div>lala</div></a>'
+	},{
+	  content: '<a href="" style="background-image:url(http://ww3.sinaimg.cn/large/54a1cbf4gw1ew16vmd87lj20g40emmyd.jpg)"><div>lala</div></a>'
+	}],
+	dom: $('.iSlider_theme')[0],
+	type: 'dom',
+	animateType: 'depth',
+	isLooping: true,
+	fixPage: false,
+	isAutoplay: true,
+	animation:1000,
+	isVertical:true,
+	plugins: [['dot', {locate:'relative'}]]
+})
+
+
+})
+</script>
+
+</body>
+</html>

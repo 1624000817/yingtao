@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<article class="Perfect_feast">
+	<header class="shop_title">
+		<a href="" class="active"><span>积分商城</span></a>
+		<a href=""><span>兑换记录</span></a>
+		<a href=""><span>我的</span></a>
+	</header>
+	<div class="shop">
+		<section class="iSlider_wrapper iSlider_banner"></section>
+		
+		<div class="shop_classfiy">
+			<div class="classfiy">
+				<a href="">
+					<div style="background-image: url(img/couple.png);"></div>
+					<span>婚纱摄影</span>
+				</a>
+				<a href="">
+					<div style="background-image: url(img/champagne.png);"></div>
+					<span>婚宴酒店</span>
+				</a>
+				<a href="">
+					<div style="background-image: url(img/wedding-rings.png);"></div>
+					<span>珠宝首饰</span>
+				</a>
+				<a href="">
+					<div style="background-image: url(img/sweets.png);"></div>
+					<span>喜铺糖果</span>
+				</a>
+			</div>
+			<div class="classfiy">
+				<a href="">
+					<div style="background-image: url(img/balloons-4.png);"></div>
+					<span>婚纱摄影</span>
+				</a>
+				<a href="">
+					<div style="background-image: url(img/dress.png);"></div>
+					<span>婚宴酒店</span>
+				</a>
+				<a href="">
+					<div style="background-image: url(img/balloons-5.png);"></div>
+					<span>珠宝首饰</span>
+				</a>
+				<a href="">
+					<div style="background-image: url(img/gifts.png);"></div>
+					<span>喜铺糖果</span>
+				</a>
+			</div>
+			<div class="lottery">
+				<a href="">
+					<b>小积分<span style="background-image:url(img/tucenng.png);"><img src="img/coin.png" alt=""></span></b>
+					<b>大抽奖<span style="background-image:url(img/tucenng.png);"><img src="img/coin.png" alt=""></span></b>
+				</a>
+				<a href="">
+					<span>幸运大转盘</span>立抢50元现金红包！
+					<span style="background-image:url(img/tucenng.png);"><img src="img/coin.png" alt=""></span>
+				</a>
+			</div>
+		</div>
+
+
+
+		<section class="WX_V3_mall_group">
+			<header>钻石会员专享</header>
+			<div>
+				<a href="">
+					<figure>
+						<div data-echo-background="img/zhuanxiang1.jpg"></div>
+						<figcaption>新娘婚礼包<span><i class="iconfont icon-jifen">&#xe630;</i> 1998积分 <del>2890</del></span></figcaption>
+					</figure>
+				</a>
+				<a href="">
+					<figure>
+						<div data-echo-background="img/zhuanxiang1.jpg"></div>
+						<figcaption>新娘婚礼包<span><i class="iconfont icon-jifen">&#xe630;</i> 1998积分 <del>2890</del></span></figcaption>
+					</figure>
+				</a>
+			</div>
+		</section>
+
+		<figure class="WX_V3_banner"><a href=""><img data-echo="img/banner17.jpg"></a></figure>
+
+		<section class="WX_V3_mall_group">
+			<header>为您推荐</header>
+			<div>
+				<a href="">
+					<figure>
+						<div data-echo-background="img/tuijian1.jpg"></div>
+						<figcaption>新娘婚礼包<span><i class="iconfont icon-jifen">&#xe630;</i> 1998积分 <del>2890</del></span></figcaption>
+					</figure>
+				</a>
+				<a href="">
+					<figure>
+						<div data-echo-background="img/tuijian1.jpg"></div>
+						<figcaption>新娘婚礼包<span><i class="iconfont icon-jifen">&#xe630;</i> 1998积分 <del>2890</del></span></figcaption>
+					</figure>
+				</a>
+				<a href="">
+					<figure>
+						<div data-echo-background="img/tuijian1.jpg"></div>
+						<figcaption>新娘婚礼包<span><i class="iconfont icon-jifen">&#xe630;</i> 1998积分 <del>2890</del></span></figcaption>
+					</figure>
+				</a>
+				<a href="">
+					<figure>
+						<div data-echo-background="img/tuijian1.jpg"></div>
+						<figcaption>新娘婚礼包<span><i class="iconfont icon-jifen">&#xe630;</i> 1998积分 <del>2890</del></span></figcaption>
+					</figure>
+				</a>
+			</div>
+		</section>
+	</div>
+
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="iconfont icon-cin2">&#xe628;</i>结婚助手</a>
+			<a href=""><i class="iconfont icon-heibanblackboard9">&#xe91d;</i>微信墙</a>
+			<a href=""><i class="i_my"></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+
+</article>
+
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/vue.min.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/zepto.min.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/echo.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/app.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/require.js"></script>
+<script>
+var v3 = new V3();
+
+var banner_data = [{
+	  content: '<a href="" style="background-image:url(img/banner1.jpg)"></a>'
+	},{
+	  content: '<a href="" data-img="img/banner2.jpg"></a>'
+	},{
+	  content: '<a href="" data-img="img/banner3.png"></a>'
+	}];
+
+
+requirejs.config({
+    baseUrl: 'http://h5.yingtaoyun.com/yingtao/wx/v3/js'
+});
+
+require(['iSlider'], function(iSlider) {
+	require(['iSlider.plugin.dot'], function() {
+		new iSlider({
+			type: 'dom',
+			data: banner_data,
+			dom: $('.iSlider_banner')[0],
+			isLooping: true,
+			fixPage: false,
+			plugins: [['dot', {locate:'relative'}]],
+			onslidechanged: function(i){
+				var obj = $('.iSlider_banner .islider-active a')
+				if(typeof obj.attr('style') == 'object'){
+					var img = obj.attr('data-img')
+					var currentImg = new Image()
+					var $loading = $('<div class="loading"><b></b><b></b><b></b><b></b><b></b></div>')
+					currentImg.src = img
+					obj.parent().append($loading)
+					banner_data[i].content = banner_data[i].content.replace('></a>',' style="background-image:url('+img+')"></a>')
+					currentImg.onload = function(){
+						setTimeout(function(){
+							$loading.remove()
+							obj.attr('style','background-image:url('+img+')')
+						},200)
+					}	
+				}
+
+			}
+		});
+	});
+});
+
+
+</script>
+</body>
+</html>

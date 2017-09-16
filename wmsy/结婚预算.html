@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<article id="WX_V3_wedding_budget">
+	<section class="WX_V3_wedding_budget_step1" v-show="budgetForm.isShow">
+		<figure class="WX_V3_wedding_budget_header">
+			<img src="img/wedding_budget.jpg">
+		</figure>
+
+		<section class="WX_V3_wedding_budget_form">
+			<form>
+				<div>
+					<input v-model="budgetForm.input" type="text" minlength="1" required placeholder="请输入您的预算金额">
+				</div>
+				<button v-on:click.prevent="startFn()">开始计算</button>
+				<small>百万新人大数据+云计算，只为给您提供最合理的预算</small>
+			</form>
+		</section>
+	</section>
+
+
+	<section class="WX_V3_wedding_budget_step2" v-show="budgetMain.isShow">
+		<section class="WX_V3_wedding_budget_chart">
+			<header>预算总额<b>{{ budgetForm.input }}</b>元<small>超过了全国<b>{{ budgetForm.percentage }}</b>％的新人</small></header>
+			<div class="chart"><canvas id="pie" width="750" height="450"></canvas></div>
+			<footer>
+				<a v-on:click="budgetItemsEdit.isShow = true,budgetMain.isShow = false">修改项目</a>
+				<a v-on:click="budgetForm.input = '',budgetMain.isShow = false,budgetForm.isShow = true">重新预算</a>
+			</footer>
+		</section>
+
+		<section class="WX_V3_center_menu WX_V3_wedding_budget_menu">
+			<header v-if="itemHeader(beforeWedding)">婚前消费</header>
+			<template v-for="item in beforeWedding" v-if="item.isShow">
+				<a v-bind:class={"is_consume":item.isConsume}>
+					<div><i v-bind:class="item.icon"></i>{{ item.name }}</div>
+					<div><span class="price">¥{{ item.price }}</span></div>
+					<div><label v-bind:class={"is_locking":item.isLocking} v-on:click="LockFn(item)"></label></div>
+					<div><i class="i_task" v-on:click="noteFn(item)"></i><i class="i_edit" v-on:click="editFn(item)"></i></div>
+				</a>
+				<q v-show="item.isNoteShow" style="display:none">{{ item.note==""?"尚未备注":item.note }}</q>
+			</template>
+			<header v-if="itemHeader(wedding)">婚礼消费</header>
+			<template v-for="item in wedding" v-if="item.isShow">
+				<a v-bind:class={"is_consume":item.isConsume} v-bind:note="item.note">
+					<div><i v-bind:class="item.icon"></i>{{ item.name }}</div>
+					<div><span class="price">¥{{ item.price }}</span></div>
+					<div><label v-bind:class={"is_locking":item.isLocking} v-on:click="LockFn(item)"></label></div>
+					<div><i class="i_task" v-on:click="noteFn(item)"></i><i class="i_edit" v-on:click="editFn(item)"></i></div>
+				</a>
+				<q v-show="item.isNoteShow" style="display:none">{{ item.note==""?"尚未备注":item.note }}</q>
+			</template>
+			<header v-if="itemHeader(afterWedding)">婚后消费</header>
+			<template v-for="item in afterWedding" v-if="item.isShow">
+				<a v-bind:class={"is_consume":item.isConsume} v-bind:note="item.note">
+					<div><i v-bind:class="item.icon"></i>{{ item.name }}</div>
+					<div><span class="price">¥{{ item.price }}</span></div>
+					<div><label v-bind:class={"is_locking":item.isLocking} v-on:click="LockFn(item)"></label></div>
+					<div><i class="i_task" v-on:click="noteFn(item)"></i><i class="i_edit" v-on:click="editFn(item)"></i></div>
+				</a>
+				<q v-show="item.isNoteShow" style="display:none">{{ item.note==""?"尚未备注":item.note }}</q>
+			</template>
+			<header v-if="itemHeader(other)">其他消费</header>
+			<template v-for="item in other" v-if="item.isShow">
+				<a v-bind:class={"is_consume":item.isConsume} v-bind:note="item.note">
+					<div><i v-bind:class="item.icon"></i>{{ item.name }}</div>
+					<div><span class="price">¥{{ item.price }}</span></div>
+					<div><label v-bind:class={"is_locking":item.isLocking} v-on:click="LockFn(item)"></label></div>
+					<div><i class="i_task" v-on:click="noteFn(item)"></i><i class="i_edit" v-on:click="editFn(item)"></i></div>
+				</a>
+				<q v-show="item.isNoteShow" style="display:none">{{ item.note==""?"尚未备注":item.note }}</q>
+			</template>
+		</section>
+	</section>
+
+
+	<div class="budget_item_edit" v-show="budgetItemEdit.isShow" style="display:none">
+		<div>
+			<i class="i_close" v-on:click.prevent="budgetItemEdit.isShow=false"></i>
+			<table>
+				<tr><td>价格: </td><td><input v-model="budgetItemEdit.price" type="number"></td></tr>
+				<tr><td>备注: </td><td><input v-model="budgetItemEdit.note" type="text"></td></tr>
+				<tr>
+					<td></td>
+					<td>
+						<label class="YT-ui-switch consume"><input type="checkbox" id="consume_checkbox" v-model="budgetItemEdit.isConsume"><small></small><span>已消费</span><span>未消费</span></label>
+
+						<label class="YT-ui-switch"><input type="checkbox" id="lock_checkbox" v-model="budgetItemEdit.isLocking"><small></small><span>解锁价格</span><span>锁定价格</span></label>
+					</td>
+				</tr>
+				<tr><td colspan="2"><button v-on:click="itemEditSubmit()">确定</button></td></tr>
+			</table>
+		</div>
+	</div>
+
+
+	<div class="budget_items_edit" v-show="budgetItemsEdit.isShow" style="display:none">
+		<h1>选择预算项目</h1>
+		<header v-on:click="selectFn(beforeWedding)"><i class="i_ok_o" v-bind:class={"c_ff7394":itemsHeader(beforeWedding)}></i>婚前消费</header>
+		<a v-for="item in beforeWedding" v-on:click="item.isShow=!item.isShow">
+			<div><i class="i_ok_o" v-bind:class={"c_ff7394":item.isShow}></i>{{ item.name }}</div>
+		</a>
+		<header v-on:click="selectFn(wedding)"><i class="i_ok_o" v-bind:class={"c_ff7394":itemsHeader(wedding)}></i>婚礼消费</header>
+		<a v-for="item in wedding" v-on:click="item.isShow=!item.isShow">
+			<div><i class="i_ok_o" v-bind:class={"c_ff7394":item.isShow}></i>{{ item.name }}</div>
+		</a>
+		<header v-on:click="selectFn(afterWedding)"><i class="i_ok_o" v-bind:class={"c_ff7394":itemsHeader(afterWedding)}></i>婚后消费</header>
+		<a v-for="item in afterWedding" v-on:click="item.isShow=!item.isShow">
+			<div><i class="i_ok_o" v-bind:class={"c_ff7394":item.isShow}></i>{{ item.name }}</div>
+		</a>
+		<header v-on:click="selectFn(other)"><i class="i_ok_o" v-bind:class={"c_ff7394":itemsHeader(other)}></i>其他消费</header>
+		<a v-for="item in other" v-on:click="item.isShow=!item.isShow">
+			<div><i class="i_ok_o" v-bind:class={"c_ff7394":item.isShow}></i>{{ item.name }}</div>
+		</a>
+		<button v-on:click.prevent="itemsEditSubmit()">确认</button>
+	</div>
+
+
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="i_gift_2"><sup class="WX_V3_badge">22</sup></i>活动</a>
+			<a href=""><i class="i_reserve"><sup class="WX_V3_badge">8</sup></i>预约</a>
+			<a href=""><i class="i_assistant"><sup class="WX_V3_badge"></sup></i>助手</a>
+			<a href=""><i class="i_my"><sup class="WX_V3_badge"></sup></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+</article>
+
+
+<script src="js/vue.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/require.js"></script>
+
+<script>
+var weddingBudgetData = {
+	"budgetForm": {
+		"isShow": false,
+		"input": "",
+		"percentage": 10
+	},
+	"budgetMain": {
+		"isShow": true
+	},
+	"budgetItemsEdit": {
+		"isShow": false
+	},
+	"budgetItemEdit": {
+		"isShow": false
+	},
+	"pieData": [10, 60, 40],
+	"pieLabel": [
+		["婚礼", "¥111110.00"],
+		["婚前", "¥68880.00"],
+		["婚后", "¥68880.00"]
+	],
+	"beforeWedding": {
+		"jewelry": {
+			"icon": "i_jewellery c_9173ff",
+			"name": "珠宝首饰",
+			"price": 111111,
+			"note": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"isLocking": true,
+			"isShow": true,
+			"isConsume": false,
+			"isNoteShow": false
+		},
+		"weddingPhotography": {
+			"icon": "i_camera c_ff7394",
+			"name": "婚纱摄影",
+			"price": 111111,
+			"note": "bbbbbbbbbbb",
+			"isLocking": false,
+			"isShow": true,
+			"isConsume": true,
+			"isNoteShow": false
+		}
+	},
+	"wedding": {
+		"candy": {
+			"icon": "i_candy c_ff414e",
+			"name": "请帖喜糖",
+			"price": 111111,
+			"note": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"isLocking": true,
+			"isShow": true,
+			"isConsume": false,
+			"isNoteShow": false
+		},
+		"weddingDress": {
+			"icon": "i_wedding_dress c_ff7394",
+			"name": "婚礼礼服",
+			"price": 111111,
+			"note": "ccccccccccc",
+			"isLocking": false,
+			"isShow": true,
+			"isConsume": false,
+			"isNoteShow": false
+		},
+		"makeup": {
+			"icon": "i_makeup c_ff414e",
+			"name": "婚礼跟妆",
+			"price": 111111,
+			"note": "",
+			"isLocking": false,
+			"isShow": true,
+			"isConsume": false,
+			"isNoteShow": false
+		},
+		"video": {
+			"icon": "i_video c_58b6ff",
+			"name": "婚礼摄像",
+			"price": 111111,
+			"note": "",
+			"isLocking": false,
+			"isShow": true,
+			"isConsume": false,
+			"isNoteShow": false
+		},
+		"photography": {
+			"icon": "i_video_camera c_00d027",
+			"name": "婚礼摄影",
+			"price": 111111,
+			"note": "",
+			"isLocking": true,
+			"isShow": true,
+			"isConsume": false,
+			"isNoteShow": false
+		},
+		"weddingMC": {
+			"icon": "i_microphone c_e4c100",
+			"name": "婚礼司仪",
+			"price": 111111,
+			"note": "",
+			"isLocking": true,
+			"isShow": true,
+			"isConsume": false,
+			"isNoteShow": false
+		},
+		"car": {
+			"icon": "i_car c_9173ff",
+			"name": "婚车租供",
+			"price": 111111,
+			"note": "",
+			"isLocking": false,
+			"isShow": true,
+			"isConsume": false,
+			"isNoteShow": false
+		},
+		"plan": {
+			"icon": "i_balloon c_ffa573",
+			"name": "婚礼策划",
+			"price": 111111,
+			"note": "",
+			"isLocking": false,
+			"isShow": false,
+			"isConsume": false,
+			"isNoteShow": false
+		},
+		"hotel": {
+			"icon": "i_hotel c_0033c4",
+			"name": "婚礼酒店",
+			"price": 111111,
+			"note": "",
+			"isLocking": false,
+			"isShow": false,
+			"isConsume": false,
+			"isNoteShow": false
+		}
+	},
+	"afterWedding": {
+		"honeymoon": {
+			"icon": "i_plane c_00dce4",
+			"name": "蜜月旅行",
+			"price": 111111,
+			"note": "",
+			"isLocking": false,
+			"isShow": true,
+			"isConsume": false,
+			"isNoteShow": false
+		}
+	},
+	"other": {
+		"other": {
+			"icon": "i_add c_73c2ff",
+			"name": "其他消费",
+			"price": 111111,
+			"note": "",
+			"isLocking": false,
+			"isShow": true,
+			"isConsume": false,
+			"isNoteShow": false
+		}
+	}
+};
+
+
+var APP = new Vue({
+	el: '#WX_V3_wedding_budget',
+	data: weddingBudgetData,
+	methods: {
+		numValidate: function(val){
+			var error = '';
+			if(val.replace(/\s+/g,'').length == 0){
+				error += '预算不能为空\n';
+			}
+			if(!/[\d]+/.test(val)){
+				error += '只能填写数字\n';
+			}
+			if(parseInt(val) <= 0){
+				error += '金额不能小于等于0\n';
+			}
+			return error;
+		},
+		startFn: function(){
+			console.log('开始计算')
+			var self = this;
+
+			if(this.numValidate(this.budgetForm.input) != ''){
+				return WXalert(this.numValidate(this.budgetForm.input));
+			}
+
+			setTimeout(function(){
+				console.log('模拟post异步测试')
+				self.budgetForm.isShow = false;
+				self.budgetMain.isShow = true;
+				self.pieData = [20, 20, 140];
+				pie(self.pieData,self.pieLabel);
+			},1e3)
+		},
+		itemsEditSubmit: function(){
+			this.budgetItemsEdit.isShow = false;
+			this.budgetMain.isShow = true;
+		},
+		selectFn: function(items){
+			if (this.itemsHeader(items)) {
+				for (item in items) {
+					items[item].isShow = false;
+				}
+			} else {
+				for (item in items) {
+					items[item].isShow = true;
+				}
+			}
+		},
+		itemsHeader: function(items) {
+			var isShow = true;
+			for(item in items){
+				isShow = items[item].isShow == false ? false : isShow;
+			}
+			return isShow;
+		},
+		LockFn: function(e){
+			e.isLocking =! e.isLocking;
+		},
+		noteFn: function(e){
+			e.isNoteShow =! e.isNoteShow;
+		},
+		editFn: function(e) {
+			console.log('编辑单个项目')
+			this.budgetItemEdit.active = e;
+			this.budgetItemEdit.price = e.price;
+			this.budgetItemEdit.note = e.note;
+			this.budgetItemEdit.isShow = true;
+			this.budgetItemEdit.isLocking = e.isLocking;
+			this.budgetItemEdit.isConsume = e.isConsume;
+		},
+		itemEditSubmit: function(){
+			console.log('保存单个项目')
+			console.log(weddingBudgetData)
+			
+			if(this.numValidate(this.budgetItemEdit.price) != ''){
+				return WXalert(this.numValidate(this.budgetItemEdit.price));
+			}
+
+
+			this.budgetItemEdit.active.price = this.budgetItemEdit.price;
+			this.budgetItemEdit.active.isLocking = this.budgetItemEdit.isLocking;
+			this.budgetItemEdit.active.note = this.budgetItemEdit.note;
+			this.budgetItemEdit.active.isConsume = this.budgetItemEdit.isConsume;
+			this.budgetItemEdit.isShow = false;
+		},
+		itemHeader: function(items) {
+			var isShow = false;
+			for(item in items){
+				isShow = items[item].isShow == true ? true : isShow;
+			}
+			return isShow;
+		}
+	}
+});
+
+
+
+function pie(myData,myLabel){
+	var myColor = ["#f9b54c", "#66b31b", "#fc6f58"];
+	function getTotal() {
+		var myTotal = 0;
+		for (var j = 0; j < myData.length; j++) {
+			myTotal += (typeof myData[j] == 'number') ? myData[j] : 0;
+		}
+		return myTotal;
+	}
+
+	function plotData() {
+		var canvas;
+		var ctx;
+		var lastend = 0;
+		var myTotal = getTotal();
+		var doc;
+		canvas = document.getElementById("pie");
+		var x = (canvas.width) / 2;
+		var y = (canvas.height) / 2;
+		var r = 150;
+
+		ctx = canvas.getContext("2d");
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+		for (var i = 0; i < myData.length; i++) {
+			ctx.fillStyle = myColor[i];
+			ctx.beginPath();
+			ctx.moveTo(x, y);
+			ctx.arc(x, y, r, lastend, lastend + (Math.PI * 2 * (myData[i] / myTotal)), false);
+			ctx.lineTo(x, y);
+			ctx.fill();
+			ctx.beginPath();
+			var start = [];
+			var end = [];
+			var last = 0;
+			var flip = 0;
+			var textOffset = 0;
+			var precentage = (myData[i] / myTotal) * 100;
+			start = getPoint(x, y, r - 20, (lastend + (Math.PI * 2 * (myData[i] / myTotal)) / 2));
+			end = getPoint(x, y, r + 20, (lastend + (Math.PI * 2 * (myData[i] / myTotal)) / 2));
+			if (start[0] <= x) {
+				flip = -1;
+				textOffset = -110;
+			} else {
+				flip = 1;
+				textOffset = 10;
+			}
+			ctx.moveTo(start[0], start[1]);
+			ctx.lineTo(end[0], end[1]);
+			ctx.lineTo(end[0] + 120 * flip, end[1]);
+			ctx.strokeStyle = "rgba(0,0,0,.5)";
+			ctx.lineWidth = 1;
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.fillStyle = "#555";
+			ctx.arc(start[0], start[1], 4, 0, Math.PI * 2, true);
+			ctx.fill();
+
+			ctx.font = "20px Arial";
+			ctx.fillStyle = 'rgba(0,0,0,.5)';
+			ctx.fillText(myLabel[i][0] + " " + precentage.toFixed(2) + "%", end[0] + textOffset, end[1] - 10);
+			ctx.fillText(myLabel[i][1], end[0] + textOffset, end[1] + 25);
+			lastend += Math.PI * 2 * (myData[i] / myTotal);
+		}
+		ctx.beginPath();
+		ctx.fillStyle = "rgba(240,240,240,1)";
+		ctx.arc(x, y, 80, 0, Math.PI * 2, true);
+		ctx.fill();
+
+	}
+	function getPoint(c1, c2, radius, angle) {
+		return [c1 + Math.cos(angle) * radius, c2 + Math.sin(angle) * radius];
+	}
+	plotData();
+};
+
+
+require(['js/echo','js/app'], function(echo,V3) {
+	window.echo = echo;
+	var v3 = new V3();
+
+});
+</script>
+</body>
+</html>

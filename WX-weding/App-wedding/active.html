@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link rel="stylesheet" type="text/css" href="http://h5.yingtaoyun.com/yingtao/wx/1708/css/footer.css">
+<link rel="stylesheet" type="text/css" href="http:////at.alicdn.com/t/font_394257_8fdbbcrlazxxyldi.css">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_389364_glhtcb8ilajxajor.css">
+<link href="http://h5.yingtaoyun.com/yingtao/mb/1709/css/wedding.css" rel="stylesheet">
+
+
+</head>
+<body>
+<article>
+	<div class="WX_wedding_activetPage">
+		<div class="bannerPic" style="background-image: url(img/banner1.png);"></div>
+		<div class="nav_menu">
+			<a href="" class="active">HOME首页</a>
+			<a href="">SHOW客照</a>
+			<a href="">PRODUCT样照</a>
+			<a href="">GOODS套系</a>
+			<a href="">ACTIVITY活动</a>
+		</div>
+
+
+		<div class="activeList">
+			<a href="" class="active_banner" style="background-image: url(img/banner12.jpg);"></a>
+			<div class="active_detail">
+				<div class="detail_box">
+					<div class="on">
+						<small>进行中</small>
+					</div>
+					<h3>后古婚纱 八月新风格</h3>
+					<p>2017.08.26-2017.09.26</p>
+				</div>
+			</div>
+		</div>
+		<div class="activeList">
+			<a href="" class="active_banner" style="background-image: url(img/banner13.jpg);"></a>
+			<div class="active_detail">
+				<div class="detail_box">
+					<div class="on">
+						<small>进行中</small>
+					</div>
+					<h3>后古独家 中国式艺术婚纱</h3>
+					<p>2017.08.26-2017.09.26</p>
+				</div>
+			</div>
+		</div>
+		<div class="activeList">
+			<a href="" class="active_banner" style="background-image: url(img/banner12.jpg);"></a>
+			<div class="active_detail">
+				<div class="detail_box">
+					<div class="on">
+						<small>进行中</small>
+					</div>
+					<h3>南方海岛纪</h3>
+					<p>2017.08.26-2017.09.26</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="WX_V3_poweredby">© Powered by 樱桃互动</section>
+	<div class="YT_Children_WX_footer">
+		<a href="" class="active"><i class="iconfont icon-shouye"></i>首页</a>
+		<a href=""><i class="iconfont icon-huodong1"></i>活动</a>
+		<a href=""><i class="iconfont icon-yuyue"></i>预约</a>
+		<a href=""><i class="iconfont icon-xiaozhushoukuaijie"></i>助手</a>
+		<a href=""><i class="iconfont icon-wode"></i>我的</a>
+	</div>
+
+</article>
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+<script type="text/javascript">
+	new G()
+
+</script>
+</html>

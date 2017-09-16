@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<article class="Perfect_feast" id="grade">
+	<figure class="WX_V3_member_center_header" style="background-image: url(img/hbj.png);">
+		<div class="memberCenter">
+			<h1>
+				<img src="img/touxiang.jpg">
+				<div>
+					钻石会员
+					<span><small>恭喜您!成为人生赢家!</small></span>
+				</div>
+			</h1>
+			<table>
+				<td>2800<span>当前积分</span></td>
+				<td>1200<span>成长值</span></td>
+				<td>9.0<span>当前折扣</span></td>
+			</table>
+			<figcaption><a href="">[钻石会员特惠]998积分兑换小熊电热饭盒<i class="i_arrow_right"></i></a></figcaption>
+		</div>
+	</figure>
+	
+	<div class="mature-progress">
+	    <div class="mature-progress-bottom">
+	        <div class="mature-progress-box v0" id="mamture_progress">
+	            <dl>
+	                <dt>0</dt>
+	                <dd><span class="member-ico v0"></span>普通0</dd>
+	            </dl>
+	            <dl>
+	                <dt>100</dt>
+	                <dd><span class="member-ico v1"></span>白银100</dd>
+	            </dl>
+	            <dl>
+	                <dt>500</dt>
+	                <dd><span class="member-ico v2"></span>黄金500</dd>
+	            </dl>
+	            <dl>
+	                <dt>1000</dt>
+	                <dd><span class="member-ico v3"></span>白金1000</dd>
+	            </dl>
+	            <dl>
+	                <dt>2000</dt>
+	                <dd><span class="member-ico v4">钻石</span>2000</dd>
+	            </dl>
+	            <div class="progress-box" id="progress_content" data-progress="500">
+	                <i class="progress-box-1"></i>
+	                <i class="progress-box-2"></i>
+	                <i class="progress-box-3"></i>
+	                <i class="progress-box-4"></i>
+	                <i class="progress-box-5"></i>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<section class="WX_V3_member_center_nav">
+		<a href=""><img src="img/member_center_nav_1.png"></a>
+		<a href=""><img src="img/member_center_nav_2.png"></a>
+	</section>
+
+	<figure class="WX_V3_banner">
+		<img src="img/banner_3.jpg">
+	</figure>
+
+	<section class="WX_V3_task_center_menu">
+		<table>
+			<td v-bind:class={"active":tabCurrent==0} v-on:click="memberTabFn(0)"><a>成长值解读</a></td>
+			<td v-bind:class={"active":tabCurrent==1} v-on:click="memberTabFn(1)"><a>成长值明细</a></td>
+		</table>
+	</section>
+
+	<section v-if="tabCurrent==0" class="WX_V3_growth_wrap">
+		<header><i class="i_help"></i> 什么是成长值</header>
+		<div>
+			<blockquote>
+				成长值是会员通过消费，接取任务，参加活动所获得的，
+				每获得1个积分即可累计1点成长值，累计成长值总额决定
+				您的会员级别。
+				积分商城兑换商品只消耗积分不消耗成长值。
+			</blockquote>
+
+			<div class="level_table">
+				<header>会员等级对照表</header>
+				<table>
+					<tr><th>会员等级</th><th>所需成长值</th><th>积分商城折扣</th></tr>
+					<tr><td><img data-echo="img/level_1.png"> 注册会员</td><td>0</td><td>无</td>
+					<tr><td><img data-echo="img/level_2.png"> 铜牌会员</td><td>100</td><td>9.8</td>
+					<tr><td><img data-echo="img/level_3.png"> 银牌会员</td><td>1000</td><td>9.5</td>
+					<tr><td><img data-echo="img/level_4.png"> 金牌会员</td><td>5000</td><td>9</td>
+					<tr><td><img data-echo="img/level_5.png"> 钻石会员</td><td>100000</td><td>8.5</td>
+					<tr class="last">
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<section v-if="tabCurrent==1" class="WX_V3_growth_wrap">
+		<div>
+			<div class="level_table">
+				<header>我的成长值明细</header>
+				<table>
+					<tr><th>时间</th><th>来源</th><th>成长值</th></tr>
+					<tr><td>2017.07.01</td><td>0</td><td>无</td>
+					<tr><td>2017.07.01</td><td>100</td><td>9.8</td>
+					<tr><td>2017.07.01</td><td>1000</td><td>9.5</td>
+					<tr><td>2017.07.01</td><td>5000</td><td>9</td>
+					<tr><td>2017.07.01</td><td>100000</td><td>8.5</td>
+				</table>
+			</div>
+		</div>
+	</section>
+	<section class="WX_V3_growth_wrap">
+		<header class="get"><i class="i_help"></i> 如何获得</header>
+	</section>
+
+	<section class="WX_V3_center_menu">
+		<a href="">
+			<div><i class="iconfont icon-xingzhuang-x">&#xe60b;</i>我的签约</div>
+			<div>签约即可获得1000积分<i class="i_arrow_right"></i></div>
+		</a>
+		<a v-on:click="sign.isShow=true">
+			<div><i class="iconfont icon-zb">&#xe60a;</i>每日签到</div>
+			<div>签到送10积分<i class="i_arrow_right"></i></div>
+		</a>
+		<a href="">
+			<div><i class="i_task c_ff7394"></i>任务中心</div>
+			<div>领任务 得积分<i class="i_arrow_right"></i></div>
+		</a>
+		<a href="">
+			<div><i class="i_invitation c_ff7394"></i>邀请新人</div>
+			<div>新人签约即可获得500积分<i class="i_arrow_right"></i></div>
+		</a>
+		<a href="" interval>
+			<div><i class="i_gift c_9173ff"></i>最新活动</div>
+			<div>美丽女人节千人团购<i class="i_arrow_right"></i></div>
+		</a>
+	</section>
+
+
+
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="i_gift_2"><sup class="WX_V3_badge">22</sup></i>活动</a>
+			<a href=""><i class="i_reserve"><sup class="WX_V3_badge">8</sup></i>预约</a>
+			<a href=""><i class="i_assistant"><sup class="WX_V3_badge"></sup></i>助手</a>
+			<a href=""><i class="i_my"><sup class="WX_V3_badge"></sup></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+
+	<div v-show="sign.isShow" style="display:none">
+		<wedding-sign-component v-bind:data="sign"></wedding-date-component>
+	</div>
+
+</article>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<!-- <script src="js/vue.min.js"></script> -->
+<script src="js/zepto.min.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script src="js/require.js"></script>
+
+<script>
+var v3 = new V3();
+(function() {
+    var mamture_progress = $('#mamture_progress');
+    var progress_content = $('#progress_content');
+    var l = 0;
+    var _number = progress_content.attr('data-progress');
+    var timer = null;
+    var pro = 0;
+
+    if (_number < 100) {
+        lad(_number, 100, '.progress-box-1', function() {
+            /*$('.progress-box-1').append('<span>再消费' + (100 - _number) + '元即可升级</span>');*/
+        });
+    };
+
+    if (_number >= 100 && _number < 500) {
+        lad(100, 100, '.progress-box-1', function() {
+            mamture_progress.addClass('v1');
+            lad(_number - 100, 500 - 100, '.progress-box-2', function() {
+                $('.progress-box-2').addClass('active');
+                /*$('.progress-box-2').append('<span>再消费' + (500 - _number) + '元即可升级</span>');*/
+            });
+        });
+    };
+
+    if (_number >= 500 && _number < 1000) {
+        lad(100, 100, '.progress-box-1', function() {
+            mamture_progress.addClass('v1')
+            lad(500, 500, '.progress-box-2', function() {
+                mamture_progress.addClass('v2');
+                lad(_number - 500, 1000 - 500, '.progress-box-3', function() {
+                    $('.progress-box-3').addClass('active');
+                    /*$('.progress-box-3').append('<span>再消费' + (1000 - _number) + '元即可升级</span>');*/
+                })
+            });
+        });
+    };
+
+    if (_number >= 1000 && _number < 2000) {
+        lad(100, 100, '.progress-box-1', function() {
+            mamture_progress.addClass('v1')
+            lad(1000, 1000, '.progress-box-2', function() {
+                mamture_progress.addClass('v2')
+                lad(1000, 1000, '.progress-box-3', function() {
+                    mamture_progress.addClass('v3')
+                    lad(_number - 1000, 2000 - 1000, '.progress-box-4', function() {
+                        $('.progress-box-4').addClass('active');
+                        /*$('.progress-box-4').append('<span>再消费' + (2000 - _number) + '元即可升级</span>');*/
+                    })
+                })
+            });
+        });
+    };
+
+    if (_number >= 2000) {
+        lad(100, 100, '.progress-box-1', function() {
+            mamture_progress.addClass('v1')
+            lad(500, 500, '.progress-box-2', function() {
+                mamture_progress.addClass('v2')
+                lad(1000, 1000, '.progress-box-3', function() {
+                    mamture_progress.addClass('v3')
+                    lad(1000, 1000, '.progress-box-4', function() {
+                        mamture_progress.addClass('v4')
+                        lad(_number - 1000, 5000000, '.progress-box-5')
+                    })
+                })
+            });
+        });
+    };
+
+    function lad(number, max, cls, callback) {
+        l = 0;
+        timer = setInterval(function() {
+            if (number <= 100) {
+                l++;
+            } else if (number > 100 && number <= 500) {
+                l += 5;
+            } else if (number > 500 && number <= 1000) {
+                l += 10;
+            } else if (number > 1000 && number <= 2000) {
+                l += 20;
+            } else {
+                l += 30;
+            };
+
+            pro = (l / max) * 125/45; 
+            if (l >= number) {
+                clearInterval(timer);
+                if (callback) callback(); //回调
+            };
+            $(cls).css({
+                width: pro + 'rem'
+            })
+        }, 1)
+    }
+})();
+
+var	APP = new Vue({
+	el: 'article',
+	data: {
+		tabCurrent: 0,
+		sign: {
+			isShow: false,
+			day: 2,
+			points: 1980,
+			plus: [5,15,35],
+			btnTitle: '去赚积分',
+			btnUrl: ''
+		}
+	},
+	components: {
+		'wedding-sign-component': weddingSignComponent
+	},
+	computed: {
+	},
+	methods: {
+		memberTabFn: function(e){
+			this.tabCurrent = e
+		}
+	}
+});
+
+</script>
+</body>
+</html>

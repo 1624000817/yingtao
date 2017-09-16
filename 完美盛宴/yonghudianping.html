@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+</head>
+<body>
+<article class="Perfect_feast">
+	<div class="user_reviews">
+		<a href="javascript:;" class="active">全部</a>
+		<a href="javascript:;">好评</a>
+		<a href="javascript:;">差评</a>
+		<a href="javascript:;">最新点评</a>
+		<a href="javascript:;">团购点评</a>
+		<a href="javascript:;">服务好(145)</a>
+		<a href="javascript:;">交通方便(135)</a>
+		<a href="javascript:;">位置好(182)</a>
+		<a href="javascript:;">很干净(76)</a>
+		<a href="javascript:;">房间舒适(76)</a>
+		<a href="javascript:;">欧舒丹洗浴(76)</a>
+	</div>
+	<!-- 用户点评 -->
+	<div class="favourable username user_reviews1">
+		<div class="headPhoto" style="background-image: url(img/touxiang.jpg)">
+			<span><small>Lv6</small></span>
+		</div>
+		<div class="review">
+			<div>
+				<b>易烊千玺</b>
+				<span>1月24日</span>
+			</div>
+			<div class="start">
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<span><b>￥</b>38000/元</span>
+			</div>
+			<p>朋友在这里结婚的！有的草坪和举行仪式的地方！看了婚礼当场放的视频租的还可以比较感人的！led屏比较惊艳！换背景的时候坐的后面也能比较清新的！吃的一般吧，量还可以！晚宴的流程还是比较简单的！司仪的主持很有调理！吃的一般吧，量还可以！晚宴的流程还是比较简单的！司仪的主持很有调理</p>
+			<a href="javascript:;">全文</a>
+			<div class="pic_list">
+				<a href="" style="background-image:url(img/banner15.jpg);"></a>
+				<a href="" style="background-image:url(img/banner15.jpg);"></a>
+				<a href="" style="background-image:url(img/banner15.jpg);"></a>
+				<a href="" style="background-image:url(img/banner15.jpg);"></a>
+				<a href="" style="background-image:url(img/banner15.jpg);"></a>
+				<a href="" style="background-image:url(img/banner15.jpg);"></a>
+			</div>
+		</div>
+	</div>
+	<div class="favourable username user_reviews1">
+		<div class="headPhoto" style="background-image: url(img/touxiang.jpg)">
+			<span><small>Lv6</small></span>
+		</div>
+		<div class="review">
+			<div>
+				<b>王俊凯</b>
+				<span>1月24日</span>
+			</div>
+			<div class="start">
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<i class="iconfont icon-xing">&#xe605;</i>
+				<span><b>￥</b>38000/元</span>
+			</div>
+			<p>朋友在这里结婚的！有的草坪和举行仪式的地方！看了婚礼当场放的视频租的还可以比较感人的！led屏比较惊艳！换背景的时候坐的后面也能比较清新的！吃的一般吧，量还可以！晚宴的流程还是比较简单的！司仪的主持很有调理量还可以！晚宴的流程还是比较简单的！司仪的主持很有调理</p>
+			<a href="javascript:;">全文</a>
+			<div class="pic_list">
+				<a href="" style="background-image:url(img/banner15.jpg);"></a>
+				<a href="" style="background-image:url(img/banner16.jpg);"></a>
+				<a href="" style="background-image:url(img/banner15.jpg);"></a>
+			</div>
+		</div>
+	</div>
+	<!-- 脚部 -->
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="i_gift_2"><sup class="WX_V3_badge">22</sup></i>活动</a>
+			<a href=""><i class="i_reserve"><sup class="WX_V3_badge">8</sup></i>预约</a>
+			<a href=""><i class="i_assistant"><sup class="WX_V3_badge"></sup></i>助手</a>
+			<a href=""><i class="i_my"><sup class="WX_V3_badge"></sup></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+	<div class="mask" style="display: none">
+		<div class="maskbox"></div>
+	</div>
+	
+
+</article>
+
+<script src="js/vue.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/echo.js"></script>
+<script src="js/app.js"></script>
+<script src="js/require.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script>
+var v3 = new V3();
+
+var number=1;
+$(".user_reviews1 .review a").on("click",function(){
+	if(number==1){
+		$(this).prev("p").css({"white-space":"normal","text-overflow":"clip","overflow":"visible","display":"block"})
+		number++;
+	}else{
+		$(this).prev("p").css({"white-space":"normal","text-overflow":"ellipsis","overflow":"hidden","display":"-webkit-box"})
+		number--;
+	}
+	
+})
+
+$(".user_reviews a").on("click",function(){
+	$(this).addClass("active").siblings("a").removeClass("active")
+})
+
+$(".pic_list a").on("click",function(e){
+	e.preventDefault();
+	var src=$(this).attr("style");
+	$(".maskbox").attr("style",src)
+	$(".mask").show()
+})
+$(".mask").on("click",function(){
+	$(this).hide();
+})
+
+</script>
+</body>
+</html>

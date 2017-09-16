@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+<link href="css/wnl.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+</head>
+<body>
+<article class="Perfect_feast">
+	<!-- 温馨提示 -->
+	<p class="kindly_reminder">温馨提示: 婚宴档期告急，在上海一般要提前一年预订，以免耽误婚期哦！</p>
+	<!-- 时间选择 -->
+	
+<div id="main">
+        <ul id="m-result" class="result">
+            <li id="first" class="res-list">
+                <div id="mohe-rili" class="g-mohe" data-mohe-type="rili">
+                    <div class="mh-rili-wap mh-rili-only " data-mgd='{"b":"rili-body"}'>
+                        <div class="mh-rili-widget">
+                            <div class="mh-doc-bd mh-calendar">
+                                <div class="mh-hint-bar gclearfix">
+                                    <div class="mh-control-bar">
+                                        <div class="mh-control-module mh-year-control mh-year-bar">
+                                            <a href="#prev-year" style="display: none;" action="prev" class="mh-prev" data-md='{"p":"prev-year"}'> </a>
+                                            <div class="mh-control" style="display: none;">
+                                                <div class="mh-field mh-year" val=""> </div>
+                                            </div>
+                                            <a href="#next-year" action="next" style="display: none;"  class="mh-next" data-md='{"p":"next-year"}'></a>
+                                             
+                                            <ul class="mh-list year-list" style="display:block;" data-md='{"p":"select-year"}'>
+                                            </ul>
+                                        </div>
+                                       <div class="mh-control-module mh-month-control mh-mouth-bar">
+                                            <a href="#prev-month" action="prev" class="mh-prev" data-md='{"p":"prev-month"}'></a>
+                                            <div class="mh-control">
+                                                <div class="mh-field mh-month" val=""></div>
+                                            </div>
+                                            <a href="#next-month" action="next" class="mh-next" data-md='{"p":"next-month"}'></a>
+                                            <ul class="mh-list month-list" style="display:none;" data-md='{"p":"select-month"}'></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mh-cal-main">
+                                    <div class="mh-col-1 mh-dates">
+                                        <ul class="mh-dates-hd gclearfix">
+                                            <li class="mh-days-title">
+                                                一
+                                            </li>
+                                            <li class="mh-days-title">
+                                                二
+                                            </li>
+                                            <li class="mh-days-title">
+                                                三
+                                            </li>
+                                            <li class="mh-days-title">
+                                                四
+                                            </li>
+                                            <li class="mh-days-title">
+                                                五
+                                            </li>
+                                            <li class="mh-days-title mh-weekend">
+                                                六
+                                            </li>
+                                            <li class="mh-days-title mh-last mh-weekend">
+                                                日
+                                            </li>
+                                        </ul>
+                                        <ol class="mh-dates-bd"> </ol>
+                                    </div>
+                                    <div class="mh-col-2 mh-almanac">
+                                        <div class="mh-almanac-base mh-almanac-main">
+                                        </div>
+                                        <div class="mh-almanac-extra gclearfix" style="display:none;">
+                                            <div class="mh-suited">
+                                                <h3 class="mh-st-label">
+                                                    吉
+                                                </h3>
+                                                <ul class="mh-st-items gclearfix">
+                                                </ul>
+                                            </div>
+                                            <div class="mh-tapu">
+                                                <h3 class="mh-st-label">
+                                                    忌
+                                                </h3>
+                                                <ul class="mh-st-items gclearfix">
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <a href="" class="order">预定</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+	<!-- 脚部 -->
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="iconfont icon-cin2">&#xe628;</i>结婚助手</a>
+			<a href=""><i class="iconfont icon-heibanblackboard9">&#xe91d;</i>微信墙</a>
+			<a href=""><i class="i_my"></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+    <!-- 遮罩层 -->
+    <div class="mask" style="display: none"></div>
+        <div class="mask_box" style="display: none">
+                <div class="close">×</div>
+                <div class="title">在线预约，即可领取专属优惠</div>
+                <div class="gift">
+                    <a href=""><span>[到店礼]</span>到店即送9999元大礼包</a>
+                    <a href=""><span>[订单礼]</span>到店即送9999元大礼包</a>
+                </div>
+                <p>请留下您的联系方式</p>
+                <input type="text" placeholder="请输入姓名">
+                <input type="text" placeholder="请输入手机号">
+                <a href="shouye.html" class="mask_order">立即预约</a>
+        </div>
+
+</article>
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="js/183.js" ></script>
+<script type="text/javascript" src="js/style.js" ></script>
+
+<script type="text/javascript">
+(function() {
+    window.OB = window.OB || {},
+    window.OB.RiLi = window.OB.RiLi || {},
+    window.OB.RiLi.dateRest = ["0101", "0102", "0103", "0218", "0219", "0220", "0221", "0222", "0223", "0224", "0404", "0405", "0406", "0501", "0502", "0503", "0620", "0621", "0622", "0903", "0904", "0905", "0926", "0927", "1001", "1002", "1003", "1004", "1005", "1006", "1007"],
+    window.OB.RiLi.dateWork = ["0104", "0215", "0228", "0906", "1010"],
+    window.OB.RiLi.dateFestival = ["20150101||元旦", "20150219||春节", "20150405||清明节", "20150501||劳动节", "20150620||端午节", "20150903||抗战纪念日", "20150927||中秋节", "20151001||国庆节"],
+    window.OB.RiLi.dateAllFestival = [
+    "1004|v,6999/桌,2017",
+    "1005|v,8999/桌,2017",
+    "1006|v,8999/桌,2017",
+    "1011|v,6999/桌,2017",
+    "1012|v,8999/桌,2017",
+    "1013|v,8999/桌,2017",
+    "1018|v,6999/桌,2017",
+    "1019|v,8999/桌,2017",
+    "1020|v,8999/桌,2017",
+    "1024|v,4999/桌,2017",
+    "1025|v,6999/桌,2017",
+    "1026|v,8999/桌,2017",
+    "1027|v,8999/桌,2017",
+    ];
+    var e = "https://s.ssl.qhimg.com/!97be6a4c/data/";
+    location.protocol == "https:" && (e = "https://s.ssl.qhimg.com/!97be6a4c/data/")
+    ,
+    window.OB.RiLi.hlUrl = {
+        2008 : e + "hl2008.js",
+        2009 : e + "hl2009.js",
+        2010 : e + "hl2010.js",
+        2011 : e + "hl2011.js",
+        2012 : e + "hl2012.js",
+        2013 : e + "hl2013.js",
+        2014 : e + "hl2014.js",
+        2015 : e + "hl2015.js",
+        2016 : e + "hl2016.js",
+        2017 : e + "hl2017.js",
+        2018 : e + "hl2018.js",
+        2019 : e + "hl2019.js",
+        2020 : e + "hl2020.js"
+    },
+    window.OB.RiLi.dateHuochepiao = ["-20141201||20", "20141201||30", "20141202||36", "20141203||42", "20141204||48", "20141205||54", "+20141205||60", "c20141221-20141228||red"],
+    window.OB.RiLi.useLunarTicketDay = {
+        2015 : {
+            "0218": "除夕",
+            "0219": "初一",
+            "0220": "初二",
+            "0221": "初三",
+            "0222": "初四",
+            "0223": "初五",
+            "0224": "初六",
+            "0225": "初七"
+        }
+    }
+})()
+</script>
+
+<script>
+
+//预订的时间
+$(".order").on("click",function(e){
+    e.preventDefault();
+    var t=$(".mh-date").text();
+    console.log(t)
+$(".mask").show();
+    $(".mask_box").show()
+    
+    
+})
+$(".mask_box .close").on("click",function(){
+    $(".mask").hide();
+    $(".mask_box").hide()
+})
+    $(window).on("click",function(){
+        $(".year-list").css("display","block")
+    })
+
+	$(".mh-control .mh-field,.mh-control .mh-year").on("click",function(){
+		$(".month-list").remove()
+	})
+	$(".mh-next").on("click",function(){
+        var T=$(".mh-month").attr("val");
+        console.log(T)
+
+    })
+</script>
+ 
+
+</body>
+</html>

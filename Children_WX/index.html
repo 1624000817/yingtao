@@ -29,13 +29,9 @@
 <body>
 <article class="Children_WX_Index">
 	<div class="Children_WX_Index_top">
-		<a href="" class="Children_WX_IndexBaner" data-echo-background="img/child25.jpg">
-			<a href="" class="Children_WX_Index_down">
-				<b></b>
-			</a>
-		</a>
+		<a href="" class="Children_WX_IndexBaner" data-echo-background="img/child25.jpg"></a>
 		<div class="Children_WX_IndexBanner_nav">
-			<h1>NICOKIDS</h1>
+			<h1 style="background-image: url(img/logo.png);" ></h1>
 			<p>去用心發現孩子的世界，记錄每壹個孩子，自己的樣子。</p>
 			<div class="Children_WX_Index_wrie"></div>
 			<div class="Children_WX_IndexNav">
@@ -66,7 +62,7 @@
 			<p>特惠套系&nbsp多种选择</p>
 			<a href="">more</a>
 		</div>
-		<div class="iSlider_wrapper iSlider_banner"></div>
+		<!--<div class="iSlider_wrapper iSlider_banner"></div>-->
 
 		<div class="M1_slider_wrap">
 			<div class="iSlider_wrapper iSlider_theme"></div>
@@ -79,17 +75,15 @@
 			<a href="">more</a>
 		</div>
 		<div class="Children_WX_GuestEnjoy_list">
-			<div>
-				<a href="">
-					<img data-echo="img/child2.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
-				</a>
+			<div class="show">
+				<a href="" style="background-image: url(img/child2.jpg);"></a>
 				<div class="GuestEnjoy_list_explain">
 					<h1>小公主-亚楠</h1>
 					<p>ADD&nbsp:&nbsp迪奥花园&nbsp/&nbsp儿童系列</p>
 					<p>AGE&nbsp:&nbsp2-4岁</p>
 				</div>
 			</div>
-			<div>
+			<div class="show">
 				<a href="">
 					<img data-echo="img/child5.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
 				</a>
@@ -153,8 +147,10 @@ echo.init({
 	unload: false
 });
 
+var b=document.documentElement.clientHeight;
+var H=parseInt(b-165)/20+"rem";
 
-
+$(".Children_WX_Index_top").css("height",H);
 
 
 //收藏
@@ -179,7 +175,7 @@ $(".GuestEnjoy_collect").on("click",function(){
 	  content: '<a href="" data-img="img/banner3.jpg"></a>'
 	}]
 
-var banner = new iSlider({
+/*var banner = new iSlider({
 	type: 'dom',
 	data: banner_data,
 	dom: $('.iSlider_banner')[0],
@@ -205,7 +201,7 @@ var banner = new iSlider({
 		}
 
 	}
-})
+})*/
 new iSlider({
 	data: [
 	{
