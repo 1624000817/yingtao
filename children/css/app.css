@@ -558,8 +558,12 @@ body{
 	box-shadow: 0 0 0.106667rem #cad4d8;
 	margin: 0.213333rem;
 }
-.Child_shows .Sample_lists .Sample_list a img{
+.Child_shows .Sample_lists .Sample_list a{
+	display: block;
 	height: 4.586667rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 .Child_shows .Sample_lists .Sample_list .Sample_list_font{
 	height: 2.88rem;
@@ -711,6 +715,7 @@ body{
 	margin-top: 0;
 }
 /* 首页 */
+
 .Child_Index img{
 	width: 100%;
 	display: block;
@@ -845,4 +850,13 @@ body{
 } 
 .iSlider_banner{
 	display: none
+}
+
+
+.Child_Index .Sample_lists .Sample_list a{
+	display: block;
+	height: 4.586667rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
