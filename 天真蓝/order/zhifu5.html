@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_503072_b9zljmd4evc84cxr.css">
+<link rel="stylesheet" type="text/css" href="http://h5.yingtaoyun.com/yingtao/wx/1712/app.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/app.css"> -->
+
+</head>
+<body>
+<article>
+	<div class="logo">
+		<img src="img/logo.png" alt="">
+	</div>
+	<div class="payment_order">
+		<div class="payment_title">
+			<p>剩余支付时间</p>
+			<div class="payment_title_time">
+				<span>1</span>
+				<span>4</span>
+				<b>:</b>
+				<span>5</span>
+				<span>9</span>
+			</div>
+		</div>
+		<div class="order_information">
+			<div class="order_information_title">确认订单信息</div>
+			<div class="order_information_box">
+				<div class="information_box_list">
+					<span class="left">预约姓名:</span>
+					<span class="right">小猪佩琪</span>
+				</div>
+				<div class="information_box_list">
+					<span class="left">手机号码:</span>
+					<span class="right">15638572084</span>
+				</div>
+				<div class="information_box_list">
+					<span class="left">拍摄类型:</span>
+					<span class="right">结婚登记照</span>
+				</div>
+				<div class="information_box_list">
+					<span class="left">拍摄日期:</span>
+					<span class="right">2017/12/20(周六) 18:00~20:00</span>
+				</div>
+			</div>
+			<div class="order_information_sum">
+				<div>
+					<span>订单金额</span>
+					<span class="symbol">￥</span>
+					<span class="price">218</span>
+				</div>
+				<div>
+					<span>需付定金</span>
+					<span class="symbol">￥</span>
+					<span class="price">118</span>
+				</div>
+			</div>
+		</div>
+		<div class="order_announcements">
+			<div class="order_announcements_title">拍摄注意事项</div>
+			<div class="order_announcements_box">
+				<p>生成新的订单后请15分钟内完成支付 15分钟后续</p>
+				<p>生成新的订单</p>
+				<p>每个订单只可以拍摄一人 多人请生成多个订单</p>
+				<p>拍摄后请支付尾款</p>
+			</div>
+		</div>
+	</div>
+	<div class="YT_Tian_footer">
+		<p>仅保留15分钟 超时未支付订单会被取消</p>
+		<a href="">
+			<i class="iconfont icon-Previous"></i>
+			重选服务
+		</a>
+		<a href="">
+			立即预约
+			<i class="iconfont icon-next"></i>
+		</a>
+	</div>
+</article>
+
+</body>
+
+
+<script src="js/zepto.min.js"></script>
+<script>
+
+	 timer()
+	  
+function timer(){  
+   interval = setInterval("timer1()",1000);  
+}  
+ var dateTime= new Date();
+function timer1(){  
+    var leftTime =  new Date().getTime() -  dateTime.getTime();  
+    leftTime = 15*60*1000  - leftTime;  
+    var minute =parseInt(leftTime/1000/60%60,10);   
+    var second = parseInt(leftTime/1000%60,10);  
+     var min = checkTime(minute);  
+     var sec = checkTime(second); 
+    min+="";
+    sec+="";
+     var first=min.substring(0,1)
+     var seconds=min.substring(2,1)
+     var thrid=sec.substring(0,1);
+     var four=sec.substring(2,1);
+    $(".payment_title_time span").eq(0).html(first);
+    $(".payment_title_time span").eq(1).html(seconds);
+    $(".payment_title_time span").eq(2).html(thrid);
+    $(".payment_title_time span").eq(3).html(four);
+        if(leftTime < 1000){  
+        console.log("hello 倒计时结束");  
+        clearInterval(interval);  
+      }  
+}  
+  
+function checkTime(i){  
+    if(i < 10 ){  
+        i = "0" + i;  
+    }  
+    return i;  
+}
+</script>
+
+
+</html>

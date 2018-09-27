@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta charset="utf-8">
+    <title>柱状图</title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+
+
+   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <style type="text/css">
+       *{
+        margin: 0;
+        padding: 0
+       }
+        #main{
+            width: 100%;
+            height:50%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <article>
+         <div id="main"></div>
+    <article>
+    <!--<script src="echarts-all.js" type="text/javascript" charset="utf-8"></script>-->
+    <script type="text/javascript" src="js/echarts.min.js" ></script>
+    <script type="text/javascript">
+    var myzhu = echarts.init(document.getElementById("main"));
+       var option={
+        //定义一个标题
+        title:{
+            text:'测试成绩'
+        },
+        legend:{
+            data:['销量'],
+           
+        },
+        //X轴设置
+        xAxis:{
+            data:['60分','70分','80分','90分','100分'],
+             axisLabel: {
+                    textStyle: {
+                        color: '#000',//坐标值得具体的颜色
+                        fontSize:15
+                    }
+                }
+         
+        },
+        yAxis:[
+           {
+               type : 'value',
+             
+               axisLine: { 
+                   lineStyle: {
+                       type: 'solid',
+                       color:'yellow',
+                       width:'2'
+                   }
+               },
+               axisLabel: {
+                   textStyle: {
+                       color: '#000',
+                       fontSize:15
+                   }
+               }
+           }
+       ],
+        //name=legend.data的时候才能显示图例
+        series:[{
+            name:'销量',
+            type:'bar',
+            data:['12','32','45','21','70'],
+            barWidth: 20,
+            itemStyle:{ //修改柱子颜色
+                normal:{
+                    color:'pink'
+                }
+            },
+        }]
+
+    };
+    myzhu.setOption(option);
+    </script>
+</body>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_758794_7jum40o6xhp.css">
+<link rel="stylesheet" href="css/app.css" />
+<!--<link href="http://h5.yingtaoyun.com/yingtao/newjifen/css/app.css" rel="stylesheet">-->
+</head>
+<body>
+<article>
+<div class="WX_V3_assistant">
+	<figure class="WX_V3_assistant_header">
+		<div class="iSlider_banner"></div>
+	</figure>
+	<figure class="WX_V3_assistant_content">
+		<i class="iconfont icon-14bianji" v-on:click="weddingFn"></i>
+		<figcaption>婚礼倒计时<time><span>{{weddingDate.countDown}}</span><sub>天</sub></time></figcaption>
+		<section class="WX_V3_assistant_nav">
+			
+			<div>
+				<a href="./请柬.html">
+					<span><img data-echo="http://h5.yingtaoyun.com/yingtao/newjifen/img/assistant_4.png"></span>	
+				请 柬</a>
+				<a href="./相册.html">
+					<span><img data-echo="http://h5.yingtaoyun.com/yingtao/newjifen/img/assistant_5.png"></span>
+				相 册</a>
+				<a href="./结婚预算.html">
+					<span><img data-echo="http://h5.yingtaoyun.com/yingtao/newjifen/img/assistant_1.png"></span>	
+				结婚预算</a>
+				<a href="">
+					<span><img data-echo="http://h5.yingtaoyun.com/yingtao/newjifen/img/assistant_2.png"></span>
+				微信墙</a>
+				<a href="">
+					<span><img data-echo="http://h5.yingtaoyun.com/yingtao/newjifen/img/assistant_3.png"></span>
+				席位安排</a>
+				<a href="">
+					<span><img data-echo="http://h5.yingtaoyun.com/yingtao/newjifen/img/assistant_6.png"></span>
+				婚礼顾问</a>
+				<a href="">
+					<span><img data-echo="http://h5.yingtaoyun.com/yingtao/newjifen/img/assistant_6.png"></span>
+				婚礼顾问</a>
+			</div>
+		</section>
+	</figure>
+</div>
+
+
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href=""><i class="iconfont icon-shouye"></i>首页</a>
+			<a href=""><i class="iconfont icon-icon-test"></i>商城</a>
+			<a href="" class="active"><i class="iconfont icon-wo"></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+
+	<div v-show="weddingDate.isShow" style="display:none">
+		<wedding-date-component v-bind:data="weddingDate" ref="wedding" v-on:wedding="submitFn"></wedding-date-component>
+	</div>
+
+</article>
+
+<script src="http://h5.yingtaoyun.com/yingtao/newjifen/js/iSlider_v2.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/newjifen/js/islider.animate.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/newjifen/js/iSlider.plugin.dot.js"></script>
+
+<script src="http://h5.yingtaoyun.com/yingtao/newjifen/js/vue.min.js"></script>
+
+<script src="http://cdn-wx.yingtaoyun.cn/views/mpv2/js/zepto.min.js?version=2018071709"></script>
+<script src="http://cdn-wx.yingtaoyun.cn/views/mpv2/js/echo.js?version=2018071709"></script>
+
+<script src="http://h5.yingtaoyun.com/yingtao/newjifen/js/app.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/newjifen/js/require.js"></script>
+
+
+<script>
+var v3 = new V3();
+
+
+
+
+var APP = new Vue({
+	el: 'article',
+	data: {
+		weddingDate: {
+			countDown: '200',
+			isShow: false,
+			iosSelect:'',
+			loading: true
+		}
+	},
+	components: {
+		'wedding-date-component': weddingDateComponent
+	},
+	methods: {
+		weddingFn: function() {
+			this.$refs.wedding.weddingFn()
+		},
+		submitFn: function(d){
+			console.log(d)
+		}
+	},
+	mounted: function(){
+		v3.countUp(this.weddingDate.countDown, function(num) {
+			APP.weddingDate.countDown = num;
+		});
+	}
+});
+
+new iSlider({
+	data: [
+	{
+	  content: '<a href="./请柬.html" style="background-image:url(http://h5.yingtaoyun.com/yingtao/newjifen/img/banner2.png)"></a>'
+	},{
+	  content: '<a href="./相册.html" style="background-image:url(http://h5.yingtaoyun.com/yingtao/newjifen/img/banner3.png)"></a>'
+	},{
+	  content: '<a href="./结婚预算.html" style="background-image:url(http://h5.yingtaoyun.com/yingtao/newjifen/img/banner4.png)"></a>'
+	}],
+	dom: $('.iSlider_banner')[0],
+	type: 'dom',
+	animateType: 'default',
+	isLooping: false,
+	fixPage: false,
+	isAutoplay: false,
+	plugins: [['dot', {locate:'relative'}]]
+})
+
+
+</script>
+</body>
+</html>

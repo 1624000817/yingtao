@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_758794_7jum40o6xhp.css">
+<link rel="stylesheet" type="text/css" href="css/app.css">
+<!--<link href="http://h5.yingtaoyun.com/yingtao/newjifen/css/app.css" rel="stylesheet">-->
+</head>
+<body>
+<article>
+	<figure class="WX_V3_center_header" style="background-image:url(http://h5.yingtaoyun.com/yingtao/newjifen/img/banner1.jpg);">
+		<div class="WX_V3_center_header_nav">
+			<table>
+				<td>
+				<div class="img" style="background-image:url(http://h5.yingtaoyun.com/yingtao/newjifen/img/avatar.jpg);"></div></td>
+				<td>Lady smiley<br><a href=""><i class="iconfont icon-nb-"></i> 397856</a></td>
+				<td><a href="">铜牌会员 <i class="iconfont icon-arrow_right"></i></a></td>
+			</table>
+			<section class="WX_V3_center_nav">
+				<a v-on:click="myPoints"><i class="iconfont icon-ziyuan"><sub class="WX_V3_badge">97856</sub></i>我的积分</a>
+				<a href=""><i class="iconfont icon-gouwuche"></i>积分商城</a>
+				<a v-on:click="earnPoints.isShow=true"><i class="iconfont icon-dengpao"></i>玩赚积分</a>
+				<!-- <a v-on:click="bus.$emit('rolesEvent',true,true)"><i class="iconfont icon-qiandao"></i>每日签到</a> -->
+				<a v-on:click="sign.isShow=true"><i class="iconfont icon-qiandao"></i>每日签到</a>
+			</section>
+		</div>		
+	</figure>
+
+
+	<section class="WX_V3_center_menu">
+		<a href="" class="color1">
+			<div><i class="iconfont icon-renyuanguanli"></i>客资管理</div>
+			<div></span><i class="iconfont icon-jiantou"></i></div>
+		</a>
+		<a href="" class="color1">
+			<div><i class="iconfont icon-tuijian"></i>员工客资推荐</div>
+			<div><i class="iconfont icon-jiantou"></i></div>
+		</a>
+		<a href="" class="color1">
+			<div><i class="iconfont icon-hezuo"></i>合作客资推荐</div>
+			<div><i class="iconfont icon-jiantou"></i></div>
+		</a>
+
+		<a href="" class="color2" interval>
+			<div><i class="iconfont icon-renwu"></i>任务中心</div>
+			<div><span>领任务 得积分</span><i class="iconfont icon-jiantou"></i></div>
+		</a>
+		<a href="" class="color2">
+			<div><i class="iconfont icon-renyuanzengjia"></i>邀请新人</div>
+			<div><span>新人签约即可获得积分</span><i class="iconfont icon-jiantou"></i></div>
+		</a>
+
+		<a href="./结婚助手.html" class="color3" interval>
+			<div><i class="iconfont icon-aixin1"></i>结婚助手</div>
+			<div><span>相册、请柬、预算、微信墙</span><i class="iconfont icon-jiantou"></i></div>
+		</a>
+
+		<a href="" class="color4" interval>
+			<div><i class="iconfont icon-qiaquan"></i>我的卡券</div>
+			<div><i class="iconfont icon-jiantou"></i></div>
+		</a>
+		<a href="" class="color4">
+			<div><i class="iconfont icon-dingdanyiwancheng"></i>我的订单</div>
+			<div><i class="iconfont icon-jiantou"></i></div>
+		</a>
+		<a href="" class="color4">
+			<div><i class="iconfont icon-ziyuan1"></i>我的收藏</div>
+			<div><i class="iconfont icon-jiantou"></i></div>
+		</a>
+	</section>
+
+
+
+
+<section class="WX_V3_pagination">
+		<pages-component v-bind:data="pagesTwo"></pages-component>
+	</section>
+
+
+
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href=""><i class="iconfont icon-shouye"></i>首页</a>
+			<a href=""><i class="iconfont icon-icon-test"></i>商城</a>
+			<a href="" class="active"><i class="iconfont icon-wo"></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+
+	<div v-show="sign.isShow" style="display:block;">
+		<wedding-sign-component v-bind:data="sign"></wedding-date-component>
+	</div>
+
+	<div v-show="roles.isShow" style="display:none">
+		<select-roles-component v-bind:data="roles"></select-roles-component>
+	</div>
+
+	<div v-show="earnPoints.isShow" style="display:none">
+		<earn-points-component v-bind:data="earnPoints"></earn-points-component>
+	</div>
+	
+
+
+
+
+</article>
+<script src="http://h5.yingtaoyun.com/yingtao/newjifen/js/vue.min.js"></script>
+
+<script src="http://cdn-wx.yingtaoyun.cn/views/mpv2/js/zepto.min.js?version=2018071709"></script>
+<script src="http://cdn-wx.yingtaoyun.cn/views/mpv2/js/echo.js?version=2018071709"></script>
+
+<script src="js/app.js"></script>
+<!--<script src="http://h5.yingtaoyun.com/yingtao/newjifen/js/app.js"></script>-->
+<script>
+var v3 = new V3();
+
+var WX_V3 = {
+	pagesFn: function(d){
+		if(d.type == 2){
+			return console.log(d)
+		}
+		var list = {
+			data: [{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "0"
+			},{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "0"
+			},{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "1"
+			},{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "1"
+			},{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "1"
+			}],
+			pages: {
+				current: 1,
+				showItem: 3,
+				allpage: 10
+			}
+		};
+
+		APP.list.data = list.data;
+	}
+};
+
+
+
+
+
+var	APP = new Vue({
+	el: 'article',
+	data: {
+		domain: 'baidu',
+		pagesTwo: {
+			type:2,
+			current:1,
+			showItem:5,
+			allpage:13
+		},
+		list: {
+			isShow: false,
+			data: [{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "1"
+			},{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "1"
+			},{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "1"
+			},{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "1"
+			},{
+				"time": "2017.10.10",
+				"source": "1",
+				"value": "1"
+			}],
+			pages: {
+				current: 1,
+				showItem: 3,
+				allpage: 10
+			}
+		},
+		earnPoints: {
+			isShow: false,
+			content: '如何赚取积分？'
+		},
+		sign: {
+			banner: 'img/bj2.png',
+			isShow: false,
+			day: 3,
+			points: 1980,
+			plus: [5,15,35],
+			btnTitle: '去赚积分',
+			pointsName: '积分',
+			btnUrl: ''
+		},
+		roles: {
+			need_show_roles: false,
+			name: '123123',
+			mobile: '',
+			birthdayShow: true,
+			birthday1: '',
+			sex: 'women',
+			women: ['新娘','img/women.png'],
+			men: ['新郎','img/men.png'],
+			isShow: true,
+			isPopup: true,
+			url: '',
+			tips: '温馨提示：完成注册立即送100积分，积分可进行抽奖积分可进行抽奖'
+		}
+	},
+	components: {
+		'wedding-sign-component': weddingSignComponent,
+		'select-roles-component': selectRolesComponent,
+		'earn-points-component': earnPointsComponent,
+		'pages-component': pagesComponent,
+	},
+	methods: {
+		myPoints: function() { //每日签到
+			this.roles.isShow = true;
+			this.roles.url = 'http://baidu.com';
+		},
+		signFn: function() { //每日签到
+
+			this.roles.isShow = true;
+			this.sign.isShow = true;
+			this.roles.url = 'http://dasda.com';
+
+		},
+		rolesFn: function(d) { //选择角色
+			console.log(d)
+
+
+			if (!/^(13[0-9]|15[0-9]|18[0-9]|14[0-9]|17[0-9])\d{8}$/.test(d.mobile)) {
+				return WXalert('请输入正确的手机号码');
+			}
+			$.post('/', {
+				name: d.name,
+				mobile: d.mobile
+
+			})
+
+
+		}
+	}
+});
+
+
+</script>
+</body>
+</html>

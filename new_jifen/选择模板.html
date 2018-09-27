@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_758794_7jum40o6xhp.css">
+<link rel="stylesheet" href="css/app.css" />
+<!--<link href="http://h5.yingtaoyun.com/yingtao/newjifen/css/app.css" rel="stylesheet">-->
+</head>
+<body>
+<article>
+	<section class="WX_V3_style_gallery">
+		<nav class="tab_nav">
+			   <div class="first_nav">
+            <a href="javascript:;" class="cur">动态版</a>
+            <a href="javascript:;">单页版</a>
+            <a href="javascript:;">批量上传</a>
+        </div>
+        <div class="last_nav">
+            <a href="" class="cur">全部</a>
+            <a href="">热推</a>
+            <a href="">简约</a>
+            <a href="">清新</a>
+            <a href="">中式</a>
+        </div>
+		</nav>
+		<div class="templates">
+			<div>
+        <a href="./预览.html" data-echo-background="http://h5.yingtaoyun.com/yingtao/newjifen/img/bj1.jpg">
+          <figcaption>前世今生</figcaption>
+        </a>
+        <a href="./预览.html" data-echo-background="http://h5.yingtaoyun.com/yingtao/newjifen/img/bj2.jpg">
+           <figcaption>眼中的风景</figcaption>
+        </a>
+        <a href="./预览.html" data-echo-background="http://h5.yingtaoyun.com/yingtao/newjifen/img/bj3.jpg"></a>
+        <a href="./预览.html" data-echo-background="http://h5.yingtaoyun.com/yingtao/newjifen/img/bj4.jpg"></a>
+        <a href="./预览.html" data-echo-background="http://h5.yingtaoyun.com/yingtao/newjifen/img/bj5.jpg"></a>
+        <a href="./预览.html" data-echo-background="http://h5.yingtaoyun.com/yingtao/newjifen/img/bj6.jpg"></a>
+        <a href="./预览.html" data-echo-background="http://h5.yingtaoyun.com/yingtao/newjifen/img/bj7.jpg"></a>
+				<a href="./预览.html" data-echo-background="http://h5.yingtaoyun.com/yingtao/newjifen/img/bj8.jpg"></a>              
+			</div>
+		</div>
+	</section>
+
+<footer class="WX_V3_footer">
+	<nav>
+		<a href=""><i class="iconfont icon-shouye"></i>首页</a>
+		<a href=""><i class="iconfont icon-icon-test"></i>商城</a>
+		<a href="" class="active"><i class="iconfont icon-wo"></i>我的</a>
+	</nav>
+</footer>	
+<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+</article>
+
+
+<script src="http://cdn-wx.yingtaoyun.cn/views/mpv2/js/zepto.min.js?version=2018071709"></script>
+<script src="http://cdn-wx.yingtaoyun.cn/views/mpv2/js/echo.js?version=2018071709"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/newjifen/js/style.js"></script>
+<script>
+
+  	var gallery = new YT_WX();
+    gallery.Moved('.WX_V3_style_gallery .templates a');
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_503072_b9zljmd4evc84cxr.css">
+<link rel="stylesheet" type="text/css" href="http://h5.yingtaoyun.com/yingtao/wx/1712/app.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/app.css"> -->
+
+</head>
+<body>
+<article>
+	<div class="logo">
+		<img src="img/logo.png" alt="">
+	</div>
+	<div class="shooting_time_box">
+		<div class="shooting_time_title">
+			选择拍摄时间
+		</div>
+		<div class="shooting_time_list">
+			<div class="time_full">
+				<span class="times">8:00~10:00</span>
+				<b>
+					已约<span class="number">3</span>人
+					<span class="surplus">已约满</span>
+				</b>
+				
+			</div>
+			<div class="active">
+				<span class="times">10:00~12:00</span>
+				<b>
+					已约<span class="number">1</span>人
+					剩余<span class="surplus">2</span>人
+				</b>
+			</div>
+			<div>
+				<span class="times">10:00~12:00</span>
+				<b>
+					已约<span class="number">1</span>人
+					剩余<span class="surplus">2</span>人
+				</b>
+			</div>
+			<div>
+				<span class="times">10:00~12:00</span>
+				<b>
+					已约<span class="number">1</span>人
+					剩余<span class="surplus">2</span>人
+				</b>
+			</div>
+			<div>
+				<span class="times">10:00~12:00</span>
+				<b>
+					已约<span class="number">1</span>人
+					剩余<span class="surplus">2</span>人
+				</b>
+			</div>
+			<div>
+				<span class="times">10:00~12:00</span>
+				<b>
+					已约<span class="number">1</span>人
+					剩余<span class="surplus">2</span>人
+				</b>
+			</div>
+		</div>
+	</div>
+	<div class="shooting_time_form">
+		<div>
+			<label>该怎么称呼您</label>
+			<input type="text" placeholder="请输入您的姓名">
+		</div>
+		<div>
+			<label>您的性别</label>
+			<div class="select">
+				<select>
+					<option>先生</option>
+					<option>女士</option>
+				</select>
+			</div>
+		</div>
+		<div>
+			<label>该怎么联系您</label>
+			<input type="text" placeholder="请输入您的手机号">
+		</div>
+	</div>
+	<div class="YT_Tian_footer">
+		<a href="">
+			<i class="iconfont icon-Previous"></i>
+			重选服务
+		</a>
+		<a href="">
+			立即预约
+			<i class="iconfont icon-next"></i>
+		</a>
+	</div>
+</article>
+
+</body>
+<script src="js/zepto.min.js"></script>
+
+<script type="text/javascript">
+$(".shooting_time_list div").on("click",function(){
+	$(this).addClass("active").siblings("div").removeClass("active")
+})
+
+</script>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_758794_7jum40o6xhp.css">
+<link rel="stylesheet" href="css/app.css" />
+<!--<link href="http://h5.yingtaoyun.com/yingtao/newjifen/css/app.css" rel="stylesheet">-->
+
+</head>
+<body>
+<article>
+	  <section class="WX_V3_wizard_gallery">
+      <section class="step-content" data-scenecode-varchar="U90522N2D853">
+          <section id="step1" class="step-pane active" data-index= '1'>
+            <form id="form_step_1">
+              <div class="form_group">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><label for="">请柬标题</label></th>
+                            <td><input type="text" name="scenename_varchar" class="form-control" value="时尚都市" placeholder="如刘先生 和 黄女士的相册"></td>
+                          </tr>
+                          <tr>
+                              <th><label for="">请柬描述</label></th>
+                              <td>
+                                  <textarea name="desc_varchar" class="form-control" placeholder="一段话描述您的相册"></textarea>
+                              </td>
+                          </tr>
+                          <tr>
+                              <th class="cover_th"><label for="">封面上传</label></th>
+                              <td class="cover">
+                                <img id="cover" src="http://cdn-whb.yingtaoyun.cn/Uploads/pic/1/201804/5ad0561483986.png!w640">
+                                <input type="hidden" name="thumbnail_varchar" value="pic/1/201804/5ad0561483986.png">
+                                <i data-name="thumbnail_varchar" class="iconfont icon-weibiaoti37"> </i>
+                              </td>
+                          </tr>
+                          <tr>
+                              <th><label for="">背景音乐</label></th>
+                              <td class="music">
+                                  <span>
+                                    <select name="musicurl_varchar">
+                                        <option value="http://www.w3school.com.cn/example/html5/mov_bbb.mp4">请选择</option>
+                                        <option value="http://win.web.ra01.sycdn.kuwo.cn/9c7dca0637c2b05a6c7803926bd507a0/5b5e8159/resource/n1/128/20/78/2905286246.mp3">张宇 - 给你们.mp3</option>
+                                        <option value="http://thirdparty.gtimg.com/abcd1234/M500003RkVkQ2ajDeU.mp3?vkey=F273152B9F2F7ACFE36AEDEA9044CCD9EB820EA4B32E2D3026B2E95E888F1A43745BFC7BE6851FA98C8560D42EC5B924CF092BA003A3EAF4&guid=2109639638&fromtag=64">我们结婚吧</option>
+                                        <option value="http://win.web.rc01.sycdn.kuwo.cn/f8eef0442b98c557b14605625b075e98/5b5e81f1/resource/n1/60/76/522290862.mp3">今天你要嫁给我</option>
+                                    </select>
+                                    <i class="iconfont icon-bofang"></i>
+                                  </span>
+                              </td>
+                          </tr>
+                          <tr>
+                            <th><label for="">地图</label></th>
+                            <td class="poi">
+                                <input type="text" style="display:inline-block" name="10_1699200064" class="form-control" placeholder="" value="">
+                                <button class="poi_btn" type="button"><i class="iconfont icon-danjiantouxia"></i></button>
+                                <input type="hidden" name="10_1699200064_gps" value="39.917053641411,116.39644135449">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
+            </form>       
+          </section>
+          <section id="step2" class="step-pane ok" data-index="2">
+              <form id="form_step_2">
+                  <div class="form_group">
+                      <table>
+                          <tbody>
+                            <tr>
+                                <th><label>新郎姓名</label></th>
+                                <td><input type="text" value="张志明"></td>
+                            </tr>
+                            <tr>
+                                <th><label>新娘姓名</label></th>
+                                <td><input type="text" value="余春娇"></td>
+                            </tr>
+                            <tr>
+                                <th><label>婚宴时间</label></th>
+                                <td>
+                                  <input type="text" value="2018.06.09 PM18:00">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label>婚宴地点</label></th>
+                               <td>
+                                  <input type="text" value="上海徐汇区静安路165号35楼">
+                                </td>
+                            </tr>
+                                                                
+                            <input type="hidden" name="sceneid_bigint" value="9188574">
+                        </tbody>
+                    </table>
+                  </div>
+              </form>
+          </section>
+          <section id="step3" class="step-pane" data-index="3">
+               <!--  <div class="tips">点编辑按钮选择替换图片后，可以拖动，缩放，旋转图片来获得合适的效果.</div> -->
+                <div id="iframe_image"></div>
+            </section>
+          <nav class="actions">
+              <a class="next_btn" disabled=""><i class="iconfont icon-xuanzhong"></i>保存</a>
+              <a class="preview_btn"><i class="iconfont icon-yulan"></i>立即预览</a>
+              <a class="select_btn"><i class="iconfont icon-xuanze"></i>选择模板</a>
+          </nav>
+      </section>
+    </section>
+    <section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+</article>
+<script>
+    var phpvars        = {};
+    phpvars.appid      = "wxebac9f9fc11613b2";
+    phpvars.shareDomain= "yingtao";
+    phpvars.shareTitle = "时尚都市";
+    phpvars.shareDesc  = "都市时光中邂逅我们的爱";
+    phpvars.share_img  = "http://cdn-whb.yingtaoyun.cn/Uploads/pic/1/201804/5ad0561483986.png!w320";
+    phpvars.share_link = "http://whb.yingtaoyun.cn/v/U90522N2D853?eqrcode=1";
+
+    phpvars.timestamp  = "1532659224";
+    phpvars.nonceStr   = "v4mbPB8jOdj3vXuK";
+    phpvars.signature  = "56894a8ed442ccf89eda3fe38ebc881ab783e89b";
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<script src="http://cdn-wx.yingtaoyun.cn/views/default/javascript/weixinshare.js?version=2018071709"></script>
+
+
+<script src="http://cdn-wx.yingtaoyun.cn/views/mpv2/js/zepto.min.js?version=2018071709"></script>
+<script src="http://cdn-wx.yingtaoyun.cn/views/mpv2/js/echo.js?version=2018071709"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/newjifen/js/style.js"></script>
+
+<script src="http://cdn-wx.yingtaoyun.cn/views/mpv2/js/hammer.js?version=2018071709"></script>
+<script src="http://cdn-wx.yingtaoyun.cn/views/mpv2/js/ImageEditor.js?version=2018071709"></script>
+<script src="http://whb.yingtaoyun.cn/v/U90522N2D853?time=20170601&amp;edit=1&amp;parent=front"></script>
+<script type="text/javascript">
+    var whb_static_prefix = "http://cdn-whb.yingtaoyun.cn/Uploads/";
+    var domain            = "yingtao";
+    var url_domain        = "yingtaoyun.cn";
+    var scenecode_varchar = "U90730Y86456";
+    var empty_2           = "";
+
+
+
+  var gallery = new YT_WX();
+    gallery.cover('.cover i');
+    gallery.ImageEditor();
+    gallery.poi();
+
+
+
+//编辑
+    wizard()
+    function wizard() {
+       var self = this;
+        var $next_btn = $(".WX_V3_wizard_gallery").find('.next_btn');
+        var $step_pane = $(".WX_V3_wizard_gallery").find('.step-pane');
+        var step =0
+         $next_btn.on('touchend',function(){
+          doSave();
+          if(!$('.step-pane.active').is('.ok')){
+            YT_WXalert('该步骤尚未完成');
+            return
+          }
+          step ++;
+          $step_pane.removeClass('active').eq(step).addClass('active');
+        });
+    }
+
+
+
+    function doSave() {
+        var a_index   = $('.step-content .active').attr('data-index');
+
+        var scenecode_varchar = $('.step-content').attr('data-scenecode-varchar');
+        switch(a_index) {
+            case '1':
+                $.post('/'+domain+'/mpv2/photo/saveBase.html', $('#form_step_1').serialize());
+                $('.step-content .active').eq(0).addClass('ok');
+                if(empty_2) {loadIframe(scenecode_varchar);}
+                break;
+            case '2':
+                $.post('/'+domain+'/mpv2/photo/saveText.html', $('#form_step_2').serialize());
+                if(!empty_2) {loadIframe(scenecode_varchar);}
+                break;
+            case '3':
+                break;
+            case '4':
+                break;
+            default:
+            break;
+        }
+    }
+    function loadIframe(scenecode_varchar)
+    {
+        if($('#iframe_image').html() == '') {
+           $('#iframe_image').html('<div id="edit_iframe"><iframe frameborder="0" src="http://whb.'+url_domain+'/v/'+scenecode_varchar+'?time=20170601&edit=1&parent=back" style="width:16.0rem;height:93vh"></iframe></div>');
+        }
+    }
+
+    $('.template_images').on('touchend','.save_btn',function(e){
+        e.preventDefault();
+        var i = $(this).closest('figure').index();
+        var cvs = gallery.editor[i].mergeImage();
+
+        YT_WXalert('正在上传,请勿关闭');
+        $('.Dialog-confirmActions').hide();
+
+        var $figure = $(this).parent('figure');
+        var base64 = cvs.toDataURL('image/jpeg');
+        var _self  = $(this);
+        $.post('/'+domain+'/ts/tools/saveWhbBase64.html', {attachments:base64,image_type:'pic'}, function(data){
+          $('.ReactModalPortal').remove();
+          var saveImageUrl = data.data.url.substr(data.data.url.indexOf('/Uploads/')+9);
+          var name = _self.parent('figure').find('input').attr('name');
+          var $html = $('<input type="hidden" name="'+name+'" value="'+saveImageUrl+'" /><img src="'+base64+'"><a class="edit_btn"><i class="fa fa-edit"></i> 编辑</a>');
+          $figure.html('');
+          $figure.removeClass('active');
+          $figure.append($html);
+          $.post('/'+domain+'/mpv2/photo/saveImages.html', $('#form_step_3').serialize());
+        }, 'json');
+
+    })
+
+
+//预览
+    $('.WX_V3_wizard_gallery').on('touchend','.preview_btn',function(e){
+        e.preventDefault();
+        doSave();
+        window.location.href='http://whb.'+url_domain+'/v/'+scenecode_varchar+'?eqrcode=1';
+    })
+      $('.WX_V3_wizard_gallery').on('touchend','.select_btn',function(e){
+        e.preventDefault();
+        doSave();
+        window.location.href='./选择模板.html';
+    })
+
+
+   music();
+
+   function music () {
+  
+      var audio = new Audio(),
+      play = 0,
+      btn = $(".form_group .music").find('span');
+      audio.src =$(".form_group .music").find("select").val()
+      $(".form_group .music").find('select').on('change',function(){
+        audio.src =$(this).val();
+        music();
+      })
+      audio.onended = function(){
+        btn.find('i').attr('class','iconfont icon-bofang');
+      }
+
+      btn.on('touchend', 'i',function(e){
+        console.log("a")
+          e.stopPropagation();
+          music();
+      })
+      function music(){
+        console.log("audio", audio.paused)
+          if(audio.paused){
+              audio.play();
+              btn.find('i').attr('class','iconfont icon-bofang');
+          }else{
+              audio.pause();
+              btn.find('i').attr('class','iconfont icon-zanting');
+          }
+      }
+   }
+</script>
+</body>
+</html>

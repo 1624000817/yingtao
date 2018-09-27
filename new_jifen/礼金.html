@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_758794_7jum40o6xhp.css">
+<link rel="stylesheet" href="css/app.css" />
+<!--<link href="http://h5.yingtaoyun.com/yingtao/newjifen/css/app.css" rel="stylesheet">-->
+</head>
+<body>
+<article>
+<section class="WX_V3_table_gallery">
+	<div class="WX_V3_tab_gallery">
+        <nav class="tab_nav">
+            <a href="./礼金.html" class="active"><span>礼金</span></a>
+            <a href="./礼物.html"><span>礼物</span></a>
+            <a href="./弹幕.html"><span>弹幕</span></a>
+        </nav>
+    </div>
+    <div>
+		<table>
+            <tbody>
+	            <tr>
+	                <th>头像</th>
+	                <th>昵称</th>
+	                <th>赠送用户</th>
+	                <th>金额</th>
+	                <th>支付时间</th>
+	                <th>支付时间</th>
+	            </tr>
+	            <template v-for="item in dataList">
+					<tr>
+		                <td>
+		                	<span :style="{'background-image':'url('+item.avatar+')'}"></span>
+		                </td>
+		                <td>{{item.name}}</td>
+		                <td>{{item.user}}</td>
+		                <td>{{item.money}}</td>
+		                <td>{{item.time}}</td>
+		                <td>{{item.time}}</td>
+		            </tr>
+	            </template>
+	           	<template v-for="item in dataList">
+					<tr>
+		                <td>
+		                	<span :style="{'background-image':'url('+item.avatar+')'}"></span>
+		                </td>
+		                <td>{{item.name}}</td>
+		                <td>{{item.user}}</td>
+		                <td>{{item.money}}</td>
+		                <td>{{item.time}}</td>
+		            </tr>
+	            </template>
+			</tbody>
+		</table>
+    </div>
+    <ul class="pagination"><li class="active"><a href="/yingtao/mpv2/photo/orders/8879465.html?p=1">1</a></li> </ul> 
+    <section class="WX_V3_create_tips_2"><div>微信支付平台将会抽取1%作为手续费</div></section>
+</section>
+
+<footer class="WX_V3_footer">
+	<nav>
+		<a href=""><i class="iconfont icon-shouye"></i>首页</a>
+		<a href=""><i class="iconfont icon-icon-test"></i>商城</a>
+		<a href="" class="active"><i class="iconfont icon-wo"></i>我的</a>
+	</nav>
+</footer>	
+<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+</article>
+
+<script src="http://h5.yingtaoyun.com/yingtao/newjifen/js/vue.min.js"></script>
+<script>
+new Vue({
+	el: 'article',
+	data: {
+		dataList: [
+			{
+				avatar:'http://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLKmRJTiavUaS2bls7p7A0P5P0ZvT4YHedaX3LrfzcfMhMibSnvkfbNhrPBZmjOuk1vDLgcJEUAMuOg/0',
+				name: '和🍒',
+				user: '和888',
+				money: '1.00',
+				time: '11-13 14:45'
+			},
+			{
+				avatar:'http://wx.qlogo.cn/mmopen/vi_32/yib6NzBG4ckP3hLmP357AywSOYE75wcm7zZZqicDpAKs8spw4bkkGt9sNFURJ20FqZlXKgQg5e0zHk8rg1gcD77Q/0',
+				name: 'll',
+				user: 'll',
+				money: '1.00',
+				time: '11-14 14:45'
+			},
+			{
+				avatar:'http://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTISd6CjczmkZtibTDlHQibC67E4rWmwcghaO8Da7JsAe951De02vcJ5mJ9daVMN7tUuYxtaw8OeAhbA/0',
+				name: 'despote*',
+				user: '1',
+				money: '1.00',
+				time: '11-12 14:45'
+			},
+			{
+				avatar:'http://wx.qlogo.cn/mmopen/vi_32/ajNVdqHZLLAMNCdTiayjnpuSIzHGsgoPxKmHnIgCJeF1tAricibviceicCkicOCXIRxfwiaGEtibYnkjMcGZFvQ4OWM5jA/0',
+				name: '周黎🍒',
+				user: '黎叔',
+				money: '1.00',
+				time: '11-11 14:45'
+			}
+		]
+	},
+	methods :{
+		
+	}
+})
+
+</script>
+</body>
+</html>

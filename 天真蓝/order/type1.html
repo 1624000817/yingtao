@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_503072_b9zljmd4evc84cxr.css">
+<link rel="stylesheet" type="text/css" href="http://h5.yingtaoyun.com/yingtao/wx/1712/app.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/app.css"> -->
+
+</head>
+<body>
+<article>
+	<div class="logo">
+		<img src="img/logo.png" alt="">
+	</div>
+  <div class="type_content">
+    <a href="">
+      <div class="pic" style="background-image: url(img/pic1.jpeg);"></div>
+      <div class="detail">
+          <span>GIF表情包</span>
+          <span>
+            <sup>￥</sup>198
+          </span>
+      </div>
+    </a>
+    <a href="">
+      <div class="pic" style="background-image: url(img/pic2.jpeg);"></div>
+      <div class="detail">
+          <span>职业照</span>
+          <span>
+            <sup>￥</sup>198
+          </span>
+      </div>
+    </a>
+    <a href="">
+      <div class="pic" style="background-image: url(img/pic2.jpeg);"></div>
+      <div class="detail">
+          <span>职业照</span>
+          <span>
+            <sup>￥</sup>198
+          </span>
+      </div>
+    </a>
+    <a href="">
+      <div class="pic" style="background-image: url(img/pic1.jpeg);"></div>
+      <div class="detail">
+          <span>职业照</span>
+          <span>
+            <sup>￥</sup>198
+          </span>
+      </div>
+    </a>
+  </div>
+<!-- 弹窗 -->
+<div class="order_mask"></div>
+<!-- 1、 已有订单的弹窗 -->
+<div class="existing_order">
+  <i class="iconfont icon-wenhao"></i>
+  <p>检测到你已有订单 是否生成新订单</p>
+  <div class="mask_box">
+      <div class="mask_box_list">
+          <span class="left">预约姓名:</span>
+          <span class="right">小猪佩琪</span>
+      </div>
+      <div class="mask_box_list">
+          <span class="left">手机号码:</span>
+          <span class="right">15638572084</span>
+      </div>
+      <div class="mask_box_list">
+          <span class="left">拍摄类型:</span>
+          <span class="right">结婚登记照</span>
+      </div>
+      <div class="mask_box_list">
+          <span class="left">拍摄日期:</span>
+          <span class="right">2017/12/20(周六) 18:00~20:00</span>
+      </div>
+  </div>
+  <div class="btn">
+    <a href="">继续下单</a>
+    <a href="">查看订单详情</a>
+  </div>
+</div>
+
+<!-- 2、已有订单未支付的弹窗 -->
+<div class="unpaid existing_order">
+    <i class="iconfont icon-tanhao"></i>
+    <p>检测到你已有订单 但尚未支付</p>
+    <div class="mask_box">
+      <div class="mask_box_list">
+          <span class="left">预约姓名:</span>
+          <span class="right">小猪佩琪</span>
+      </div>
+      <div class="mask_box_list">
+          <span class="left">手机号码:</span>
+          <span class="right">15638572084</span>
+      </div>
+      <div class="mask_box_list">
+          <span class="left">拍摄类型:</span>
+          <span class="right">结婚登记照</span>
+      </div>
+      <div class="mask_box_list">
+          <span class="left">拍摄日期:</span>
+          <span class="right">2017/12/20(周六) 18:00~20:00</span>
+      </div>
+  </div>
+  <div class="btn">
+    <a href="">取消订单</a>
+    <a href="">立即支付</a>
+  </div>
+</div>
+
+</article>
+
+<script src="js/zepto.min.js"></script>
+
+<script type="text/javascript">
+$(".order_mask").hide()
+$(".existing_order").hide()
+$(".unpaid").hide()
+
+var order=false; 
+// true   为已有订单
+// false  为未支付订单
+if(order==true){
+  console.log("已有订单")
+  $(".order_mask,.existing_order").show()
+  $(".unpaid").hide()
+}else{
+  console.log("未支付订单")
+  $(".order_mask,.unpaid").show()
+}
+
+$(".order_mask").on("click",function(){
+  $(this).hide()
+  $(".existing_order").hide()
+})
+</script>
+</body>
+</html>

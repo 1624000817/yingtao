@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_758794_7jum40o6xhp.css">
+<link rel="stylesheet" href="css/app.css" />
+<!--<link href="http://h5.yingtaoyun.com/yingtao/newjifen/css/app.css" rel="stylesheet">-->
+</head>
+<body>
+<article>
+<section class="WX_V3_table_gallery">
+	<div class="WX_V3_tab_gallery">
+        <nav class="tab_nav">
+            <a href="./祝福.html"><span>祝福数据</span></a>
+            <a href="./留言.html"><span>留言数据</span></a>
+            <a href="./表单.html" class="active"><span>表单数据</span></a>
+        </nav>
+    </div>
+    <div>
+		<table>
+            <tbody>
+	            <tr>
+	                <th>姓名</th>
+	                <th>手机</th>
+	                <th>随性人员</th>
+	                <th>时间</th>
+	            </tr>
+	            <template v-for="(item,index) in dataList">
+					<tr>   
+		                <td>{{item.name}}</td>
+		                <td>{{item.mobile}}</td>
+		                <td>{{item.user}}</td>
+		                <td>{{item.time}}</td>
+		            </tr>
+	            </template>
+			</tbody>
+		</table>
+    </div>
+</section>
+
+<footer class="WX_V3_footer">
+	<nav>
+		<a href=""><i class="iconfont icon-shouye"></i>首页</a>
+		<a href=""><i class="iconfont icon-icon-test"></i>商城</a>
+		<a href="" class="active"><i class="iconfont icon-wo"></i>我的</a>
+	</nav>
+</footer>	
+<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+</article>
+
+<script src="http://h5.yingtaoyun.com/yingtao/newjifen/js/vue.min.js"></script>
+<script>
+new Vue({
+	el: 'article',
+	data: {
+		dataList: [
+			{
+				mobile:'17621627757',
+				name: '完颜佳慧',
+				user:'皇甫富强',
+				time: '2018-11-13 14:45'
+			},
+			{
+				mobile:'17621626836',
+				name: '邵珊',
+				user:'赖芸静',
+				time: '2018-11-14 14:45'
+			},
+			{
+				mobile:'17621626836',
+				name: '赖芸静',
+				user:'董园',
+				time: '2018-11-12 14:45'
+			},
+			{
+				mobile:'17621626836',
+				name: '董园',
+				user:'邵珊',
+				time: '2018-11-11 14:45'
+			}
+		]
+	},
+	methods :{
+		onRemove(index) {
+			this.dataList.splice(index, 1)
+		}
+	}
+})
+
+</script>
+</body>
+</html>

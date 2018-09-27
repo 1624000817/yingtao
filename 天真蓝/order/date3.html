@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_503072_b9zljmd4evc84cxr.css">
+<link rel="stylesheet" type="text/css" href="http://h5.yingtaoyun.com/yingtao/wx/1712/app.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/app.css"> -->
+<style type="text/css">
+	.logo h1{
+		width: 100%;
+		max-width:3.954667rem;
+    	height: 100%;
+    	margin:  auto;
+	    background-size: 100%;
+	    background-position: center;
+	    background-repeat: no-repeat
+	}
+</style>
+<!-- http://productimg.yingtaoyun.com/bf/6c/bf6cf38597cc362fe59fc2d5f5af2c1b.png -->
+</head>
+<body>
+<article>
+	<div class="logo">
+		<h1 style="background-image: url(img/444362995212113301.png);"></h1>
+		<!-- <img src="img/444362995212113301.png" alt=""> -->
+	</div>
+	<div class="date_box">
+		<div class="date_box_content">
+			<div class="date_title">
+				<span class="before"></span>
+				请选择拍摄日期
+				<span class="after"></span>
+			</div>
+			<div class="calendar_box">
+				<div class="calendar_all">
+					<div class="calendar" v-for="(n,index) in this.myDay" :class="{'absence':index<6}">
+						<a href="javascript:;" data-id="1">
+							<div class="top">
+								<span></span>
+								<span></span>
+							</div>
+							<div class="number"></div>
+						</a>
+					</div>
+				</div>
+				
+			</div> 
+			<div class="date_bottom">
+				<div>点击查看<span>后</span>十五天排期</div>
+				<i class="iconfont icon-pullgroup"></i>
+			</div>
+		</div>
+	</div>
+</article>
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+
+<script type="text/javascript">
+
+	new Vue({
+			el:"article",
+			data:{
+				myDay:15,
+			},
+			methods:{
+			}
+		})
+$(".calendar a").on("click",function(){
+	console.log($(this).attr("data-id"))
+})
+
+
+$(".date_bottom").on("click",function(){
+	var Text=$(".date_bottom div span").html();
+	if(Text=="后"){
+		$(".calendar_all").css("transform","translateY(-11.667rem)");
+		$(".date_bottom div span").html("前");
+		$(".date_bottom .icon-pullgroup").css("transform","rotate(180deg)")
+	}else if(Text=="前"){
+		$(".calendar_all").css("transform","translateY(0)");
+		$(".date_bottom div span").html("后");
+		$(".date_bottom .icon-pullgroup").css("transform","rotate(0deg)")
+	}
+})
+
+
+for(var i=0;i<30;i++){
+	var dd = new Date();
+	dd.setDate(dd.getDate()+i);
+	var day=dd.getDate();
+	var month=dd.getMonth()+1;
+	var week=dd.getDay();
+	var myweek="";
+
+	switch (week){
+		case 0:
+		  myweek="星期天";
+		  break;
+		case 1:
+		  myweek="星期一";
+		  break;
+		case 2:
+		  myweek="星期二";
+		  break;
+		case 3:
+		  myweek="星期三";
+		  break;
+		case 4:
+		  myweek="星期四";
+		  break;
+		case 5:
+		  myweek="星期五";
+		  break;
+		case 6:
+		  myweek="星期六";
+		  break;
+	}
+	console.log(day)
+	$(".calendar_box .calendar").eq(i).children("a").children(".number").html(day);
+	$(".calendar_box .calendar").eq(i).children("a").children(".top").children("span").eq(0).html(month+"月")
+	$(".calendar_box .calendar").eq(i).children("a").children(".top").children("span").eq(1).html(myweek)
+}
+
+</script>
+</html>

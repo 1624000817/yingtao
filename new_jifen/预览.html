@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_758794_7jum40o6xhp.css">
+<link rel="stylesheet" href="css/app.css" />
+<!--<link href="http://h5.yingtaoyun.com/yingtao/newjifen/css/app.css" rel="stylesheet">-->
+</head>
+<body>
+<article>
+	<!--<div class="WX_V3_look"></div>-->
+	<div class="WX_V3_look">
+		<object data="http://whb.yingtaoyun.cn/v/U903VP7M76?eqrcode=1/" width="100%" height="100%">
+		    <embed width="100%" height="100%" src="http://whb.yingtaoyun.cn/v/U903VP7M76?eqrcode=1/">
+		</object>
+	</div>
+	<!--<div class="WX_V3_look">
+		<img src="http://h5.yingtaoyun.com/yingtao/newjifen/img/20140524124238403.gif" alt="" />
+		<iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" id="PlayFrame" name="PlayFrame" src="http://whb.yingtaoyun.cn/v/U903VP7M76?eqrcode=1"></iframe>
+	</div>-->
+	<a href="./请帖信息.html">开始制作</a>
+</article>
+<script src="http://cdn-wx.yingtaoyun.cn/views/mpv2/js/zepto.min.js?version=2018071709"></script>
+<script src="http://cdn-wx.yingtaoyun.cn/views/mpv2/js/echo.js?version=2018071709"></script>
+<script>
+//function loadIframe(){
+//	if($('.WX_V3_look').html() == '') {
+//	   $('.WX_V3_look').html('<iframe frameborder="0" src="http://whb.yingtaoyun.cn/v/U903VP7M76?eqrcode=1/"></iframe>');
+//	}
+//}
+//loadIframe()
+</script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_758794_96ahz4w0ud5.css">
+<link rel="stylesheet" href="css/app.css" />
+<!--<link href="http://h5.yingtaoyun.com/yingtao/newjifen/css/app.css" rel="stylesheet">-->
+</head>
+<body>
+<article>
+<div class="WX_V3_invitation">
+	<div class="WX_V3_invitation_banner">
+		<template v-for="(item, index) in header">
+			<p :class="{'active' : index == activeIndex}">
+				<span @click="onTab(index)"><i :class="item.icon"></i>{{item.title}}</span>
+			</p>
+		</template>
+	</div>
+	<nav class="tab_nav">
+        <a href="javascript:;" class="cur">动态版、单页版</a>
+        <a href="javascript:;">批量上传</a>
+	</nav>
+	<div class="WX_V3_create_gallery" v-show="activeIndex ==0">
+		<figure >
+			<span>
+				<i class="iconfont icon-guanbi2"></i>
+			</span>
+			<p>上海宴席</p>
+			<!-- <input type="text" value="上海宴席"> -->
+			<a style="background-image:url(http://h5.yingtaoyun.com/yingtao/newjifen/img/bj1.jpg);" href="./预览.html"></a>
+			<figcaption>
+				<span>
+					<a href="./祝福.html">祝福留言</a>
+				</span>
+				<span>
+					<a href="./礼金.html">弹幕礼金</a>
+				</span>
+			</figcaption>
+		</figure>
+		<figure >
+			<span>
+				<i class="iconfont icon-guanbi2"></i>
+			</span>
+			<p>厦门宴席</p>
+			<a style="background-image:url(http://h5.yingtaoyun.com/yingtao/newjifen/img/bj2.jpg);" href="./预览.html">
+				
+			</a>
+			<figcaption>
+				<span>
+					<a href="./祝福.html">祝福留言</a>
+				</span>
+				<span>
+					<a href="./礼金.html">弹幕礼金</a>
+				</span>
+			</figcaption>
+		</figure>
+		<figure >
+			<span>
+				<i class="iconfont icon-guanbi2"></i>
+			</span>
+			<p>上海朋友宴席</p>
+			<a style="background-image:url(http://h5.yingtaoyun.com/yingtao/newjifen/img/bj3.jpg);" href="./预览.html">
+				
+			</a>
+			<figcaption>
+				<span>
+					<a href="./祝福.html">祝福留言</a>
+				</span>
+				<span>
+					<a href="./礼金.html">弹幕礼金</a>
+				</span>
+			</figcaption>
+		</figure>
+	</div>
+	<div class="WX_V3_help_content" v-show="activeIndex ==1">
+		<template v-for="(item, index) in interactive_content">
+			<div class="WX_V3_help_content_list" 
+			:class="{'open_list':item.isShow}"
+			@click="isOpen(item)">
+				<div class="header">{{item.title}}<i class="iconfont icon-danjiantouxia"></i></div>
+				<div class="content">
+					<p v-html="item.desc"></p>
+					<i class="iconfont icon-danjiantouxia"></i>
+				</div>
+			</div>
+		</template>
+	</div>
+
+	<a href="./选择模板.html" class="WX_V3_create_gallery_btn" v-show="activeIndex ==0"><i class="iconfont icon-weibiaoti37"></i>创建请柬</a>
+</div>
+</article>
+<script src="http://h5.yingtaoyun.com/yingtao/newjifen/js/vue.min.js"></script>
+<script src="http://wx.yingtaoyun.cn/views/mpv2/js/zepto.min.js?version=2018071709"></script>
+<script src="http://wx.yingtaoyun.cn/views/mpv2/js/echo.js?version=2018071709"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/newjifen/js/style.js"></script>
+<!-- <script src="http://wx.yingtaoyun.cn/views/mpv2/js/app.js?version=2018071709"></script> -->
+<script>
+
+new Vue({
+	el: 'article',
+	data: {
+		activeIndex: 0,
+		header: [
+			{
+				title: '我的请柬',
+				icon: 'iconfont icon-16'
+			},
+			{
+				title: '帮助中心',
+				icon: 'iconfont icon-bangzhu'
+			}
+		],
+		interactive_content:[
+			{
+				title: '如何关闭弹幕？',
+				desc: '点开想要关闭弹幕的请柬，点击底部的“弹”， 就可以选择弹幕的开启还是关闭。',
+				isShow: false,
+			},
+			{
+				title: '宾客姓名可以不填吗？能填多少次？',
+				desc: '可以不填，可以填无数次，每次都可以填不一样的嘉宾哦。',
+				isShow: false
+			},
+			{
+				title: '宾客统计、朋友祝福在哪里看？',
+				desc: '在请柬页面上方导航模块对应的【弹幕礼金】可以查看宾客统计数据表、朋友祝福信息。',
+				isShow: false,
+			},
+			{
+				title: '如何更换请柬音乐？',
+				desc: '点击【编辑修改】，在需要更换音乐的请柬中，选择要更换的音乐即可。',
+				isShow: false,
+			},
+			{
+				title: '网页打不开、上传不了图片等怎么办？',
+				desc: '一般是由于网络问题，切换WiFi或者4G刷新几次试试，如果还是不行就重启微信或者重启手机，如果还是无效请联系客服人员',
+				isShow: false
+			},
+			{
+				title: '我的请柬还没做完就退出了，在哪里可以继续编辑？',
+				desc: '回到请柬页面点击【编辑修改】，选择对应的请柬继续编辑就可以哦',
+				isShow: false,
+			},
+			{
+				title: '图片看起来比较模糊怎么办？',
+				desc: '上传清晰的<a href="">1</a>',
+				isShow: false,
+			}
+		]
+	},
+	methods :{
+		onTab(index) {
+			this.activeIndex = index
+		},
+		isOpen(e) {
+			e.isShow =! e.isShow;
+		}
+	}
+})
+
+
+
+
+var domain = "yingtao";
+var gallery = new YT_WX();
+
+$('.WX_V3_create_gallery').on('touchend','figure>span',function(e){
+	e.preventDefault();
+	var i = $(this).index();
+	var id = $(this).attr('data-id');
+	YT_WXconfirm('删除后将无法恢复，确定要删除吗？',
+	function() {$.post('/'+domain+'/mpv2/photo/delScene.html', {id:id}, function(data){
+	YT_WXalert('删除成功');
+	setTimeout("window.location.reload()", 2000);
+	},'json')}
+	)
+});
+</script>
+</body>
+</html>

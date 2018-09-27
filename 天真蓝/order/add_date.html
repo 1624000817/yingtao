@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_503072_7mzx6na8yw4s4i.css">
+<!-- <link rel="stylesheet" type="text/css" href="http://h5.yingtaoyun.com/yingtao/wx/1712/app.css"> -->
+<link rel="stylesheet" type="text/css" href="css/app.css">
+<style>
+	tr td{
+		width: 25%
+	}
+</style>
+</head>
+<body>
+<article>
+	<div class="select_date">
+		<div class="select_date_top">
+			<div>
+				<span>已选择档期</span>
+				<p>2018年02月18日(周六)</p>
+			</div>
+			<a href="">
+				<span>
+				<i class="iconfont icon-rili"></i>
+				更改日期
+				</span>
+			</a>
+		</div>
+		<div class="select_time">
+			<div class="select_time_title">
+				<div>选择拍摄时间</div>
+				<div>
+					<span>可预约</span>
+					<span>已约满</span>
+				</div>
+			</div>
+			<!-- <table border="1" cellpadding="0"  cellspacing="0" width="100%">
+				<tr>
+					<td>12</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+				</tr>
+				<tr>
+					<td>12</td>
+				</tr>
+			</table> -->
+			<div class="select_hour">
+				<span v-for="item in timeList" :class="item.full ? 'full':'' " :data-id="item.data_id">{{item.time}}</span>
+			</div>
+		</div>
+		<div class="shooting_time_form">
+			<div>
+				<label>该怎么称呼您</label>
+				<input type="text" placeholder="请输入您的姓名">
+			</div>
+			<div>
+				<label>您的性别</label>
+				<div class="select">
+					<select>
+						<option>先生</option>
+						<option>女士</option>
+					</select>
+				</div>
+			</div>
+			<div>
+				<label>该怎么联系您</label>
+				<input type="text" placeholder="请输入您的手机号">
+			</div>
+		</div>
+	</div>
+	<div class="YT_Tian_footer">
+		<a href="">
+			<i class="iconfont icon-Previous"></i>
+			重选服务
+		</a>
+		<a href="">
+			立即预约
+			<i class="iconfont icon-next"></i>
+		</a>
+	</div>
+</article>
+
+</body>
+
+
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+
+<script type="text/javascript">
+
+	new Vue({
+			el:"article",
+			data:{
+				timeList: [
+					{
+						time: '09:00', full: false, data_id:'1'
+					},
+					{
+						time: '09:30',full: true, data_id:'2'
+					},
+					{
+						time: '10:00',full: false
+					},
+					{
+						time: '10:30',full: true
+					},
+					{
+						time: '11:00',full: false
+					},
+					{
+						time: '11:30',full: false
+					},
+					{
+						time: '12:00',full: true
+					},
+					{
+						time: '12:30',full: true
+					},
+					{
+						time: '13:00',full: false
+					},
+					{
+						time: '13:30',full: true
+					},
+					{
+						time: '14:00',full: true
+					},
+					{
+						time: '14:30',full: false
+					},
+					{
+						time: '15:00',full: false
+					},
+					{
+						time: '15:30',full: true
+					},
+					{
+						time: '16:00',full: true
+					},
+					// {
+					// 	time: '16:30',full: false
+					// },
+					// {
+					// 	time: '17:00',full: true
+					// },
+					// {
+					// 	time: '17:30',full: false
+					// },
+					// {
+					// 	time: '18:00',full: false
+					// },
+					// {
+					// 	time: '18:30',full: true
+					// },
+				]
+			},
+			methods:{
+			}
+		})
+
+$(".select_hour span").on("click",function(){
+	if($(this).attr("class")=="full"){
+		$(this).attr("click","") 
+	}else{
+		$(this).addClass("active").siblings("span").removeClass("active")
+		var Text=$(this).html();
+		console.log(Text)
+	}
+})
+</script>
+
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_503072_b9zljmd4evc84cxr.css">
+<link rel="stylesheet" type="text/css" href="http://h5.yingtaoyun.com/yingtao/wx/1712/app.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/app.css"> -->
+
+</head>
+<body>
+<article>
+	<div class="logo">
+		<img src="img/logo.png" alt="">
+	</div>
+	<div class="pay_success">
+		<div class="pic" style="background-image:url(img/aa.png);"></div>
+		<p>已收到您的定金<span>￥118</span></p>
+		<p>我们会在拍摄前<span>24</span>H联系您</p>
+		<a href="" class="pay_detail">
+			订单详情 <i class="iconfont icon-next"></i>
+		</a>
+	</div>
+</article>
+
+</body>
+
+
+<script src="js/zepto.min.js"></script>
+<script>
+
+</script>
+
+
+</html>

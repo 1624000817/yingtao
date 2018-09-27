@@ -1,0 +1,86 @@
+@import url(../icon.css);
+
+.WX_V3_offer figure img{
+  display:block;
+  width:100%;
+  }
+.WX_V3_offer .wrap{
+  margin:0.32rem 0;
+  padding:0 1.066667rem;
+  background-color:#fff;
+  }
+.WX_V3_offer table{
+  table-layout:fixed;
+  width:100%;
+  border-collapse:collapse;
+  }
+.WX_V3_offer tr > *{
+  border-bottom:1px solid #eee
+  }
+.WX_V3_offer th{
+  position:relative;
+  padding:0.426667rem 0;
+  width:3.413333rem;
+  font-weight:400;
+  font-size:0.384rem;
+  }
+.WX_V3_offer th::after{
+  content:'';
+  position:absolute;
+  right:0;
+  top:0.853333rem;
+  bottom:0.853333rem;
+  border-left:1px solid #eee;
+  }
+.WX_V3_offer th i{
+  font-size:1.28rem;
+  }
+.WX_V3_offer td{
+  padding:0.426667rem 0 0.106667rem 0.533333rem;
+  }
+.WX_V3_offer th small{
+  margin:0.213333rem 0 0;
+  display:block;
+  font-size:0.384rem;
+  color:#898989;
+  }
+.WX_V3_offer td label{
+  position:relative;
+  display:inline-block;
+  margin:0 0 0.32rem 0.32rem;
+  padding:0 0.5rem;
+  height:1.066667rem;
+  line-height:1.066667rem;
+  min-width:2.56rem;
+  color:#898989;
+  font-size:0.554667rem;
+  text-align:center;
+  border:1px solid #e6e6e6;
+  border-radius:1.066667rem;
+  }
+.WX_V3_offer td label.active{
+  color:#fff;
+  background-color:#a8a8a8;
+  border:1px solid #a8a8a8;
+  }
+.WX_V3_offer tfoot td{
+  padding:0.32rem 0.64rem;
+  border-top:0.32rem solid #f0f0f0
+  }
+.WX_V3_offer button{
+  width:100%;
+  height:2.133333rem;
+  color:#fff;
+  font-size:0.725333rem;
+  font-weight:300;
+  letter-spacing:0.15rem;
+  border:0;
+  background-color:#ff753c;
+  }
+.WX_V3_offer input[type=text]{
+  margin-bottom:0.32rem;
+  padding:0 0.213333rem;
+  width:100%;
+  height:1.706667rem;
+  border:1px solid #eee;
+  }
