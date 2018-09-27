@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_785480_ucvl2pfi6g.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+<!-- <link rel="stylesheet" type="text/css" href="http://h5.yingtaoyun.com/yingtao/wx/1808/css/app.css"> -->
+<link rel="stylesheet" type="text/css" href="css/app.css">
+
+<style>
+[v-cloak]{
+  display:none
+  }
+</style>
+</head>
+<body>
+<article v-cloak :class="{activeMenu:isMenu}">
+	<nav>
+    <i class="menu_icon" :class="{activeMenu_icon:isMenu}" @click="onMenu">
+      <template v-if="isMenu"><img src="http://h5.yingtaoyun.com/yingtao/wx/1808/img/menu2.png" class="icon2"></template>
+      <template v-else>
+        <img src="http://h5.yingtaoyun.com/yingtao/wx/1808/img/menu2.png" class="icon2" v-if="$route.meta.type == 'brand'">
+        <img src="http://h5.yingtaoyun.com/yingtao/wx/1808/img/menu2.png" class="icon2" v-else-if="$route.name == 'productList'">
+        <img src="http://h5.yingtaoyun.com/yingtao/wx/1808/img/menu1.png" class="icon1" v-else>
+      </template>
+    </i>
+    <ul>
+      <li v-for="(item,index) in menuData" :key="index" @click="onChange()">
+        <router-link :to="item.path">
+          <i :class="item.icon"></i>{{item.name}}
+          <template v-if="item.type == $route.meta.type">
+            <i class="iconfont icon-bofang"></i>
+          </template>
+        </router-link>
+      </li>
+    </ul>	
+	</nav>
+
+	<div class="yt_LV_content scroll" @click="onChange">
+    
+    <!-- 首页 -->
+		<template v-if="$route.meta.type == 'home'">
+        <img src="http://h5.yingtaoyun.com/yingtao/wx/1808/img/logo.png" alt="">
+        
+        <div id="yt_LV_home_swiper">
+          <div class="yt_LV_home_pic" v-for="(item,index) in home" :key="index" :style="{backgroundImage: 'url('+item.url+')'}"></div>
+        </div>
+        <p class="yt_LV_home_circle">
+          <span v-for="(item,index) in home.length"></span>
+        </p>
+    </template>
+    <!-- 样照 -->
+	<template v-if="$route.name == 'product'">
+      <div class="swiper-container" id="yt_LV_product_swiper">
+        <span class="yt_LV_classify">样照分类</span>
+        <div class="swiper-wrapper">
+          <template v-for="(item, index) in product">
+            <router-link :to="'/product/1?showId='+index" class="swiper-slide" :style="{backgroundImage: 'url('+item.url+')'}">
+              <div>
+                <p>{{item.text}}</p>
+                <p>{{item.name}}</p>
+              </div>
+            </router-link> 
+          </template>
+        </div>
+      </div>
+	</template>
+     <!-- 样照分类 -->
+    <template v-if="$route.name == 'productList'">
+      <div class="yt_LV_product">
+        <div class="yt_LV_product_content">
+          <div class="yt_LV_product_scroll" onscroll="onScrollFn()">
+            <ul class="yt_LV_product_small">
+                <li v-for="(item, index) in product" 
+                :key="index"
+                @click="onSmall(index)"
+                :class="index == activeIndex ? 'active' : 'remove'"
+                :style="{backgroundImage: 'url('+item.url+')'}">
+                  <div class="product_text">
+                    <p>{{item.text}}</p>
+                    <p>{{item.name}}</p>
+                  </div>
+                </li>
+            </ul>
+          </div>
+        </div>
+        <div class="yt_LV_product_big_font">
+          <p class="text">{{product[activeIndex].text}}</p>
+          <p class="name">{{product[activeIndex].name}}</p>
+          <span @click="isGoFn" :class="{go : product[activeIndex].isGo}">想去<i class="iconfont icon-aixin"></i></span>
+        </div>
+        <template v-if="product.length>5">
+            <span><i class="iconfont icon-jiantou"></i></span>
+        </template>
+        <div class="yt_LV_classify_detail">
+          <div class="yt_LV_classify_list" v-for="(item,index) in product_classfiy_detail" :key="index">
+            <router-link to="/product/1/1" :style="{backgroundImage: 'url('+item.url+')'}"></router-link>
+            <div>
+                <p class="name">{{item.name}}</p>
+                <p class="address">
+                    <i class="iconfont icon-address"></i>
+                    <small>{{item.address}}</small>
+                </p>
+                <p class="zan" :class="{like : item.isLike}" @click="likeFn(item)">
+                  <i class="iconfont icon-aixin"></i>人气:{{item.num}}
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+    <!-- 客照 -->
+		<template v-if="$route.name == 'show'">
+        <div class="swiper-container" id="yt_LV_show_swiper">
+          <span class="yt_LV_classify">客照分类</span>
+          <div class="swiper-wrapper">
+            <template v-for="item in show">
+              <router-link :to="'/show/'+item.id" class="swiper-slide" :style="{backgroundImage: 'url('+item.url+')'}">
+                <div>
+                  <p>{{item.text}}</p>
+                  <p>{{item.name}}</p>
+                </div>
+              </router-link> 
+            </template>
+          </div>
+        </div>
+    </template>
+    <!-- 微电影 -->
+    <template v-if="$route.meta.type == 'film'">
+        <div class="swiper-container" id="yt_LV_film_swiper">
+          <div class="swiper-wrapper">
+            <template v-for="item in film">
+              <router-link to="" class="swiper-slide" :style="{backgroundImage: 'url('+item.url+')'}">
+                  <img src="http://h5.yingtaoyun.com/yingtao/wx/1808/img/film1.png" alt="">
+              </router-link> 
+            </template>
+          </div>
+          <template v-if="film.length>1 && showIndex!= film.length-1">
+              <span>next<i class="iconfont icon-jiantouyou"></i></span>
+          </template>
+        </div>
+    </template>
+    <!-- 品牌 -->
+		<template v-if="$route.meta.type == 'brand'">
+        <div class="yt_LV_brand scroll">
+          <p class="title">品牌优势</p>
+          <router-link to="">
+            <img  alt="" v-for="(item,index) in brand" :key="index" :src="item.url">
+          </router-link>
+          
+        </div>
+    </template>
+    <!-- 联系我们 -->
+		<template v-if="$route.meta.type == 'contact'">
+        <div class="yt_LV_contact">
+            <div id="yt_LV_contact_swiper" class="swiper-container">
+              <div class="swiper-wrapper">
+               <div class="swiper-slide" v-for="(item,index) in map" :key="index">
+                  <figure :data-background="mapPic(item)" class="swiper-lazy" @click="mapFn(item)">
+                      <div class="swiper-lazy-preloader"></div>
+                  </figure>
+                </div>
+              </div>
+              <div class="yt_LV_contact_info">
+                  <a :href="'tel:'+map[showIndex].phone"><i class="iconfont icon-dianhua"></i>立即咨询</a>
+                  <p class="call">call me <small>联系我们</small></p>
+                  <p class="name">{{map[showIndex].title}}</p>
+                  <p class="address">
+                    <span>{{map[showIndex].desc}}</span>
+                    <template v-if="map.length>1 && showIndex!= map.length-1">
+                      <i class="iconfont icon-arrow_right"></i>
+                    </template>
+                    
+                  </p>
+              </div>
+            </div>
+        </div>
+    </template>
+   
+     <!-- 客照分类 -->
+    <template v-if="$route.name == 'showList'">
+      <div class="yt_LV_show_classify" :style="{backgroundImage: 'url('+show_calssify[showIndex].url+')'}">
+          <p class="name">{{show_calssify[showIndex].name}}</p>
+          <div class="swiper-container" id="yt_LV_show_calssify_swiper">
+            <div class="swiper-wrapper">
+              <template v-for="item in show_calssify">
+                <router-link to="/show/1/1" class="swiper-slide" :style="{backgroundImage: 'url('+item.url+')'}">     
+                </router-link>
+              </template>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+      </div>
+    </template>
+    <!-- 客照/样照详情 -->
+    <template v-if="$route.name == 'detail'">
+      <div class="yt_LV_detail">
+          <template v-for="item in detailData.photo">
+            <img :src="item.url" alt="">
+          </template>
+          <div class="yt_LV_more_detail">
+              <p class="title">更多{{$route.meta.type == 'show'?'客片':'样片'}}赏析</p>
+              <div class="more_box">
+                <figure v-for="(item,index) in detailData.more" :key="index" @click="recommendFn(item)">     
+                  <div :style="{backgroundImage: 'url('+item.url+')'}"></div>
+                  <p><i class="iconfont icon-address"></i>{{item.address}}</p>
+                </figure>
+              </div>
+              
+          </div>
+      </div>
+    </template>
+	</div>
+	
+	 
+</article>
+
+
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script> 
+<script src="https://h5.yingtaoyun.com/yingtao/wx/7/js/hammer.min.js"></script>
+<script src="https://h5.yingtaoyun.com/yingtao/wx/7/js/swiper.min.js"></script>
+<script src="https://h5.yingtaoyun.com/yingtao/wx/v3/js/vue.min.js"></script>
+<script src="https://jd.yingtaoyun.cn/jd/js/vue-router.min.js"></script>
+<script src="https://h5.yingtaoyun.com/yingtao/wx/7/js/app.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/1808/js/turn.min.js"></script>
+<!-- <script src="http://h5.yingtaoyun.com/yingtao/wx/1808/js/app.js"></script> -->
+<script src="js/app.js"></script>
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=0c8nnro4HDLqlORuLEAxA7OP84TeuvUK"></script>
+
+
+
+<script>
+
+
+var routes = [{
+  path: '/',
+  name: 'home',
+  meta: {
+    type: 'home'
+  },
+  children: [{ //样照
+    path: 'product',
+    name: 'product',
+    meta: {
+      type: 'product'
+    },
+    children: [{//样照分类
+      path: ':id(\\d+)',
+      name: 'productList',
+      meta: {
+        type: 'product'
+      },
+    },{//样照详情
+      path: ':id(\\d+)/:cid(\\d+)',
+      name: 'detail',
+      meta: {
+        type: 'product'
+      }
+    }]
+  },
+  {
+    path: 'show',//客照
+    name: 'show',
+    meta: {
+      type: 'show'
+    },
+    children: [{//客照分类
+      path: ':id(\\d+)',
+      name: 'showList',
+      meta: {
+        type: 'show'
+      }
+    },{//客照详情
+      path: ':id(\\d+)/:cid(\\d+)',
+      name: 'detail',
+      meta: {
+        type: 'show'
+      }
+    }]
+  },{
+    path: 'film',//微电影
+    name: 'film',
+    meta: {
+      type: 'film'
+    }
+  },{
+    path: 'brand',//品牌
+    name: 'brand',
+    meta: {
+      type: 'brand'
+    },
+    children: [{//品牌详情
+      path: ':id(\\d+)',
+      name: 'detail',
+      meta: {
+        type: 'brand_detail'
+      }
+    }]
+  },{
+    path: 'contact',//联系我们
+    name: 'contact',
+    meta: {
+      type: 'contact'
+    }
+  }]
+}]
+var router = new VueRouter({
+  routes
+})
+var	APP = new Vue({
+	el: 'article',
+	data: {
+    isMenu: false,
+    showIndex: 0,
+    activeIndex: 0,
+    paramsId: null,
+    menuData:[ //菜单
+      {
+        name:'首页',
+        type:'home',
+        path:'/',
+        icon:'iconfont icon-msnui-home-inverse'
+      },
+      {
+        name:'全球样片',
+        type:'product',
+        path:'/product',
+        icon:'iconfont icon-picture'
+      },
+      {
+        name:'全球客片',
+        type:'show',
+        path:'/show',
+        icon:'iconfont icon-zhaopian'
+      },
+      {
+        name:'微电影',
+        type:'film',
+        path:'/film',
+        icon:'iconfont icon-shipindefuben'
+      },
+      {
+        name:'品牌资源',
+        type:'brand',
+        path:'/brand',
+        icon:'iconfont icon-zuanshi'
+      },
+      {
+        name:'联系我们',
+        type:'contact',
+        path:'/contact',
+        icon:'iconfont icon-76'
+      },
+    ],
+    home:[ //首页
+      {url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner1.jpg'},
+      {url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner2.jpg'},
+      {url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner3.jpg'},
+      {url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner4.jpg'},
+    ],
+    product:[ //样照
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner5.jpg',
+        text:'nei meng gu',
+        name:'内蒙古',
+        isGo: false,
+      },
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner6.jpg',
+        text:'qing hai',
+        name:'青海',
+        isGo: true,
+      },
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner7.jpg',
+        text:'san ya',
+        name:'三亚',
+        isGo: false,
+      },
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner8.jpg',
+        text:'xia men',
+        name:'厦门',
+        isGo: false,
+      },
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner9.jpg',
+        text:'Hong Kong',
+        name:'香港',
+        isGo: false,
+      },
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner10.jpg',
+        text:'xi zang',
+        name:'西藏',
+        isGo: false,
+      },
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner11.jpg',
+        text:'ba li',
+        name:'巴厘岛',
+        isGo: false,
+      },
+    ],
+    product_classfiy_detail:[
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/product1.jpg',
+        name:'原木之森',
+        address:'青海湖、沙漠、草原、季 节性景点元素',
+        isLike: true,
+        num: 1256,
+      },
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/product2.jpg',
+        name:'盐下之意',
+        address:'青海、茶卡盐湖、季节性 景点元素',
+        isLike: false,
+        num: 888
+      },
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/product3.jpg',
+        name:'在路上',
+        address:'青海湖、沙漠、草原、季 节性景点元素',
+        isLike: true,
+        num: 999
+      }
+    ],
+     show:[ //客照
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner12.jpg',
+        text:'qing hai',
+        name:'青海',
+        id: 1,
+      },
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner13.jpg',
+        text:'li jiang',
+        name:'丽江',
+        id: 2,
+      },
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner14.jpg',
+        text:'san ya',
+        name:'三亚',
+        id: 3,
+      },
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner15.jpg',
+        text:'ba li',
+        name:'巴厘岛',
+        id: 4,
+      },
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner16.jpg',
+        text:'Hong Kong',
+        name:'香港',
+        id: 5,
+      },
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner17.jpg',
+        text:'xi zang',
+        name:'西藏',
+        id: 6,
+      },
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner18.jpg',
+        text:'xiamne',
+        name:'厦门',
+        id: 7,
+      },
+    ],
+    show_calssify:[ //客照分类模板
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner19.jpg',
+        name:'高先生&黎女士',
+      },
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner20.jpg',
+        name:'林先生&蓝女士',
+      },
+      {
+        url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner21.jpg',
+        name:'伍先生&齐女士',
+      },
+    ],
+    detailData:{
+      photo:[ //详情
+        {url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner22.jpg'},
+        {url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner23.jpg'},
+        {url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner24.jpg'},
+        {url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner25.jpg'},
+        {url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner26.jpg'},
+        {url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner27.jpg'},
+      ],
+      more:[ //详情更多
+        {
+          url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/more1.jpg',
+          id: 1,
+          address: '丽江、虎跳峡'
+        },
+        {
+          url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/more2.jpg',
+          id: 2,
+          address: '丽江、玉龙雪山'
+        },
+        {
+          url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/more3.jpg',
+          id: 3,
+          address: '丽江、泸沽湖'
+        },
+        {
+          url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/more4.jpg',
+          id: 4,
+          address: '丽江、里格岛'
+        },
+      ],
+    },
+    film:[ //微电影
+      {url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/film1.jpg'},
+      {url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/banner4.jpg'},
+    ],
+    brand:[ //品牌
+      {url:'http://h5.yingtaoyun.com/yingtao/wx/1808/img/brand.jpg'},
+    ],
+    map: [{ //联系我们
+        title: '柒城影像婚纱摄影(品质优选店)',
+        desc: '深圳市南山区华侨城创意文化园康佳苑5栋204',
+        phone: '400-400-400',
+        longitude: '121.404164',
+        latitude: '31.17622'
+      },
+      {
+        title: '柒城影像婚纱摄影',
+        desc: '沙河街道华侨城创意文化园柒城影像婚纱摄影',
+        phone: '400-400-410',
+        longitude: '116.410593',
+        latitude: '39.898774'
+      }
+      ]
+	},
+	router,
+	watch: {
+	    $route(to, from) {
+        this.isMenu = false; 
+        this.showIndex = 0;
+        this.loadFn()
+	     }
+	  },
+	components: {
+	},
+	methods: {
+    onMenu(){
+      this.isMenu = !this.isMenu
+    },
+    onChange(){
+      if(this.isMenu){
+         this.isMenu = false
+      }
+    },
+    loadFn(){
+      console.log("this.$route", this.$route)
+      var name = this.$route.name;
+      if(name == 'productList'){
+        var self = this;
+        setTimeout(function(){
+          scrollFn()
+        })
+        
+      }
+      this.onShowFn(name)
+      this.paramsId = this.$route.query.showId;
+      if(this.paramsId != 'undefined'){
+        this.activeIndex = this.paramsId
+      }
+    },
+    onSmall(index){
+      this.activeIndex = index; 
+    },
+    isGoFn(){
+      var obj = this.product[this.activeIndex].isGo;
+       if(!obj){
+        this.product[this.activeIndex].isGo = true
+      }
+    },
+    likeFn(v){
+      if(!v.isLike){
+        v.isLike = true
+        v.num += 1
+      }
+    },
+    swiperFn(name,slide,type, number, center){
+      var self = this;
+      var swiper = new Swiper(name,{
+        initialSlide: slide,
+        direction: type,
+        slidesPerView: number,
+        centeredSlides : center,
+        observer: true,
+        observerParent: true,
+        uniqueNavElements :false,
+        // slideToClickedSlide: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        lazy: {
+          loadPrevNext: true,
+        },
+        on:{
+          slideChangeTransitionEnd: function(){
+            self.activeIndex = self.showIndex = this.activeIndex;
+          },
+          init: function(){
+            self.showIndex = 0;
+            self.activeIndex = 0;
+          },
+          sliderMove:function(){
+          },
+          click:function(){
+           self.activeIndex =  swiper.clickedIndex;
+          },
+          touchEnd:function(){ 
+            
+          }
+        }
+      })
+      swiper.on("resize", function () {
+          swiper.update();
+      });
+    },
+    recommendFn(v){
+      var type = this.$route.meta.type
+      var id = this.$route.params.id
+      document.querySelector('.yt_LV_content').scrollTop = 0
+      if(type == 'product'){
+        this.$router.push('/product/'+id+'/'+v.id)
+      }
+      if(type == 'show'){
+        this.$router.push('/show/'+id+'/'+v.id)
+      }
+    },
+    mapFn(v){ //跳转到微信地图
+      wx.openLocation({
+        latitude: v.latitude, // 纬度，浮点数，范围为90 ~ -90
+        longitude: v.longitude, // 经度，浮点数，范围为180 ~ -180。
+        name: v.title, // 位置名
+        address: v.desc, // 地址详情说明
+        scale: 1, // 地图缩放级别,整形值,范围从1~28。默认为最大
+        infoUrl: '' // 在查看位置界面底部显示的超链接,可点击跳转
+      })
+    },
+    mapPic(v){ //图片地图地址
+      return 'http://apis.map.qq.com/ws/staticmap/v2/?size=750*1008&markers=color:red|label:A|'+v.latitude+','+v.longitude+'&key=OGZBZ-6POHP-4PWDZ-LQOYG-IPGO5-HUFEJ&center='+v.latitude+','+v.longitude+'&zoom=16'
+    },
+    onShowFn(name){
+      var self = this;
+      setTimeout(function(){
+       if(name == 'home'){
+          trunFn() 
+        }else if(name == 'show'){
+          self.swiperFn('#yt_LV_show_swiper',1,'vertical','2', true)
+        }else if(name == 'showList'){
+          self.swiperFn('#yt_LV_show_calssify_swiper',0,'horizontal','1', false)
+        }else if(name == 'contact'){
+          self.swiperFn('#yt_LV_contact_swiper',0,'horizontal','1', false)
+        }else if(name == 'film'){
+          self.swiperFn('#yt_LV_film_swiper',0,'horizontal','1', false)
+        }else if(name == 'product'){
+          self.swiperFn('#yt_LV_product_swiper',1,'vertical','2', true)
+        }
+      }) 
+    }
+	},
+	mounted(){
+	 	this.$nextTick(() => {
+      this.loadFn()
+      var name = this.$route.name;
+      if(name == 'productList'){
+         this.$router.push({path:"/product"})
+      }
+	 	})
+		
+	}
+});
+
+
+
+</script>
+</body>
+</html>
