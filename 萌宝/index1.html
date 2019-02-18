@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>beautiful world</title>
+<meta name="keywords" content="">
+<meta id="metaDescription" name="description" content="beautiful world">
+<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+<meta name="viewport" id="viewport" content="width=320, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+ <link rel="stylesheet" href="http://whb.yingtaoyun.cn/view/css/yingtao-2.1.5.3.css?v=13.3"> 
+<!--<link rel="stylesheet" type="text/css" href="css//yingtao-2.1.5.3.css">-->
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_721375_9hxtj5c9ej5.css">
+<link rel="stylesheet" href="css/style.css" />
+
+
+<script>
+var your_demain='http://www.yingtaoyun.cn';
+var your_webname='樱桃互动 - 微海报';
+var logo_url='樱桃互动 - 微海报';
+ var  yt_login_url ='http://www.yingtaoyun.cn';
+var lastpagelink='';
+var lastpagetext_color='#23a3d3';
+var lastpagetext='';
+var jubao_link='';
+var APPID_WX = 'wxebac9f9fc11613b2';
+var yt_domain = 'yingtao';
+var is_lemon = '';
+</script>
+<link rel="stylesheet" href="http://whb.yingtaoyun.cn/Public/css/my52.css">
+
+</head>
+<body>
+
+<div id="ppitest" style="width:1in;visible:hidden;padding:0px"></div>
+<div style="height:100%;overflow-x:hidden;overflow-y:auto;">
+  <div class="p-index main phoneBox" id="con" style="display: none;">
+      <div class="top"></div>
+      <div class="phone_menubar"></div>
+      <div class="scene_title_baner" style="display: none">
+          <div class="scene_title">beautiful world</div>
+      </div>
+      <div class="nr" id="nr">
+          <div id="audio_btn" class="off">
+              <div id="yinfu"></div>
+              <audio loop src="" id="media" autoplay="" preload></audio>
+          </div>
+          <div id="loading" class="loading">
+              <div class="loadbox">
+                  <div class="loadlogo" style="background-image: url('http://cdn-whb.yingtaoyun.cn/Uploads/pic/1/201803/5ab380ea1a7d9.jpg ');"></div>
+                  <div class="loadbg" ></div>
+              </div>
+          </div>
+                </div>
+      <div class="bottom"></div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+ 
+  
+  
+  <section class="main-page lovely_baby-add">
+    <div class="lovely_baby_hug">
+        <div class="flags flags1" style="background-image: url(img/c1.png);"></div>
+        <div class="flags flags2" style="background-image: url(img/c2.png);"></div>
+        <div class="flags flags10" style="background-image: url(img/c10.png);"></div>
+        <div class="flags flags4" style="background-image: url(img/c4.png);"></div>
+        <div class="flags flags6" style="background-image: url(img/c9.png);"></div>
+        <div class="flags flags7" style="background-image: url(img/c6.png);"></div>
+        <div class="flags flags8" style="background-image: url(img/c7.png);"></div>
+        <div class="flags flags3" style="background-image: url(img/c3.png);"></div>
+        <div class="flags flags9" style="background-image: url(img/c8.png);"></div>
+        <div class="flags flags5" style="background-image: url(img/c5.png);"></div>
+        <div class="lovely_baby_hug_flags" style="background-image: url(img/pic1.png);"></div>
+        <div class="lovely_baby_hug_text" style="background-image: url(img/pic2.png);"></div>
+        <div class="lovely_baby_hug_children" 
+        v-bind:style="styleChildren"
+        style="background-image: url(img/pic3.png);"> 
+        </div>
+        <div class="button">
+            <div class="small_button"></div>
+        </div>
+        <div class="lovely_baby_hug_hand" 
+		  style="background-image: url(img/pic4.png);">
+        </div>
+        <div class="lovely_baby_model_box">
+		    <div class="mask_box">
+		      <i class="iconfont icon-2guanbi lovely_baby_close"></i>
+		      <p>恭喜叔叔阿姨获得xxxx大礼包一份！</p>
+		      <input type="text" placeholder="请输入姓名" v-model="members.name">
+		      <input type="text" placeholder="请输入手机号" v-model="members.mobile" v-on:blur="changeMobile()">
+		      <a href="" class="mask_btn" style="background-image: url(img/btn.png);"></a>
+		    </div>
+	  </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+<div id="fixed_ad" style="position: fixed;top: 0px;z-index: 1000;width: 100%;text-align: center;/* display: none; */"><a href="javascript:void(0)"><img src="http://productimg.yingtaoyun.com/2d/5d/2d5d6cb75a1219374cbb6d039a22761e.png!w640" style="max-width:100%;"></a><i class="fa fa-times-circle" style="color:rgba(139, 134, 134, 0.8);font-size:18px;position:absolute;top: 36%;right: 10px;transform: translateY(-50%);" onclick="document.querySelector('#fixed_ad').style.display='none'"></i></div>
+
+
+
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="http://whb.yingtaoyun.cn/Public/css/waiwan/jquery.min.js"></script>
+
+<script>
+
+$("body").on("touchmove",function(){
+	window.parent.$("iframe").css("pointer-events","none")
+})
+$("body").on("touchend",function(){
+	window.parent.$("iframe").css("pointer-events","auto")
+})
+
+
+
+	$(".button").on("click", function(){
+		$(".lovely_baby_hug_hand").css({"bottom":"38px","right":"94px"});
+		$(".lovely_baby_model_box").show()
+	})
+	$(".lovely_baby_close").on("click",function(){
+		$(".lovely_baby_model_box").hide()
+		$(".lovely_baby_hug_hand").css({"bottom":"7px","right":"64px"});
+	})
+
+</script>
+
+
+
+
+
+
+
+
+<script >
+ (function (window, $) {
+   window.PREFIX_URL = "http://"+window.location.host+"/";
+    window.PREFIX_S1_URL =  "http://"+window.location.host+"/";//"/json/";
+    window.PREFIX_S2_URL ="http://"+window.location.host+"/";
+    window.PREFIX_S6_URL ="http://"+window.location.host+"/";
+    window.PREFIX_HOST = "http://"+window.location.host+"/";
+    window.PREFIX_HOST1 = "http://"+window.location.host+"/";
+    window.PREFIX_SHOW_HOST = "http://"+window.location.host+"/";
+    window.TRACK_HOST = "http://"+window.location.host+"/";
+    window.PREFIX_FILE_HOST = "http://cdn-whb.yingtaoyun.cn/Uploads/"; 
+  window.PREFIX_COMPANY_HOST_ARRAY = ["http://"+window.location.host, "http://"+window.location.host];
+  window.OLD_FILE_HOST="http://"+window.location.host+"/";
+    window.CLIENT_CDN ="http://whb.yingtaoyun.cn/"; 
+    window.WX_SITE_URL ="http://wx.yingtaoyun.cn/"; 
+   window.clientWidth = document.documentElement.clientWidth;
+    window.clientHeight = document.documentElement.clientHeight;    
+  window.PREFIX_HOST_ARRAY = [
+      "http://"+window.location.host,
+      "http://"+window.location.host,
+      "http://"+window.location.host,
+      "http://"+window.location.host
+    ];
+       
+})(window, jQuery)
+</script>
+ <script type="text/javascript" src="http://whb.yingtaoyun.cn/view/yingtao-preview-2.1.5.3.js?v=13.3"></script>
+ <script src="http://cdn.yingtaoyun.cn/views/default/js/mpv2/hammer.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/whb/js/ImgEditor.js"></script>
+<script src="http://whb.yingtaoyun.cn/view/exif.js?v=13.3"></script>
+<script>
+var scene = {id:8853810,code:"U8067KE7K3",name:"beautiful world",bgAudio:{"url":"{$sceneinfo['musicurl_varchar']}","name":"","id":202382032},pageMode:0,cover:"",property:'{"triggerLoop":true,"slideNumber":true,"autoFlipTime":3,"shareDes":"","eqAdType":1,"hideEqAd":false,"activityPageId":null}'};
+    eqShow.bootstrap();
+      
+   (function () {
+    function isMobile() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobi/i.test(navigator.userAgent) ||
+                window.innerWidth < 500;
+    }
+
+    function setScale() {
+        if (window.top !== window) {
+            return;
+        }
+        var pageScale = 1;
+
+        var width = document.documentElement.clientWidth || 320;
+        var height = document.documentElement.clientHeight || 486;
+
+
+        if (width / height >= 320 / 486) {
+            pageScale = height / 486;
+        } else {
+            pageScale = width / 320;
+        }
+         console.log('screen.width', width, 'screen.height', height, 'setScale', pageScale);
+        // meta
+        var content = 'width=320, initial-scale=' + pageScale + ', maximum-scale=' + pageScale + ', user-scalable=no';
+        document.getElementById('viewport').setAttribute('content', content);
+    }
+    
+    if (isMobile()) {
+        setScale();
+    }
+
+})();
+</script>
+
+<script>
+  wx.config({
+      debug: false,
+      appId: 'wxebac9f9fc11613b2',
+      timestamp: "1530152646",
+      nonceStr: 'Qrm6tYuwjBXVjayI',
+      signature: '42e103b4d6698067d25f2675f2900c1d11e199f3',
+      jsApiList: [
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage'
+      ]
+  });
+  wx.ready(function () {
+  
+      var shareData64 = {
+        title: "beautiful world",
+        desc: "beautiful world",
+        link: PREFIX_URL+'v/U8067KE7K3',
+        imgUrl:  PREFIX_FILE_HOST  +'pic/1/201803/5ab380ea1a7d9.jpg!w320'
+      };
+      wx.onMenuShareAppMessage(shareData64);
+      wx.onMenuShareTimeline(shareData64);
+      if (!eqShow.getUrlParameter('edit')) {
+        $("#media").get(0).play();
+      }
+  });
+$('.flags').each(function(i,item){  
+     $('.flags').eq(i).css('animation-delay',(1500*i)+"ms"); 
+});
+</script>
+
+
+
+</body>
+</html>

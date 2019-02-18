@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+ <link href="css/app.css" rel="stylesheet"> 
+<!-- <link rel="stylesheet" type="text/css" href="http://h5.yingtaoyun.com/yingtao/packet/css/app.css"> -->
+</head>
+<body>
+<article>
+	<div class="maskBox">
+		<div class="maskBox_content">
+			<div class="maskBox_content_flow" style="background-image: url(img/bj.png);">
+				<h1 class="title">恭喜你</h1>
+				<h1>获得现金红包！</h1>
+				<div class="buzhou">
+					<p>怎样领取红包</p>
+					<p>第一步：截图保存此图片</p>
+					<p>第二步：打开微信右上角扫一扫</p>
+					<p>第三步：选择上传图片</p>
+					<p>第四步：拆红包领取大奖</p>
+				</div>
+			</div>
+			<div class="maskBox_content_Code" style="background-image: url(img/code.png);"></div>
+			<div class="close">×</div>
+		</div>
+	</div>
+
+	<!-- 点击按钮测试用可删除 -->
+	<button>领取红包</button>
+
+</article>
+
+
+
+
+
+<script src="js/jquery-3.1.1.js"></script>
+<script>
+
+// 点击按钮js测试用可删除 
+$("button").on("click",function(){
+	$(".maskBox").fadeIn(500)
+})
+//
+
+
+
+$(".maskBox .close").on("click",function(){
+	$(".maskBox").fadeOut(500)
+})
+</script>
+
+</body>
+</html>

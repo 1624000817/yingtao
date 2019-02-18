@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_721375_9hxtj5c9ej5.css">
+<link rel="stylesheet" href="css/iview.css">
+<link rel="stylesheet" href="css/app.css">
+
+
+
+</head>
+<body>
+<article>
+
+<div class="lovely_baby_hug">
+  <div class="flags flags1" style="background-image: url(img/c1.png);"></div>
+  <div class="flags flags2" style="background-image: url(img/c2.png);"></div>
+  <div class="flags flags9" style="background-image: url(img/c10.png);"></div>
+  <div class="flags flags4" style="background-image: url(img/c4.png);"></div>
+  <div class="flags flags6" style="background-image: url(img/c9.png);"></div>
+  <div class="flags flags7" style="background-image: url(img/c6.png);"></div>
+  <div class="flags flags8" style="background-image: url(img/c7.png);"></div>
+  <div class="flags flags3" style="background-image: url(img/c3.png);"></div>
+  <div class="flags flags9" style="background-image: url(img/c8.png);"></div>
+  <div class="flags flags5" style="background-image: url(img/c5.png);"></div>
+  
+
+  <div class="lovely_baby_hug_flags" style="background-image: url(img/pic1.png);"></div>
+  <div class="lovely_baby_hug_text" style="background-image: url(img/pic2.png);"></div>
+  <div class="lovely_baby_hug_children" 
+  v-bind:style="styleChildren"
+  style="background-image: url(img/pic3.png);"> 
+  </div>
+  <div class="button" @click="onClick">
+      <div class="small_button"></div>
+  </div>
+  <div class="lovely_baby_hug_hand" 
+  v-bind:style="styleObject"
+  style="background-image: url(img/pic4.png);"></div>
+  <div class="model_box" v-cloak v-if="isShow">
+    <div class="mask_box">
+      <i class="iconfont icon-2guanbi close" @click="onClose"></i>
+      <p>恭喜叔叔阿姨获得xxxx大礼包一份！</p>
+      <input type="text" placeholder="请输入姓名" v-model="members.name">
+      <input type="text" placeholder="请输入手机号" v-model="members.mobile" v-on:blur="changeMobile()">
+      <div class="btn" style="background-image: url(img/btn.png);"></div>
+    </div>
+  </div>
+</div>
+
+</article>
+
+
+<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+<script src="js/jquery-3.1.1.js"></script>
+
+
+<script src="js/iview.min.js"></script>
+<script type="text/javascript">
+new Vue({
+  data(){
+    return{
+      isShow:false,
+      members:{
+        name:null,
+        mobile:null
+      },
+      styleObject: {
+        bottom: '1.986667rem',
+        right: '2.370667rem'
+      },
+      styleChildren:{
+        animationIterationCount:'infinite'
+      }
+    }
+  },
+  methods:{
+    onClick(){
+      this.styleObject.bottom = '2.986667rem'
+      this.styleObject.right = '3.986667rem'
+      this.styleChildren.animationIterationCount = '0'
+      this.isShow = true
+    },
+    onClose(){
+      this.styleObject.bottom = '1.986667rem'
+      this.styleObject.right = '2.370667rem'
+      this.styleChildren.animationIterationCount = 'infinite'
+      this.isShow = false
+    },
+    changeMobile(){
+      var myreg=/^[1][3,4,5,7,8][0-9]{9}$/;  
+      if (!myreg.test(this.members.mobile)) {  
+        alert("手机号格式错误！")
+          return false;  
+      } else {  
+        console.log("aa1")
+          return true;  
+      }  
+    }
+  },
+   mounted: function () {
+
+   },
+}).$mount('article')
+
+
+$('.flags').each(function(i,item){  
+     $('.flags').eq(i).css('animation-delay',(1500*i)+"ms");
+    console.log(i,$(this).eq(i));  
+}); 
+</script>
+
+
+</body>
+</html>

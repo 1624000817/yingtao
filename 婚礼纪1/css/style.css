@@ -1,0 +1,533 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}
+body{
+	height: 2000px;
+}
+.c_icon div span i{
+	font-size:25px;
+}
+#chatEntry{
+	line-height: 34.4px;
+	color: rgba(255,255,255,.8);
+}
+.close_red_packets{
+		width: 22.1867px;
+		height: 24.2098px;
+		position: absolute;
+		bottom: auto;
+		top: -90px;
+		margin: 0;
+		left: auto;
+		right: -17px;
+}
+.red_packets_wrap{
+	top: -10px !important;
+}
+#red_packets_form{
+		position: absolute;
+		width: 255px;
+		height: 285px;
+		margin: 0px auto;
+		top: 160px;
+		z-index: 12;
+		opacity:1;
+		display: none;
+		border-radius: 0 0 15px 15px;
+		 
+	}
+.red_packets_before {
+		width: 255px;
+		height: 285px;
+		border-radius: 0 0 15px 15px;
+	}
+
+	#nameTxt.zc{
+		outline: none;
+		/*position: absolute;
+		top: 19px;*/
+		color: transparent;
+		text-shadow: 0 0 0px #000;
+	}
+#label_box{
+	width: 59%;
+    height: 17px;
+    display: block;
+    position: absolute;
+    top: 19px;
+    left: 75px
+}
+.Payment_page .close{
+	width: 22px;
+	height: 22px;
+	margin: 20px auto;
+}
+.Payment_page{
+		width: 100%;
+		height: 100%;
+		background-color: #efeef3;
+		padding: 20px;
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: none;
+		z-index: 15;
+		box-sizing: border-box;
+	}
+.Payment_box span{
+		color: #333333;
+		font-weight: 500;
+	}
+	.Payment_box b{
+		float: right;
+		font-weight: 100;
+		color: #888;
+	}
+
+.bomb span{
+	width: 34px !important;
+	height: 34px !important;
+}
+
+
+
+
+
+
+
+
+.c_icon img{
+	width: 100%;
+}
+.red_packets_btn img{
+	width: 100%;
+}
+.g_layout span img {
+	width: 100%;
+}
+.close img{
+	width: 100%;
+}
+.c_icon div span{
+	width:30px;
+	height: 30px;
+	background-color: #fc3d4f;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 30px;
+	opacity: 0.8;
+}
+	
+.gift_layout .g_y i{
+	font-style: normal;
+}
+.gift_layout .g_y h5{
+	font-weight: normal;
+}
+.gift_layout .g_y p{
+	font-size: 12px;
+}
+.gift_layout.active{
+	-webkit-animation:a_z  3s 1 forwards;
+	animation:a_z 3s 1 forwards;
+}
+@-webkit-keyframes a_z{
+			40%{
+				-webkit-transform:translateX(0px);
+				opacity: 1;
+				}
+			60%{
+				-webkit-transform:translateX(0px);
+				opacity: 1;
+			}
+			80%{
+				-webkit-transform:translateY(-10px);
+				opacity: 0;
+			}
+			100%{
+				opacity: 0;
+				-webkit-transform:translateX(-174px);
+			}
+		}
+.chat_dis{
+	max-height: 46px;
+	overflow: hidden;
+	
+}
+
+.bd{
+	min-height: 48px;
+	transition:all 2s
+}
+.bd .c_g,.bd .c_g p{
+	border-radius:21px;
+	height:21px;
+	line-height:21px;
+}
+.bd .c_g{
+	margin-bottom: 3px;
+}
+.bd .c_g p em{
+	/*white-space: nowrap;*/
+	font-style: normal;
+	/*overflow: hidden;*/
+}
+.chat_entry .c_txt{
+	line-height:30.72px;
+	border-radius:30.72px;
+}
+
+	#red_packets_bg{
+		display: none;
+		opacity: 1;
+		z-index: 12;
+	}
+	
+	
+	#red_packets_form .container,#red_packets_form .front,#red_packets_form .back{
+		width: 254.6px;
+		height: 82px;
+	}
+	#red_packets_form .container img{
+		width: 100%;
+		height: 100%;
+	}
+	
+	#red_packets_form .money{
+		width: 210px;
+    	height: 325px;
+    	display: none;
+    	z-index: 0;
+    	animation: money 1000ms ease-in-out 100ms both;
+	}
+	.red_packets_name,.red_packets_money{
+		width: 221.867px;
+		height: 35px;
+		overflow: hidden;
+	}
+	.red_packets_name i,.red_packets_money i{
+		font-style: normal;
+	}
+	.red_packets_name_txt,.red_packets_money_txt{
+		padding: 10.24px 0px;
+		width: 140.8px;
+		outline: none;
+	}
+
+	.entryName em{
+		font-style: normal;
+	}
+	.red_packets_tip{
+		display: block;
+		width: 196.267px;
+		height: 25px;
+		margin: auto auto 12.8px;
+		background: 0px 0px / 100% no-repeat;
+	}
+	#sendPriceBtnV2{
+		display: block;
+		width: 221.867px;
+		height: 40.9705px;
+		margin: auto;
+	}
+	
+	.close_red_packets img{
+		width: 100%;
+	}
+	#allCode{
+		padding: 0px 12.8px;
+		z-index: 13;
+		display: none;
+		opacity: 1;
+	}
+	#allCode i{
+		font-style: normal;
+	}
+	.ac_wish_txt{
+		resize: none;
+		margin: 12.8px 0;
+		height: 55px;
+		vertical-align: -webkit-baseline-middle;
+		border: 0;
+		background: #f2f3f7;
+		width: 256px;
+		border-radius: 4px;
+		box-sizing: border-box;
+		padding: 10.24px;
+		outline: none;
+	}
+	.ac_name_txt{
+		overflow: hidden;
+		resize: none;
+		margin: 12.8px 0 12.8px -3px;
+		height: 34.986666666666665px;
+		vertical-align: -webkit-baseline-middle;
+		border: 0;
+		background: #f2f3f7;
+		width: 195px;
+		border-radius: 4px;
+		box-sizing: border-box;
+		padding: 10.24px;
+		outline: none;
+	}
+	.ac_bg{
+		width: 175px;
+		height: 40px;
+		background-color: rgba(0,0,0,.5);
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		z-index: 15;
+		transform: translate3d(-50%,-50%,0);
+		border-radius: 5px;
+		color: #fff;
+		text-align: center;
+		line-height: 40px;
+		font-size: 17px;
+		opacity: 0;
+		display: none;
+		
+	}
+	.ac_bg.active{
+		-webkit-animation:fade  3s 1;
+		animation:fade 3s 1;
+		display: block;
+	}
+	@-webkit-keyframes fade{
+			30%{
+				opacity: 1;
+			}
+			60%{
+				opacity: 1;
+			}
+			
+		}
+	.sureBtn{
+		width:51px;
+		height:35px;
+		line-height:35px
+	}
+	.winBg{
+		display: none;
+	}
+	.winMsg{
+		width: 204.8px;
+		top: 149.333px;
+		padding-bottom: 19.2px;
+		display: none;
+		z-index: 15;
+	}
+	.winMsg img{
+		margin-top:27.733333333333334px
+	}
+	.winMsg span{
+		margin-top:10.666666666666666px;
+		font-size:14.506666666666668px
+	}
+	#giftBtnWin{
+		margin-top:19.2px;
+		font-size:13.653333333333332px;
+		height:30.72px;
+		line-height:30.72px
+	}
+	#cashBtnWin{
+		margin-top:8.533333333333333px;
+		font-size:13.653333333333332px;
+		height:30.72px;
+		line-height:30.72px
+	}
+	.bgc{
+		display: none;
+		z-index: 13;
+	}
+	#send_gift{
+		z-index: 14;
+		bottom: 0px;
+		width: 100%;
+		/*transform: translateY(0px);*/
+		display: none;
+		overflow: initial;
+		position: absolute;
+		
+	}
+	#send_gift .close{
+		position: absolute;
+		top: -40px;
+		width: 22px;
+		height: 22px;
+		z-index: 99;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.giftTit{
+		padding:11.093333333333334px 0
+	}
+	.entryName{
+		width:267.09333333333336px;
+		padding: 8.533333333333333px 12.8px;
+		font-size:11.946666666666667px
+	}
+
+	#giftMore{
+	
+		width: 292.693px;
+		touch-action: pan-y;
+		user-select: none;
+		-webkit-user-drag: none;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	}
+	#g_bd_wrap{
+		width: 640px;
+		overflow: hidden;
+		list-style: none;
+		transform: translate3d(0px, 0px, 0px);
+		transition: -webkit-transform 350ms cubic-bezier(0.42, 0, 0.58, 1);
+	}
+	#g_bd_wrap .g_bd{
+		width: 320px;
+		padding: 0px 8.53333px;
+		box-sizing: border-box;
+	}
+	#g_bd_wrap .g_bd .g_layout{
+		width: 25%;
+		box-sizing: border-box; 
+		padding: 4.26667px;
+	}
+	.pageGift{
+		padding-bottom: 16.21333333333333px
+	}
+	.gift_footer{
+		border-top: 1px solid #e7e7e7;
+		overflow: hidden;
+		padding: 11.946666666666667px
+	}
+	.gift_footer .gift_tishi{
+		overflow: hidden;
+		float: left;
+		width:192px;
+		height: 33.28px;
+		margin: 0
+	}
+	.gift_footer .gift_tishi img{
+		width:144.21333333333334px;
+		height: 33.28px;
+	}
+	.gift_footer #sendGiftBtn{
+		float: right;
+		width: 81.06666666666668px;
+		height:34.13333333333333px;
+		line-height:34.13333333333333px
+	}
+	#chat_msg{
+		padding: 8.53333px;
+		width: 320px;
+	}
+	#giftModule{
+		top:-50px;
+		left:8.533333333333333px;
+		height: 40px;
+	}
+	
+	#giftModule .gy{
+		padding: 3.41333px 10px 3.41333px 3.41333px;
+		margin-bottom: 8.41333px;
+		border-radius: 34.1333px;
+		transform: translateX(-174px);
+		margin-right: 4px;
+	}
+	.chat_dis.kid{
+		-webkit-mask:-webkit-gradient(linear,0 100%,0 1%,from(rgba(222,187,71,1)),to(rgba(255,255,255,0)))
+	}
+
+	.Payment_box{
+		width: 100%;
+		height: auto;
+		background-color: #fff;
+		border-radius: 10px;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+	.Payment_box p{
+		line-height: 40px;
+	}
+	
+	.Payment_button{
+		border-top: 1px solid #efeef3;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.Payment_button button{
+		border: none;
+		background-color: #1aac19;
+		color: #fff;
+		outline: none;
+		width: 160px;
+		height: 40px;
+		border-radius: 5px;
+		text-align: center;
+		line-height: 40px;
+		margin: 20px auto 0 auto;
+	}
+	#bd_2{
+		position: fixed;
+	}
+	#bd_2 .c_g{
+		position: fixed;
+		width: 100%;
+	    display: inline-block;
+	   /* left: 100%;*/
+	    top:75px;
+	    right: 0;
+	    color: #fff;    
+	    z-index: 999;
+	    transform: translate3d(100%,0,0);
+	}
+	#bd_2 .c_g.active{
+		animation: danmu 10s 1 forwards;
+		-webkit-animation: danmu 10s 1 forwards;
+	}
+	@-webkit-keyframes danmu {
+	   
+	  to {
+	    transform: translate3d(-110%,0,0);
+	  }
+	}
+	
+	
+	#wrap{
+		pointer-events: none;
+	}
+	#wrap>*{
+		pointer-events: auto;
+	}
+	#wrap #bd_2,#wrap #bd_1{
+		pointer-events: none !important;
+	}
+	.chat_entry{
+		pointer-events: auto;
+	}
+	#wishTxt{
+		pointer-events: auto;
+	}
+	
+	
+.gift_tishi i{
+	display: inline-block;
+	color: #e33f4a;
+	height: 100%;
+	vertical-align: top;
+}
+.gift_tishi p{
+	display: inline-block;
+	width: 162px;
+	padding-left: 10px;
+	color: #e33f4a;
+	vertical-align: middle;
+	font-size: 13px;
+}
+
+.c_txt{
+	-webkit-box-flex: 1;
+}
+
+.Payment_page .close img{
+	display: block;
+}

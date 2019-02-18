@@ -1,0 +1,431 @@
+﻿*, *:before, *:after{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+	}
+body{
+	margin: 0;
+	padding: 0;
+}
+::-webkit-scrollbar{
+	display:none;
+	}
+.lovely_baby-add{
+	display: block;
+	overflow-y: auto;
+}
+.lovely_baby_hug{
+	width: 101%;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #fff;
+	position: relative;
+	padding-top: 64px;
+	margin-left: -1px;
+}
+.lovely_baby_hug .flags{
+	position: absolute;
+	top: -30px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 99;
+	animation-timing-function: ease-out;
+	animation-name:cai;
+	animation-duration:8000ms;
+	animation-iteration-count:infinite;
+}
+.lovely_baby_hug .flags1,
+.lovely_baby_hug .flags2{
+	width: 25px;
+	height: 20px;
+}
+.lovely_baby_hug .flags1{
+	left: 10px;
+}
+.lovely_baby_hug .flags2{
+	right: 14px;
+}
+.lovely_baby_hug .flags3,
+.lovely_baby_hug .flags4{
+	width:24px;
+	height: 20px
+}
+.lovely_baby_hug .flags3{
+	left: 216px
+}
+.lovely_baby_hug .flags4{
+	left: 117px
+}
+.lovely_baby_hug .flags5,
+.lovely_baby_hug .flags6{
+	width: 10px;
+	height: 15px;
+}
+.lovely_baby_hug .flags5{
+	right: 30px
+}
+.lovely_baby_hug .flags6{
+	right: 60px
+}
+.lovely_baby_hug .flags7,
+.lovely_baby_hug .flags8
+{
+	width:15px;
+	height: 10px;
+}
+.lovely_baby_hug .flags7{
+	left: 70px
+}
+.lovely_baby_hug .flags8{
+	left: 164px
+}
+.lovely_baby_hug .flags9{
+	width: 9px;
+	height: 13px;
+	left:200px;
+}
+.lovely_baby_hug .flags10{
+	width:22px;
+	height:11px;
+	right: 70px;
+}
+@keyframes cai {
+	0%{
+		top: -30px
+	}
+	100%{
+		top: 100vh
+	}
+}
+
+.lovely_baby_hug .lovely_baby_hug_flags,
+.lovely_baby_active .lovely_baby_hug_flags{
+	width: 390px;
+    height: 122px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: -73px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.lovely_baby_hug .lovely_baby_hug_text{
+	width: 240px;
+	height: 125px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin:0 auto;
+}
+.lovely_baby_hug .lovely_baby_hug_children{
+	width: 280px;
+	height: 230px;
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 30px auto 0;
+	transition:all .2s;
+	animation-timing-function: ease-out;
+	animation-name:big;
+	animation-duration:1000ms;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+}
+
+@keyframes big {
+	0%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(1.2);
+	}
+}
+
+.lovely_baby_hug  .button{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 348px;
+	left: 50%;
+	border-radius: 50%;
+	transform: translateX(-74%);
+	background-color: rgba(255,255,255,.541);
+	border:1px solid rgba( 25, 4, 5 ,.541);
+	animation-timing-function: ease-out;
+	animation-name:color;
+	animation-duration:1000ms;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+	padding: 5px;
+}
+.lovely_baby_hug .button .small_button{
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	background-color: rgba(255,255,255,.541);
+	border:1px solid rgba( 25, 4, 5 ,.541);
+	animation-timing-function: ease-out;
+	animation-name:color;
+	animation-duration:1000ms;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+}
+@keyframes color {
+	0%{
+		background-color: rgba(255,255,255,.541);
+	}
+	100%{
+		background-color: rgba(255,255,255,.2);
+	}
+}
+.lovely_baby_hug .lovely_baby_hug_hand{
+	width: 88px;
+	height: 89px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	bottom: 7px;
+	right: 64px;
+	transition: all .2s
+}
+.lovely_baby_hug .lovely_baby_model_box{
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.7);
+}
+.lovely_baby_hug .mask_box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%,-50%,0);
+	width: 241px;
+    height: 268px;
+    border-radius: 6px;
+	background-color: #fff;
+	padding:5px 18px 18px 18px;
+	text-align: center;
+}
+.lovely_baby_hug .mask_box .lovely_baby_close{
+	font-size:26px;
+	position: absolute;
+	top: -45px;
+	right: 0;
+	color: #fff
+}
+.lovely_baby_hug .mask_box p{
+	font-size:16px;
+	color: rgb( 51, 51, 51 );
+	font-weight: 600;
+	letter-spacing: 2px;
+	margin-bottom: 28px;
+	line-height: 26px;
+}
+.lovely_baby_hug .mask_box input{
+	display: block;
+	width: 100%;
+	height: 32px;
+	line-height: 32px;
+	border: 1px solid rgb( 192, 192, 192 );
+	border-radius: 4px;
+	margin-bottom: 10px;
+	text-indent: 1em;
+	color: rgb( 102, 102, 102 );
+	font-size: 12px;
+	outline:none;
+}
+.lovely_baby_hug .mask_box .mask_btn{
+	display: block;
+	width: 150px;
+	height: 35px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 24px auto 0 auto;
+	border: none;
+}
+.lovely_baby_active{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	min-height: 100vh;
+	background-color: #fff;
+	padding-top: 95px;
+	padding-bottom: 30px
+}
+.lovely_baby_active .love{
+	width: 64px;
+	height: 56px;
+	text-align: center;
+	position: fixed;
+	top: 350px;
+	right: 20px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	font-size: 18px;
+	color: #fff;
+	line-height: 56px;
+}
+.lovely_baby_active .love.active{
+	-webkit-animation:a_z .5s linear forwards;
+}
+
+@-webkit-keyframes a_z{
+60%{
+	-webkit-transform:translate3d(0,0,0) scaleX(1.2) scaleY(1.2);
+	}
+to{
+	opacity:1;
+	-webkit-transform:translate3d(0,0,0) scaleX(1) scaleY(1);
+	}
+}
+
+.lovely_baby_active .lovely_baby_active_text{
+	width: 318px;
+	height: 76px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0 auto 20px auto
+}
+.lovely_baby_active .lovely_baby_active_content{
+	width: 100%;
+	height: 122px;
+	background-color: #f7f7f7;
+	box-shadow: 0px 1px 4px rgba( 75, 75, 75,.5 );
+	padding:8px 12px;
+	margin-bottom: 12px
+}
+.lovely_baby_active .lovely_baby_active_content .lovely_baby_active_content_pic{
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 4.117333rem;
+	width: 135px;
+	height: 106px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	margin-right: 8px;
+}
+.lovely_baby_active .lovely_baby_active_content .lovely_baby_active_content_pic i{
+	color: #d5d3d3;
+	position: absolute;
+	z-index: 99;
+	left: 50%;
+	top: 50%;
+	transform: translate3d(-50%,-50%,0);
+	font-size: 32px
+}
+.lovely_baby_active .lovely_baby_active_content .lovely_baby_active_content_pic::after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba( 0, 0, 0,.4 );
+}
+.lovely_baby_active .lovely_baby_active_content .complete::after{
+	display: none;
+}
+.lovely_baby_active .lovely_baby_active_content .complete i{
+	display: none;
+}
+.lovely_baby_active_content_process{
+	display: inline-block;
+	vertical-align: middle;
+	width: 58%;
+	height: 106px;
+	text-align: left;
+}
+.lovely_baby_active_content_process .progress_inner{
+	width: 98%;
+	height: 10px;
+	background-color: rgb( 195, 195, 195);
+	border-radius: 5px;
+	overflow: hidden;
+}
+.lovely_baby_active_content_process .progress_inner .progress_bg{
+	height: 10px;
+	border-radius: 5px;
+	background: repeating-linear-gradient(-45deg, #e96971, #f4868d 0.213333rem, #e96971 0.216rem);
+    background-color: #d43535;
+	box-shadow:inset 0px 0px 0.128rem 0.042667rem rgba(255,255,255,.34);
+}
+ .lovely_baby_active .lovely_baby_active_content_process .status{
+	font-size: 15px;
+	color: rgb( 55, 55, 55 );
+	text-align: left;
+	margin-top: 10px;
+	line-height: 20px;
+}
+.lovely_baby_active .lovely_baby_active_content_process .number{
+	font-size: 13px;
+	color: rgb( 55, 55, 55 );
+	line-height: 18px;
+}
+.lovely_baby_active .lovely_baby_active_content_process .name{
+	font-size: 17px;
+	color: rgb( 55, 55, 55 );
+	margin-top: 25px
+}
+.lovely_baby_active .lovely_baby_active_awesome{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background-color: #ffdadc;
+	margin-top:15px;
+	text-align: center;
+	color: #ec414c;
+	font-size: 20px
+}
+
+.lovely_baby_active .lovely_baby_active_awesome img{
+	display: inline-block;
+	width: 20px;
+	vertical-align: sub;
+	margin-right:10px
+}
+.lovely_baby_active .lovely_baby_active_scroll{
+	height: 150px;
+	box-shadow: 1px 2px	 3px 0px rgb( 200, 198, 198 );
+	overflow: hidden;
+}
+.lovely_baby_active .lovely_baby_active_scroll .scroll div{
+	height: 50px;
+	line-height: 50px;
+	border: 1px solid  #eee;
+	padding: 0 16px	
+}
+.lovely_baby_active .lovely_baby_active_scroll .scroll div p{
+	display: inline-block;
+	vertical-align: middle;
+}
+.lovely_baby_active .lovely_baby_active_scroll .scroll div .avatar{
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	background-color: rgb( 126, 125, 125 );
+	margin-right: 10px;
+	display: inline-block;
+	vertical-align: middle;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.lovely_baby_active .lovely_baby_active_scroll div .members{
+	font-size: 13px
+}
+.lovely_baby_active .lovely_baby_active_scroll div .members span{
+	color: rgb( 236, 65, 76 );
+}

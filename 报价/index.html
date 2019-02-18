@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+		(function (doc, win) {
+		  var docEl = doc.documentElement,
+		    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		    recalc = function () {
+		      var clientWidth = docEl.clientWidth;
+		      if (!clientWidth) return;
+		      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+		    };
+		
+		  if (!doc.addEventListener) return;
+		  win.addEventListener(resizeEvt, recalc, false);
+		  doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+		</script>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="applicable-devive" content="mobile">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="telephone=no" name="format-detection">
+		
+		<link rel="stylesheet" href="http://h5.yingtaoyun.com/yingtao/wx/1709/css/wedding.css">	
+		<link rel="stylesheet" href="http://h5.yingtaoyun.com/yingtao/wx/v3/css/app.css">
+		
+		<!--底部导航样式及导航iconcss-->
+		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_389364_ksu7xanfav2t9.css">
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<style type="text/css">
+		.WX_V3_offer *{
+			display: inline-block;
+		}
+		.WX_V3_offer tr td{
+			display: table-cell;
+			background-color: #fff;
+			width: 74%;
+			padding: 0.426667rem 0 0.106667rem 0.533333rem;
+		}
+		.WX_V3_offer tr th{
+			display: table-cell;
+			padding: 0.426667rem 0;
+    		width: 3.413333rem;
+			height: auto;
+			line-height: normal;
+			background-color: #fff;
+			text-align: center;
+		}
+		.WX_V3_offer tr th i{
+			display: block;
+			font-size: 1.28rem;
+		}
+		.WX_V3_offer tr th small{
+			margin: 0.213333rem 0 0;
+			display: block;
+			font-size: 0.384rem;
+			color: #898989;
+		}
+		.WX_V3_offer tr td label{
+			position: relative;
+		    display: inline-block;
+		    margin: 0 0 0.32rem 0.32rem;
+		    padding: 0 0.5rem;
+		    height: 1.066667rem;
+		    line-height: 1.066667rem;
+		    min-width: 2.56rem;
+		    width: auto;
+		    color: #898989;
+		    font-size: 0.554667rem;
+		    text-align: center;
+		    border: 1px solid #e6e6e6;
+		    border-radius: 1.066667rem;
+		}
+		.WX_V3_offer tr td label.active{
+			border: none;
+		}
+		.WX_V3_offer tr th.c_ff7394 {
+		    color: #ff7394;
+		}
+		.WX_V3_offer tr th.c_58b6ff{
+			color: #58b6ff;
+		}
+		.WX_V3_offer tr th.c_ff414e {
+		    color: #ff414e;
+		}
+	</style>
+	<body>
+		<article>
+			
+			<offer-component v-bind:data="offer" v-on:offer="postFn"></offer-component>
+			
+			<section class="WX_V3_poweredby">© Powered by 樱桃互动</section>
+			
+			<!--底部导航-->
+			<div class="YT_Children_WX_footer">
+				<a href="" class="active"><i class="iconfont icon-shouye"></i>首页</a>
+				<a href=""><i class="iconfont icon-huodong"></i>活动</a>
+				<a href=""><i class="iconfont icon-yuyue"></i>预约</a>
+				<a href=""><i class="iconfont icon-bangzhushouce"></i>助手</a>
+				<a href=""><i class="iconfont icon-wode"></i>我的</a>
+			</div>
+			
+		</article>
+	</body>
+	<script src="js/zepto.min.js"></script>
+	<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/vue.min.js "></script>
+	<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/app.js "></script>
+
+<script>
+var	APP = new Vue({
+	el: 'article',
+	data: {
+		offer: {
+			"banner": "img/child11.jpg",
+			"btnTitle": "获取报价",
+			"offerData": [{
+				"name": ["c_ff7394","i_wedding_dress","礼服", "dress"],
+				"items": [
+					["男女各三套", true],
+					["男女各四套", false],
+					["男女各五套", false]
+				],
+				"type": 1
+			}, {
+				"name": ["c_58b6ff","i_balloon","风格", "style"],
+				"items": [
+					["韩式", true],
+					["个性", false],
+					["法式", false]
+				],
+				"type": 1
+			}, {
+				"name": ["c_ff414e","i_fav","外景", "location"],
+				"items": [
+					["厦门", true],
+					["三亚", false]
+				],
+				"type": 0
+
+			}, {
+				"name": ["c_ff7394","i_fav","相册", "Photo"],
+				"items": [
+					["1本", true],
+					["2本", false]
+				],
+				"type": 0
+
+			}],
+			"offerInput": [{
+				"name": ["c_ff7394","i_wedding_dress","某某1", "dress"],
+				"id": "a"
+			}, {
+				"name": ["c_ff7394","i_wedding_dress","某某2", "dress"],
+				"id": "b"
+			}]
+		}
+	},
+	components: {
+		'offer-component': offerComponent
+	},
+	methods: {
+		postFn: function(arr) { //报价提交
+			console.log(arr)
+
+			$.post('/', {
+				data: arr
+			}, function() {
+
+
+			})
+		}
+	}
+});
+</script>
+</html>

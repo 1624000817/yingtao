@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_723967_9zjesg0lvk6.css">
+<!-- <link rel="stylesheet" href="css/app.css"> -->
+<link rel="stylesheet" href="http://h5.yingtaoyun.com/yingtao/body/css/app.css">
+
+
+
+</head>
+<body>
+<article>
+<div class="Indiana_Jones_kindergarten_success">
+  <div class="success_box">
+      <img src="img/happy.png" alt="">
+      <p>支付成功</p>
+      <div>你获得<img src="http://productimg.yingtaoyun.com/03/a0/03a05522aa04e9e649c310a6829c575e.png" alt="">幸运码 : <b>100020 </b></div>
+  </div>
+  <div class="success_content" 
+  :style="{padding: padding}"
+  style="background-image: url(img/bj3.png);">
+    <div class="success_tag" style="background-image: url(img/bj4.png);">支付用户专享</div>
+    <template v-if="isShow">
+      <div class="success_title">
+        <div><img src="http://productimg.yingtaoyun.com/3b/1d/3b1d85153bef9b6b4089a4918bd28a56.png" alt=""></div>
+        <p :style="styleObj">嘿，徐小小童鞋！ <br>你有一次免费领取小红花的机会</p>
+      </div>
+      <div class="success_btn" @click="onClick">
+          <p>点我试试实力吧</p>
+         <small>n朵小红花</small>
+      </div>
+    </template>
+    <template v-if="isShowBox">
+      <div class="success_title">
+        <div>祝贺你! +5朵<img src="http://productimg.yingtaoyun.com/3b/1d/3b1d85153bef9b6b4089a4918bd28a56.png" alt=""></div>
+        <p :style="styleObj">你很优秀嘛，叫上小伙伴还可以得小红花哟</p>
+        <a href="">查看幸运码</a>
+      </div>
+      <a href="" class="success_btn">
+        <p>呼唤小伙伴</p>
+        <small>最多再得66朵小红花</small>
+      </a>
+    </template>
+   
+  </div>
+  <div class="Indiana_Jones_kindergarten_index">
+  		<div class="mask_box">
+        <div class="model">
+          <div class="model_close">
+            <i class="iconfont icon-guanbi"></i>
+          </div>
+          <div class="model_title" style="background-image: url(http://productimg.yingtaoyun.com/7d/08/7d0852909af31d1573d53f2094046f33.png);"></div>
+          <div class="model_content">
+              <div class="model_scroll_text">
+                <p>100029</p>
+                <p>100030</p>
+                <p>100031</p>
+                <p>100032</p>
+                <p>100033</p>
+                <p>100034</p>
+                <p>100035</p>
+                <p>100036</p>
+                <p>100037</p>
+                <p>100038</p>
+              </div>
+          </div>
+          <div class="model_btn">关闭</div>
+        </div>
+      </div>
+  </div>
+</div>
+</article>
+<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+<script type="text/javascript">
+  new Vue({
+    data(){
+      return{
+         isShow:true,
+         isShowBox:false,
+         styleObj:{
+          fontSize:'0.64rem',
+          marginTop:'0'
+         },
+         padding:'2.005333rem 1.237333rem 0.32rem 1.237333rem'
+      }
+    },
+    methods:{
+      onClick(){
+        this.isShow = false
+        this.isShowBox = true
+        this.padding = '2.005333rem 0.533333rem 0.32rem 0.533333rem'
+        this.styleObj.fontSize = '0.533333rem'
+        this.styleObj.marginTop = '0.213333rem'
+      },
+      
+    },
+    mounted: function () {
+      
+    },
+  }).$mount('article')
+</script>
+</body>
+</html>

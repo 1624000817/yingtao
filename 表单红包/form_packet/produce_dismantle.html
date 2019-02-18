@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<!-- <link rel="stylesheet" type="text/css" href="css/app.css"> -->
+<link rel="stylesheet" type="text/css" href="http://h5.yingtaoyun.com/yingtao/packet/css/app.css">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_409108_y3wxyrrcxlayvi.css">
+</head>
+<body>
+<article>
+	<div class="dismantle_packet">
+		<div class="cricle" style="background-image:url(img/circle.png);"></div>
+		<div class="big_packet">
+			<div class="head_box">
+				<div class="head" style="background-image:url(img/timg.jpg);"></div>
+				<p>名字</p>
+				<h1>恭喜你，获得红包</h1>
+			</div>
+
+			<div class="dismantle">
+				<div class="start" style="background-image: url(img/light_star.png);"></div>
+				<form action="">
+					<input type="submit" value="拆" class="font">
+				</form>
+			</div>
+			<p>韩式新馆预约登记</p>
+		</div>
+		<div class="footer" style="background-image:url(img/footer01.png);"></div>
+		<p class="copy">Prowered by 樱桃互动</p>
+	</div>
+
+</article>
+
+
+
+
+
+<script src="js/jquery-3.1.1.js"></script>
+
+<script type="text/javascript">
+$(".dismantle").click(function(){
+	$(this).addClass("shake_chunk");
+	setTimeout(function(){
+		$("this").removeClass("shake_chunk");
+	},800)
+})
+</script>
+</body>
+</html>
+
+
+

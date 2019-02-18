@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<style>
+.WX_V3_select_roles_form div:nth-child(2){
+	position: relative;
+}
+.button {
+  display: block;
+  position: absolute;
+  width:2.133333rem;
+  height:1.066667rem;
+  background: #181815;
+  border-radius:0.64rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  right: 0.469333rem;
+  top: 3.3rem
+}
+.off{
+	background-color: green;
+}
+.on{
+	background-color: red;
+}
+.button span {
+  position: absolute;
+  display: block;
+}
+.button span:first-of-type {
+  z-index: 100;
+  top: 0;
+  right:0;
+  width:1.066667rem;
+  height:1.066667rem;
+  background:#fff;
+  border-radius: 50%;
+  -webkit-transition: right 400ms cubic-bezier(1, 0, 0, 1), box-shadow 400ms ease;
+          transition: right 400ms cubic-bezier(1, 0, 0, 1), box-shadow 400ms ease;
+}
+
+.button input[type="checkbox"] {
+  display: none;
+}
+.button input[type="checkbox"]:checked ~ span:first-of-type {
+  right: 1.066667rem;
+}
+.button input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+  opacity: 1;
+ 
+}
+
+
+</style>
+<article>
+	<figure class="WX_V3_select_roles_header">
+		<img src="img/select_roles.jpg">
+	</figure>
+
+	<select-roles-component v-bind:data="roles"></select-roles-component>
+
+	<footer class="WX_V3_footer">
+		<nav>
+			<a href="" class="active"><i class="i_home"></i>首页</a>
+			<a href=""><i class="i_gift_2"><sup class="WX_V3_badge">22</sup></i>活动</a>
+			<a href=""><i class="i_reserve"><sup class="WX_V3_badge">8</sup></i>预约</a>
+			<a href=""><i class="i_assistant"><sup class="WX_V3_badge"></sup></i>助手</a>
+			<a href=""><i class="i_my"><sup class="WX_V3_badge"></sup></i>我的</a>
+		</nav>
+	</footer>
+
+	<section class="WX_V3_poweredby">&copy; Powered by 樱桃互动</section>
+</article>
+
+
+
+
+<script src="js/vue.min.js"></script>
+<!--<script src="js/zepto.min.js"></script>-->
+<!--<script src="js/echo.js"></script>-->
+<!--<script src="js/app.js"></script>-->
+<!--<script src="js/require.js"></script>-->
+<script>
+//var v3 = new V3();
+
+
+
+
+
+var	APP = new Vue({
+	el: 'article',
+	data: {
+		roles: {
+			name: '123123',
+			mobile: '',
+			sex: 'women',
+			women: ['新娘','img/women.png'],
+			men: ['新郎','img/men.png'],
+			isShow: true,
+			isPopup: false,
+			url: ''
+		}
+	},
+	components: {
+		'select-roles-component': selectRolesComponent
+	}
+});
+
+</script>
+<script>
+//$(".button input").on("click",function(){
+//if($(this).is(":checked")){
+//  console.log("开")
+//  $(".button").addClass("off").removeClass("on")
+//}else{
+//  console.log("关")
+//  $(".button").addClass("on").removeClass("off")
+//}
+//})
+</script>
+
+</body>
+</html>

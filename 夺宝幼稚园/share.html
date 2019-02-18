@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_723967_9zjesg0lvk6.css">
+ <link rel="stylesheet" href="css/app.css"> 
+<!--<link rel="stylesheet" href="http://h5.yingtaoyun.com/yingtao/body/css/app.css">-->
+
+
+
+</head>
+<body>
+<article>
+  <div class="Indiana_Jones_kindergarten_share">
+    <div class="share_top_box">
+      <p> 祝贺你！<br> 为徐小小童鞋夺得1朵小红花</p>
+      <div class="share_pic_box" style="background-image:url(img/bj5.png);">1朵小红花</div>
+      <a href="javascript:;" @click="onClick">二话不说支持童鞋</a>
+    </div>
+    <div class="performance_box">
+      <div class="performance_title">
+        <img src="http://productimg.yingtaoyun.com/03/a0/03a05522aa04e9e649c310a6829c575e.png" alt="">看看他们的表现
+      </div>
+      <div class="performance_scroll_content">
+        <div class="performance_content">
+          <template v-for="item in 6">
+            <div class="performance_content_list">
+              <div class="avatar_box" style="background-image:url(img/avatar1.png)"></div>
+              <div class="performance_content_text">
+                  <b>鹰击长空<span class="tag">闺蜜</span></b>
+                  <p>幼稚园的友谊，共同进步，为<span>徐小小 +6朵小红花</span><img src="http://productimg.yingtaoyun.com/03/a0/03a05522aa04e9e649c310a6829c575e.png" alt=""></p>
+                  <div class="time">2018-6-12  16：20</div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+      <i class="iconfont icon-jiantou9"></i>
+    </div>
+    <!-- 支持弹框 -->
+    <div class="support_mask" v-cloak v-if="isShowSupport">
+      <div class="support_model_box">
+        <div class="support_close" @click="onClose"><i class="iconfont icon-guanbi"></i></div>
+        <div class="support_model_content">
+            <div class="support_model_top">
+                <div class="flower">
+                    <span style="background-image: url(img/flower3.png);">1朵<br>小红花</span>
+                    <p>你的鼓励</p>
+                </div>
+                <div class="arrow"><i class="iconfont icon-youjiantou"></i></div>
+                <div class="avatar">
+                  <span style="background-image: url(img/avatar1.png);" data-num="+1"></span>
+                  <p>徐小小夺宝小红花</p>
+                </div>
+            </div>
+            <div class="input_box"> 
+               <label>
+                <img src="http://productimg.yingtaoyun.com/42/77/42772efe14323a07d676d7d9b7534621.png" alt="">
+                <input type="text" placeholder="请输入姓名">
+              </label>
+              <label>
+                <img src="http://productimg.yingtaoyun.com/67/05/6705f575f10ae9f48871f873cccc31ac.png" alt="">
+                <input type="text" placeholder="请输入手机号">
+              </label>
+              <label>
+                <img src="http://productimg.yingtaoyun.com/95/d2/95d2f89322177ed1fbcaab5272fd3e57.png" alt="">
+                <select name="1" id="">
+                    <option value="1">闺蜜</option>
+                    <option value="2">长辈</option>
+                    <option value="3">老铁</option>
+                </select>
+                <i class="iconfont icon-jiantou9 arrow_dwon"></i>
+              </label> 
+              
+            </div>
+        </div>
+        <div class="support_btn" @click="onCofirm">确认</div>
+      </div>
+    </div>
+    <!-- 确认支持弹框 -->
+    <div class="support_mask confirm_support_mask" v-cloak v-if="isShowConfirmSupport">
+      <div class="support_model_box">
+        <div class="support_close" @click="onCloseConfirm"><i class="iconfont icon-guanbi"></i></div>
+        <div class="support_model_content">
+            <b>祝贺你，鼓励成功！</b>
+            <p>你的童鞋徐小小，夺得小红花增至</p>
+            <div class="bj" style="background-image: url(img/bj6.png);">
+                <div class="pic"><img src="http://productimg.yingtaoyun.com/3b/1d/3b1d85153bef9b6b4089a4918bd28a56.png" alt=""></div>
+                <a href="javascript:;">88朵小红花</a>
+            </div>
+        </div>
+        <div class="support_btn" @click="onCloseConfirm">关闭</div>
+      </div>
+    </div>
+  </div>
+</article>
+<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+<script type="text/javascript">
+  new Vue({
+    data(){
+      return{
+         isShowSupport:false,
+         isShowConfirmSupport:false,
+      }
+    },
+    methods:{
+      onClick () {
+        this.isShowSupport = true
+      },
+      onClose(){
+        this.isShowSupport = false
+      },
+      onCofirm () {
+        this.isShowSupport = false
+        this.isShowConfirmSupport = true
+      },
+      onCloseConfirm(){
+        this.isShowConfirmSupport = false
+      }
+    },
+    mounted: function () {
+      
+    },
+  }).$mount('article')
+</script>
+</body>
+</html>

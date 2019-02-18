@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_484019_ktowsb027c0rizfr.css">
+<link rel="stylesheet" href="http://h5.yingtaoyun.com/yingtao/wx/v3/css/app.css">
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+<!-- <link rel="stylesheet" href="http://h5.yingtaoyun.com/yingtao/wx/1710/app.css"> -->
+<link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+<body>
+<article class="addIndex">
+	
+	<div class="logo">
+		<img src="img/logo.png" alt="">
+	</div>
+	
+	<div class="addIndex_banner">
+		<ul id="elasticstack" class="elasticstack">
+			<li>
+				<a href="www.baidu.com" style="background-image: url(img/pic1.jpeg);"></a>
+			</li>
+			<li>
+				<a href=""  style="background-image: url(img/pic2.jpeg);"></a>
+			</li>
+			<li>
+				<a href=""  style="background-image: url(img/pic3.jpg);"></a>
+			</li>
+			<li>
+				<a href=""  style="background-image: url(img/pic4.jpg);"></a>
+			</li>
+		</ul>
+	</div>
+	<header class="addIndex_header">
+		<a href="" class="active">首页<span>home</span></a>
+		<a href="">客照<span>show</span></a>
+		<a href="">样照<span>product</span></a>
+		<a href="">套系<span>goods</span></a>
+		<a href="">活动<span>activity</span></a>
+	</header>
+	<a href="" class="classify_title">
+		<div>
+			<b>product</b>热门样照
+		</div>
+		<div>
+			<span>十</span>
+		</div>
+	</a>
+	
+	<div class="sample_box">
+		<div class="sample_scroll"></div>
+	</div>
+	<a href="" class="classify_title show_title">
+		<div>
+			<b>show</b>最新客照
+		</div>
+		<div>
+			<span>十</span>
+		</div>
+	</a>
+	<div class="show_box">
+
+		<div class="swiper-container">
+	        <div class="swiper-wrapper">
+	        	<a href="" class="swiper-slide" style="background-image: url(img/pic2.jpeg);">
+					<div>
+						<b>09·25</b>
+						<p>Mr袁&Miss者</p>
+					</div>
+	        	</a>
+	        	<a href="" class="swiper-slide" style="background-image: url(img/pic5.jpeg);">
+					<div>
+						<b>09·25</b>
+						<p>Mr郑&Miss刘</p>
+					</div>
+	        	</a>
+	        	<a href="" class="swiper-slide" style="background-image: url(img/pic6.jpeg);">
+					<div>
+						<b>09·25</b>
+						<p>Mr袁&Miss者</p>
+					</div>
+	        	</a>          
+	        </div>
+	    </div>
+	</div>
+	<a href="" class="classify_title show_title">
+		<div>
+			<b>goods</b>推荐套系
+		</div>
+		<div>
+			<span>十</span>
+		</div>
+	</a>
+	<div class="goods_box">
+		<a href="">
+			<div class="pic" style="background-image: url(img/pic3.jpg);"></div>
+			<div class="pic_detail">
+				<div class="left">
+					<p class="title">夏日幻彩色诱惑你的美</p>
+					<p class="name">时尚秀场吹来一股自然清新风 每年的绿意弥生 总有一种</p>
+				</div>
+				<div class="right">
+					<div class="price">
+						<!-- 折扣价 -->
+						<span class="discount">RMB:19800</span>
+						<small>原价:<del>28888</del></small>
+
+						<!-- 预定价 -->
+						<!-- <span class="yuding">预订:￥38888</span> -->
+					</div>
+				</div>
+			</div>
+		</a>
+		<a href="">
+			<div class="pic" style="background-image: url(img/pic4.jpg);"></div>
+			<div class="pic_detail">
+				<div class="left">
+					<p class="title">夏日幻彩色诱惑你的美</p>
+					<p class="name">时尚秀场吹来一股自然清新风 每年的绿意弥生 总有一种</p>
+				</div>
+				<div class="right">
+					<div class="price">
+						<!-- 折扣价 -->
+						<!-- <span class="discount">RMB:19800</span>
+						<small>原价:<del>28888</del></small> -->
+						<!-- 预定价 -->
+						<span class="yuding">预订:￥38888</span>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="get_offer" id="get_offer">
+		<div class="title">婚纱影楼快速报价</div>
+		<offer-component v-bind:data="offer" v-on:offer="postFn"></offer-component>
+	</div>
+	
+	<section class="WX_V3_poweredby">© Powered by 樱桃互动</section>
+	<div class="YT_Children_WX_footer">
+		<a href="" class="active"><i class="iconfont icon-shouye"></i>首页</a>
+		<a href=""><i class="iconfont icon-liwu"></i>活动</a>
+		<a href=""><i class="iconfont icon-yuyue"></i>预约</a>
+		<a href=""><i class="iconfont icon-xiaozhushoukuaijie"></i>助手</a>
+		<a href=""><i class="iconfont icon-wode"></i>我的</a>
+	</div>
+</article>
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/iSlider_v2.js"></script>
+<script src="js/iSlider.plugin.dot.js"></script>
+<script src="js/iSlider.animate.js"></script>
+
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/vue.min.js "></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/app.js "></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/draggabilly.pkgd.min.js"></script>
+<script src="js/elastiStack.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script>
+$(".elasticstack li").addClass("active")
+$(".elasticstack li").eq(0).removeClass("active")
+	new ElastiStack( document.getElementById( 'elasticstack' ),{
+	 onUpdateStack : function( index ) {
+	 	$(".elasticstack li").eq(index).removeClass("active").siblings("li").addClass("active")
+	}
+} );
+</script>
+<script>
+
+var	APP = new Vue({
+	el: '#get_offer',
+	data: {
+		offer: {
+			"banner": "img/pic3.jpg",
+			"btnTitle": "获取报价",
+			"offerData": [{
+				"name": ["c_ff7394","i_wedding_dress","礼服", "dress"],
+				"items": [
+					["男女各三套", true],
+					["男女各四套", false],
+					["男女各五套", false]
+				],
+				"type": 1
+			}, {
+				"name": ["c_58b6ff","i_balloon","风格", "style"],
+				"items": [
+					["韩式", true],
+					["个性", false],
+					["法式", false]
+				],
+				"type": 1
+			}, {
+				"name": ["c_ff414e","i_fav","场景", "location"],
+				"items": [
+					["厦门", true],
+					["三亚", false]
+				],
+				"type": 0
+
+			}, {
+				"name": ["c_ff7394","i_fav","特色", "special"],
+				"items": [
+					["1本", true],
+					["2本", false]
+				],
+				"type": 0
+
+			}],
+			"offerInput": [{
+				"name": ["c_ff7394","i_wedding_dress","家长姓名", "dress"],
+				"id": "a"
+			}, {
+				"name": ["c_ff7394","i_wedding_dress","联系方式", "dress"],
+				"id": "b"
+			}]
+		}
+	},
+	components: {
+		'offer-component': offerComponent
+	},
+	methods: {
+		postFn: function(arr) { //报价提交
+			console.log(arr)
+
+			$.post('/', {
+				data: arr
+			}, function() {
+
+
+			})
+		}
+	}
+});
+var myi=$("<i>").attr("class","iconfont icon-xiala");
+$("th").append($(myi))
+
+console.log(myi)
+new iSlider({
+	data: [
+	{
+	  content: '<a href="" style="background-image:url(img/pic1.jpeg)"><div><p class="title">品读城市-轻旅拍</p><p class="name">[你好摩登]</p></div></a>'
+	},{
+	  content: '<a href="" style="background-image:url(http://ww3.sinaimg.cn/large/54a1cbf4gw1eyc70eg6zfj20ku0gf0x7.jpg)"><div><p class="title">品读城市-轻旅拍</p><p class="name">[你好摩登]</p></div></a>'
+	},{
+	  content: '<a href="" style="background-image:url(http://ww3.sinaimg.cn/large/54a1cbf4gw1ew16vmd87lj20g40emmyd.jpg)"><div><p class="title">品读城市-轻旅拍</p><p class="name">[你好摩登]</p></div></a>'
+	}],
+	dom: $('.sample_scroll')[0],
+	type: 'dom',
+	animateType: 'depth',
+	isLooping: true,
+	fixPage: false,
+	isAutoplay: false,
+	
+})
+
+
+ var mySwiper = new Swiper('.swiper-container', {
+        slidesPerView: "auto",
+        paginationClickable: true,
+        observer: true,
+        observeParents: true,
+        loop:true,
+        centeredSlides: true,
+
+    });
+
+$(".elasticstack li").each(function(index,dom){
+	var Index=$(this).css("z-index");
+	console.log(Index)
+})
+
+
+// 报价点击
+$("th").on("click",function(){
+	 $(this).parent("tr").siblings("tr").children("td").css("display","none")
+	var style=$(this).next("td").css("display");
+	if(style=="none"){
+		$(this).next("td").css("display","block");
+	}else{
+		$(this).next("td").css("display","none");
+	}
+})
+
+</script>
+
+</body>
+</html>

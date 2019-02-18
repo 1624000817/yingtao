@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta charset="utf-8">
+    <title>swiper</title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<title></title>
+
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		
+		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_462588_p8pv5kh5jiofxbt9.css">
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+	</head>
+	<style type="text/css">
+
+ .swiper-container {
+        width: 100%;
+        height: 100vh;
+    }
+.swiper-slide {
+        text-align: center;
+		    height: 100%;
+
+    }
+	</style>
+	<body style="background-image:url(img/bj.jpg)">
+   
+		<div class="swiper-container">
+	        <div class="swiper-wrapper">
+
+    <div class="swiper-slide">
+          <a href="set.html" class="iconfont icon-shezhi"></a>
+            <div class="index_top">
+                <div class="page" style="background-image: url(img/page.png);"></div>
+                <div class="logo">POWERED BY 樱桃互动</div>
+            </div>
+            <div class="index_tabs">
+                <span data-id="0"  class="active">客资</span>
+                <span data-id="1">进店</span>
+                <span data-id="2">成交</span>
+            </div>
+       <div id="main" class="main"></div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+	            <div class="swiper-slide first">
+	            	 <!-- 第一页数据 -->
+	            	<div class="mask data1">
+                              <div class="close"><span>×</span></div>
+                              <h1><span>2017.10.01-10.20</span> 目标完成率</h1>
+                            <div class="table">
+                              <table border="1" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                   <th></th>
+                                   <th>目标</th>
+                                   <th>实际</th>
+                                   <th>完成率</th>
+                                  </tr>
+                                  <tr>
+                                    <td>投放<br>目标完成率</td>
+                                    <td>56,000</td>
+                                    <td>58,000</td>
+                                    <td>102%</td>
+                                  </tr>
+                                  <tr>
+                                    <td>客资<br>目标完成率</td>
+                                    <td>560</td>
+                                    <td>320</td>
+                                    <td>75%</td>
+                                  </tr>
+                                  <tr>
+                                    <td>有效客资<br>目标完成率</td>
+                                    <td>800</td>
+                                    <td>600</td>
+                                    <td>73%</td>
+                                  </tr>
+                                  <tr>
+                                    <td>进店数<br>目标完成率</td>
+                                    <td>560</td>
+                                    <td>620</td>
+                                    <td>106%</td>
+                                  </tr>
+                                  <tr>
+                                    <td>成交数<br>目标完成率</td>
+                                    <td>320</td>
+                                    <td>260</td>
+                                    <td>81%</td>
+                                  </tr>
+                              </table>
+                          </div>
+                          </div>
+                           <!-- 第一页数据 end-->
+	            	<h1>目标完成率雷达图</h1>
+                    <div class="hide"><img src="img/yanjing.png" alt=""></div>
+                    <p class="sub">网销流程数据</p>
+
+                    <div class="tabs_bj">
+                    	
+                    	<span>天维度</span>
+                    	<span  class="active">月维度</span>
+                    	<span>自选维度</span>
+                    	
+                    </div>
+                    <div class="times" id="times">
+                    <!-- //日维度 -->
+            						<div class="times_box day" id="times1">
+            							<div class="date_box" data-start="">
+                            <input type="date">
+            								<i class="iconfont icon-icon"></i>
+            								<span class="year"></span>
+            								<sup>Year</sup>
+            								<span class="dates"></span>
+            								<i class="iconfont icon-arrow-right"></i>
+            							</div>
+                        </div>
+                       <!--  月维度 -->
+              					<div class="times_box month  active">
+              							<div class="date_box" data-start="">
+                              <input type="month">
+              								<i class="iconfont icon-icon"></i>
+              								<span class="year"></span>
+              								<sup>Year</sup>
+              								<span class="dates"></span>
+              								<i class="iconfont icon-arrow-right"></i>
+              							</div>
+              					</div>
+                        <!-- //自选维度 -->
+                      <div class="times_box zixuan">
+                          <div class="date_box" data-start="" data-end="">
+                              <input type="date" class="zixuan1">
+                              <input type="date" class="zixuan2">
+                            <i class="iconfont icon-icon"></i>
+                            <span class="year"></span>
+                            <sup>Year</sup>
+                            <span class="dates"></span>
+                            <span class="year2"></span>
+                            <sup>Year</sup>
+                            <span class="dates2"></span>
+                            <i class="iconfont icon-arrow-right"></i>
+                          </div>
+                        </div>
+
+                    </div>
+                             
+          					<div id="first"></div>
+          					<div class="detail_data" data-time="">
+                          <i class="iconfont icon-shuju"></i>  详细数据
+                     </div>
+	            </div>
+
+
+
+	            <div class="swiper-slide second">
+	            	<div class="mask data2">
+                             <div class="close"><span>×</span></div>
+                             <h1>2017.10.1-10.20 网销数据</h1>
+                              <table border="1" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td>渠道</td>
+                                      <td>投放</td>
+                                      <td>有效<br>客资</td>
+                                      <td>有效客资成本</td>
+                                      <td>订单数</td>
+                                      <td>实际订单成本</td>
+                                    </tr>
+                                    <tr>
+                                      <td>百度PC</td>
+                                      <td>500</td>
+                                      <td>320</td>
+                                      <td>￥45</td>
+                                      <td>186</td>
+                                      <td>￥250</td>
+                                    </tr>
+                                    <tr>
+                                      <td>微信</td>
+                                      <td>300</td>
+                                      <td>160</td>
+                                      <td>￥180</td>
+                                      <td>180</td>
+                                      <td>￥125</td>
+                                    </tr>
+                                    <tr>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                    </tr>
+                                    
+                              </table>
+
+                      </div>
+                      <h1>网销数据</h1>
+                          <div class="hide"><img src="img/yanjing.png" alt=""></div>
+                          <p class="sub">网销流程数据</p>
+                          <div class="tabs_bj">
+                              <span>天维度</span>
+                              <span  class="active">月维度</span>
+                              <span>自选维度</span>
+                          </div>
+                        <div class="times" id="times02">
+                              <div class="times_box day">
+                                <div class="date_box" data-start="">
+                                  <input type="date">
+                                  <i class="iconfont icon-icon"></i>
+                                  <span class="year"></span>
+                                  <sup>Year</sup>
+                                  <span class="dates"></span>
+                                  <i class="iconfont icon-arrow-right"></i>
+                                </div>
+                              </div>
+                              <div class="times_box month active">
+                                  <div class="date_box">
+                                    <input type="month">
+                                    <i class="iconfont icon-icon"></i>
+                                    <span class="year"></span>
+                                    <sup>Year</sup>
+                                    <span class="dates"></span>
+                                    <i class="iconfont icon-arrow-right"></i>
+                                  </div>
+                                </div>
+                               <div class="times_box zixuan">
+                                  <div class="date_box" data-start="" data-end="">
+                                    <input type="date" class="zixuan1">
+                                    <input type="date" class="zixuan2">
+                                    <i class="iconfont icon-icon"></i>
+                                    <span class="year"></span>
+                                    <sup>Year</sup>
+                                    <span class="dates"></span>
+                                    <span class="year2"></span>
+                                    <sup>Year</sup>
+                                    <span class="dates2"></span>
+                                    <i class="iconfont icon-arrow-right"></i>
+                                  </div>
+                            </div>
+                          </div>
+                          <div class="pie_radius" style="background-image:url(img/yuan.png)">
+                               <span>投放</span>
+                               <p>￥<b>866,000</b></p>
+                          </div>         
+                          <div class="second_table">
+                                <div class="tr">
+                                    <div class="td">
+                                        <sup>有效客资</sup>
+                                        <div>573</div>
+                                    </div>
+                                    <div class="td">
+                                          <sup>有效客资成本</sup>
+                                          <div><span>￥</span>150</div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <sup>订单数</sup> 
+                                        <div>172</div>
+                                    </div>
+                                    <div class="td">
+                                        <sup>订单成本</sup> 
+                                         <div><span>￥</span>500</div>
+                                    </div>
+                                </div>
+                          </div>
+                          <div class="detail_data">
+                              <i class="iconfont icon-shuju"></i>  详细数据
+                          </div>
+                               
+          					
+	            	
+	            </div>
+
+
+	            <div class="swiper-slide third">
+	            	<div class="mask data3">
+                             <div class="close"><span>×</span></div>
+                             <h1>2017.10.1-10.20 客资数据</h1>
+                              <table border="1" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td></td>
+                                      <td>占比</td>
+                                      <td>客资</td>
+                                      <td>有效客资</td>
+                                      <td>进店</td>
+                                      <td>订单</td>
+                                    </tr>
+                                    <tr>
+                                      <td>网销渠道</td>
+                                      <td>38%</td>
+                                      <td>382</td>
+                                      <td>182</td>
+                                      <td>80</td>
+                                      <td>32</td>
+                                    </tr>
+                                    <tr>
+                                      <td>产品</td>
+                                      <td>80%</td>
+                                      <td>180</td>
+                                      <td>32</td>
+                                      <td>16</td>
+                                      <td>18</td>
+                                    </tr>
+                                    <tr>
+                                      <td>推荐</td>
+                                      <td>30%</td>
+                                      <td>330</td>
+                                      <td>160</td>
+                                      <td>88</td>
+                                      <td>36</td>
+                                    </tr>
+                                    <tr>
+                                      <td>自然进店</td>
+                                      <td>11%</td>
+                                      <td>110</td>
+                                      <td>60</td>
+                                      <td>62</td>
+                                      <td>28</td>
+                                    </tr>
+                                    
+                              </table>
+
+                      </div>
+                       <h1>客资数据漏斗图</h1>
+                          <div class="hide"><img src="img/yanjing.png" alt=""></div>
+                          <p class="sub">网销流程客资数据</p>
+                           <div class="tabs_bj">
+                              <span>天维度</span>
+                              <span  class="active">月维度</span>
+                              <span>自选维度</span>
+                          </div>
+                           <div class="times" id="times03">
+                              <div class="times_box day">
+                                <div class="date_box" data-start="">
+                                  <input type="date">
+                                  <i class="iconfont icon-icon"></i>
+                                  <span class="year"></span>
+                                  <sup>Year</sup>
+                                  <span class="dates"></span>
+                                  <i class="iconfont icon-arrow-right"></i>
+                                </div>
+                              </div>
+                              <div class="times_box month active">
+                                  <div class="date_box">
+                                    <input type="month">
+                                    <i class="iconfont icon-icon"></i>
+                                    <span class="year"></span>
+                                    <sup>Year</sup>
+                                    <span class="dates"></span>
+                                    <i class="iconfont icon-arrow-right"></i>
+                                  </div>
+                                </div>
+                               <div class="times_box zixuan">
+                                  <div class="date_box" data-start="" data-end="">
+                                     <input type="date" class="zixuan1">
+                                    <input type="date" class="zixuan2">
+                                    <i class="iconfont icon-icon"></i>
+                                    <span class="year"></span>
+                                    <sup>Year</sup>
+                                    <span class="dates"></span>
+                                    <span class="year2"></span>
+                                    <sup>Year</sup>
+                                    <span class="dates2"></span>
+                                    <i class="iconfont icon-arrow-right"></i>
+                                  </div>
+                            </div>
+                          </div>
+                          <div id="third"></div>
+
+                          <div class="detail_data">
+                              <i class="iconfont icon-shuju"></i>  详细数据
+                          </div>
+
+	            	
+	            </div>
+
+
+
+	            <div class="swiper-slide four">
+	            	<div class="mask data4">
+                             <div class="close"><span>×</span></div>
+                             <h1>2017.10.1-10.20 网销数据</h1>
+                              <table border="1" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td>渠道</td>
+                                      <td>占比</td>
+                                      <td>金额</td>
+                                      <td>有效<br>客资</td>
+                                      <td>订单数</td>
+                                      <td>均价</td>
+                                    </tr>
+                                    <tr>
+                                      <td>百度PC</td>
+                                      <td>50%</td>
+                                      <td>￥85,000</td>
+                                      <td>300</td>
+                                      <td>186</td>
+                                      <td>￥5750</td>
+                                    </tr>
+                                    <!-- <tr>
+                                      <td>微信</td>
+                                      <td>30%</td>
+                                      <td>￥67,000</td>
+                                      <td>180</td>
+                                      <td>180</td>
+                                      <td>￥3800</td>
+                                    </tr>
+                                     -->
+                                   
+                              </table>
+
+                      </div>
+                      
+                          <h1>成交数据</h1>
+                          <div class="hide"><img src="img/yanjing.png" alt=""></div>
+                          <p class="sub">所有流程数据</p>
+                          <div class="tabs_bj">
+                              <span>天维度</span>
+                              <span  class="active">月维度</span>
+                              <span>自选维度</span>
+                          </div>
+                           <div class="times" id="times04">
+                              <div class="times_box day">
+                                <div class="date_box" data-start="">
+                                  <input type="date">
+                                  <i class="iconfont icon-icon"></i>
+                                  <span class="year"></span>
+                                  <sup>Year</sup>
+                                  <span class="dates"></span>
+                                  <i class="iconfont icon-arrow-right"></i>
+                                </div>
+                              </div>
+                              <div class="times_box month active">
+                                  <div class="date_box">
+                                    <input type="month">
+                                    <i class="iconfont icon-icon"></i>
+                                    <span class="year"></span>
+                                    <sup>Year</sup>
+                                    <span class="dates"></span>
+                                    <i class="iconfont icon-arrow-right"></i>
+                                  </div>
+                                </div>
+                               <div class="times_box zixuan">
+                                  <div class="date_box" data-start="" data-end="">
+                                       <input type="date" class="zixuan1">
+                                      <input type="date" class="zixuan2">
+                                    <i class="iconfont icon-icon"></i>
+                                    <span class="year"></span>
+                                    <sup>Year</sup>
+                                    <span class="dates"></span>
+                                    <span class="year2"></span>
+                                    <sup>Year</sup>
+                                    <span class="dates2"></span>
+                                    <i class="iconfont icon-arrow-right"></i>
+                                  </div>
+                            </div>
+                          </div>
+                         <div class="pie_radius" style="background-image:url(img/yuan.png)">
+                               <span>成交额</span>
+                               <p>￥<b>866,000</b></p>
+                          </div>  
+                          <div class="four_table">
+                              <table border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                      <th colspan="6"></th>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td>占比</td>
+                                    <td>金额</td>
+                                    <td>订单数</td>
+                                    <td>均价</td>
+                                    <td>详情</td>
+                                  </tr>
+                                  <tr>
+                                    <td>网销渠道</td>
+                                    <td>60%</td>
+                                    <td><span>￥</span>59,590</td>
+                                    <td>265</td>
+                                    <td><span>￥</span>5600</td>
+                                    <td><i class="iconfont icon-shuju"></i></td>
+                                  </tr>
+                                  <tr>
+                                    <td>推荐</td>
+                                    <td>12%</td>
+                                    <td><span>￥</span>54,590</td>
+                                    <td>66</td>
+                                    <td><span>￥</span>3600</td>
+                                    <td><i class="iconfont icon-shuju"></i></td>
+                                  </tr>
+                                  <tr>
+                                    <td>门店</td>
+                                    <td>10%</td>
+                                    <td><span>￥</span>56,590</td>
+                                    <td>18</td>
+                                    <td><span>￥</span>9600</td>
+                                    <td><i class="iconfont icon-shuju"></i></td>
+                                  </tr>
+                              </table>
+                          </div>
+	            </div>
+
+
+<!-- 
+               <div class="swiper-slide five">
+                  <h1>目标完成率雷达图</h1>
+                  <div class="hide"><img src="img/yanjing.png" alt=""></div>
+                  <p class="sub">网销流程数据</p>
+                  <div class="tabs_bj">
+                      <span>天维度</span>
+                      <span  class="active">月维度</span>
+                      <span>自选维度</span>
+                  </div>
+                  <div class="times" id="times05">
+                      <div class="times_box day">
+                         <div class="date_box" data-start="">
+                             <input type="date">
+                              <i class="iconfont icon-icon"></i>
+                              <span class="year"></span>
+                              <sup>Year</sup>
+                              <span class="dates"></span>
+                             <i class="iconfont icon-arrow-right"></i>
+                          </div>
+                      </div>
+                      <div class="times_box month active">
+                        <div class="date_box">
+                            <input type="month">
+                            <i class="iconfont icon-icon"></i>
+                            <span class="year"></span>
+                            <sup>Year</sup>
+                            <span class="dates"></span>
+                            <i class="iconfont icon-arrow-right"></i>
+                        </div>
+                      </div>
+                      <div class="times_box zixuan">
+                          <div class="date_box" data-start="" data-end="">
+                              <input type="date" class="zixuan1">
+                              <input type="date" class="zixuan2">
+                              <i class="iconfont icon-icon"></i>
+                              <span class="year"></span>
+                              <sup>Year</sup>
+                              <span class="dates"></span>
+                              <span class="year2"></span>
+                              <sup>Year</sup>
+                              <span class="dates2"></span>
+                              <i class="iconfont icon-arrow-right"></i>
+                          </div>
+                        </div>
+                  </div>
+
+
+                   <div id="five"></div>
+               </div>
+ -->
+
+          <div class="swiper-slide five">
+                      <div class="mask data1">
+                              <div class="close"><span>×</span></div>
+                              <h1><span>2017.10.01-10.20</span> 影像系统制作数据</h1>
+                            <div class="table">
+                              <table border="1" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                   <th></th>
+                                   <th>目标</th>
+                                   <th>实际</th>
+                                   <th>完成率</th>
+                                  </tr>
+                                  <tr>
+                                    <td>投放<br>目标完成率</td>
+                                     <td><a href="">1</a></td>
+                                     <td><a href="">1</a></td>
+                                     <td><a href="">1</a></td>
+                                    
+                                  </tr>
+                                  <tr>
+                                    <td>客资<br>目标完成率</td>
+                                    <td><a href="">1</a></td>
+                                     <td><a href="">1</a></td>
+                                     <td><a href="">1</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td>有效客资<br>目标完成率</td>
+                                    <td><a href="">1</a></td>
+                                     <td><a href="">1</a></td>
+                                     <td><a href="">1</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td>进店数<br>目标完成率</td>
+                                   <td><a href="">1</a></td>
+                                     <td><a href="">1</a></td>
+                                     <td><a href="">1</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td>成交数<br>目标完成率</td>
+                                    <td><a href="">1</a></td>
+                                     <td><a href="">1</a></td>
+                                     <td><a href="">1</a></td>
+                                  </tr>
+                              </table>
+                          </div>
+                          </div>  
+              <h1>影像数据</h1>
+                  <div class="hide"><img src="img/yanjing.png" alt=""></div>
+                  <p class="sub">影像系统制作数据</p>
+                  <div class="tabs_bj">
+                      <span>天维度</span>
+                      <span  class="active">月维度</span>
+                      <span>自选维度</span>
+                  </div>
+                  <div class="times" id="times05">
+                      <div class="times_box day">
+                         <div class="date_box" data-start="">
+                             <input type="date">
+                              <i class="iconfont icon-icon"></i>
+                              <span class="year"></span>
+                              <sup>Year</sup>
+                              <span class="dates"></span>
+                             <i class="iconfont icon-arrow-right"></i>
+                          </div>
+                      </div>
+                      <div class="times_box month active">
+                        <div class="date_box">
+                            <input type="month">
+                            <i class="iconfont icon-icon"></i>
+                            <span class="year"></span>
+                            <sup>Year</sup>
+                            <span class="dates"></span>
+                            <i class="iconfont icon-arrow-right"></i>
+                        </div>
+                      </div>
+                      <div class="times_box zixuan">
+                          <div class="date_box" data-start="" data-end="">
+                              <input type="date" class="zixuan1">
+                              <input type="date" class="zixuan2">
+                              <i class="iconfont icon-icon"></i>
+                              <span class="year"></span>
+                              <sup>Year</sup>
+                              <span class="dates"></span>
+                              <span class="year2"></span>
+                              <sup>Year</sup>
+                              <span class="dates2"></span>
+                              <i class="iconfont icon-arrow-right"></i>
+                          </div>
+                        </div>
+                  </div>
+                <div class="five_table">
+                              <table border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                      <th colspan="6"></th>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td>占比</td>
+                                    <td>金额</td>
+                                    <td>订单数</td>
+                                    <td>均价</td>
+
+                                  </tr>
+                                  <tr>
+                                    <td>网销渠道</td>
+                                    <td><a href="">1</a></td>
+                                    <td><a href="">1</a></td>
+                                    <td><a href="">1</a></td>
+                                    <td><a href="">1</a></td>
+                                   
+                                  </tr>
+                                  <tr>
+                                    <td>推荐</td>
+                                    <td><a href="">1</a></td>
+                                    <td><a href="">1</a></td>
+                                    <td><a href="">1</a></td>
+                                    <td><a href="">1</a></td>
+                                   
+                                  </tr>
+                                  <tr>
+                                    <td>门店</td>
+                                    <td><a href="">1</a></td>
+                                    <td><a href="">1</a></td>
+                                    <td><a href="">1</a></td>
+                                    <td><a href="">1</a></td>
+                                   
+                                  </tr>
+                              </table>
+                          </div>
+
+                           <div class="detail_data">
+                              <i class="iconfont icon-shuju"></i>  详细数据
+                          </div>
+
+                    </div>
+
+                    
+          </div>
+	        <!-- Add Pagination -->
+	        <div class="swiper-pagination"></div>
+	    </div>
+	</body>
+</html>
+
+<script type="text/javascript" src="js/echarts.min.js" ></script>
+
+
+
+<script type="text/javascript" src="js/main.js" ></script>
+<script type="text/javascript" src="js/swiper.jquery.min.js" ></script>
+
+<script>
+
+		
+	$(function(){
+    var myi=true;
+		var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        paginationClickable: true,
+          // loop: true,
+        onSlideChangeEnd: function(swiper){
+          // if(swiper.isEnd){
+          //    swiper.slideTo(1, 500, true);
+          // }
+          var index=swiper.activeIndex;
+          console.log(swiper.activeIndex)
+         
+      
+            $(".swiper-wrapper .swiper-slide").eq(index).attr("data-name")
+             //切换结束时，告诉我现在是第几个slide
+            }
+	       
+    	});
+
+$(".swiper-wrapper .swiper-slide").eq(1).before($(".swiper-wrapper .swiper-slide").eq(4))
+
+$(".swiper-wrapper .swiper-slide").each(function(index,dom){
+  $(".swiper-wrapper .swiper-slide").eq(index).attr("data-name")
+})
+
+  // swiper.slideTo(2, 500, true);
+
+
+		//删除当前页
+		$(".hide").on("click",function(){
+      var L=$(".swiper-wrapper .swiper-slide").length;
+
+			var index=$(this).parent().index();
+      console.log(index)
+      if(L==index+1){
+          swiper.init();
+          swiper.slideTo(0, 500, true);
+
+      }
+			 swiper.removeSlide(index)
+      
+		})
+
+
+
+//维度
+var d=new Date();
+var mydate1=d.getDate();//日期
+var myyear1=d.getFullYear();//年份
+var mymonth1=d.getMonth()+1;//月份
+
+if(mydate1<10){
+mydate1="0"+mydate1;
+console.log(mydate1)
+}
+if(mymonth1<10){
+mymonth1="0"+mymonth1;
+console.log(mymonth1)
+}
+
+
+	//天维度	
+
+$(".day .date_box .year").html(myyear1);
+$(".day .dates").html(mymonth1+"."+mydate1);
+
+$(".day .date_box").attr("data-start",myyear1+"."+mymonth1+"."+mydate1);
+
+//前一天
+$(".day .icon-icon").on("click",function(){
+var daydate=$(".day .date_box").attr("data-start");
+
+d=new Date(daydate.replace(/\./g,'/'));
+d.setDate(d.getDate()-1);
+var year=d.getFullYear();
+var month=d.getMonth()+1;
+   var day=d.getDate();
+if(month<10){
+    month="0"+month
+}
+if(day<10){
+    day="0"+day
+}
+   var all=year+"."+month+"."+day;
+$(".day .date_box").attr("data-start",all);
+d=new Date(all)
+
+
+$(".day .date_box").children(".year").html(year)
+   
+$(".day .date_box").children(".dates").html(month+"."+day);
+})
+
+//后一天
+$(".day .icon-arrow-right").on("click",function(){
+var daydate=$(".day .date_box").attr("data-start");
+d=new Date(daydate.replace(/\./g,'/'));
+   d.setDate(d.getDate()+1);
+var year=d.getFullYear();
+var month=d.getMonth()+1;
+   var day=d.getDate();
+if(month<10){
+    month="0"+month
+}
+if(day<10){
+    day="0"+day
+}
+   var all=year+"."+month+"."+day;
+$(".day .date_box").attr("data-start",all);
+d=new Date(all)
+console.log(d)
+$(".day .date_box").children(".year").html(year);
+$(".day .date_box").children(".dates").html(month+"."+day);
+
+})
+
+	$(".day input").on("change",function(){
+var val=$(this).val();
+console.log(val)
+var year=val.substring(0,4);
+var month=val.substring(5,7);
+var day=val.substring(8,10);
+   
+$(this).siblings(".year").html(year);
+$(this).siblings(".dates").html(month+"."+day)
+$(".day .date_box").attr("data-start",year+"."+month+"."+day);
+})
+
+
+
+
+
+
+//自选维度
+
+function GetDateStr(AddDayCount) { 
+var dd = new Date(); 
+dd.setDate(dd.getDate()+AddDayCount);//获取AddDayCount天后的日期 
+var y = dd.getFullYear(); 
+var m = dd.getMonth()+1;//获取当前月份的日期 
+var d2 = dd.getDate(); 
+if(d2<10){
+    d2="0"+d2
+}
+if(m<10){
+    m="0"+m
+}
+return y+"."+m+"."+d2; 
+
+} 
+
+
+
+var mydate3=GetDateStr(-6);//6天前
+var mydate4=GetDateStr(6); // 6天后
+console.log(mydate3) 
+console.log(mydate4) 
+var bmydate1= mydate3.substring(0,4);
+var bmydate2= mydate3.substring(5,10);
+var bmydate4= mydate4.substring(0,4);
+var bmydate3= mydate4.substring(5,10);
+console.log(bmydate1) 
+console.log(bmydate2) 
+console.log(bmydate3) 
+
+   $(".zixuan .date_box .year").html(bmydate1)
+   $(".zixuan .dates").html(bmydate2+" -")
+$(".zixuan .date_box .year2").html(bmydate4)
+   $(".zixuan .dates2").html(bmydate3)
+   $(".zixuan .date_box").attr("data-start",bmydate1+"."+bmydate2)
+   $(".zixuan .date_box").attr("data-end",bmydate4+"."+bmydate3)
+   
+
+
+
+
+
+
+$(".zixuan input").on("change",function(){
+var val=$(this).val();
+console.log(val)
+var Class=$(this).attr("class");
+var year=val.substring(0,4);
+var month=val.substring(5,7);
+var day=val.substring(8,10);
+console.log(val,Class)
+if(Class=="zixuan1"){
+      $(this).siblings(".year").html(year);
+      $(this).siblings(".dates").html(month+"."+day+" -");
+      $(".zixuan .date_box").attr("data-start",year+"."+month+"."+day);
+}else if(Class=="zixuan2"){
+      $(this).siblings(".year2").html(year);
+      $(this).siblings(".dates2").html(month+"."+day);
+    $(".zixuan .date_box").attr("data-end",year+"."+month+"."+day);
+}
+})
+
+
+
+
+
+//自选维度 后退
+$(".zixuan .icon-icon").on("click",function(){
+
+//开始时间
+   var that=$(".zixuan .date_box").attr("data-start");
+    var newdate=new Date(that.replace(/\./g,'/'));
+    newdate.setDate(newdate.getDate()-12);
+    var newyear=newdate.getFullYear();
+    var newmonth=newdate.getMonth()+1;
+    var newday=newdate.getDate();
+    if(newday<10){
+      newday="0"+newday;
+    }
+    if(newmonth<10){
+      newmonth="0"+newmonth;
+    }
+    var newdate2=newyear+"."+newmonth+"."+newday;
+    that=$(".zixuan .date_box").attr("data-start",newdate2);
+    newdate=new Date(newdate2)
+    var year4=newdate2.substring(0,4);
+    var end3= newdate2.substring(5,10);
+   $(".zixuan .icon-icon").siblings(".year").html(year4);
+   $(".zixuan .icon-icon").siblings(".dates").html(end3+" -");
+//结束时间
+    var that2=$(".zixuan .date_box").attr("data-end");
+    var newdate3=new Date(that2.replace(/\./g,'/'));
+    newdate3.setDate(newdate3.getDate()-12);
+    var newyear2=newdate3.getFullYear();
+    var newmonth2=newdate3.getMonth()+1;
+    var newday2=newdate3.getDate();
+    if(newday2<10){
+      newday2="0"+newday2;
+    }
+    if(newmonth2<10){
+      newmonth2="0"+newmonth2;
+    }
+    var newdate4=newyear2+"."+newmonth2+"."+newday2;
+    that2=$(".zixuan .date_box").attr("data-end",newdate4);
+    newdate3=new Date(newdate4)
+    var year5=newdate4.substring(0,4);
+    var end4= newdate4.substring(5,10);
+   $(".zixuan .icon-icon").siblings(".year2").html(year5);
+   $(".zixuan .icon-icon").siblings(".dates2").html(end4);
+
+})
+
+//自选维度 前进
+$(".zixuan .icon-arrow-right").on("click",function(){
+
+//开始时间
+   var that=$(".zixuan .date_box").attr("data-start");
+    var newdate=new Date(that.replace(/\./g,'/'));
+    newdate.setDate(newdate.getDate()+12);
+    var newyear=newdate.getFullYear();
+    var newmonth=newdate.getMonth()+1;
+    var newday=newdate.getDate();
+    if(newday<10){
+      newday="0"+newday;
+    }
+    if(newmonth<10){
+      newmonth="0"+newmonth;
+    }
+    var newdate2=newyear+"."+newmonth+"."+newday;
+    that=$(".zixuan .date_box").attr("data-start",newdate2);
+    newdate=new Date(newdate2)
+    var year4=newdate2.substring(0,4);
+    var end3= newdate2.substring(5,10);
+    $(".zixuan .icon-arrow-right").siblings(".year").html(year4);
+    $(".zixuan .icon-arrow-right").siblings(".dates").html(end3+" -");
+//结束时间
+    var that2=$(".zixuan .date_box").attr("data-end");
+    var newdate3=new Date(that2.replace(/\./g,'/'));
+    newdate3.setDate(newdate3.getDate()+12);
+    var newyear2=newdate3.getFullYear();
+    var newmonth2=newdate3.getMonth()+1;
+    var newday2=newdate3.getDate();
+    if(newday2<10){
+      newday2="0"+newday2;
+    }
+    if(newmonth2<10){
+      newmonth2="0"+newmonth2;
+    }
+    var newdate4=newyear2+"."+newmonth2+"."+newday2;
+    that2=$(".zixuan .date_box").attr("data-end",newdate4);
+    newdate3=new Date(newdate4)
+    var year5=newdate4.substring(0,4);
+    var end4= newdate4.substring(5,10);
+   $(".zixuan .icon-arrow-right").siblings(".year2").html(year5);
+    $(".zixuan .icon-arrow-right").siblings(".dates2").html(end4);
+
+})
+
+
+
+
+
+
+//月维度
+$(".month .date_box .year").html(myyear1)
+$(".month .date_box .dates").html(mymonth1)
+$(".month .date_box").attr("data-start",myyear1+"."+mymonth1);
+
+
+$(".month input").on("change",function(){
+var val=$(this).val();
+console.log(val)
+var year=val.substring(0,4);
+var month=val.substring(5,7);
+$(this).siblings(".year").html(year);
+$(this).siblings(".dates").html(month)
+$(".month .date_box").attr("data-start",year+"."+month);
+})
+
+
+
+
+//前一月
+$(".month .date_box .icon-icon").on("click",function(){
+var day4=$(this).siblings(".dates").html();
+var year4=$(this).siblings(".year").html();
+
+if(day4<=12&&day4>=1){
+      day4=day4-1;
+}
+if(day4<10){
+    day4="0"+day4;
+    console.log(typeof day4)
+}
+if(day4*1<1){
+    day4=12;
+    year4=year4-1
+}
+  $(".month .date_box .icon-arrow-right").siblings(".dates").html(day4)
+  $(".month .date_box .icon-arrow-right").siblings(".year").html(year4)
+
+})
+//后一月
+
+$(".month .date_box .icon-arrow-right").on("click",function(){
+var day4=$(this).siblings(".dates").html();
+var year4=$(this).siblings(".year").html();
+
+   if(day4<=12){
+    day4=parseInt(day4)+1;
+   }
+   if(parseInt(day4)>12){
+    day4=1;
+     year4=parseInt(year4)+1
+   }
+   if(day4<10){
+		day4="0"+day4;
+   }
+
+   $(".month .date_box .icon-arrow-right").siblings(".dates").html(day4)
+   $(".month .date_box .icon-arrow-right").siblings(".year").html(year4)
+
+})
+
+
+
+
+
+
+// 查看详情数据
+$("body").on("click",".detail_data,.four_table td i",function(){
+      var starts= $(this).siblings(".times").children(".active").children(".date_box").attr("data-start");
+      var ends= $(this).siblings(".times").children(".active").children(".date_box").attr("data-end");
+
+      if(ends==undefined){
+        $(this).attr("data-time",starts);
+        $(this).siblings(".mask").children("h1").children("span").html(starts)
+      }else{
+        $(this).attr("data-time",starts+"-"+ends);
+        $(this).siblings(".mask").children("h1").children("span").html(starts+"-"+ends)
+      }
+
+$(this).parent().children().hide();
+$(this).parent().children(".mask").show()
+})
+
+
+$("body").on("click",".four_table td i",function(){
+    $(".four").children().hide();
+    $(this).show()
+   $(".four").children(".mask").show()
+})
+// 详情数据关闭按钮
+
+$(".close").on("click",function(){
+     $(this).parent().siblings().show();
+     $(this).parent().hide()
+
+})
+
+
+
+var values=[[10, 32, 41,84, 90, 30, 10],[78, 46, 41,88, 90,120, 20],[20, 82, 91, 34, 100,30, 10]];
+
+
+ var myzhu = echarts.init(document.getElementById("main"));
+function _ajax(values){
+       var option = {
+    title: {
+        text: ''
+    },
+    tooltip : {
+      
+    },
+    legend: {
+        left:"center",
+        selectedMode: 'single', 
+        itemWidth:0,
+        textStyle: {color: '#98825f'},
+        data:['','',''],
+
+         selected: {  
+               '进店' : false,             
+               '成交' : false,             
+          } 
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    grid: {
+        left: '0%',
+        right: '0%',
+        bottom: '-2%',
+        zlevel:1,
+        containLabel: false,
+    },
+   
+    xAxis : [
+        {
+            type : 'category',
+            zlevel:3,
+            boundaryGap : false,
+            axisTick : {
+                inside: false,
+                length: 0,
+            },
+             axisLine:{
+                lineStyle:{
+                  width:0
+                }
+             },
+             splitLine:{  
+                show:true,
+                 offset:0,
+                lineStyle:{
+                    color:'rgba(23,23,23,0.4)',
+                    width: 1,
+
+                }
+            
+            },
+            data : ['        10.11','10.12','10.13','10.14','10.15','10.20','10.21        '],
+            axisLabel:{
+                     interval:0,
+                     rotate:0,
+                     margin:-20,
+                     textStyle:{
+                        color:"#816740",
+                       fontSize:12
+                     },
+                     
+                 },
+           
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value',
+            min: 0,
+            margin:0,
+            zlevel:3,
+             axisTick : {
+                inside: false,
+                length: 0,
+            },
+            axisLine:{
+                lineStyle:{
+                  width:0
+                }
+             },
+             splitLine:{  
+                show:true,
+                 lineStyle:{
+                  color:'rgba(23,23,23,0.4)',
+                  width:1
+                }
+            },
+
+             axisLabel:{ 
+                    margin:-30,
+                      textStyle:{
+                        color:"#816740",
+                        left:"left"
+                     },
+                }
+
+           
+        }
+    ],
+    series : [
+
+            {
+                name:'客资',
+                type:'line',
+                zlevel:2,
+                stack: '总量',
+                lineWidth:10,
+                label: {
+                normal: {
+                    show: true,
+                    position: 'top',
+                }
+            },
+                areaStyle: {normal: {}},
+                data:values,
+                smooth:true,
+                symbol:'none',
+                itemStyle: {
+                 normal: {
+                    color:"rgba(28,27,23,0)",
+                     areaStyle: {
+                         type: 'default',
+                         opacity: 1, // 图表中各个图区域的透明度
+                         color: "rgba(28,27,23,.97)" // 图表中各个图区域的颜色
+                     }
+                 }
+             },
+        },
+       
+       
+    ]
+};
+$(window).resize(function(){
+       myzhu.setOption(option);
+  });
+    myzhu.setOption(option);
+
+}
+
+$(".index_tabs span").on("click",function(){
+    $(this).addClass("active").siblings("span").removeClass("active");
+    var id=$(this).attr("data-id");
+     _ajax(values[id])
+})
+
+   _ajax(values[0])  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		});
+
+</script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link rel="stylesheet" type="text/css" href="http://h5.yingtaoyun.com/yingtao/packet/css/app.css">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_409108_y3wxyrrcxlayvi.css">
+</head>
+<body>
+<article>
+	<div class="not_smoking">
+		<div class="head_box">
+			<div class="head" style="background-image:url(img/timg.jpg);"></div>
+			<p>名字</p>
+			<p class="price"><span>5.00</span>元</p>
+			<p>恭喜抽中红包，请在微信消息列表中查收</p>
+		</div>
+
+		<div class="footer_content">
+			<div class="receive">
+				<span><i class="iconfont icon-wenhao"></i></span>
+				如何领取微信红包
+			</div>
+			<div class="receive_flow" style="background-image: url(img/footer.png);">
+				
+				<ol>
+					<li>请先关闭本页</li>
+					<li>如果你关注【大城小爱婚纱摄影】可以直接在微信公众号内领取红包</li>
+					<li>如果你未关注，在服务通知内领取红包</li>
+					<li>24小时内未领取将被退回</li>
+				</ol>
+			</div>
+		</div>
+		<p class="copy">Prowered by 樱桃互动</p>
+	</div>
+
+</article>
+
+</body>
+</html>

@@ -1,0 +1,1266 @@
+﻿html{
+	font-size:6.25vw;
+	}
+@media only screen and (min-width: 1200px){
+	html{
+		font-size:24px!important; 
+		}
+	article{
+		margin:auto;
+		max-width:750px;
+		}
+}
+
+body,button, input, select, textarea, h1, h2, h3, h4, h5, h6{
+	font-weight:300;
+	font-size:0.512rem;
+	color:#3b3b3b;
+	-webkit-text-size-adjust:none;
+	text-rendering:optimizelegibiligty;
+	-webkit-font-smoothing:antialiased;
+	overflow-scrolling:touch;
+	-webkit-overflow-scrolling:touch;
+	}
+*, *:before, *:after{
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	margin: 0;
+	padding: 0
+	}
+::-webkit-scrollbar{
+	display:none;
+	}
+body,figure,p,ul,ol,h2{
+	margin:0
+	}
+html,body,article{
+	height:100%;
+	background-color: #fff;
+	}
+article{
+	width:16.0rem;
+	}
+ul,ol{
+	padding:0;
+	list-style:none;
+}
+body{
+	overflow-x: hidden
+}
+a{
+	color:#3b3b3b;
+	text-decoration:none
+	}
+button,a{
+	-webkit-tap-highlight-color:rgba(0,0,0,0)
+	}
+ul,ol{
+	padding:0
+	}
+@supports (-webkit-backdrop-filter:blur(0.277778rem)){
+.model-city{
+	-webkit-backdrop-filter:blur(0.277778rem);
+	}
+}
+
+/*主页*/
+.yt_moneyTree_home{
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/bj3.png);
+	overflow: hidden;
+}
+.yt_moneyTree_home .lunbo{
+	position: absolute;
+	bottom: 0;
+	/*bottom: 0.298667rem;*/
+	left: 0;
+	z-index: 12;
+	color: rgb( 241, 231, 185 );
+	font-size: 0.512rem;
+	height: 1.066667rem;
+	line-height: 1.066667rem;
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+	background-color: rgba(0,0,0,.3);
+}
+.yt_moneyTree_home .lunbo ul{
+	position: absolute;
+	width: 100%
+}
+.yt_moneyTree_home .lunbo ul li p{
+	width: 100%
+}
+.yt_moneyTree_home .lunbo ul li i{
+	margin-right: 0.213333rem
+}
+.yt_moneyTree_home .lunbo span{
+	/*padding: 0 0.426667rem;*/
+}
+.yt_moneyTree_home .rules{
+	position: absolute;
+	right: 0.512rem;
+	top:2.133333rem;
+	color: rgb( 252, 248, 226 );
+	font-size: 0.512rem;
+	z-index: 9;
+	padding: 0.085333rem 0;
+	text-align: center;
+	border-bottom: 1px solid rgb( 252, 248, 226 );
+
+}
+.yt_moneyTree_home .rules i{
+	margin-right: 0.213333rem;
+	position: absolute;
+	left: -0.725333rem;
+}
+.yt_moneyTree_home  .active_rules{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 10;
+	background-color: rgba(0,0,0,.8);
+	display: none;
+}
+.yt_moneyTree_home  .active_rules .active_box{
+	width: 14.933333rem;
+	height: 10.666667rem;
+	background-color: #f9f9d8;
+	border: 0.213333rem solid #ef3738;
+	border-radius: 0.213333rem;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate3d(-50%,-50%,0);
+}
+.yt_moneyTree_home  .active_rules .active_box::after{
+	content: attr(data-title);
+    position: absolute;
+    top: -0.810667rem;
+    left: 50%;
+    transform: translate3d(-50%,0,0);
+    width: 8.405333rem;
+    height: 1.6rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/title.png);
+    font-size: 0.682667rem;
+    font-family: "PingFangSC";
+    color: rgb( 208, 42, 29 );
+    text-align: center;
+    line-height: 1.4rem;
+    font-weight: 500;
+}
+.yt_moneyTree_home  .active_rules .active_box .close{
+	position: absolute;
+    top: -0.52rem;
+    right: -0.385333rem;
+    color: rgb( 208, 42, 29 );
+    font-size: 1.28rem;
+    width: 1.066667rem;
+    height: 1.066667rem;
+    text-align: center;
+    border-radius: 50%;
+    font-style: normal;
+    background-color: #ffcc00;
+    line-height: 1.066667rem;
+    line-height: 0.8rem
+}
+.yt_moneyTree_home  .active_rules .active_box .active_box_scroll{
+	padding:1.28rem 0.512rem 0.426667rem 0.512rem;
+	height: 100%;
+	overflow-y: auto;
+}
+.yt_moneyTree_home  .active_rules .active_box .active_box_scroll p{
+	font-size: 0.554667rem;
+	color: rgb( 70, 70, 70 );
+	line-height: 0.896rem
+}
+.yt_moneyTree_home .logo{
+	display: inline-block;
+	height: 1.28rem;
+	position: absolute;
+	top: 0.682667rem;
+	left: 0.64rem;
+}
+.yt_moneyTree_home .more_opportunity{
+	display: inline-block;
+	width: 4.394667rem;
+  	height: 1.237333rem;
+  	line-height: 1.237333rem;
+	font-size: 0.576rem;
+	font-family: "FZLTHK";
+  	color: rgb( 252, 248, 226 );
+  	text-align: center;
+  	border:1px solid #fff;
+  	border-radius: 0.618667rem;
+  	position:absolute;
+  	top: 0.682667rem;
+	right: 0.512rem;
+	z-index: 9
+}
+.yt_moneyTree_home .wave{
+	position: absolute;
+  	left: 0;
+  	display: table;
+  	/*top:-18%;*/
+  	width: 100%;
+  	text-align: center;
+  	z-index: 5;
+  	height: 69%;
+  	height: 26%;
+}
+.wave_table{
+	display: table-cell;
+	vertical-align: middle;
+}
+.yt_moneyTree_home .wave span{
+	display: inline-block;
+	width: 2.24rem;
+  	height: 2.24rem;
+  	line-height: 2.24rem;
+  	border-radius: 50%;
+  	background-color: rgb( 148, 14, 21 );
+  	box-shadow: inset 0 0 0.426667rem rgba(0,0,0,.25);
+  	position: relative;
+}
+.yt_moneyTree_home .wave span i{
+	font-size: 1.621333rem;
+	display: inline-block;
+	background: -webkit-linear-gradient(79deg,#cda160 0%,#e5c992 40%,#fffbd9 51%,#fefce9 60%,#e6cc96 100%);
+    -webkit-background-clip: text;
+   	-webkit-text-fill-color: transparent;
+   	animation-timing-function: ease-out;
+	animation-name:upin;
+	animation-duration:1s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+}
+@keyframes upin{
+	0%{
+		transform:scale(1.2)
+	}
+	100%{
+		transform:scale(1)
+	}
+}
+
+.yt_moneyTree_home .wave p{
+	font-size: 0.768rem;
+  	font-family: "PingFangSC";
+  	color: rgb( 241, 231, 185 );
+  	margin-top: 0.213333rem
+}
+
+
+.yt_moneyTree_home .money_animation_box{
+	width: 16.0rem;
+	/*height: 64%;*/
+	/*height:16.533333rem;*/
+	height:16.298667rem;
+	height: 64%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	/*bottom:3.55333rem;*/
+	bottom:3.05333rem;
+	left: 0;
+}
+
+
+.yt_moneyTree_home .money_animation_box .tree{
+	animation:dous 1.5s 1 ease-out alternate;
+	transform-origin: center center;
+}
+.yt_moneyTree_home .money_animation_box .tree.gift{
+	animation:dous1 1.5s 1 ease-out alternate;
+	transform-origin: center center;
+}
+.yt_moneyTree_home .money_animation_box .tree.leaves4{
+	animation:dous2 1.5s 1 ease-out alternate;
+	transform-origin: center center;
+}
+.yt_moneyTree_home .money_animation_box .tree.leaves2{
+	animation:dous3 1.5s 1 ease-out alternate;
+	transform-origin: center center;
+}
+.yt_moneyTree_home .money_animation_box .leaves1{
+	width: 14.314667rem;
+	height: 11.733333rem;
+	width: 15.314667rem;
+    height: 12.733333rem;
+    width: 15.78rem;
+    height: 12.933333rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/tree8.png);
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translate3d(-50%,0,0);
+	z-index: 1;
+}
+.yt_moneyTree_home .money_animation_box .leaves2{
+	width: 14.762667rem;
+	height: 10.090667rem;
+	width: 15.762667rem;
+    height: 11.090667rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/tree6.png);
+	position: absolute;
+	left: 50%;
+	top: 0.66667rem;
+	transform: translate3d(-50%,0,0);
+	z-index: 3;
+}
+.yt_moneyTree_home .money_animation_box .gift{
+	width: 14.890667rem;
+	height: 16.384rem;
+	width: 16.0890667rem;
+    height: 17.384rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/tree5.png);
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translate3d(-49%,0,0);
+	z-index: 4;
+}
+.yt_moneyTree_home .money_animation_box .leaves4{
+	width: 11.861333rem;
+	height: 8.064rem;
+	width: 12.861333rem;
+    height: 9.064rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/tree3.png);
+	position: absolute;
+	left: 50%;
+	top: 1.706667rem;
+	transform: translate3d(-52%,0,0);
+	z-index: 5;
+}
+.yt_moneyTree_home .money_animation_box .trunk{
+	width: 9.024rem;
+	height:7.616rem;
+	width: 10.024rem;
+    height: 8.616rem;
+    width: 12.954rem;
+    height: 10.016rem;
+	/*height: 53%;*/
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/tree2.png);
+	position: absolute;
+	left: 50%;
+	bottom: 0.789333rem;
+	transform: translate3d(-50%,0,0);
+	z-index: 2
+}
+
+@keyframes dous{
+	0% {
+		transform:translate3d(-48%,0,0);	
+	}
+	5%{
+		transform:translate3d(-52%,0,0);
+	}
+	10% {
+		transform:translate3d(-48%,0,0);	
+	}
+	15%{
+		transform:translate3d(-52%,0,0);
+	}
+	20% {
+		transform:translate3d(-48%,0,0);	
+	}
+	25%{
+		transform:translate3d(-52%,0,0);
+	}
+	30% {
+		transform:translate3d(-49%,0,0);	
+	}
+	35%{
+		transform:translate3d(-51%,0,0);
+	}
+	45% {
+		transform:translate3d(-49%,0,0);	
+	}
+	60% {
+		transform:translate3d(-51%,0,0);	
+	}
+	80% {
+		transform:translate3d(-49%,0,0);	
+	}
+	100%{
+		transform:translate3d(-51%,0,0);
+	}
+}
+@keyframes dous1{
+	0% {
+		transform:translate3d(-48%,0,0);	
+	}
+	5%{
+		transform:translate3d(-52%,0,0);
+	}
+	10% {
+		transform:translate3d(-48%,0,0);	
+	}
+	15%{
+		transform:translate3d(-52%,0,0);
+	}
+	20% {
+		transform:translate3d(-48%,0,0);	
+	}
+	25%{
+		transform:translate3d(-52%,0,0);
+	}
+	30% {
+		transform:translate3d(-49%,0,0);	
+	}
+	35%{
+		transform:translate3d(-51%,0,0);
+	}
+	45% {
+		transform:translate3d(-49%,0,0);	
+	}
+	60% {
+		transform:translate3d(-51%,0,0);	
+	}
+	80% {
+		transform:translate3d(-49%,0,0);	
+	}
+	100%{
+		transform:translate3d(-51%,0,0);
+	}
+}
+@keyframes dous2{
+	0% {
+		transform:translate3d(-50%,0,0);	
+	}
+	5%{
+		transform:translate3d(-54%,0,0);
+	}
+	10% {
+		transform:translate3d(-50%,0,0);	
+	}
+	15%{
+		transform:translate3d(-54%,0,0);
+	}
+	20% {
+		transform:translate3d(-50%,0,0);	
+	}
+	25%{
+		transform:translate3d(-54%,0,0);
+	}
+	30% {
+		transform:translate3d(-51%,0,0);	
+	}
+	35%{
+		transform:translate3d(-53%,0,0);
+	}
+	45% {
+		transform:translate3d(-51%,0,0);	
+	}
+	60% {
+		transform:translate3d(-53%,0,0);
+	}
+	80% {
+		transform:translate3d(-51%,0,0);	
+	}
+	100%{
+		transform:translate3d(-53%,0,0);
+	}
+}
+@keyframes dous3{
+	0% {
+		transform:translate3d(-52%,0,0);	
+	}
+	5%{
+		transform:translate3d(-48%,0,0);
+	}
+	10% {
+		transform:translate3d(-52%,0,0);	
+	}
+	15%{
+		transform:translate3d(-48%,0,0);
+	}
+	20% {
+		transform:translate3d(-52%,0,0);	
+	}
+	25%{
+		transform:translate3d(-48%,0,0);
+	}
+	30% {
+		transform:translate3d(-51%,0,0);	
+	}
+	35%{
+		transform:translate3d(-49%,0,0);
+	}
+	45% {
+		transform:translate3d(-51%,0,0);	
+	}
+	60% {
+		transform:translate3d(-49%,0,0);
+	}
+	80% {
+		transform:translate3d(-51%,0,0);	
+	}
+	100%{
+		transform:translate3d(-49%,0,0);
+	}
+}
+.yt_moneyTree_home .money_animation_box .tree_trunk{
+	animation:trunk_dou 1.5s 1 ease-out alternate;
+	transform-origin: bottom center;
+}
+@keyframes trunk_dou{
+	0% {
+		transform:translate3d(-50%,0,0) rotate(-3deg);	
+	}
+	5%{
+		transform:translate3d(-50%,0,0) rotate(3deg);
+	}
+	10% {
+		transform:translate3d(-50%,0,0) rotate(-3deg);	
+	}
+	15%{
+		transform:translate3d(-50%,0,0) rotate(3deg);
+	}
+	20% {
+		transform:translate3d(-50%,0,0) rotate(-3deg);	
+	}
+	25%{
+		transform:translate3d(-50%,0,0) rotate(3deg);
+	}
+	30% {
+		transform:translate3d(-50%,0,0) rotate(-2deg);	
+	}
+	35%{
+		transform:translate3d(-50%,0,0) rotate(2deg);
+	}
+	45% {
+		transform:translate3d(-50%,0,0) rotate(-2deg);	
+	}
+	60% {
+		transform:translate3d(-50%,0,0) rotate(2deg);
+	}
+	80% {
+		transform:translate3d(-50%,0,0) rotate(-2deg);	
+	}
+	100%{
+		transform:translate3d(-50%,0,0) rotate(2deg);
+	}
+}
+
+.yt_moneyTree_home .money_animation_box .icon{
+	position: absolute;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	animation:left_right 1s infinite alternate;
+	z-index: 6;
+}
+
+
+.yt_moneyTree_home .money_animation_box .icon1{
+	width: 0.789333rem;
+	height: 0.682667rem;
+	top: 0.667rem;
+    left: 5.702667rem;
+    transform-origin: top center;
+    background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/icon1.png);
+}
+.yt_moneyTree_home .money_animation_box .icon2{
+	width: 2.133333rem;
+	height: 1.813333rem;
+	top: 4.963333rem;
+    left: 9.6333rem;
+    background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/icon2.png);
+}
+.yt_moneyTree_home .money_animation_box .icon3{
+	width: 2.496rem;
+	height: 2.069333rem;
+	top: 3.2rem;
+    left: 3.373333rem;
+    transform-origin: top center;
+    background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/icon3.png);
+}
+.yt_moneyTree_home .money_animation_box .icon4{
+	width: 0.725333rem;
+	height: 0.832rem;
+    left: 6.250667rem;
+    top: 66%;
+    transform-origin: top right;
+    background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/icon4.png);
+}
+.yt_moneyTree_home .money_animation_box .icon5{
+	width: 2.688rem;
+	height: 2.922667rem;
+	top: 6.586667rem;
+	left: 2.66667rem;
+    transform-origin: center;
+    background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/icon5.png);
+}
+.yt_moneyTree_home .money_animation_box .icon6{
+    width: 2.154667rem;
+    height: 2.304rem;
+    top: 2.9333rem;
+    left: 10.2rem;
+    transform-origin: top center;
+    background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/icon6.png);
+}
+.yt_moneyTree_home .money_animation_box .icon7{
+	width: 0.746667rem;
+	height: 0.704rem;
+	top: 6.9333rem;
+    left: 11.92rem;
+    transform-origin: top center;
+    background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/icon7.png);
+}
+.yt_moneyTree_home .money_animation_box .icon8{
+	width: 1.173333rem;
+	height: 1.045333rem;
+	top: 6.242667rem;
+    left: 1.194667rem;
+    transform-origin: center;
+    background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/icon8.png);
+}
+.yt_moneyTree_home .money_animation_box .icon9{
+	width: 0.789333rem;
+	height: 0.576rem;
+	top: 10.33333rem;
+    left: 8.704rem;
+    transform-origin: center;
+    background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/icon9.png);
+}
+.yt_moneyTree_home .money_animation_box .icon10{
+	width: 0.768rem;
+	height: 0.682667rem;
+    left:9.388rem;
+    top: 2.033333rem;
+    transform-origin: top center;
+    background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/icon10.png);
+}
+.yt_moneyTree_home .money_animation_box .icon:nth-child(2n){
+	animation-delay:.3s;
+}
+.yt_moneyTree_home .money_animation_box .icon:nth-child(3n){
+	animation-delay:.6s;
+}
+.yt_moneyTree_home .money_animation_box .animate{
+	top:100%;
+	left:7.893333rem;
+	transition: all 1s;
+}
+
+@keyframes left_right{
+	from {
+		transform:rotate(-24deg);
+	}
+	to{
+		transform:rotate(24deg);
+	}
+}
+.yt_moneyTree_home .round_box{
+	width: 32.853333rem;
+	height: 8.426667rem;
+	position: absolute;
+	top: 83%;
+	left: -8.256rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/round.png);
+	z-index: 3
+}
+
+.yt_moneyTree_home .winning_record{
+	width: 6.933333rem;
+  	height: 1.92rem;
+  	line-height: 1.578667rem;
+  	text-align: center;
+  	border-radius: 1.92rem;
+  	position: absolute;
+  	left: 50%;
+  	/*bottom: 1.066667rem;*/
+  	bottom: 1.566667rem;
+  	transform: translate3d(-50%,0,0);
+  	background-color: rgb( 191, 45, 52 );
+  	font-size: 0.853333rem;
+  	font-family: "PingFangSC";
+  	font-weight: 400;
+  	color: rgb( 253, 251, 217 );
+  	text-shadow: 1px 0.042667rem 0.149333rem rgb( 97, 0, 1 );
+  	z-index: 4
+}
+.yt_moneyTree_home .winning_record::before{
+	content: "";
+	width: 7.018667rem;
+  	height: 2.005333rem;
+  	border-radius: 1.002667rem;
+	position: absolute;
+	top: -0.170667rem;
+	left: -0.085333rem;
+	border:0.042667rem solid rgb( 228, 71, 82 );
+	background-color: rgb( 251, 173, 161 );
+}
+.yt_moneyTree_home .winning_record::after{
+	content: "";
+	width: 6.933333rem;
+  	height: 1.941333rem;
+  	border-radius: 1.002667rem;
+	position: absolute;
+	left: 0;
+	top: -0.170667rem;
+	background-image: -webkit-linear-gradient(bottom left, rgb(250,125,118) 0%, rgb(247,113,112) 9%, rgb(224,60,75) 71%, rgb(247,113,112) 95%, rgb(251,116,117) 100%);
+	background-image: -o-linear-gradient(bottom left, rgb(250,125,118) 0%, rgb(247,113,112) 9%, rgb(224,60,75) 71%, rgb(247,113,112) 95%, rgb(251,116,117) 100%);
+	background-image: linear-gradient(to top right, rgb(250,125,118) 0%, rgb(247,113,112) 9%, rgb(224,60,75) 71%, rgb(247,113,112) 95%, rgb(251,116,117) 100%);
+}
+.yt_moneyTree_home .winning_record span{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9;
+}
+
+
+.yt_moneyTree_home  .yt_moneyTree_success,
+.yt_moneyTree_home  .yt_moneyTree_error{
+	display: none;
+}
+
+
+
+
+
+
+/*中奖、未中奖弹窗*/
+.winning_red_mask .money_icon_box{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.winning_red_mask .money_icon_box .money{
+	position: absolute;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	top: -4.266667rem;
+	animation:change_top 8s linear infinite;
+	z-index: 9;
+}
+@keyframes change_top{
+	from {
+		top: -4.266667rem;
+		transform: rotate(-90deg); 
+	}
+	to{
+		top:101vh;
+		transform: rotate(90deg);
+	}
+}
+.winning_red_mask .money_icon_box .money1{
+	width: 6.08rem;
+	height: 5.802667rem;
+	left: -2.133333rem;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/icon14.png);
+}
+.winning_red_mask .money_icon_box .money2{
+	width: 1.28rem;
+	height: 0.75333rem;
+	right: 0;
+	animation-delay:.4s;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/icon11.png);
+}
+.winning_red_mask .money_icon_box .money3{
+	width: 0.789333rem;
+	height: 0.682667rem;
+	left: 0.704rem;
+	animation-delay:.8s;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/icon1.png);
+}
+.winning_red_mask .money_icon_box .money4{
+	width: 3.861333rem;
+	height: 4.544rem;
+	right:0.746667rem;
+	animation-delay:1.2s;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/icon13.png);
+}
+.winning_red_mask .money_icon_box .money5{
+	width: 1.92rem;
+	height: 1.045333rem;
+	left: 7.042667rem;
+	animation-delay:1.6s;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/icon11.png);
+}
+.winning_red_mask .money_icon_box .money6{
+	width: 1.322667rem;
+	height: 1.301333rem;
+	left: 4.266667rem;
+	animation-delay:2s;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/icon12.png);
+}
+.winning_red_mask .money_icon_box .money7{
+	width: 1.122667rem;
+    height: 1rem;
+	right: 3.733333rem;
+	animation-delay:2.4s;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/icon10.png);
+}
+.yt_moneyTree_home .winning_red_mask{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/bj2.png);
+}
+
+.yt_moneyTree_home .winning_red_mask .winning_red_box{
+	width: 16.0rem;
+	height: 19.114667rem;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate3d(-50%,-50%,0);
+	transition: all .6s;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/red3.png);
+}
+/*.yt_moneyTree_home .winning_red_mask .animateTop{
+	animation:shake 1s 1 forwards;
+}*/
+@keyframes shake{
+	0% {
+		top: -50%;
+	}
+	100% {
+		top: 50%;
+	}
+}
+.yt_moneyTree_home .winning_red_mask .winning_red_box i{
+	font-size: 1.166667rem;
+	color: #ffcc00;
+	position: absolute;
+	right: 1.042667rem;
+	top: 0.64rem
+}
+.yt_moneyTree_home .winning_red_mask .winning_red_box .red_info{
+	width: 10.410667rem;
+	position: absolute;
+	left: 50%;
+	top: 4.05333rem;
+	transform: translate3d(-49%,0,0);
+	text-align: center;
+}
+.yt_moneyTree_home .winning_red_mask .winning_red_box .red_info .title{
+	font-size: 1.28rem;
+	font-family: "PingFangSC";
+  	color: rgb( 235, 179, 110 );
+  	line-height: 1;
+  	margin-bottom: 0.746667rem;
+  	white-space:nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+.yt_moneyTree_home .winning_red_mask .winning_red_box .red_info p{
+	font-size: 0.512rem;
+	font-family: "PingFangSC";
+  	color: rgb( 108, 108, 108 );
+}
+.yt_moneyTree_home .winning_red_mask .winning_red_box .red_button{
+	width: 6.592rem;
+	height: 2.325333rem;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: absolute;
+	left: 50%;
+	bottom: 4.053333rem;
+	transform: translate3d(-50%,0,0);
+}
+.yt_moneyTree_home .yt_moneyTree_success .winning_red_box .red_button{
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/button1.png)
+}
+.yt_moneyTree_home .yt_moneyTree_error .winning_red_box .red_button{
+	/*display: none;*/
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/button2.png)
+}
+.yt_moneyTree_home .winning_red_mask .winning_red_box .red_copyright{
+	position: absolute;
+	left: 50%;
+	bottom: 2.133333rem;
+	transform: translate3d(-49%,0,0);
+	width: 12.970667rem;
+	font-size: 0.512rem;
+	color: rgb( 133, 26, 26 ); 
+	text-align: center;
+}
+.yt_moneyTree_home .winning_red_mask .winning_red_box .share_button{
+	width: 7.8rem;
+	height: 2.56rem;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: absolute;
+	left: 50%;
+	bottom: 4.233333rem;
+	transform: translate3d(-50%,0,0);
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/button3.png);
+	/*display: none;*/
+}
+.yt_moneyTree_home .winning_red_mask .winning_red_box .confirm_button{
+	width:6.592rem;
+	height: 2.197333rem;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: absolute;
+	left: 50%;
+	bottom: 4.233333rem;
+	transform: translate3d(-50%,0,0);
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/button4.png);
+	/*display: none;*/
+}
+
+/*领取红包弹窗*/
+.yt_moneyTree_home .receive_red_mask{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color:rgba(0,0,0,.8) ;
+	z-index: 100;
+	display: none
+}
+.yt_moneyTree_home .receive_red_mask .receive_red_box{
+	width: 14.464rem;
+	height: 15.594667rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat:no-repeat;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate3d(-50%,-50%,0);
+	padding-top: 5.12rem;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/red1.png)
+}
+.yt_moneyTree_home .receive_red_mask .receive_red_box p{
+	text-align: center;
+	font-size: 0.768rem;
+	background: -webkit-linear-gradient(top,#ffe5c6 0%,#ebb46f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    margin-bottom: 0.938667rem
+}
+
+
+.yt_moneyTree_home .receive_red_mask .receive_red_box input,
+.yt_moneyTree_home .receive_red_mask .receive_red_box .tijiao{
+	display: block;
+	outline: none;
+	border:none;
+	background-color: #fff;
+	width: 12.842667rem;
+	height: 2.218667rem;
+	border-radius: 0.426667rem;
+	border:0.064rem solid #cf0913;
+	margin: 0.426667rem auto;
+	text-indent: 1em;
+	font-size: 0.64rem;
+	color: rgb( 149, 149, 149 );
+}
+.yt_moneyTree_home .receive_red_mask .receive_red_box .tijiao{
+	background: -webkit-linear-gradient(#fee3c3 0%, #edb877 100%);
+	background: -o-linear-gradient(#fee3c3 0%, #edb877 100%);
+	background: linear-gradient(#fee3c3 0%, #edb877 100%); 
+	text-align: center;
+	font-size: 0.853333rem;
+	color: rgb( 251, 56, 61 );
+	text-indent:0;
+	box-shadow: 0 0.128rem 0.128rem rgba(0,0,0,.2);
+	margin-top: 0.682667rem
+}
+
+
+/*分享*/
+.yt_moneyTree_home .red_share_mask{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color:rgba(0,0,0,.8) ;
+	z-index: 100;
+	display: none;
+}
+.yt_moneyTree_home .red_share_mask .red_share_arrow{
+	width: 2.410667rem;
+	height: 4.970667rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat:no-repeat;
+	position: absolute;
+	right: 1.322667rem;
+	top: 0.97333rem;
+	animation:big .8s infinite alternate;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/arrow.png)
+}
+@keyframes big{
+	from {
+		transform: scale(1);
+	}
+	to{
+		transform: scale(1.2);
+	}
+}
+.yt_moneyTree_home .red_share_mask  .red_share_font{
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom: 14.933333rem;
+	left: 0;
+	color: rgb( 250, 209, 116 );
+	font-size: 0.768rem;
+	line-height: 1.8;
+	animation:shake2 .8s 1 forwards;
+}
+@keyframes shake2{
+	from {
+		bottom: 0;
+	}
+	to{
+		bottom: 13.33333rem;
+	}
+}
+.yt_moneyTree_home .red_share_mask  .red_share_font span{
+	color: #fff
+}
+.yt_moneyTree_home .red_share_mask .red_share_flower{
+	width: 100%;
+	height: 13.76rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat:no-repeat;
+	position: absolute;
+	left: 0;
+	bottom: -13.76rem;
+	animation:bottom .8s 1 forwards;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/flower.png)
+}
+@keyframes bottom{
+	from {
+		bottom: -13.76rem;
+	}
+	to{
+		bottom: 0;
+	}
+}
+
+/*领取红包二维码*/
+.yt_moneyTree_home .receive_red_qrCode{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color:rgba(0,0,0,.8) ;
+	z-index: 101;
+	display: none;
+}
+.yt_moneyTree_home .receive_red_qrCode .red_qrCode_box{
+	width: 100%;
+	height: 17.941333rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-position: center;
+	background-size: cover;
+	background-repeat:no-repeat;
+	animation:top .8s 1 forwards;
+	background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/red2.png)
+}
+@keyframes top{
+	from {
+		top: -17.941333rem;
+	}
+	to{
+		top: 0;
+	}
+}
+.yt_moneyTree_home .receive_red_qrCode .red_qrCode_box::before{
+	content: "";
+	width: 100%;
+	height: 8.106667rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: -webkit-linear-gradient(rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 100%);
+	background: linear-gradient(rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 100%);
+}
+.yt_moneyTree_home .receive_red_qrCode img{
+	display: block;
+	width: 6.016rem;
+	margin: 5.973333rem auto 1.066667rem auto; 
+}
+.yt_moneyTree_home .receive_red_qrCode .qrCode_info{
+	width: 12.818667rem;
+	/*height: 3.84rem;*/
+	/*border-style: dashed;
+	border-width: 1px 0;
+	border-color: rgb( 182, 182, 182 );*/
+	margin: 0 auto;
+	text-align: center;
+	/*padding-top: 0.725333rem;*/
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate3d(-50%,-25%,0);
+}
+.yt_moneyTree_home .receive_red_qrCode .qrCode_info .title{
+	font-size: 1.768rem;
+	color: #000;
+	line-height: 1;
+	margin-bottom: 2.554667rem
+}
+.yt_moneyTree_home .receive_red_qrCode .qrCode_info .number{
+	font-size:0.87333rem;
+	color: rgb( 95, 95, 95 );
+	line-height: 1;
+	margin-bottom: 0.3333rem
+}
+.yt_moneyTree_home .receive_red_qrCode .qrCode_info .tip{
+	font-size: 0.712rem;
+	color: rgb( 95, 95, 95 );
+	line-height: 1
+}
+
+
+
+
+
+
+/*中奖纪录弹窗*/
+.yt_moneyTree_home .winning_record_mask{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color:rgba(0,0,0,.8) ;
+	z-index: 100;
+	display: none;
+}
+.yt_moneyTree_home .winning_record_mask  i{
+	position: absolute;
+	/*top: 5.688rem;*/
+	top: -2.12rem;
+	right: -0.385333rem;
+	color: #ffcc00;
+	font-size: 1.28rem
+}
+.yt_moneyTree_home .winning_record_mask .winning_record_box{
+	width: 13.333333rem;
+  	height: 8.65333rem;
+  	border-radius: 0.277333rem;
+  	border:0.213333rem solid #ef3738;
+  	position: absolute;
+  	/*top: 7.68rem;*/
+  	left: 50%;
+  	top: 50%;
+  	transform: translate3d(-50%,-50%,0);
+  	
+  	background-color: #f9f9d8
+}
+.yt_moneyTree_home .winning_record_mask .winning_record_box::after{
+	content: attr(data-title); 
+	position: absolute;
+	top: -0.810667rem;
+	left: 50%;
+	transform: translate3d(-50%,0,0);
+	width: 8.405333rem;
+	height: 1.6rem;
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(http://h5.yingtaoyun.com/yingtao/wx/1809/img/title.png);
+    font-size: 0.682667rem;
+    font-family: "PingFangSC";
+  	color: rgb( 208, 42, 29 );
+  	text-align: center;
+  	line-height: 1.4rem;
+  	font-weight: 500;
+}
+
+
+.yt_moneyTree_home .winning_record_mask .winning_record_scroll_box{
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+}
+.yt_moneyTree_home .winning_record_mask .winning_record_box .row{
+	display: table;
+	width: 100%;
+	height: 1.408rem;
+	background-color: #f9f9d8;
+}
+.yt_moneyTree_home .winning_record_mask .winning_record_box .row:nth-child(even){
+	background-color: #f3eec3
+}
+.yt_moneyTree_home .winning_record_mask .winning_record_box .row div{
+	display: table-cell;
+	vertical-align: middle;
+}
+.yt_moneyTree_home .winning_record_mask .winning_record_box .row div span{
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 0.512rem;
+	color: rgb( 70, 70, 70 )
+}
+.yt_moneyTree_home .winning_record_mask .winning_record_box .row .first span{
+	width: 5.87rem;
+	text-align: center;
+}
+.yt_moneyTree_home .winning_record_mask .winning_record_box .row .second span{
+	width: 3.029333rem;
+	text-align: left;
+}
+.yt_moneyTree_home .winning_record_mask .winning_record_box .row .third span{
+	width: 3.968rem;
+	text-align: left;
+	color: rgb( 239, 55, 56 )
+}
+
+
+
+

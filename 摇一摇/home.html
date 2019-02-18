@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta charset="utf-8">
+<title>摇一摇</title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_856041_0lc99vc4efah.css">
+<link rel="stylesheet" type="text/css" href="css/app.css">
+<!-- <link rel="stylesheet" type="text/css" href="http://h5.yingtaoyun.com/yingtao/wx/1809/css/app.css"> -->
+
+</head>
+<body>
+<article>
+  <div class="yt_moneyTree_home">
+    <img src="http://h5.yingtaoyun.com/yingtao/wx/1809/img/logo.png" alt="" class="logo">
+    <div class="more_opportunity">更多摇宝机会</div>
+    <div class="wave">
+      <span><i class="iconfont icon-weixinyaoyiyaoicon"></i></span>
+      <p>当前可摇(3)次</p>
+    </div>
+    <div class="money_animation_box">
+        <i class="icon icon1"></i>
+        <i class="icon icon2"></i>
+        <i class="icon icon3"></i>
+        <i class="icon icon4"></i>
+        <i class="icon icon5"></i>
+        <i class="icon icon6"></i>
+        <i class="icon icon7"></i>
+        <i class="icon icon8"></i>
+        <i class="icon icon9"></i>
+        <i class="icon icon10"></i>
+    </div>
+    <div class="round_box"></div>
+    <div class="winning_record">
+      <span>我的中奖记录</span>
+    </div>
+    <!-- 中奖弹窗 -->
+    <div class="yt_moneyTree_success winning_red_mask">
+        <div class="money_icon_box">
+            <div class="money money1"></div>
+            <div class="money money2"></div>
+            <div class="money money3"></div>
+            <div class="money money4"></div>
+            <div class="money money5"></div>
+            <div class="money money6"></div>
+            <div class="money money7"></div>
+        </div>
+        <div class="winning_red_box animateTop">
+            <i class="iconfont icon-guanbi1"></i>
+            <div class="red_info">
+                <div class="title">888元</div>
+                <p>恭喜您获得大城小爱送出的红包</p>
+                <p>快点击领取吧</p>
+            </div>
+            <div class="red_button"></div>
+            <div class="red_copyright">
+              <p>本次活动由大城小爱婚纱影楼为您奉上</p>
+              <p>如有疑问可联系客服</p>
+            </div>
+        </div>
+    </div>
+    <!-- 未中奖弹框 -->
+    <div class="yt_moneyTree_error winning_red_mask">
+        <div class="money_icon_box">
+            <div class="money money1"></div>
+            <div class="money money2"></div>
+            <div class="money money3"></div>
+            <div class="money money4"></div>
+            <div class="money money5"></div>
+            <div class="money money6"></div>
+            <div class="money money7"></div>
+        </div>
+        <div class="winning_red_box animateTop">
+            <i class="iconfont icon-guanbi1"></i>
+            <div class="red_info">
+                <div class="title">谢谢参与</div>
+                <p>您没有摇中奖品</p>
+                <p>再试一次吧</p>
+            </div>
+            <div class="red_button"></div>
+            <div class="red_copyright">
+              <p>本次活动由大城小爱婚纱影楼为您奉上</p>
+              <p>如有疑问可联系客服</p>
+            </div>
+        </div>
+    </div>
+    <!-- 领取红包 -->
+    <div class="receive_red_mask">
+      <div class="receive_red_box">
+          <p>恭喜获得888元红包</p>
+          <form action=""  method="post" onSubmit="return vad()">
+              <input type="text" id="name" value="" placeholder="请输入姓名">
+              <input type="text" id="mobile" value="" placeholder="请输入电话">
+              <button class="tijiao">立即领取代金券</button>
+          </form>
+      </div>
+    </div>
+    <!-- 领取红包二维码 -->
+    <div class="receive_red_qrCode">
+      <div class="red_qrCode_box">
+          <!-- <img src="http://h5.yingtaoyun.com/yingtao/wx/1809/img/qr.png" alt=""> -->
+          <div class="qrCode_info">
+              <div class="title">领取成功</div>
+              <p class="number">红包来了</p>
+              <p class="number">本次活动有樱桃互动为您奉上</p>
+              <p class="tip">如何疑问可联系客服</p>
+          </div>
+      </div>
+    </div>
+    <!-- 分享获得机会 -->
+    <div class="red_share_mask">
+      <div class="red_share_arrow"></div>
+      <div class="red_share_font">
+          <p>点击这里</p>
+          <p>分享到<span>朋友圈</span>或者发给<span>小伙伴</span></p>
+          <p>获得更多摇宝机会</p>
+          <p>更多给力礼品</p>
+      </div>
+      <div class="red_share_flower"></div>
+    </div>
+    <!-- 中奖纪录弹框 -->
+    <div class="winning_record_mask">
+        
+        <div class="winning_record_box" data-title="中奖纪录">
+          <i class="iconfont icon-guanbi1"></i>
+          <div class="winning_record_scroll_box">
+            <div class="row"></div>
+            <div class="row">
+              <div class="first"><span>2018-09-21</span></div>
+              <div class="second"><span>摇宝</span></div>
+              <div class="third"><span>888元红包</span></div>
+            </div>
+            <div class="row">
+              <div class="first"><span>2018-09-21</span></div>
+              <div class="second"><span>摇宝</span></div>
+              <div class="third"><span>50元优惠券</span></div>
+            </div>
+            <div class="row">
+              <div class="first"><span>2018-09-21</span></div>
+              <div class="second"><span>摇宝</span></div>
+              <div class="third"><span>50元优惠券</span></div>
+            </div>
+            <div class="row">
+              <div class="first"><span>2018-09-21</span></div>
+              <div class="second"><span>摇宝</span></div>
+              <div class="third"><span>五折优惠券</span></div>
+            </div>
+            <div class="row">
+              <div class="first"><span>2018-09-21</span></div>
+              <div class="second"><span>摇宝</span></div>
+              <div class="third"><span>萌兔玩偶</span></div>
+            </div>
+            <div class="row">
+              <div class="first"><span>2018-09-21</span></div>
+              <div class="second"><span>摇宝</span></div>
+              <div class="third"><span>萌兔玩偶</span></div>
+            </div>
+            <div class="row">
+              <div class="first"><span>2018-09-21</span></div>
+              <div class="second"><span>摇宝</span></div>
+              <div class="third"><span>888元红包</span></div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <!-- 音频 -->
+  <audio id="myAudio">
+    <source src="http://h5.yingtaoyun.com/yingtao/wx/1809/img/金币.mp3">
+  </audio>  
+</article>
+
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script> 
+<script>
+  function vad(){
+    return false;
+  }
+  
+  var isSatisfy = true //是否满足触发摇动条件
+  var length = $(".icon").length; //获取摇动金币的个数
+  var audio = document.getElementById("myAudio"); //音频
+  var u = navigator.userAgent;        
+  var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); 
+  var money = 10; //0~10元
+
+// 分享获得次数
+$(".more_opportunity").on("click",function(){
+  $(".red_share_mask").slideDown()
+})
+$(".red_share_mask").on("click",function(){
+  $(".red_share_mask").slideUp()
+})
+// 领取红包二维码
+$(".receive_red_qrCode").on("click",function(){
+  $(".receive_red_qrCode").slideUp()
+})
+// 中奖/未中奖弹窗关闭
+  $(".winning_red_mask .winning_red_box i,.winning_red_mask .red_button").on("click",function(){
+    $(this).parent().removeClass("animateTop")
+    $(this).parent().parent().hide()
+  })
+//领取红包
+$(".yt_moneyTree_success .red_button").on("click",function(){
+  $(".receive_red_mask").show()
+})
+$(".receive_red_mask").on("click",function(){
+  $(".receive_red_mask").hide()
+})
+$(".receive_red_box").on("click",function(e){
+  e.stopPropagation();
+})
+// 领取代金券按钮
+$(".tijiao").on("click",function(){
+  var name = $("#name").val();
+  var mobile = $("#mobile").val();
+  var reg = /^[1][3-9]\d{9}$|^([6|9|5])\d{7}$|^[0][9]\d{8}$|^[6]([8|6])\d{5}$/;
+  if(name == null || name == ''){
+    alert("请填写姓名")
+    return false
+  }
+  if(mobile == null || mobile == ''){
+    alert("请填写电话")
+    return false
+  }else if(!reg.test(mobile)){
+    alert("电话格式不正确")
+    return false
+  }
+  //提交成功
+  $(".receive_red_mask").hide()
+  $(".receive_red_qrCode").slideDown()
+})
+
+// 中奖纪录弹窗显示
+$(".winning_record").on("click",function(){
+  $(".winning_record_mask").slideDown()
+})
+$(".winning_record_mask i") .on("click",function(){
+  $(".winning_record_mask").slideUp()
+})
+
+ 
+
+//判断是否是ios(ios第一次无法正常播放)
+  if(isiOS){
+    document.addEventListener("WeixinJSBridgeReady", function () {
+      audio.currentTime=0;
+      audio.play(); 
+      setTimeout(function(){
+        audio.pause();
+      },100) 
+    }, false); 
+  }
+
+
+  var SHAKE_SPEED = 200;
+  var isAnimated = false;
+  var lastTime = 0;//上次变化的时间
+  var x = y = z = lastX = lastY = lastZ = 0;//位置变量初始化
+
+  function  motionHandler(event) {
+    // 弹窗出现不允许你摇动触发start
+    var obj1 = $(".yt_moneyTree_success").css("display");
+    var obj2 = $(".yt_moneyTree_error").css("display");
+    var obj3 = $(".receive_red_mask").css("display");
+    var obj4 = $(".receive_red_qrCode").css("display");
+    var obj5 = $(".red_share_mask").css("display");
+    var obj6 = $(".winning_record_mask").css("display");
+    if(obj1=='none' && obj2=='none' && 
+      obj3=='none' && obj4=='none' &&
+      obj5=='none' && obj6=='none'){
+      isSatisfy = true
+    }else{
+      isSatisfy = false
+    }
+    // 弹窗出现不允许你摇动触发end
+
+    var acceleration = event.accelerationIncludingGravity; //捕捉重力加速度
+    var curTime = Date.now();//取得当前时间
+    if ((curTime - lastTime) > 120) {
+      var diffTime = curTime - lastTime;
+      lastTime = curTime;
+      x = acceleration.x;
+      y = acceleration.y;
+      z = acceleration.z;
+      //计算摇动速度
+      var speed = Math.abs(x + y + z - lastX - lastY - lastZ) / diffTime * 1000;
+      if (speed > SHAKE_SPEED && isSatisfy) {
+        vibration();
+      }
+      lastX = x;
+      lastY = y;
+      lastZ = z;
+    }
+  }
+  function vibration(){
+    if(!isAnimated){
+      //播放金币音乐
+      isAnimated = true 
+      audio.currentTime=0;
+      audio.play(); 
+      //震动
+      var supportsVibrate = "vibrate" in navigator;
+      if(supportsVibrate){
+        navigator.vibrate(300);
+      }
+      setTimeout(function(){ //1秒之后金币音乐停止
+        audio.pause();
+        isAnimated = false 
+        var number = Math.floor(Math.random()*length); 
+        var num = (Math.random()*money).toFixed(1);
+        $(".money_animation_box").addClass("tree");
+        setTimeout(function(){
+          $(".icon").eq(number).addClass("animate");
+        },1100)
+        setTimeout(function(){
+          if(num>0){
+            $(".yt_moneyTree_success").show()
+            $(".yt_moneyTree_success .red_info .title").html(num)
+            $(".yt_moneyTree_success .winning_red_box").addClass("animateTop")
+          }else{
+            $(".yt_moneyTree_error").show()
+            $(".yt_moneyTree_error .winning_red_box").addClass("animateTop")
+          }
+          $(".icon").eq(number).removeClass("animate")
+          $(".money_animation_box").removeClass("tree");
+        },2100)
+      },1000)
+    }        
+  }
+  if(window.DeviceMotionEvent) {
+    window.addEventListener('devicemotion', motionHandler, false);
+  }
+</script>
+
+
+</body>
+</html>

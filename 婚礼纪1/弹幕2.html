@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+  <title>jQuery.danmu.js  jQuery弹幕插件</title>
+<!--  <link rel="stylesheet" href="css/barrager.css" />-->
+  <style>
+    .ctr {
+      margin-top: 300px;
+    }
+  </style>
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/jquery.danmu.min.js"></script>
+</head>
+
+<body>
+	<div id="danmu"></div>
+
+<!--控制区-->
+<div class="ctr" >
+  显示弹幕:<input type='checkbox' checked='checked' id='ishide' value='is' onchange='changehide()'> 
+  发弹幕:
+  <input type="textarea" id="text" max=300 />
+  <button type="button"  onclick="send()">发送</button>
+</div>
+<script>
+  //初始化
+  $("#danmu").danmu({
+    left:0,
+    top:0,
+    height:33,
+    width:100,
+    speed:15000,
+    opacity:1,
+    fontSizeSmall:12,
+    FontSizeBig:30,
+    topBottonDanmuTime:1000,
+    SubtitleProtection:true,     //是否字幕保护
+		positionOptimize:false,  
+		maxCountInScreen: 10,   //屏幕上的最大的显示弹幕数目,弹幕数量过多时,优先加载最新的。
+		maxCountPerSec: 100,
+		sumTime: 2000
+  });
+  
+  
+  query();//  从后端获取弹幕并添加
+
+    //一个定时器，监视弹幕时间并更新到页面上
+  function timedCount(){
+    $("#time").text($('#danmu').data("nowTime"));
+    t=setTimeout("timedCount()",50)
+  }
+  timedCount();
+
+  function resumer(){
+    $('#danmu').danmu('danmuResume');
+  }
+  resumer()
+
+
+  //从后端获取到弹幕并添加
+  function query() {
+  	var array = [
+	{ text:"这是滚动弹幕" ,size:0,position:0,time:2},
+	{ text:"这是顶部弹幕" ,size:0,position:0,time:10},
+	{ text:"这是底部弹幕" ,size:0,position:0,time:20},
+	{ text:"这是底部弹幕" ,size:0,position:0,time:30},
+	{ text:"这是底部弹幕" ,size:0,position:0,time:40},
+	{ text:"这是底部弹幕" ,size:0,position:0,time:50},
+	{ text:"这是底部弹幕" ,size:0,position:0,time:60},
+	{ text:"这是底部弹幕" ,size:0,position:0,time:70},
+	{ text:"这是底部弹幕" ,size:0,position:0,time:80},
+	{ text:"这是底部弹幕" ,size:0,position:0,time:90},
+]
+  	 $('#danmu').danmu("addDanmu",array);
+  }
+  //发送弹幕
+  function send(){
+    var text = document.getElementById('text').value;
+    var time = $('#danmu').data("nowTime")+1;
+    var size = 12;
+    var position = 0;
+     var text_obj='{ "text":"'+text+'","size":"'+size+'","position":"'+position+'","time":'+time+'}';
+//  $.post("stone.php",{danmu:text_obj});
+    var text_obj='{"text":"'+text+'","size":"'+size+'","position":"'+position+'","time":'+time+',"isnew":""}';
+    var new_obj=eval('('+text_obj+')');
+    $('#danmu').danmu("addDanmu",new_obj);
+    document.getElementById('text').value='';
+  }
+
+  //调隐藏 显示
+function changehide() {
+    if (document.getElementById("ishide").checked) {
+      $("#danmu").danmu("setOpacity",1)
+    } else {
+      $("#danmu").danmu("setOpacity",0)
+    }
+}
+
+setInterval(function(){
+	console.log("aa")
+	$('#danmu').danmu('danmuStop');
+	$('#danmu').danmu('danmuStart');
+},10000)
+
+</script>
+
+</body>
+</html>

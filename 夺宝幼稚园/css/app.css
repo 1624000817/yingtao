@@ -1,0 +1,1487 @@
+﻿
+
+*, *:before, *:after{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+	}
+::-webkit-scrollbar{
+	display:none;
+	}
+body,figure,p,ul,ol,h2{
+	margin:0;
+	padding: 0;
+	}
+
+article{
+	overflow: hidden;
+	width: 100%;
+	height: 100%
+	}
+a{
+	text-decoration:none
+	}
+button,a{
+	-webkit-tap-highlight-color:rgba(0,0,0,0)
+	}
+ul,ol{
+	padding:0;
+	list-style: none
+
+	}
+i{
+	font-size:1.05rem;
+	}
+body{
+	margin:0;
+	background-color:#ebebeb;
+	overflow-x: hidden;
+	}
+
+
+*, *:before, *:after{
+	margin: 0;
+	padding: 0;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+	}
+.swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+.swiper-pagination-bullet{
+	background-color: rgb(255,255,255);
+	opacity: 0.702;
+	outline: none
+}
+
+.swiper-pagination-bullet-active{
+	opacity: 1;
+	background-color: #fff;
+}
+.Indiana_Jones_kindergarten_home{
+	display: block;
+	width: 100%;
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.Indiana_Jones_kindergarten_home img{
+	width: 100%;
+}
+.Indiana_Jones_kindergarten_index .swiper-container{
+	height: 10.346667rem
+}
+.Indiana_Jones_kindergarten_index .swiper-container .swiper-slide{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.Indiana_Jones_kindergarten_index .divider{
+	height: 0.192rem;
+	background-color: #82cdef;
+}
+.Indiana_Jones_kindergarten_index .group_name{
+	background-color: #fff;
+	height: 1.877333rem;
+	line-height:  1.877333rem;
+	box-shadow: 1px 0.042667rem 0.064rem rgba( 35, 2, 12,.4 );
+	position: relative;
+	padding-right: 0.554667rem;
+}
+.Indiana_Jones_kindergarten_index .group_name .status{
+	width: 3.413333rem;
+	height: 0.810667rem;
+	line-height: 0.810667rem;
+	background-color: #82cdef;
+	border-radius: 0 0.405333rem 0.405333rem 0;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translate3d(0,-50%,0);
+	text-align: center;
+	color: #fff;
+	font-size: 0.469333rem
+}
+.Indiana_Jones_kindergarten_index .group_name .status_no{
+	background-color: #b0b0b0
+}
+.Indiana_Jones_kindergarten_index .group_name .status img{
+	vertical-align: middle;
+	width: 0.618667rem;
+	margin-right: 0.170667rem
+}
+.Indiana_Jones_kindergarten_index .group_name .name{
+	display: inline-block;
+	vertical-align: middle;
+	color: rgb( 44, 44, 44 );
+	font-size: 0.810667rem;
+	margin-left: 3.84rem;
+	font-weight: bolder;
+}
+.Indiana_Jones_kindergarten_index .group_name .price_box{
+	display: inline-block;
+	vertical-align: middle;
+	float: right;
+}
+.Indiana_Jones_kindergarten_index .group_name .price_box>*{
+	display: inline-block;
+	vertical-align: middle;
+}
+.Indiana_Jones_kindergarten_index .group_name .price_box sub{
+	font-size: 0.469333rem;
+	color: rgb( 44, 44, 44 );
+}
+.Indiana_Jones_kindergarten_index .group_name .price_box sub i,
+.Indiana_Jones_kindergarten_index .group_name .price_box b{
+	font-style: normal;
+	color: rgb( 255, 171, 24 );
+}
+.Indiana_Jones_kindergarten_index .group_name .price_box sub i{
+	font-size: 0.426667rem;
+	margin-left: 0.128rem
+}
+.Indiana_Jones_kindergarten_index .group_name .price_box b{
+	font-size: 1.024rem;
+}
+.Indiana_Jones_kindergarten_index .countdown_box{
+	width: 100%;
+	height: 8.661333rem;
+	background-color: #f2f4f6;
+	padding-top: 0.426667rem
+}
+.Indiana_Jones_kindergarten_index .countdown_box .countdown_pic{
+	width: 14.976rem;
+	height: 6.016rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin:0 auto;
+	position: relative;
+}
+.Indiana_Jones_kindergarten_index .countdown_box .countdown_pic .day{
+	position: absolute;
+	width: 2.048rem;
+	height: 1.493333rem;
+	line-height: 1.493333rem;
+	text-align: center;
+	letter-spacing: 0.513333rem;
+	font-size: 0.981333rem;
+	padding-left: 0.185333rem;
+	color: #fff;
+	left: 2.348rem;
+	bottom: 2.54rem;
+}
+.Indiana_Jones_kindergarten_index .countdown_box .countdown_pic .time{
+	position: absolute;
+	width: 2.048rem;
+	height: 1.493333rem;
+	line-height: 1.493333rem;
+	text-align: center;
+	letter-spacing: 0.513333rem;
+	font-size: 0.981333rem;
+	padding-left: 0.185333rem;
+	color: #fff;
+	left: 4.998rem;
+	bottom: 2.54rem;
+}
+.Indiana_Jones_kindergarten_index .countdown_box .countdown_pic .points{
+	position: absolute;
+	width: 2.048rem;
+	height: 1.493333rem;
+	line-height: 1.493333rem;
+	text-align: center;
+	letter-spacing: 0.513333rem;
+	font-size: 0.981333rem;
+	padding-left: 0.185333rem;
+	color: #fff;
+	left: 7.68rem;
+	bottom: 2.54rem;
+
+}
+.Indiana_Jones_kindergarten_index .countdown_box .countdown_pic .seconds{
+	position: absolute;
+	width: 2.048rem;
+	height: 1.493333rem;
+	line-height: 1.493333rem;
+	text-align: center;
+	letter-spacing: 0.513333rem;
+	font-size: 0.981333rem;
+	padding-left: 0.185333rem;
+	color: #fff;
+	left: 10.338rem;
+	bottom: 2.54rem;
+}
+.Indiana_Jones_kindergarten_index .countdown_box .tips{
+	width: 12.842667rem;
+	height: 0.682667rem;
+	line-height: 0.882667rem;
+	text-align: center;
+	margin: 0.128rem auto 0 auto;
+	background-color: rgb( 227, 227, 227 );
+	border-radius: 0.341333rem;
+	font-size: 0.384rem
+}	
+.Indiana_Jones_kindergarten_index .shoop_detail,
+.Indiana_Jones_kindergarten_index .red_list,
+.Indiana_Jones_kindergarten_index .award_detail,
+.Indiana_Jones_kindergarten_index .instructions_detail{
+	background-color: #fff;
+	box-shadow: 0px 0.064rem 0.128rem 0px rgba( 67, 67, 67,.2 );
+	margin-bottom: 0.426667rem;
+}
+.Indiana_Jones_kindergarten_index .shoop_detail .shoop_title,
+.Indiana_Jones_kindergarten_index .red_list .red_title,
+.Indiana_Jones_kindergarten_index .award_detail .award_title,
+.Indiana_Jones_kindergarten_index .instructions_detail .instructions_title,
+.Indiana_Jones_kindergarten_share .performance_box .performance_title{
+	height: 1.365333rem;
+	line-height: 1.365333rem;
+	text-align: center;
+	box-shadow: 0px 0.064rem 0.128rem 0px rgba( 67, 67, 67,.4 );
+	color: rgb( 44, 44, 44 );
+	font-size: 0.725333rem
+}
+.Indiana_Jones_kindergarten_index .shoop_detail .shoop_title img{
+	height: 0.725333rem;
+	vertical-align: middle;
+	margin-right: 0.213333rem
+}
+.Indiana_Jones_kindergarten_index .shoop_detail .shoop_title_box{
+	width: 100%;
+	height: auto;
+	padding:0.96rem 0.746667rem 1.173333rem 0.746667rem;
+}
+.Indiana_Jones_kindergarten_index .shoop_detail .shoop_title_box b{
+	display: block;
+	color: rgb( 44, 44, 44 );
+	font-size: 0.725333rem;
+	line-height: 1;
+	margin-bottom: 0.64rem;
+	padding-left: 0.341333rem;
+	position: relative;
+}
+.Indiana_Jones_kindergarten_index .shoop_detail .shoop_title_box b::before{
+	content: "";
+	width: 0.128rem;
+	height: 0.682667rem;
+	background-color: rgb( 107, 205, 249 );
+  	position: absolute;
+  	left: 0;
+  	top: 0
+}
+.Indiana_Jones_kindergarten_index .shoop_detail .shoop_title_box .pic_box{
+	width: 100%;
+	height: 8.533333rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-bottom: 0.64rem;
+}
+.Indiana_Jones_kindergarten_index .shoop_detail .shoop_title_box p{
+	color: rgb( 44, 44, 44 );
+	font-size: 0.533333rem;
+	line-height: 0.938667rem
+}
+.Indiana_Jones_kindergarten_index .red_list .red_title img,
+.Indiana_Jones_kindergarten_share .performance_box .performance_title img{
+	vertical-align: middle;
+	margin-right: 0.213333rem;
+	width: 0.746667rem
+}
+.Indiana_Jones_kindergarten_index .red_list .red_scroll{
+	width: 100%;
+	height: 10.161333rem;
+	overflow: hidden;
+	box-shadow: 0px 0.055556rem 0.055556rem 0px rgb( 98, 98, 98,.5 );
+}
+.Indiana_Jones_kindergarten_index .red_list .red_scroll .scroll_box{
+	padding:0  0.533333rem
+}
+.Indiana_Jones_kindergarten_index .red_list .red_scroll .scroll_box .box_list{
+	height: 3.413333rem;
+	border-bottom: 1px solid rgb( 238, 238, 238 );
+	padding: 0.896rem 0
+}
+.Indiana_Jones_kindergarten_index .red_list .red_scroll .scroll_box .box_list>*{
+	display: inline-block;
+	vertical-align: middle;
+
+}
+.Indiana_Jones_kindergarten_index .red_list .red_scroll .scroll_box .box_list .avatar_box{
+	width: 1.621333rem;
+	height: 1.621333rem;
+	border-radius: 50%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-right: 0.213333rem
+}
+.Indiana_Jones_kindergarten_index .red_list .red_scroll .scroll_box .box_list .text_box{
+	width: 62%
+}
+.Indiana_Jones_kindergarten_index .red_list .red_scroll .scroll_box .box_list .text_box .name{
+	color: rgb( 44, 44, 44 );
+	font-size: 0.64rem
+}
+.Indiana_Jones_kindergarten_index .red_list .red_scroll .scroll_box .box_list .text_box .number{
+	font-size: 0.533333rem;
+	color: rgb( 44, 44, 44 );
+}
+.Indiana_Jones_kindergarten_index .red_list .red_scroll .scroll_box .box_list .text_box .number span{
+	color: #ffd180
+}
+.Indiana_Jones_kindergarten_index .red_list .red_scroll .scroll_box .box_list .text_box .number img{
+	width: 0.746667rem;
+	vertical-align: middle;
+}
+.Indiana_Jones_kindergarten_index .red_list .red_scroll .scroll_box .box_list a{
+	width: 3.477333rem;
+	height: 1.066667rem;
+	line-height: 1.066667rem;
+	background-color: rgb( 107, 205, 249 );
+	color: #fff;
+	font-size: 0.469333rem;
+	vertical-align: bottom;
+	padding-left: 0.32rem;
+	position: relative;
+}
+.Indiana_Jones_kindergarten_index .red_list .red_scroll .scroll_box .box_list a::after{
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	border-left:0.234667rem solid #fff;  
+    border-right:0.234667rem solid transparent;  
+    border-bottom:0.234667rem solid transparent;
+    border-top:0.234667rem solid transparent;
+    top: 50%;
+    right: 0;
+    transform: translate3d(0,-50%,0);
+}
+
+.Indiana_Jones_kindergarten_index .award_detail .award_title img{
+	width: 0.597333rem;
+	vertical-align: middle;
+	margin-right: 0.213333rem;
+}
+.Indiana_Jones_kindergarten_index .award_detail .award_box{
+	padding: 0.682667rem;
+}
+.Indiana_Jones_kindergarten_index .award_detail .award_box p{
+	height: 1.408rem;
+	line-height: 1.408rem;
+	padding-left: 0.512rem;
+	color: rgb( 44, 44, 44 );
+	font-size: 0.725333rem;
+	position: relative;
+}
+.Indiana_Jones_kindergarten_index .award_detail .award_box p::before{
+	content: "";
+    width: 0.128rem;
+    height: 0.682667rem;
+    background-color: rgb( 107, 205, 249 );
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate3d(0,-50%,0);
+}
+.Indiana_Jones_kindergarten_index .instructions_detail .instructions_title img{
+	width: 0.64rem;
+	vertical-align: middle;
+	 margin-right: 0.213333rem;
+}
+.Indiana_Jones_kindergarten_index .instructions_detail .instructions_box{
+	padding: 0.64rem;
+	/*margin-bottom:3.82667rem;*/
+}
+.Indiana_Jones_kindergarten_index .instructions_detail .instructions_box .instructions_list b{
+	display: block;
+	color: rgb( 44, 44, 44 );
+	font-size: 0.725333rem;
+	font-weight: normal;
+	padding-left: 0.512rem;
+	line-height: 1.28rem;
+	position: relative;
+}
+.Indiana_Jones_kindergarten_index .instructions_detail .instructions_box .instructions_list b::before{
+	content: "";
+    width: 0.128rem;
+    height: 0.682667rem;
+    background-color: rgb( 107, 205, 249 );
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate3d(0,-50%,0);
+}
+.Indiana_Jones_kindergarten_index .instructions_detail .instructions_box .instructions_list div{
+	font-size: 0.533333rem;
+	color: rgb( 44, 44, 44 );
+	line-height: 0.853333rem
+}
+.Indiana_Jones_kindergarten_index .instructions_detail .instructions_box .instructions_list p{
+	font-size: 0.512rem;
+	color: rgba( 44, 44, 44,.9);
+	margin-bottom: 0.426667rem
+}
+.Indiana_Jones_kindergarten_index .instructions_detail .instructions_box .small_tip{
+	font-size: 0.341333rem;
+	margin-top: 1.493333rem
+}
+.Indiana_Jones_kindergarten_index .btn_box{
+	width: 100%;
+	height: 2.282667rem;
+	line-height: 2.282667rem;
+	background-color: rgb( 107, 205, 249 );
+	display: block;
+	margin-top: 1.066667rem;
+	position: fixed;
+	bottom: 0;
+	left: 0
+}
+.Indiana_Jones_kindergarten_index .btn_box_no{
+	text-align: center;
+	background-color: rgb( 176, 176, 176 );
+  	box-shadow: 0px 0.106667rem 0.192rem 0px rgb( 0, 52, 76 );
+  	color: #fff;
+  	font-size: 0.810667rem
+}
+.Indiana_Jones_kindergarten_index .btn_box_lucky{
+	font-size: 0.64rem;
+	color: #fff;
+	padding-left: 4.266667rem;
+	/*position: relative;*/
+	line-height: 2.682667rem;
+}
+.Indiana_Jones_kindergarten_index .btn_box_lucky img{
+	vertical-align: middle;
+	margin-right: 0.213333rem;
+	width: 0.725333rem;
+}
+.Indiana_Jones_kindergarten_index .btn_box_lucky .bubbles{
+	display: inline;
+	padding: 0 0.213333rem;
+	height: 0.597333rem;
+	line-height: 0.697333rem;
+	border-radius: 1.213333rem;
+	font-size: 0.341333rem;
+	color: #6bcdf9;
+	float: none;
+	background-color: #fff;
+	position: absolute;
+	top: 0.170667rem;
+	right: 0.426667rem;
+}
+.Indiana_Jones_kindergarten_index .btn_box_lucky .bubbles::before{
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	border-width: 0px 0.213333rem 0.256rem 0.256rem; 
+	border-style: none solid solid; 
+	border-color: transparent transparent #fff;
+    bottom: 0;
+    left: -0.12333rem;
+    transform: rotate(-22deg);
+
+}
+
+.Indiana_Jones_kindergarten_index .btn_box_lucky .lucky_box{
+	width:7.189333rem;
+	height:3.428rem;
+	position: absolute;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: right;
+	font-size: 0.64rem;
+	color: #fff;
+	left: -3.2rem;
+	top: -0.15333rem;
+	padding-right: 1.366667rem
+}
+
+
+.Indiana_Jones_kindergarten_index .btn_box div{
+	display: inline-block;
+	float: left;
+}
+.Indiana_Jones_kindergarten_index .btn_box .left{
+	width: 10.788rem;
+	height: 100%;
+	border-radius: 0 0.085333rem 0.085333rem 0;
+	box-shadow: 0px  0 0.042667rem rgba( 0, 52, 76,.5 );
+	color: #fff;
+	font-size: 0.810667rem;
+	text-align: center;
+}
+.Indiana_Jones_kindergarten_index .btn_box .left b{
+	font-size: 0.853333rem
+}
+.Indiana_Jones_kindergarten_index .btn_box .left sub{
+	bottom: 0px;
+}
+.Indiana_Jones_kindergarten_index .btn_box .right{
+	width: 5.198667rem;
+	height: 100%;
+	border-radius:  0.085333rem 0 0 0.085333rem ;
+	box-shadow: 0px 0 0.042667rem rgba( 0, 52, 76,.5 );
+	font-size: 0.533333rem;
+	color: #fff;
+	text-align: center;
+	background-color: #faa411;
+}
+
+.Indiana_Jones_kindergarten_index .mask_box{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,.6);
+	top: 0;
+	left: 0;
+	z-index: 9
+}
+.Indiana_Jones_kindergarten_index .mask_box .model{
+	width: 12.544rem;
+	height: 15.061333rem;
+	border-radius: 0.213333rem;
+	background-color: rgb( 255, 255, 255 );
+	position: absolute;
+	top: 6.186667rem;
+	left: 50%;
+	transform: translate3d(-50%,0,0);
+}
+.Indiana_Jones_kindergarten_index .mask_box .model .model_close{
+	position: absolute;
+	top: -4.266667rem;
+	left: 50%;
+	transform: translate3d(-50%,0,0);
+	color: #fff;
+	width: 1.706667rem;
+	height: 1.706667rem;
+	line-height: 1.706667rem;
+	text-align: center;
+}
+.Indiana_Jones_kindergarten_index .mask_box .model .model_close i{
+	font-size:1.28rem;
+}
+.Indiana_Jones_kindergarten_index .mask_box .model .model_title{
+	width: 12.650667rem;
+	height: 3.84rem;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-top: -1.92rem
+}
+.Indiana_Jones_kindergarten_index .mask_box .model .model_content{
+	width: 100%;
+	height: 9.3rem;
+	overflow: auto;
+}
+.Indiana_Jones_kindergarten_index .mask_box .model .model_content .model_scroll_text p{
+	line-height: 1.38rem;
+	text-align: center;
+	font-size:0.938667rem ;
+	color: #a6a6a6;
+}
+
+.Indiana_Jones_kindergarten_index .mask_box .model  .model_btn{
+	width: 9.898667rem;
+	height: 1.706667rem;
+	line-height: 1.706667rem;
+	text-align: center;
+	border-radius: 0.085333rem;
+	background-color: rgb( 107, 205, 249 );
+  	box-shadow: 0px 0.106667rem 0.192rem 0px rgba( 0, 52, 76,.4 );
+  	margin: 1.109333rem auto;
+  	font-size: 0.981333rem;
+  	color: #fff;
+  	letter-spacing: 0.128rem
+}
+.Indiana_Jones_kindergarten_index .my_red_box{
+	margin-bottom:0.426667rem;
+	background-color: #fff;
+	/*padding:0 0.533333rem;*/
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_title{
+	height: 2.901333rem;
+	box-shadow: 0px 0.064rem 0.128rem 0px rgba( 67, 67, 67,.4 );
+	padding:0 0.853333rem;
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_title .avatar_box{
+	display: inline-block;
+	width: 1.877333rem;
+	height: 1.877333rem;
+	border-radius: 50%;
+	vertical-align: middle;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-right: 0.213333rem
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_title .my_munber_box{
+	display: inline-block;
+	vertical-align: middle;
+	width: 84%;
+	height: 100%;
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_title .my_munber_box p{
+	height: 0.938667rem;
+	line-height: 0.938667rem;
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_title .my_munber_box .title{
+	border-bottom: 1px solid rgb( 229, 229, 229 );
+	font-size: 0.64rem;
+	color: rgb( 44, 44, 44 );
+	font-weight: bold;
+	height: 1.536rem;
+	line-height: 1.536rem
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_title .my_munber_box .title span{
+	font-size: 0.554667rem;
+	display: inline-block;
+	vertical-align: top;
+	float: right;
+	font-weight: normal;
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_title .my_munber_box .title span img{
+	width: 0.746667rem;
+	vertical-align: middle;
+	margin-right: 0.166667rem;
+	margin-top: -0.166667rem
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_title .my_munber_box .number{
+	color: rgb( 44, 44, 44 );
+	font-size: 0.469333rem;
+	height: 1.28rem;
+	line-height: 1.28rem
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_title .my_munber_box .number a{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0.384rem;
+	color: #fff;
+	width: 3.285333rem;
+	height: 0.810667rem;
+	line-height: 0.810667rem;
+	background-color: rgb( 107, 205, 249 );
+	padding-left: 0.384rem;
+	position: relative;
+	float: right;
+	margin-top:0.095333rem;
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_title .my_munber_box .number a::after{
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	border-left:0.213333rem solid #fff;  
+    border-right:0.213333rem solid transparent;  
+    border-bottom:0.213333rem solid transparent;
+    border-top:0.213333rem solid transparent;
+    top: 50%;
+    right: 0;
+    transform: translate3d(0,-50%,0);
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_detail_box{
+	box-shadow: 0px 0.064rem 0.128rem 0px rgba( 67, 67, 67,.4 );
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_detail_box i{
+	display: block;
+	text-align: center;
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_detail_box .my_red_detail_title{
+	width: 8.426667rem;
+	font-size: 0.405333rem;
+	color: rgb( 183, 183, 183 );
+	text-align: center;
+	margin: 0.512rem auto 0.32rem auto;
+	position: relative;
+}	
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_detail_box .my_red_detail_title::before{
+	content: "";
+	width: 3.776rem;
+	height: 1px;
+	background-color: rgb( 183, 183, 183 );
+  	position: absolute;
+  	left: -3.776rem;
+  	top: 50%;
+  	transform: translate3d(0,-50%,0);
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_detail_box .my_red_detail_title::after{
+	content: "";
+	width: 3.776rem;
+	height: 1px;
+	background-color: rgb( 183, 183, 183 );
+  	position: absolute;
+  	right: -3.776rem;
+  	top: 50%;
+  	transform: translate3d(0,-50%,0);
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_scroll{
+	width: 100%;
+	max-height: 10.88rem;
+	padding: 0 0.64rem;
+	overflow: auto;
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_scroll .my_red_list{
+	height: 3.626667rem;
+	border-bottom: 1px solid rgb( 238, 238, 238 )
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_scroll .my_red_list .avatar_box{
+	width: 1.621333rem;
+	height: 1.621333rem;
+	border-radius: 50%;
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 0.213333rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_scroll .my_red_list .my_red_scroll_text{
+	display: inline-block;
+	width: 86%;
+	height: 100%;
+	vertical-align: middle;
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_scroll .my_red_list .my_red_scroll_text b{
+	display: block;
+	font-size: 0.64rem;
+	color: rgb( 44, 44, 44 );
+	margin-bottom: 0.32rem;
+	margin-top: 0.213333rem
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_scroll .my_red_list .my_red_scroll_text b .tag{
+	display: inline-block;
+	width: 2.218667rem;
+	height: 0.682667rem;
+	line-height: 0.682667rem;
+	text-align: center;
+	color: #fff;
+	background-color: rgb( 107, 205, 249 );
+	border-radius: 0.341333rem;
+	font-size: 0.469333rem;
+	font-weight: normal;
+	margin-left:0.213333rem;
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_scroll .my_red_list .my_red_scroll_text p{
+	font-size: 0.533333rem;
+	color: rgb( 44, 44, 44 );
+	margin-bottom: 0.32rem;
+	line-height: 1
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_scroll .my_red_list .my_red_scroll_text p span{
+ 	color: #ffab18
+ }
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_scroll .my_red_list .my_red_scroll_text p img{
+	width: 0.746667rem;
+	vertical-align:middle;
+	margin-left: 0.213333rem
+}
+.Indiana_Jones_kindergarten_index .my_red_box .my_red_scroll .my_red_list .my_red_scroll_text div{
+	font-size: 0.405333rem;
+	color: rgb( 183, 183, 183 );
+}
+
+.Indiana_Jones_kindergarten_index .pay_mask{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.6);
+	top: 0;
+	left: 0;
+	z-index: 9
+}
+.Indiana_Jones_kindergarten_index .pay_mask .pay_model_box{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+.Indiana_Jones_kindergarten_index .pay_mask .pay_model_box .pay_model_content{
+	width: 15.146667rem;
+	height: 7.253333rem;
+	background-color: rgb( 255, 255, 255 );
+	padding-top:2.837333rem;
+	border-radius: 0.213333rem;
+	margin: 0 auto;
+	position: relative;
+}
+.Indiana_Jones_kindergarten_index .pay_mask .pay_model_box .pay_model_content .clsoe{
+	position: absolute;
+	width: 1.706667rem;
+	height: 1.706667rem;
+	line-height: 1.706667rem;
+	top: -3.413333rem;
+	left: 50%;
+	transform: translate3d(-50%,0,0);
+	text-align: center;
+}
+.Indiana_Jones_kindergarten_index .pay_mask .pay_model_box .pay_model_content .clsoe i{
+	color: #fff;
+	font-size: 0.853333rem
+}
+.Indiana_Jones_kindergarten_index .pay_mask .pay_model_box .pay_model_content .pay_model_title{
+	width: 10.581333rem;
+	height: 4.394667rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	left: 50%;
+	top: -2.197333rem;
+	transform: translate3d(-50%,0,0);
+}
+.Indiana_Jones_kindergarten_index .pay_mask .pay_model_box .pay_model_content .pay_money{
+	 background-color: rgba( 107, 205, 249,.251 );
+	 width: 9.088rem;
+	 height: 1.28rem;
+	 line-height: 1.28rem;
+	 border-radius: 0.64rem;
+	 margin: 0 auto;
+	 text-align: center;
+	 font-size: 0.810667rem;
+	 color: #000
+}
+
+.Indiana_Jones_kindergarten_index .pay_mask .pay_model_box .pay_btn{
+	display: block;
+	width: 100%;
+	height: 2.261333rem;
+	background-color: rgb( 107, 205, 249 );
+	line-height: 2.261333rem;
+	text-align: center;
+	color: #fff;
+	font-size: 0.810667rem;
+	position: absolute;
+	bottom: 0;
+	left: 0
+}
+.Indiana_Jones_kindergarten_index .confirm_pay_mask .pay_model_box .pay_model_content{
+	height: 15.274667rem;
+	padding:1.706667rem 0.426667rem 0.426667rem 0.426667rem;
+}
+
+.Indiana_Jones_kindergarten_index .confirm_pay_mask .pay_model_box .pay_model_content .confirm_pay_tip{
+	 color: rgb( 45, 45, 45 );
+	 font-size: 0.469333rem;
+	 text-align: center;
+	 line-height: 1.493333rem
+}
+.Indiana_Jones_kindergarten_index .confirm_pay_mask .pay_model_box .pay_model_content .input_box{
+	text-align: center;
+}
+.input_box label{
+	position: relative;
+	width: 12.096rem;
+	height: 1.301333rem;
+	margin-bottom: 0.64rem;
+	display: inline-block;
+}
+ .input_box label img{
+	position: absolute;
+	height: 0.853333rem;
+	left: 0.512rem;
+	top: 50%;
+	transform: translate3d(0,-50%,0);
+}
+.input_box label .arrow{
+	position: absolute;
+	color: #000;
+	right: 1.024rem;
+	top: 0;
+	height: 1.301333rem;
+	line-height: 1.301333rem;
+}
+.confirm_pay_mask label .arrow{
+	display: none;
+}
+ .input_box input{
+	width: 12.096rem;
+	height: 1.301333rem;
+	background-color: rgba( 107, 205, 249,.251 );
+	border:none;
+	outline: none;
+	border-radius: 0.661333rem;
+	text-indent: 3em;
+	font-size: 0.554667rem;
+	color: rgb( 24, 24, 24 );
+	box-shadow: inset 0px 1px 0.042667rem rgba(0,0,0,.2);
+}
+input[type="date"]{
+	background-color: rgba( 107, 205, 249,.251 );
+}
+input[type="date"]:before{
+    color: rgb( 107, 205, 249 );
+    content:attr(placeholder);
+}
+input[type="date"].full:before {
+   color: rgb( 107, 205, 249 );
+    content:""!important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+   display: none;
+}
+input[type="date"]::-webkit-clear-button{
+   display:none;
+}
+ .input_box input::placeholder{
+	color: rgb( 24, 24, 24 );
+}
+.Indiana_Jones_kindergarten_index .confirm_pay_mask .pay_model_box .pay_model_content .input_box .agreement{
+	margin-bottom: 0;
+	text-align: left;
+	padding-left: 0.853333rem
+}
+.Indiana_Jones_kindergarten_index .confirm_pay_mask .pay_model_box .pay_model_content .input_box .agreement a{
+	color: #ffa200
+}
+.Indiana_Jones_kindergarten_index .confirm_pay_mask .pay_model_box .pay_model_content .input_box .checkbox{
+	width: 0.64rem;
+	height: 0.64rem;
+	vertical-align: middle;
+	background-color: #fff;
+	border:1px solid #ffa200;
+	-webkit-appearance:none;
+    border: 1px solid #ffa200;
+    border-radius: 2px;
+    outline: none;
+    border-radius: 0;
+}
+ input[type=checkbox]:checked{
+   background: url(http://productimg.yingtaoyun.com/7b/9e/7b9eb9b0d2e2c500a852925651477322.png) center no-repeat;  
+  background-size: cover; 
+}
+
+.Indiana_Jones_kindergarten_index .code_pay_mask .pay_model_box .pay_model_content .input_box label:nth-child(4) img{
+	height: 0.64rem
+}
+.Indiana_Jones_kindergarten_index .code_pay_mask .pay_model_box .pay_model_content .input_box label:nth-child(4) input,
+.Indiana_Jones_kindergarten_index .code_pay_mask .pay_model_box .pay_model_content .input_box label:nth-child(4) input::placeholder{
+	 color: rgb( 107, 205, 249 );
+}
+
+.Indiana_Jones_kindergarten_index  .invitation_mask{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	background-color: rgba(0,0,0,.6);
+}
+.Indiana_Jones_kindergarten_index  .invitation_mask .invitation_model{
+	width: 13.056rem;
+	height: 13.653333rem;
+	background-color: rgb( 255, 255, 255 );
+	border-radius: 0.213333rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%,-50%,0);
+	padding: 1.066667rem 1.6rem 1.6rem 1.6rem;
+}
+.Indiana_Jones_kindergarten_index  .invitation_mask .invitation_model .invitation_model_pic{
+	width: 8.192rem;
+	height: 4.906667rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 0 auto
+}
+.Indiana_Jones_kindergarten_index  .invitation_mask .invitation_model p{
+	text-align: center;
+	font-size: 0.64rem;
+	color: rgb( 45, 45, 45 );
+	line-height: 1.066667rem;
+	margin-top: 0.384rem
+}
+.Indiana_Jones_kindergarten_index  .invitation_mask .invitation_model a{
+	display: block;
+	width: 8.533333rem;
+	height: 1.472rem;
+	background-color: rgb( 107, 205, 249 );
+  	box-shadow: 0px 0.106667rem 0.192rem 0px rgba( 0, 52, 76,.4 );
+  	text-align: center;
+  	line-height: 1.472rem;
+  	font-size: 0.682667rem;
+  	color: #fff;
+  	margin: 1.493333rem auto
+}
+.Indiana_Jones_kindergarten_index  .invitation_mask .invitation_model .invitation_close{
+	width: 1.706667rem;
+	height: 1.706667rem;
+	position: absolute;
+	top: -2.56rem;
+	right: 0;
+	text-align: right;
+	line-height: 1.706667rem
+}
+.Indiana_Jones_kindergarten_index  .invitation_mask .invitation_model .invitation_close i{
+	font-size: 0.981333rem;
+	color: #fff
+}
+
+.Indiana_Jones_kindergarten_success{
+	width: 100%;
+	height: 100vh;
+	background-color:#f2f4f6;
+}
+.Indiana_Jones_kindergarten_success .success_box{
+	width: 100%;
+	height: 7.232rem;
+	background-color: rgb( 255, 255, 255 );
+	box-shadow: 0px 0.042667rem 0.042667rem 0px rgba( 98, 98, 98,.4 );
+	text-align: center;
+	padding: 1.621333rem 0;
+	position: relative;
+}
+.Indiana_Jones_kindergarten_success .success_box img{
+	width: 2.304rem;
+}
+.Indiana_Jones_kindergarten_success .success_box p{
+	font-size: 0.938667rem;
+	color: rgb( 19, 19, 19 );
+}
+.Indiana_Jones_kindergarten_success .success_box div{
+	width: 13.184rem;
+	height: 1.429333rem;
+	line-height: 1.429333rem;
+	background-color: rgb( 107, 205, 249 );
+  	position: absolute;
+  	bottom:-0.704rem;
+  	left: 50%;
+  	transform: translate3d(-50%,0,0);
+  	text-align: center;
+  	color: #fff;
+  	font-size: 0.682667rem
+}
+.Indiana_Jones_kindergarten_success .success_box div img{
+	width: 0.746667rem;
+	vertical-align: middle;
+}
+.Indiana_Jones_kindergarten_success .success_content{
+	width: 12.16rem;
+	height: 11.008rem;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: 2.346667rem auto;
+	position: relative;
+	padding: 2.005333rem 1.237333rem 0.32rem 1.237333rem
+}
+.Indiana_Jones_kindergarten_success .success_content .success_tag{
+	width: 4.736rem;
+	height: 1.322667rem;
+	line-height: 1.322667rem;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+	color: #fff;
+	font-size: 0.426667rem;
+	text-shadow: 1px 1px 1px rgb( 28, 28, 28 );
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translate3d(-50%,0,0);
+}
+.Indiana_Jones_kindergarten_success .success_content .success_title{
+	text-align: center;
+}
+.Indiana_Jones_kindergarten_success .success_content .success_title div{
+	font-size: 1.066667rem;
+	color: rgb( 255, 171, 24 );
+	font-weight: bold;
+}
+.Indiana_Jones_kindergarten_success .success_content .success_title div img{
+	width: 1.066667rem;
+	vertical-align: middle;
+	margin-left:0.213333rem;
+}
+.Indiana_Jones_kindergarten_success .success_content .success_title p{
+	font-size: 0.64rem;
+	color: rgb( 17, 17, 17 );
+	line-height: 1.066667rem
+}
+.Indiana_Jones_kindergarten_success .success_content .success_title a{
+	display: block;
+	width: 5.76rem;
+	height: 0.96rem;
+	line-height: 0.96rem;
+	padding-left: 1.365333rem;
+	background-color: rgb( 255, 255, 255 );
+	box-shadow: 0px 0px 0.106667rem rgba( 28, 28, 28 ,.2);
+	font-size: 0.533333rem;
+	color: rgb( 17, 17, 17 );
+	text-align: left;
+	margin: 0.426667rem auto 0 auto;
+	position: relative;
+}
+.Indiana_Jones_kindergarten_success .success_content .success_title a::after{
+	content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+	border-left: 0.213333rem solid #000;
+    border-right: 0.213333rem solid transparent;
+    border-bottom: 0.213333rem solid transparent;
+    border-top: 0.213333rem solid transparent;
+    top: 50%;
+    right: 1.024rem;
+    transform: translate3d(0,-50%,0); 
+}
+
+.Indiana_Jones_kindergarten_success .success_content .success_btn{
+	background-color: rgb( 255, 171, 24 );
+  	box-shadow: 0px 0.106667rem 0.192rem 0px rgba( 0, 52, 76,.4 );
+  	width: 8.533333rem;
+  	height: 1.834667rem;
+  	color: #fff;
+  	text-align: center;
+  	margin: 1.066667rem auto 0 auto;
+  	display: block;
+}
+.Indiana_Jones_kindergarten_success .success_content .success_btn p{
+	font-size: 0.682667rem;
+	line-height: 1.066667rem;
+	font-weight: bold;
+}
+.Indiana_Jones_kindergarten_success .success_content .success_btn small{
+	font-size: 0.469333rem;
+	display: block;
+}
+.Indiana_Jones_kindergarten_share{
+	width: 100%;
+	height: 100vh;
+	background-color:#f2f4f6;
+}
+.Indiana_Jones_kindergarten_share .share_top_box{
+	padding-top:1.28rem
+}
+.Indiana_Jones_kindergarten_share .share_top_box p{
+	text-align: center;
+	font-size: 0.768rem;
+	color: rgb( 20, 20, 20 );
+	line-height: 1.28rem
+}
+.Indiana_Jones_kindergarten_share .share_top_box .share_pic_box{
+	width: 10.026667rem;
+	height: 5.141333rem;
+	line-height: 5.141333rem;
+	text-align: center;
+	padding-left: 1.706667rem;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	font-size: 0.576rem;
+	color: rgb( 20, 20, 20 );
+	margin: 0.746667rem auto
+}
+.Indiana_Jones_kindergarten_share .share_top_box a{
+	display: block;
+	width: 10.624rem;
+	height: 1.472rem;
+	line-height: 1.472rem;
+	text-align: center;
+	margin: 0 auto;
+	background-color: rgb( 107, 205, 249 );
+	box-shadow: 0px 0.106667rem 0.192rem 0px rgba( 0, 52, 76,.4 );
+	color: #fff;
+	font-size: 0.64rem;
+	margin-bottom: 1.173333rem
+}
+.Indiana_Jones_kindergarten_share .performance_box{
+	background-color: #fff;
+	width: 100%;
+	height: 15.8rem;
+}
+.Indiana_Jones_kindergarten_share .performance_box i{
+	display: block;
+	width: 100%;
+	text-align: center;
+	line-height: 1.3333rem;
+	border-top:1px solid #dfdfdf;
+}
+.Indiana_Jones_kindergarten_share .performance_box .performance_scroll_content{
+	height: 12.8rem;
+	overflow: auto;
+}
+.Indiana_Jones_kindergarten_share .performance_box .performance_content{
+	height: auto;
+	padding: 0 0.64rem 0 0.64rem;
+}
+.Indiana_Jones_kindergarten_share .performance_box .performance_content .performance_content_list{
+	height: 3.626667rem;
+	padding-top: 0.426667rem;
+    border-bottom: 1px solid rgb( 238, 238, 238 );
+}
+.Indiana_Jones_kindergarten_share .performance_box .performance_content .performance_content_list .avatar_box{
+	width: 1.621333rem;
+    height: 1.621333rem;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 0.213333rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+.Indiana_Jones_kindergarten_share .performance_box .performance_content .performance_content_list .performance_content_text{
+	display: inline-block;
+    width: 85%;
+    height: 100%;
+    vertical-align: middle;
+}
+.Indiana_Jones_kindergarten_share .performance_box .performance_content_list .performance_content_text b{
+	display: block;
+    font-size: 0.64rem;
+    color: rgb( 44, 44, 44 );
+    margin-bottom: 0.32rem;
+    margin-top: 0.213333rem;
+}
+.Indiana_Jones_kindergarten_share .performance_box .performance_content_list .performance_content_text b .tag{
+	display: inline-block;
+    width: 2.218667rem;
+    height: 0.682667rem;
+    line-height: 0.682667rem;
+    text-align: center;
+    color: #fff;
+    background-color: rgb( 107, 205, 249 );
+    border-radius: 0.341333rem;
+    font-size: 0.469333rem;
+    font-weight: normal;
+    margin-left: 0.213333rem;
+}
+.Indiana_Jones_kindergarten_share .performance_box .performance_content_list .performance_content_text p{
+	font-size: 0.533333rem;
+    color: rgb( 44, 44, 44 );
+    margin-bottom: 0.32rem;
+    line-height: 1;
+}
+.Indiana_Jones_kindergarten_share .performance_box .performance_content_list .performance_content_text p span{
+	color: #ffab18;
+}
+.Indiana_Jones_kindergarten_share .performance_box .performance_content_list .performance_content_text p img{
+	width: 0.746667rem;
+    vertical-align: middle;
+    margin-left: 0.213333rem;
+}
+.Indiana_Jones_kindergarten_share .performance_box .performance_content_list .performance_content_text div{
+	font-size: 0.405333rem;
+    color: rgb( 183, 183, 183 );
+}
+.Indiana_Jones_kindergarten_share .support_mask{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.6);
+}
+.Indiana_Jones_kindergarten_share .support_mask .support_model_box{
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.Indiana_Jones_kindergarten_share .support_mask .support_model_box .support_close{
+	position: absolute;
+    width: 1.706667rem;
+    height: 1.706667rem;
+    line-height: 1.706667rem;
+    top: -3.13333rem;
+    left: 50%;
+    transform: translate3d(-50%,0,0);
+    text-align: center;
+}
+.Indiana_Jones_kindergarten_share .support_mask .support_model_box .support_close i{
+	color: #fff;
+    font-size: 1.153333rem;
+}
+.Indiana_Jones_kindergarten_share .support_mask .support_model_box .support_model_content{
+	width: 15.146667rem;
+    height: 15.872rem;
+    background-color: rgb( 255, 255, 255 );
+    padding: 1.450667rem;
+    padding-top: 2.1333rem;
+    border-radius: 0.213333rem;
+    margin: 0 auto;
+    position: relative;
+}
+.Indiana_Jones_kindergarten_share .support_mask .support_model_content .support_model_top{
+	height: 4.608rem;
+	width: 100%;
+	text-align: center;
+}
+.Indiana_Jones_kindergarten_share .support_mask .support_model_content .support_model_top .flower,
+.Indiana_Jones_kindergarten_share .support_mask .support_model_content .support_model_top .arrow,
+.Indiana_Jones_kindergarten_share .support_mask .support_model_content .support_model_top .avatar{
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	text-align: center;
+}
+.Indiana_Jones_kindergarten_share .support_mask .support_model_content .support_model_top .flower span{
+	display: block;
+	width: 3.050667rem;
+	height: 3.264rem;
+	padding-top: 0.981333rem;
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0 auto;
+	font-size: 0.533333rem;
+	color: #fff;
+}
+.Indiana_Jones_kindergarten_share .support_mask .support_model_content .support_model_top .flower p,
+.Indiana_Jones_kindergarten_share .support_mask .support_model_content .support_model_top .avatar p{
+	font-size: 0.533333rem;
+	color: rgb( 24, 24, 24 );
+	line-height: 1.066667rem
+}
+.Indiana_Jones_kindergarten_share .support_mask .support_model_content .support_model_top .avatar p{
+	width: 4.266667rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.Indiana_Jones_kindergarten_share .support_mask .support_model_content .support_model_top .arrow{
+	width: 1.344rem;
+	margin: 0 1.066667rem;
+	line-height: 2.908rem
+}
+.Indiana_Jones_kindergarten_share .support_mask .support_model_content .support_model_top .arrow i{
+	font-size: 1.744rem;
+	color: #6bcdf9
+}
+.Indiana_Jones_kindergarten_share .support_mask .support_model_content .support_model_top .avatar span{
+	display: block;
+	width: 3.264rem;
+	height: 3.264rem;
+	border-radius: 50%;
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0 auto;
+	position: relative;
+}
+.Indiana_Jones_kindergarten_share .support_mask .support_model_content .support_model_top .avatar span::after{
+	content: attr(data-num);
+	width: 0.682667rem;
+	height: 0.682667rem;
+	border-radius: 50%;
+	background-color: #ffa200;
+	color: #fff;
+	position: absolute;
+	font-size: 0.341333rem;
+	top: 0.158667rem;
+    right: 0;
+    text-align: center;
+    line-height: 0.682667rem
+}
+.Indiana_Jones_kindergarten_share .support_mask .support_model_content .input_box{
+	text-align: center;
+}
+.Indiana_Jones_kindergarten_share .support_mask .support_model_content .input_box label img{
+	position: absolute;
+    height: 0.853333rem;
+    left: 0.512rem;
+    top: 50%;
+    transform: translate3d(0,-30%,0);
+}
+.Indiana_Jones_kindergarten_share .support_mask .support_model_content .input_box label select{
+	width: 12.096rem;
+    height: 1.301333rem;
+    background-color: rgba( 107, 205, 249,.251 );
+    border: none;
+    outline: none;
+    border-radius: 0.661333rem;
+    text-indent: 3em;
+    font-size: 0.554667rem;
+    color: rgb( 24, 24, 24 );
+    appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  color: rgb( 107, 205, 249 );
+  box-shadow: inset 0px 1px 0.042667rem rgba(0,0,0,.2);
+}
+select::-ms-expand { display: none; }
+.Indiana_Jones_kindergarten_share .support_mask .support_model_content .input_box label .arrow_dwon{
+	position: absolute;
+    color: #000;
+    right: 1.024rem;
+    top: 0.16667rem;
+    height: 1.301333rem;
+    line-height: 1.301333rem;
+    pointer-events: none;
+}
+
+.Indiana_Jones_kindergarten_share .support_mask .support_model_box .support_btn{
+	display: block;
+    width: 100%;
+    height: 2.261333rem;
+    background-color: rgb( 107, 205, 249 );
+    line-height: 2.261333rem;
+    text-align: center;
+    color: #fff;
+    font-size: 0.810667rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.Indiana_Jones_kindergarten_share .confirm_support_mask .support_model_content{
+	height: 11.050667rem !important;
+	padding-top: 1.6333rem !important
+}
+.Indiana_Jones_kindergarten_share .confirm_support_mask .support_model_content b{
+	display: block;
+	text-align: center;
+	font-size: 0.96rem;
+	color:#ffa200;
+	margin-bottom: 0.56667rem
+}
+.Indiana_Jones_kindergarten_share .confirm_support_mask .support_model_content p{
+	font-size: 0.533333rem;
+	color: rgb( 24, 24, 24 );
+  	text-align: center;
+  	line-height: 1.408rem;
+  	margin-bottom: 0.213333rem
+}
+.Indiana_Jones_kindergarten_share .confirm_support_mask .support_model_content .bj{
+	width: 11.093333rem;
+	height: 2.837333rem;
+	text-align: center;
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0 auto;
+	text-align:left;
+}
+.Indiana_Jones_kindergarten_share .confirm_support_mask .support_model_content .bj>*{
+	display: inline-block;
+	height: 2.090667rem;
+	line-height: 2.090667rem;
+	vertical-align: middle;
+}
+.Indiana_Jones_kindergarten_share .confirm_support_mask .support_model_content .bj .pic{
+	width: 3.273333rem;
+	text-align: center;
+	padding-left:0.513333rem;
+}
+.Indiana_Jones_kindergarten_share .confirm_support_mask .support_model_content .bj .pic img{
+	width: 1.173333rem;
+	vertical-align: middle;
+}
+.Indiana_Jones_kindergarten_share .confirm_support_mask .support_model_content .bj a{
+	width: 6.997333rem;
+	text-align: center;
+	font-size: 0.64rem;
+	color: rgb( 107, 205, 249 );
+}
+

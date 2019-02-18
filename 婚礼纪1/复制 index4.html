@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>婚礼纪</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="">
+  <meta name="viewport" id="viewport" content="width=320, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta content="email=no" name="format-detection" />
+  <link rel="stylesheet" href="css/card_main.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <link	rel="stylesheet" href="http://at.alicdn.com/t/font_454849_n2ox997qkie5qaor.css"/>
+</head>
+<style type="text/css">
+		#wrapper{
+			position: relative;
+			width: auto;
+			height: 200px;
+			box-sizing:border-box;
+			overflow: hidden;
+		}
+		@keyframes move{
+			to{
+				left: -200px;
+			}
+		}
+	</style>
+<body>
+<div class="Payment_page">
+	<div class="Payment_box">
+		<p>
+			<span>赠送方</span>
+			<b>1</b>
+		</p>
+		<p>
+			<span>被赠送方</span>
+			<b>aaaa和bbbb</b>
+		</p>
+		<p>
+			<span>礼金金额</span>
+			<b>￥1</b>
+		</p>
+		<div class="Payment_button">
+			<button>微信支付</button>
+		</div>
+	</div>
+	<div class="close"><img src="img/close.png" alt="" /></div>
+</div>
+
+
+<div id="wrap" >
+    <div id="chat_msg" class="fadeIn">
+        <div>
+            <div id="giftModule" class="">
+            	
+                <div class="animated gift_layout gy">
+                    <div class="giftBd" style="height:34.13333333333333px;">
+                        <div class="g_y">
+                            <span style="height:34.13333333333333px;width:34.13333333333333px;border-radius:50%">
+                                <img src="img/icon3.png">
+                            </span>
+                        </div>
+                        <div class="g_y">
+                            <h5>
+                                <i style="font-weight:700"> 婚礼纪</i> 送了 百合花
+                            </h5>
+                            <p>百年好合</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="animated gift_layout gy">
+                    <div class="giftBd" style="height:34.13333333333333px;">
+                        <div class="g_y">
+                            <span style="height:34.13333333333333px;width:34.13333333333333px;border-radius:50%">
+                                <img src="img/icon3.png">
+                            </span>
+                        </div>
+                        <div class="g_y">
+                            <h5>
+                                <i style="font-weight:700"> 婚礼纪</i> 送了 蜜月保
+                            </h5>
+                            <p>百年好合</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="animated gift_layout gy">
+                    <div class="giftBd" style="height:34.13333333333333px;">
+                        <div class="g_y">
+                            <span style="height:34.13333333333333px;width:34.13333333333333px;border-radius:50%">
+                                <img src="img/icon3.png">
+                            </span>
+                        </div>
+                        <div class="g_y">
+                            <h5>
+                                <i style="font-weight:700"> 婚礼纪</i> 送了 蜜月保
+                            </h5>
+                            <p>早生贵子</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!--横向弹幕-->
+            <div class="bd" id="bd_2">
+                    <div class="c_g">
+                        <p>
+                            <span>盼：</span>
+                            <em>123</em>
+                        </p>
+                    </div>
+                    <!--<div class="c_g">
+                        <p>
+                            <span>晴：</span>
+                            <em>嘎嘎嘎</em>
+                        </p>
+                    </div>
+                    <div class="c_g">
+                        <p>
+                            <span>盼：</span>
+                            <em>123</em>
+                        </p>
+                    </div>
+                    <div class="c_g">
+                        <p>
+                            <span>晴：</span>
+                            <em>嘎嘎嘎</em>
+                        </p>
+                    </div>
+                    <div class="c_g">
+                        <p>
+                            <span>盼：</span>
+                            <em>123</em>
+                        </p>
+                    </div>
+                    <div class="c_g">
+                        <p>
+                            <span>晴：</span>
+                            <em>嘎嘎嘎</em>
+                        </p>
+                    </div>
+                    <div class="c_g">
+                        <p>
+                            <span>晴：</span>
+                            <em>嘎嘎嘎</em>
+                        </p>
+                    </div>-->
+
+                </div>
+            <!--滚动弹幕 begin-->
+            <div class="chat_dis kid" id="chat_dis_box">
+                 <div class="bd" id="bd_1">
+                    <div class="c_g">
+                        <p>
+                            <span>盼：</span>
+                            <em>123</em>
+                        </p>
+                    </div>
+                    <div class="c_g">
+                        <p>
+                            <span>晴：</span>
+                            <em>嘎嘎嘎</em>
+                        </p>
+                    </div>
+                    <div class="c_g">
+                        <p>
+                            <span>雪：</span>
+                            <em>啦啦啦</em>
+                        </p>
+                    </div> 
+                </div>
+            </div>
+            <!--滚动弹幕 end-->
+            <div class="chat_entry">
+                <div class="c_txt">
+                    <div id="wishTxt">
+                        <span id="chatEntry">请留下你的祝福...</span>
+                    </div>
+                </div>
+                <div class="c_icon">
+                		<div class="bomb">
+                			<span>
+                				<img src="img/1.png" alt="" />
+                			<!--<i class="iconfont icon-danmu"></i>-->
+                			</span>
+                		</div>
+                    <div class="">
+                        <span id="giftShow">
+                            <img src="img/icon1.png">
+                        </span>
+                    </div>
+                    <div class="">
+                        <span id="priceShow">
+                            <img src="img/icon2.png">
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--祝福-->
+    <div class="ac_bg"></div>
+    <div id="allCode" style="">
+    	<div class="ac_wish">
+    		<i>祝福</i>
+    		<textarea class="ac_wish_txt" type="text" value="" placeholder="请留下你的祝福..." ></textarea>
+    	</div>                                
+    	<div class="ac_name">  
+    		<div class="ac_name_bd">
+    			<i>姓名</i>
+    			<textarea class="ac_name_txt"  type="text" value="" ></textarea>
+    		</div>
+    		<div class="ac_name_btn">
+    			<span class="sureBtn" style="">确定</span>
+    		</div>
+    	</div>
+    </div>
+    
+    <!--发送成功-->
+    <div class="winMsg">
+    	<i class="closedBtn"></i>
+    	<img  src="img/ok.png">
+    	<span>发送成功</span>
+    	<div id="giftBtnWin" class="winMsgBtn">送礼物</div>
+    	<div id="cashBtnWin" class="winMsgBtn">送礼金</div>
+    </div>
+    <div class="winBg"></div>
+    
+    <!--赠送礼物-->
+    <div class="bgc"></div>
+   
+    <div id="send_gift">
+    	 <div class="close"><img src="img/close.png" alt="" /></div>
+    	<div class="giftTit">
+    		<div class="entryName"><div>
+    			<em>赠送人：</em>
+    			<!--<label for="nameTxt" id="label_box"></label>-->
+    			<input style="line-height: 17px"  id="nameTxt" autofocus="autofocus" class="ak" type="text" value="" placeholder="请输入您的姓名">
+    		</div>
+    		</div>
+    	</div>
+    	<div class="gift_main" style="padding-top:13.653333333333332px;">
+    		<div id="giftMore" class="gift_box">
+    			<ul id="g_bd_wrap">
+    				<li class="g_bd">
+    					<div class="g_layout ">
+    					<span price="2.88" title="一箱红枣" cid="22">
+    						<img src="http://qnm.hunliji.com/o_1bniiv6lv1lnf1rcoa6u1ipfueul.jpg?imageView2/1/w/200/h/200">
+    					</span>
+    				</div>
+    				<div class="g_layout " >                
+    					<span price="6.66" title="一车套套" cid="3">
+    						<img src="http://qnm.hunliji.com/o_1bk6fudjd1is1mr311qml0aosq13.jpg?imageView2/1/w/200/h/200">
+    					</span>
+    				</div>
+    				<div class="g_layout " >
+    					<span price="9.99" title="蜜月保" cid="27">
+    						<img src="http://qnm.hunliji.com/o_1bos5qu8c89fg7t8ungi31l55l.jpg?imageView2/1/w/200/h/200">
+    					</span>
+    				</div>
+    				<div class="g_layout ">
+    					<span price="19.99" title="一辆跑车" cid="5">
+    						<img src="http://qnm.hunliji.com/o_1bk6g3ted6cn3gpvbd1aa95h846.jpg?imageView2/1/w/200/h/200">
+    					</span>
+    				</div>
+    				<div class="g_layout ">
+    					<span price="66.66" title="一场流星雨" cid="11">
+    						<img src="http://qnm.hunliji.com/o_1bk6g9qgr1lksr0m1eao1nbtsb5h.jpg?imageView2/1/w/200/h/200">
+    					</span>
+    				</div>
+    				<div class="g_layout ">
+    					<span price="99.99" title="月球蜜月游" cid="7" class="ap">
+    						<img src="http://qnm.hunliji.com/o_1bk8bfk7518qh1lsd17vi8a9rqvg.jpg?imageView2/1/w/200/h/200">
+    					</span>
+    				</div>
+    				<div class="g_layout ">
+    					<span price="131.40" title="爱神丘比特" cid="28">
+    						<img src="http://qnm.hunliji.com/o_1bpth6rge19j8861j941jr100is.jpg?imageView2/1/w/200/h/200">
+    					</span>
+    				</div>
+    				<div class="g_layout ">
+    					<span price="168.88" title="一车纸尿裤" cid="32">
+    						<img src="http://qnm.hunliji.com/o_1bqf71shrb1t1rh7kar64u95kl.jpg?imageView2/1/w/200/h/200">
+    					</span>
+    				</div>
+    				</li>
+    				<li class="g_bd">
+    					<div class="g_layout ">
+    						<span price="8.88" title="一个搓衣板" cid="16">
+    							<img src="http://qnm.hunliji.com/o_1bmmf6t7h18cre7i1k3h1j55135bq.jpg?imageView2/1/w/200/h/200">
+    						</span>
+    					</div>
+    					<div class="g_layout ">
+    						<span price="13.14" title="一座城堡" cid="36">
+    							<img src="http://qnm.hunliji.com/o_1br89g7vp2gb155j1mdc1vpt1n461a.jpg?imageView2/1/w/200/h/200">
+    						</span>
+    					</div>
+    					<div class="g_layout ">
+    						<span price="66.66" title="一座火箭" cid="34">
+    							<img src="http://qnm.hunliji.com/o_1br6583rv1eb11eh4j768gasbjl.jpg?imageView2/1/w/200/h/200">
+    						</span>
+    					</div>
+    					<div class="g_layout ">
+    						<span price="100.00" title="十里桃花" cid="18">
+    							<img src="http://qnm.hunliji.com/o_1bmmfc3ogkc1146b5gk73ekan3v.jpg?imageView2/1/w/200/h/200">
+    						</span>
+    					</div>
+    					<div class="g_layout ">
+    						<span price="131.40" title="一根皮鞭" cid="37">
+    							<img src="http://qnm.hunliji.com/o_1br89ia1gq1615te1nba13tjd2222.jpg?imageView2/1/w/200/h/200">
+    						</span>
+    					</div>
+    					<div class="g_layout ">
+    						<span price="168.88" title="一套兔女郎装" cid="35">
+    							<img src="http://qnm.hunliji.com/o_1br88vpvk1trrudb14vub4tghc1m.jpg?imageView2/1/w/200/h/200">
+    						</span>                          
+    					</div>
+    					<div class="g_layout ">
+    						<span price="199.99" title="老公牌洗碗机" cid="38">
+    							<img src="http://qnm.hunliji.com/o_1br89m2qje4uombiu1gi1ilf2q.jpg?imageView2/1/w/200/h/200">
+    						</span>               
+    					</div>
+    					<div class="g_layout ">
+    						<span price="999.99" title="时光穿梭机" cid="21">
+    							<img src="http://qnm.hunliji.com/o_1bmmfdubg1hbag27fmiuvb14i15f.jpg?imageView2/1/w/200/h/200">
+    						</span>
+    					</div>
+    				</li>
+    			</ul>
+    		</div>
+    		<div class="pageGift">
+    			<i class="ko"></i>
+    			<i></i>
+    		</div>
+    		<div class="gift_footer">
+    			<div class="gift_tishi">
+    				<i class="iconfont icon-xiaolian"></i>
+    				<p>小主放心送，礼物金额将全部转至新人的xxx账户</p>
+    			</div>
+    			<div id="sendGiftBtn">赠送礼物</div>
+    		</div>
+    	</div>
+    </div>
+    
+    <!--红包-->
+    <div id="red_packets_bg" class="" ></div>
+    <div id="red_packets_form" class="" style="background-image: url(img/o_1br40f8ql441kldbnnnfe12qm1k.png);">  
+    	<div class="container">
+    		<div class="flip">
+    			<div class="front">
+    				<img src="img/o_1br3sqcqfihrqq73fn1rcs2iru.png">
+    			</div>
+    			<div class="back">
+    				<img src="img/o_1br6i7odt1hf345lpm1dqdog610.png">
+    			</div>
+    		</div>
+    	</div>
+    	<div class="money" style="background-image: url(img/o_1br3sqcqfab81ppi4p11mu21msg11.png);"></div> 
+    	<div class="red_packets_before"></div> 
+    	<div class="red_packets_wrap" style="position: relative; top:13px;"> 
+    		<div class="red_packets_name"><i>赠送人：</i>
+    			<input class="red_packets_name_txt" type="text" value="" placeholder="请输入您的姓名">
+    		</div>
+    		<div class="red_packets_money"><i>礼金金额：</i>
+    			<input class="red_packets_money_txt"  type="text" value="" placeholder="请输入礼金金额">
+    		</div> 
+    		<i class="red_packets_tip"></i>  
+    		<a class="red_packets_btn" id="sendPriceBtnV2">
+    			<img src="img/o_1br6i543210sh1ftisg57fe135tr.png">
+    		</a>
+    	</div>
+    	<a class="close_red_packets">
+    		<img src="img/close.png">
+    	</a>
+    </div>
+</div>
+	<div id="wrapper"></div>
+<script type="text/javascript" src="js/jquery-3.1.1.js" ></script>
+</body>
+
+<script type="text/javascript">
+//		var l=document.getElementById("#label_box");
+//
+//document.getElementById("#nameTxt").addEventListener("input", function(e) {
+//  l.textContent = e.target.value || "Input";
+//});
+
+//$("#nameTxt").on("input",function(e){
+//	var html=$("#label_box").html();
+//	html=e.target.value;
+//})
+</script>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+//$("#nameTxt").attr("readonly","readonly");
+//$("#nameTxt").on("click",function(){
+//	setTimeout(function(){
+//		$("#nameTxt").removeAttr("readonly");
+//		$("#nameTxt").trigger("focus")
+//	},1000);
+//})
+//
+//$(".bgc,#send_gift .close").on("click",function(){
+//	$("#nameTxt").attr("readonly","readonly");
+//})
+
+
+
+
+
+
+
+
+
+//		<!--var $ = function(id){
+//			return document.getElementById(id);
+//		};
+
+		// data
+		var playList = [{
+			// 内容
+			text: '欢迎欢迎~\\(≧▽≦)/~',
+			// 弹幕颜色
+			color: 'red',
+			//弹幕文字的大小
+			size: 20,
+			//从何时开始
+			time: 0,
+			// 经过实践
+			duration: 10,
+			//舞台偏移的高度
+			top:120
+		},
+		{
+			text: '这里是何帅帅的小弹幕DEMO',
+			color: 'blue',
+			size: 16,
+			time: 40,
+			duration: 15,
+			top:100
+		},
+		{
+			text: '我的博客：sammieho.github.io 要来参观噢',
+			color: '#000',
+			size: 16,
+			time: 500,
+			duration: 20,
+			top:150
+		}];
+
+		// variable
+		var LEFT = document.body.clientWidth;
+		console.log(LEFT);
+		const playerColors = ["#33B5E5", "#0099CC", "#AA66CC", "#9933CC", "#99CC00", "#669900", "#FFBB33", "#FF8800", "#FF4444", "#CC0000"];
+		var actorList = " ";
+
+
+		(function(){render();})();
+
+
+
+		// 添加演员
+		function addActors( text ){
+
+			this.text = text;
+			var addActor = {
+				text: this.text,
+				color: playerColors[ Math.floor( Math.random() * playerColors.length )],
+				size: Math.ceil( Math.random() * 20 ) + 10 + "px",
+				time: Math.ceil( Math.random() * 100 ),
+				duration: Math.ceil( Math.random() * 30 ) + 10,
+				top: Math.floor( Math.random() * 400 )
+			};
+
+			playList.push(addActor);
+			updateRender();
+		}
+
+
+		// 渲染舞台stage
+		function render(){
+			$("wrapper").innerHTML = " ";
+			for(var i = 0; i < playList.length; i++){
+				actorList +="<div style=\"color:" + playList[i].color + ";font-size: " + playList[i].size + "px;position: absolute;min-width:400px;animation-iteration-count: infinite;animation-name: move;animation-duration:" + playList[i].duration + "s;" + "left:" + LEFT + "px;top: " + playList[i].top + "px;\" class=\"danmu\">" + playList[i].text + "</div>"
+			}
+
+			$("wrapper").innerHTML += actorList;
+			actorList = "";
+ 		}
+
+ 		// update insert
+ 		function updateRender(){
+ 			var newNode = document.createElement("div");
+ 			newNode.innerHTML = playList[playList.length-1].text;
+ 			newNode.style.color = playList[playList.length-1].color;
+ 			newNode.style.fontSize = playList[playList.length-1].size;
+ 			newNode.style.position = "absolute";
+ 			newNode.style.left = LEFT + "px";
+ 			newNode.style.top = playList[playList.length-1].top + "px";
+ 			newNode.style.minWidth = "400px";
+ 			newNode.style.animation = "move" + " " + playList[playList.length-1].duration + "s";
+ 			newNode.style.animationIterationCount = "infinite";
+ 			$("wrapper").appendChild(newNode);
+ 		}
+
+ 
+
+
+	</script>-->
+<script type="text/javascript">
+$(".bomb span").on("click",function(){
+	$(this).children("img").attr("src","img/dan1.png")
+//	alert("a")
+//	$("#wrapper").toggle()
+//	$(this).css("background-color","#eee");
+})
+
+//$("#chat_msg,#send_gift").css("bottom","45px")
+
+$(".Payment_page .close").on("click",function(){
+	$(".Payment_page").hide();
+	$(".close_red_packets").trigger("click"); 
+})
+
+$(".bomb").on("click",function(){
+	$("#bd_2").toggle();
+	var term=$('#bd_2').css('display');
+	if(term=="none"){
+		$(this).children("span").css("background-color","#b4b4b4")
+	}else if(term=="block"){
+		$(this).children("span").css("background-color","#fc3d4f")
+	}
+	
+})
+
+
+	//红包
+	
+	$("#priceShow").click(function(){
+		$("#red_packets_bg").show()
+		$("#red_packets_form").show()
+		$(".money").show();
+		var scrollT=$(document).scrollTop()+160;
+		console.log(scrollT)
+		$("#red_packets_form").css("top",scrollT+"px");
+		
+	})
+	
+	//塞钱
+	$(".red_packets_name_txt").blur(function(){
+		$(this).prop("placeholder", "请输入你的姓名")
+	})
+	$("#sendPriceBtnV2").on("click",function(){
+		var name=$(".red_packets_name_txt").val();
+		var money=$(".red_packets_money_txt").val();
+			if(name==""){
+			$(".ac_bg").html("请填写姓名").addClass("active");
+			setTimeout(function(){
+				$(".ac_bg").removeClass("active")
+			},3000)
+			return false;
+		}
+		else if(money==""){
+			$(".ac_bg").html("请输入礼金金额").addClass("active")
+			setTimeout(function(){
+				$(".ac_bg").removeClass("active")
+			},3000)
+			return false;
+			}
+		else if(money<1){
+			$(".ac_bg").html("金额不能小于1").addClass("active")
+			setTimeout(function(){
+				$(".ac_bg").removeClass("active")
+			},3000)
+			return false;
+			}else{
+				$(".Payment_page").show()
+			}
+	})
+			//红包关闭按钮
+	$(".close_red_packets").on("click",function(){
+		$("#red_packets_bg").hide();
+		$("#red_packets_form").hide();
+		$(".money").hide()
+	})
+	
+	
+	//礼物
+	$(".ak").blur(function(){
+		$(this).prop("placeholder", "请输入你的姓名")
+	})
+	$("#giftShow").on("click",function(){
+		$(".bgc,#send_gift").show();
+//		$("html").css("overflow-y","hidden");
+		var scrollT=$(document).scrollTop()-45;
+		console.log(scrollT)
+		$("#send_gift").css("bottom",-scrollT+"px")
+		
+	})
+	$("#send_gift .close,.bgc").on("click",function(){
+		$(".bgc,#send_gift").hide();
+//		$("html").css("overflow-y","auto");
+		
+	})
+	
+	
+	
+	
+
+	
+	//选择礼物
+	$(".g_layout span").on("click",function(){
+		$(this).addClass("ap").parent().siblings().children().removeClass("ap");
+		$(this).parent().parent().siblings().children().children().removeClass("ap")
+	})
+	
+	//确定按钮
+	$("#sendGiftBtn").on("click",function(){
+		var ak=$(".ak").val();
+		if(ak==""){
+				$(".ac_bg").html("请填写姓名").addClass("active");
+			setTimeout(function(){
+				$(".ac_bg").removeClass("active")
+			},3000)
+			return false;
+		}
+	})
+	
+	
+	$("#g_bd_wrap").on("touchstart", function(e) {
+    startX = e.originalEvent.changedTouches[0].pageX,
+    startY = e.originalEvent.changedTouches[0].pageY;
+});
+$("#g_bd_wrap").on("touchmove", function(e) {
+    e.preventDefault();
+    moveEndX = e.originalEvent.changedTouches[0].pageX,
+    moveEndY = e.originalEvent.changedTouches[0].pageY,
+    X = moveEndX - startX,
+    Y = moveEndY - startY;
+    if ( X > 40 ) {
+        $("#g_bd_wrap").css("transform","translate3d(-320px, 0px, 0px)")
+        $(".pageGift").children("i").eq(1).addClass("ko").siblings("i").removeClass("ko")
+    }
+    else if ( X < -40 ) {
+        $("#g_bd_wrap").css("transform","translate3d(0px, 0px, 0px)")
+        $(".pageGift").children("i").eq(0).addClass("ko").siblings("i").removeClass("ko")
+    }
+
+});
+	
+	
+	
+	
+	
+	
+	//祝福
+	$(document).click(function (e) {
+			e.stopPropagation()
+       $("#allCode").hide();
+  });
+	$("#wishTxt,#allCode").on("click",function(e){
+			e.stopPropagation()
+		$("#allCode").show()
+	})
+	$("#wishTxt").on("click",function(e){
+			e.stopPropagation()
+		$("#allCode").show().css("opacity","1")
+	})
+	$(".ac_wish_txt,.ak,.red_packets_name_txt").focus(function(){
+		$(this).prop("placeholder", "").addClass("zc")
+	})
+	
+	$(".ac_wish_txt").blur(function(){
+		$(this).prop("placeholder", "请留下你的祝福...")
+	})
+
+
+    $('textarea').bind('input propertychange', function() {
+
+      if(($(".ac_wish_txt").val() !="") && ($(".ac_name_txt").val() !="")){
+        $('.sureBtn').addClass("active")
+      } else {
+         $('.sureBtn').removeClass("active")
+      }
+
+    });
+    
+ 
+		//祝福提交按钮
+		
+	$(".ac_name_btn").on("click",function(){
+		var wish=$(".ac_wish_txt").val();
+		var name=$(".ac_name_txt").val();
+		if(wish==""){
+			$(".ac_bg").html("请留下你的祝福...").addClass("active");
+			setTimeout(function(){
+				$(".ac_bg").removeClass("active")
+			},3000)
+			return false;
+			
+		}
+		else if(name==""){
+			$(".ac_bg").html("请输入你的姓名...").addClass("active")
+			setTimeout(function(){
+				$(".ac_bg").removeClass("active")
+			},3000)
+			return false;
+			}
+		else{
+			var c_g=$("<div>").attr("class","c_g");
+			var p=$("<p>");
+			var span=$("<span>").html(name+":");
+			var em=$("<em>").html(wish);
+			
+			$(p).append($(span));
+			$(p).append($(em));
+			$(c_g).append($(p));
+			$(".bd").append($(c_g));
+
+			
+			$("#allCode").hide().css("opacity","0")
+			$(".winMsg,.winBg").show()
+
+		}
+		
+	})
+	
+	//发送成功送礼物
+	$("#giftBtnWin").on("click",function(){
+		var name=$(".ac_name_txt").val();
+		$(".winMsg,.winBg").hide()
+		$(".bgc,#send_gift").show();
+		$(".ak").val(name)
+		$(".ac_wish_txt").val("")
+		$(".ac_name_txt").val("")
+	})
+	//
+	$("#cashBtnWin").on("click",function(){
+		$(".winMsg,.winBg").hide()
+		$(".ac_wish_txt").val("")
+		$(".ac_name_txt").val("")
+	})
+	
+	//发送成功关闭按钮
+	$(".closedBtn").click(function(){
+		$(".winMsg,.winBg").hide()
+		$(".ac_wish_txt").val("")
+		$(".ac_name_txt").val("")
+	})
+	
+function gun(){
+	$("#giftModule .gift_layout").eq(0).addClass("active")
+	setTimeout(function(){
+		$("#giftModule .gift_layout").eq(0).appendTo($("#giftModule")).removeClass("active")
+		setTimeout(function(){
+				gun()
+			},3000)
+	},3000)
+}
+gun()
+
+
+
+//弹幕1
+		var L=$("#bd_1 .c_g");
+		if(L.length>1){
+				scroll()
+		}
+
+		function scroll(){		
+		$("#bd_1").css({
+			"transform":"translateY(-24px)",
+			transition:"all 2s"
+		});
+		
+		setTimeout(function(){
+			$("#bd_1").css({
+				"transform":"translateY(0)",
+				transition:"none"
+			});
+			$("#bd_1 .c_g").eq(0).appendTo($("#bd_1"));
+
+			setTimeout(function(){
+				scroll()
+			},2000)
+		 	
+		},2000);			   
+   
+	};
+		
+		//弹幕2
+
+		
+
+</script>
+</html>
+
+
+
+
+
+

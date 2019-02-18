@@ -1,0 +1,803 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>you are my everything</title>
+<meta name="keywords" content="">
+<meta id="metaDescription" name="description" content="you are my everything">
+<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+<meta name="viewport" id="viewport" content="width=320, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/view/css/yingtao-2.1.5.3.css?v=15.9">
+<script>
+var your_demain='http://www.yingtaoyun.cn';
+var your_webname='樱桃互动 - 微海报';
+var logo_url='樱桃互动 - 微海报';
+ var  yt_login_url ='http://www.yingtaoyun.cn';
+var lastpagelink='';
+var lastpagetext_color='#23a3d3';
+var lastpagetext='';
+var jubao_link='';
+var APPID_WX = 'wxebac9f9fc11613b2';
+var yt_domain = 'yingtao';
+var is_lemon = '';
+</script>
+<link rel="stylesheet" href="http://whb.yingtaoyun.cn/Public/css/my52.css">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_721375_9hxtj5c9ej5.css">
+<link rel="stylesheet" href="http://h5.yingtaoyun.com/yingtao/body/style/app.css?v=15.9" />
+
+
+<link rel="stylesheet" href="http://whb.yingtaoyun.cn/Public/css/card_main.min.css">
+<link rel="stylesheet" href="http://whb.yingtaoyun.cn/Public/css/style.css?2018042903">
+
+</head>
+<body style="background: url(http://m.czz-vogue.com/uploads/2017/05/221442075350.jpg) no-repeat center;">
+  <a href="https://mp.weixin.qq.com/s?__biz=MzA3MzYxNDgwNA==&mid=402985935&idx=1&sn=3648d89f7114fd5e730b4abd0ed824da&scene=1&srcid=05133CzEJEJYr9yAANYBRRZc#rd">我要制作</a>
+<div id="ppitest" style="width:1in;visible:hidden;padding:0px"></div>
+<div style="height:100%;overflow-x:hidden;overflow-y:auto;">
+  <div class="p-index main phoneBox" id="con" style="display: none;">
+      <div class="top"></div>
+      <div class="phone_menubar"></div>
+      <div class="scene_title_baner" style="display: none">
+          <div class="scene_title">you are my everything</div>
+      </div>
+      <div class="nr" id="nr">
+          <div id="audio_btn" class="off">
+              <div id="yinfu"></div>
+              <audio loop src="" id="media" autoplay="" preload></audio>
+          </div>
+          <div id="loading" class="loading">
+              <div class="loadbox">
+                  <div class="loadlogo" style="background-image: url('http://cdn-whb.yingtaoyun.cn/Uploads/syspic/pageimg/5b61877caa968.jpg ');"></div>
+                  <div class="loadbg" ></div>
+              </div>
+          </div>
+                </div>
+      <div class="bottom"></div>
+  </div>
+</div>
+
+<div class="Payment_page">
+  <div class="close"><img src="http://whb.yingtaoyun.cn/Public/img/close.png" alt="" /></div>
+  <div class="Payment_box">
+    <p>
+      <span>赠送人</span>
+      <b><span id="payment_name"></span></b>
+
+    </p>
+    <p>
+      <span>接收人</span>
+      <b><span>和</span></b>
+
+    </p>
+    <p>
+      <span>金额</span>
+      <b>￥<span id="payment_money">1</span></b>
+
+    </p>
+    <div class="Payment_button">
+      <button>确定</button>
+    </div>
+    <input type="hidden" name="scenecode_varchar" value="U80513564HDQ">
+    <input type="hidden" name="payment_money" value="1">
+    <input type="hidden" name="payment_type" value="whbmoney">
+    <input type="hidden" name="gift_id" value="0">
+    <input type="hidden" name="gift_name" value="">
+  </div>
+  
+</div>
+
+    <style type="text/css">
+    #yt_1wrapper{
+     position: fixed;
+     width: auto;
+     top:0px;
+     height: 200px;
+     box-sizing:border-box;
+     /*overflow: hidden;*/
+     pointer-events:none;
+    }
+    .yt_tanmu_box{ 
+		    position:absolute;
+		    border-radius:45px;
+		    background:rgba(0,0,0,.4);
+		    color:#fff;
+		    top:0px;
+		    font-size:12px;
+		    white-space:nowrap;
+		    padding:2px 10px;
+		    z-index: 999;
+        animation: danmu_move 10s  1;
+        transform:translateZ(0)
+		}
+    @keyframes danmu_move{
+       to{
+         transform: translate3d(-350px, 0, 0);
+        /*display: none;*/
+       }
+    }
+   </style>
+<div id="wrap" >
+
+    <div id="chat_msg" class="fadeIn">
+        <div>
+            <div id="giftModule" class="">
+                          </div>
+                                   <!--横向弹幕-->
+            <div id="yt_1wrapper"></div>
+
+                                                <div class="chat_entry">
+                                <div class="c_txt">
+                    <div id="wishTxt">
+                        <span id="chatEntry">请留下你的祝福...</span>
+                    </div>
+                </div>
+                                <div class="c_icon">
+                                         <div class="bomb">
+                       <span><img src="http://whb.yingtaoyun.cn/Public/img/dan1.png"></span>
+                    </div>
+                                                            
+                                    </div>
+            </div>
+        </div>
+    </div>
+
+         <!--祝福-->
+    <div class="ac_bg"></div>
+    <div id="allCode" style="">
+      <div class="ac_wish">
+        <i>祝福</i>
+        <textarea class="ac_wish_txt" type="text" value="" placeholder="请留下你的祝福..." ></textarea>
+      </div>                                
+      <div class="ac_name">  
+        <div class="ac_name_bd">
+          <i>姓名</i>
+          <textarea class="ac_name_txt"  type="text"></textarea>
+        </div>
+        <div class="ac_name_btn">
+          <span class="sureBtn" style="">确定</span>
+        </div>
+      </div>
+    </div>
+    
+    <!--发送成功-->
+    <div class="winMsg">
+      <i class="closedBtn"></i>
+      <img src="http://whb.yingtaoyun.cn/Public/img/ok.png">
+      <span>发送成功</span>
+               </div>
+    <div class="winBg"></div>
+        <!--赠送礼物-->
+    <div class="bgc"></div>
+        
+    <!--红包-->
+    <div id="red_packets_bg" class="" ></div>
+    <div id="red_packets_form" class="" style="background-image: url(http://whb.yingtaoyun.cn/Public/img/o_1br40f8ql441kldbnnnfe12qm1k.png);">  
+      <div class="container">
+        <div class="flip">
+          <div class="front">
+            <img src="http://whb.yingtaoyun.cn/Public/img/o_1br3sqcqfihrqq73fn1rcs2iru.png">
+          </div>
+          <div class="back">
+            <img src="http://whb.yingtaoyun.cn/Public/img/o_1br6i7odt1hf345lpm1dqdog610.png">
+          </div>
+        </div>
+      </div>
+      <div class="money" style="background-image: url(http://whb.yingtaoyun.cn/Public/img/o_1br3sqcqfab81ppi4p11mu21msg11.png);"></div> 
+      <div class="red_packets_before"></div> 
+      <div class="red_packets_wrap" style="position: relative; top: 13px;"> 
+        <div class="red_packets_name"><i>赠送人：</i>
+          <input class="red_packets_name_txt" type="text" value="" placeholder="请输入您的姓名">
+        </div>
+        <div class="red_packets_money"><i>礼金金额：</i>
+          <input class="red_packets_money_txt"  type="text" value="" placeholder="请输入礼金金额">
+        </div> 
+        <i class="red_packets_tip"></i>  
+        <a class="red_packets_btn" id="sendPriceBtnV2">
+          <img src="http://whb.yingtaoyun.cn/Public/img/o_1br6i543210sh1ftisg57fe135tr.png">
+        </a>
+      </div>
+      <a class="close_red_packets">
+        <img src="http://whb.yingtaoyun.cn/Public/img/close.png">
+      </a>
+    </div>
+</div>
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="http://whb.yingtaoyun.cn/Public/css/waiwan/jquery.min.js"></script>
+
+<script >
+ (function (window, $) {
+   window.PREFIX_URL = "http://"+window.location.host+"/";
+    window.PREFIX_S1_URL =  "http://"+window.location.host+"/";//"/json/";
+    window.PREFIX_S2_URL ="http://"+window.location.host+"/";
+    window.PREFIX_S6_URL ="http://"+window.location.host+"/";
+    window.PREFIX_HOST = "http://"+window.location.host+"/";
+    window.PREFIX_HOST1 = "http://"+window.location.host+"/";
+    window.PREFIX_SHOW_HOST = "http://"+window.location.host+"/";
+    window.TRACK_HOST = "http://"+window.location.host+"/";
+    window.PREFIX_FILE_HOST = "http://cdn-whb.yingtaoyun.cn/Uploads/"; 
+	window.PREFIX_COMPANY_HOST_ARRAY = ["http://"+window.location.host, "http://"+window.location.host];
+	window.OLD_FILE_HOST="http://"+window.location.host+"/";
+    window.CLIENT_CDN ="http://whb.yingtaoyun.cn/"; 
+    window.WX_SITE_URL ="http://wx.yingtaoyun.cn/"; 
+   window.clientWidth = document.documentElement.clientWidth;
+    window.clientHeight = document.documentElement.clientHeight;    
+	window.PREFIX_HOST_ARRAY = [
+			"http://"+window.location.host,
+			"http://"+window.location.host,
+			"http://"+window.location.host,
+			"http://"+window.location.host
+		];
+       
+})(window, jQuery)
+</script>
+ <script type="text/javascript" src="/view/yingtao-preview-2.1.5.3.js?v=15.9"></script>
+ <script src="http://cdn.yingtaoyun.cn/views/default/js/mpv2/hammer.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/whb/js/ImgEditor.js"></script>
+<script src="/view/exif.js?v=15.9"></script>
+<script>
+var scene = {id:8840674,code:"U80513564HDQ",name:"you are my everything",bgAudio:{"url":"{$sceneinfo['musicurl_varchar']}","name":"","id":202382032},pageMode:0,cover:"",property:'{"triggerLoop":true,"slideNumber":true,"autoFlipTime":3,"shareDes":"","eqAdType":1,"hideEqAd":false,"activityPageId":null}'};
+    eqShow.bootstrap();
+      
+   (function () {
+    function isMobile() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobi/i.test(navigator.userAgent) ||
+                window.innerWidth < 500;
+    }
+
+    function setScale() {
+        if (window.top !== window) {
+            return;
+        }
+        var pageScale = 1;
+
+        var width = document.documentElement.clientWidth || 320;
+        var height = document.documentElement.clientHeight || 486;
+
+
+        if (width / height >= 320 / 486) {
+            pageScale = height / 486;
+        } else {
+            pageScale = width / 320;
+        }
+         console.log('screen.width', width, 'screen.height', height, 'setScale', pageScale);
+        // meta
+        var content = 'width=320, initial-scale=' + pageScale + ', maximum-scale=' + pageScale + ', user-scalable=no';
+        document.getElementById('viewport').setAttribute('content', content);
+    }
+    
+    if (isMobile()) {
+        setScale();
+    }
+
+})();
+</script>
+
+<script>
+  wx.config({
+      debug: false,
+      appId: 'wxebac9f9fc11613b2',
+      timestamp: "1533712118",
+      nonceStr: 'RTWFsG6KgPZsUJbY',
+      signature: '86dd9df6c51dbe0c22634918c633965feddd004d',
+      jsApiList: [
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage'
+      ]
+  });
+  wx.ready(function () {
+  
+      var shareData64 = {
+        title: "you are my everything",
+        desc: "有你的日子，咖啡也是甜的！",
+        link: PREFIX_URL+'v/U80513564HDQ',
+        imgUrl:  PREFIX_FILE_HOST  +'syspic/pageimg/5b61877caa968.jpg!w320'
+      };
+      wx.onMenuShareAppMessage(shareData64);
+      wx.onMenuShareTimeline(shareData64);
+      if (!eqShow.getUrlParameter('edit')) {
+        $("#media").get(0).play();
+      }
+  });
+
+</script>
+
+
+
+<script type="text/javascript">
+
+   
+   $("#send_gift .close,.bgc").on("click",function(){
+    $(".bgc,#send_gift").hide();  
+  })
+
+
+  //红包
+  
+  $("#priceShow").click(function(){
+    $("#red_packets_bg").show()
+    $("#red_packets_form").show()
+    $(".money").show()
+    var scrollT=$(document).scrollTop()+160;
+    $("#red_packets_form").css("top",scrollT+"px")
+  })
+  
+  //塞钱
+  $(".red_packets_name_txt").blur(function(){
+    $(this).prop("placeholder", "请输入你的姓名")
+  })
+  $("#sendPriceBtnV2").on("click",function(){
+    var is_wx = '';
+    var openid = '';
+    if(!is_wx) {
+      $(".ac_bg").html("请在微信打开").addClass("active");
+      setTimeout(function(){
+        $(".ac_bg").removeClass("active")
+      },3000)
+      return false;
+    }
+
+    if(!openid) {
+      $(".ac_bg").html("未获取到用户信息").addClass("active");
+      setTimeout(function(){
+        $(".ac_bg").removeClass("active")
+      },3000)
+      return false;
+    }
+
+
+    var name=$(".red_packets_name_txt").val();
+    var money=$(".red_packets_money_txt").val();
+    var reg = /^\d+(?=\.{0,1}\d+$|$)/;
+      if(name==""){
+      $(".ac_bg").html("请填写姓名").addClass("active");
+      setTimeout(function(){
+        $(".ac_bg").removeClass("active")
+      },3000)
+      return false;
+    }
+    else if(money==""){
+      $(".ac_bg").html("请输入礼金金额").addClass("active")
+      setTimeout(function(){
+        $(".ac_bg").removeClass("active")
+      },3000)
+      return false;
+      }
+    else if(!reg.test(money)){
+      $(".ac_bg").html("请输入1~199.99的数字").addClass("active")
+      setTimeout(function(){
+        $(".ac_bg").removeClass("active")
+      },3000)
+      return false;
+      }
+    else if(money<1 || money> 199.99){
+      $(".ac_bg").html("金额请在1~199.99之间").addClass("active")
+      setTimeout(function(){
+        $(".ac_bg").removeClass("active")
+      },3000)
+      return false;
+    }else{
+      var payment_money = Math.round(money*100)/100;
+        $('.Payment_page #payment_name').html(name);
+        $('#payment_money').html(payment_money);
+        $('.Payment_page input[name=payment_money]').val(payment_money);
+        $('.Payment_page input[name=payment_type]').val('whbmoney');
+        $(".Payment_page").show()
+      }
+  })
+      //红包关闭按钮
+  $(".close_red_packets").on("click",function(){
+    $("#red_packets_bg").hide();
+    $("#red_packets_form").hide();
+    $(".money").hide()
+  })
+  
+  
+  //礼物
+  $(".ak").blur(function(){
+    $(this).prop("placeholder", "请输入你的姓名")
+  })
+
+  $("#giftShow").on("click",function(){
+    $(".bgc,#send_gift").show();
+    var scrollT=$(document).scrollTop()-45;
+    $("#send_gift").css("bottom",-scrollT+"px")
+  
+ })
+
+  $(".bgc").click(function(){
+    $(".bgc,#send_gift").hide()
+  })
+  
+  //选择礼物
+  $(".g_layout span").on("click",function(){
+    $(this).addClass("ap").parent().siblings().children().removeClass("ap");
+    $(this).parent().parent().siblings().children().children().removeClass("ap")
+  })
+  
+  //确定按钮
+  $("#sendGiftBtn").on("click",function(){
+    var name=$("#send_gift .ak").val();
+    if(name==""){
+        $(".ac_bg").html("请填写姓名").addClass("active");
+      setTimeout(function(){
+        $(".ac_bg").removeClass("active")
+      },3000)
+      return false;
+    } else {
+      var is_wx = '';
+      var openid = '';
+      if(!is_wx) {
+        $(".ac_bg").html("请在微信打开").addClass("active");
+        setTimeout(function(){
+          $(".ac_bg").removeClass("active")
+        },3000)
+        return false;
+      }
+
+      if(!openid) {
+        $(".ac_bg").html("未获取到用户信息").addClass("active");
+        setTimeout(function(){
+          $(".ac_bg").removeClass("active")
+        },3000)
+        return false;
+      }
+
+      var selectedGift = $('#g_bd_wrap .ap');
+      var money        = selectedGift.attr('price');
+      var giftCid      = selectedGift.attr('cid');
+      var giftTitle    = selectedGift.attr('title');
+      var reg = /^\d+(?=\.{0,1}\d+$|$)/;
+      if(!reg.test(money)){
+        $(".ac_bg").html("请输入1~199.99的数字").addClass("active")
+        setTimeout(function(){
+          $(".ac_bg").removeClass("active")
+        },3000)
+        return false;
+      }
+
+      var payment_money = Math.round(money*100)/100;
+      $('.Payment_page #payment_name').html(name);
+      $('#payment_money').html(payment_money);
+      $('.Payment_page input[name=payment_money]').val(payment_money);
+      $('.Payment_page input[name=payment_type]').val('whbgift');
+      $('.Payment_page input[name=gift_id]').val(giftCid);
+      $('.Payment_page input[name=gift_name]').val(giftTitle);
+
+      $(".Payment_page").show()
+    }
+  })
+  
+  
+  $("#g_bd_wrap").on("touchstart", function(e) {
+    startX = e.originalEvent.changedTouches[0].pageX,
+    startY = e.originalEvent.changedTouches[0].pageY;
+});
+$("#g_bd_wrap").on("touchmove", function(e) {
+    e.preventDefault();
+    moveEndX = e.originalEvent.changedTouches[0].pageX,
+    moveEndY = e.originalEvent.changedTouches[0].pageY,
+    X = moveEndX - startX,
+    Y = moveEndY - startY;
+    if ( X > 40 ) {
+        $("#g_bd_wrap").css("transform","translate3d(0px, 0px, 0px)")
+        $(".pageGift").children("i").eq(0).addClass("ko").siblings("i").removeClass("ko")
+    }
+    else if ( X < -40 ) {
+        $("#g_bd_wrap").css("transform","translate3d(-320px, 0px, 0px)")
+        $(".pageGift").children("i").eq(1).addClass("ko").siblings("i").removeClass("ko")
+    }
+
+});
+  
+  
+
+  //祝福
+  $(document).click(function (e) {
+      e.stopPropagation()
+       $("#allCode").hide();
+  });
+  $("#wishTxt,#allCode").on("click",function(e){
+      e.stopPropagation()
+    $("#allCode").show()
+  })
+  $("#wishTxt").on("click",function(e){
+      e.stopPropagation()
+    $("#allCode").show().css("opacity","1")
+  })
+  $(".ac_wish_txt,.ak,.red_packets_name_txt").focus(function(){
+    $(this).prop("placeholder", "").addClass("zc")
+  })
+  
+  $(".ac_wish_txt").blur(function(){
+    $(this).prop("placeholder", "请留下你的祝福...")
+  })
+
+
+    $('textarea').bind('input propertychange', function() {
+
+      if(($(".ac_wish_txt").val() !="") && ($(".ac_name_txt").val() !="")){
+        $('.sureBtn').addClass("active")
+      } else {
+         $('.sureBtn').removeClass("active")
+      }
+
+    });
+    
+ 
+    //祝福提交按钮
+    
+  $(".ac_name_btn").on("click",function(){
+    var wish=$(".ac_wish_txt").val();
+    var name=$(".ac_name_txt").val();
+    if(wish==""){
+      $(".ac_bg").html("请留下你的祝福...").addClass("active");
+      setTimeout(function(){
+        $(".ac_bg").removeClass("active")
+      },3000)
+      return false;
+      
+    }
+    else if(name==""){
+      $(".ac_bg").html("请输入你的姓名...").addClass("active")
+      setTimeout(function(){
+        $(".ac_bg").removeClass("active")
+      },3000)
+      return false;
+      }
+    else{
+		clearInterval(danmu_timer);
+		clearTimeout(danmu_timer1);
+    	$.post('/index.php?c=view&a=saveBarrage', {name:name,content:wish,yt_domain:yt_domain,yt_type:"2", sceneid_bigint:"8840674"});
+      var c_g=$("<div>").attr("class","c_g");
+      var p=$("<p>");
+      var span=$("<span>").html(name+":");
+      var em=$("<em>").html(wish);
+      var isNew = true;
+      
+      $(p).append($(span));
+      $(p).append($(em));
+      $(c_g).append($(p));
+      $(".bd").append($(c_g));
+
+      
+      $("#allCode").hide().css("opacity","0")
+      $(".winMsg,.winBg").show()
+
+      playList.push({"message":name+":"+wish});
+      $("#yt_1wrapper").append(createScreenPraise(name+":"+wish,isNew));
+      danmu_timer1 = setTimeout(function(){
+	   	initScreen();//初始化屏幕
+	  },100)
+    }
+    
+  })
+  
+  //发送成功送礼物
+  $("#giftBtnWin").on("click",function(){
+    var name=$(".ac_name_txt").val();
+    $(".winMsg,.winBg").hide()
+    $(".bgc,#send_gift").show();
+    $(".ak").val(name)
+    $(".ac_wish_txt").val("")
+    $(".ac_name_txt").val("")
+  })
+  //
+  $("#cashBtnWin").on("click",function(){
+    $(".winMsg,.winBg").hide()
+    $(".ac_wish_txt").val("")
+    $(".ac_name_txt").val("")
+  })
+  
+  //发送成功关闭按钮
+  $(".closedBtn").click(function(){
+    $(".winMsg,.winBg").hide()
+    $(".ac_wish_txt").val("")
+    $(".ac_name_txt").val("")
+  })
+  
+function gun(){
+  $("#giftModule .gift_layout").eq(0).addClass("active")
+  setTimeout(function(){
+    $("#giftModule .gift_layout").eq(0).appendTo($("#giftModule")).removeClass("active")
+    setTimeout(function(){
+        gun()
+      },2000)
+  },2000)
+}
+gun()
+
+
+
+//弹幕1
+    var L=$("#bd_1 .c_g");
+    if(L.length>1){
+        scroll()
+    }
+
+    function scroll(){    
+    $("#bd_1").css({
+      "transform":"translateY(-24px)",
+      transition:"all 2s"
+    });
+    
+    setTimeout(function(){
+      $("#bd_1").css({
+        "transform":"translateY(0)",
+        transition:"none"
+      });
+      $("#bd_1 .c_g").eq(0).appendTo($("#bd_1"));
+
+      setTimeout(function(){
+        scroll()
+      },2000)
+      
+    },2000);         
+   
+  };
+    
+
+  //弹幕2
+
+var locaScreen = [20,120,40,160,140,80];//弹幕位置
+var danmu_num = -1;
+var danmu_timer;
+var danmu_timer1;
+var max_num = 15; //最大条数
+
+var playList=[
+  	{"message": '子怡:祝福：长长久久'},
+   	{"message": 'Cora:恩爱百年'},
+   	{"message": '唐龙影视:666'},
+   	{"message": '双辽金百合客服经理艾米:百年好合'},
+   	{"message": 'Class:恩爱百年'},
+   	{"message": '发仔:恭喜恭喜💐'},
+   	{"message": '和🍒:百年好合，早生贵子！'},
+   	{"message": '秦森:祝福哦'},
+   	{"message": '双辽金百合客服经理艾米:百年好合'},
+   	{"message": '朱徐林:祝福'},
+   	{"message": '阿:好美！'},
+   	{"message": 'A💄米兰🎀Anna 17755333271:要幸福哦！'},
+   	{"message": 'A王强远:结婚大喜，恭喜恭喜'},
+   	{"message": '王雪:新婚快乐'},
+   	{"message": '马鞍山巴黎婚纱～杨安庆:美好，快乐'},
+   	{"message": 'll:祝福㊗️百年好合'},
+   	{"message": '甜甜:恭喜恭喜🎉🎉🎉'},
+  ]
+window.onpageshow=function(e){
+    if(e.persisted) {
+        window.location.reload() 
+    }
+    initScreen();
+};
+  // initScreen();
+	//初始屏幕
+	function initScreen(){
+    if(playList.length != 0){
+  		danmu_timer = setInterval(function(){
+  		    danmu_num ++;
+  		    if(danmu_num>playList.length-1 || danmu_num>max_num){
+  		    	danmu_num = 0
+  		    }
+          var style = $('#yt_1wrapper').css('display');
+  		    if(danmu_num <max_num+1 && style == 'block'){ 
+  		    	$("#yt_1wrapper").append(createScreenPraise(playList[danmu_num].message,playList[danmu_num].isNew));
+  		    }else if(style == 'none')	{
+              clearInterval(danmu_timer);
+              $('#yt_1wrapper').empty() 
+          }
+  		},1000);
+    }			
+	}
+	//生成弹幕
+	function createScreenPraise(message, isNew){
+		var div = document.createElement("div");
+	
+		//放入到最后tanmu元素里
+		div.className = "yt_tanmu_box";
+		div.innerHTML = message;
+		if(isNew){
+			div.style.backgroundColor="red"
+		}
+		createScreen(div)//执行生成弹幕的动画
+		return div;
+	}
+	//生成弹幕
+	var olN = 0;
+	function createScreen(elem){
+		var _top=0;
+		var _left=$(window).width();
+     var _left=$(window).width()-$(elem).width();
+
+		var lN= Math.floor(6*Math.random());
+		
+		if(olN ==lN){
+			lN++;
+			if(lN>locaScreen.length-1){
+				lN = 0;
+			}	
+		}
+		olN = lN;
+		_top=locaScreen[lN];
+		$(elem).css({"transform":"translate3d("+_left+"px,0,0)",top:_top})
+
+	}
+
+	
+     $(".bomb span").on("click",function(){
+     $("#bd_1").toggle();
+     $("#yt_1wrapper").toggle();
+     var term=$('#bd_1').css('display');
+     var term2=$('#yt_1wrapper').css('display');
+     if(term=="none"){
+      $(this).children("img").attr("src","http://whb.yingtaoyun.cn/Public/img/dan1.png")
+     }else if(term=="block"){
+      $(this).children("img").attr("src","http://whb.yingtaoyun.cn/Public/img/dan2.png")
+     }
+
+     if(term2=="none"){
+      initScreen();
+      $(this).children("img").attr("src","http://whb.yingtaoyun.cn/Public/img/dan2.png")
+     }else if(term2=="block"){
+      $(this).children("img").attr("src","http://whb.yingtaoyun.cn/Public/img/dan1.png")
+     }
+     
+    })
+
+
+     $(".Payment_page .close").on("click",function(){
+       $(".Payment_page").hide();
+       $(".close_red_packets").trigger("click"); 
+    })
+
+     $(".Payment_button button").on("click",function(e){
+        var _self = $(this);
+         // _self.attr('disabled', 'disabled');
+         var price             = $('.Payment_page input[name=payment_money]').val();
+         var notifi_type       = $('.Payment_page input[name=payment_type]').val();
+         var scenecode_varchar = "U80513564HDQ";
+
+         var gift_id         = $('.Payment_page input[name=gift_id]').val();
+         if(notifi_type == 'whbgift') {
+          var gift_name       = $('.Payment_page input[name=gift_name]').val();
+          var body            = '影像v2礼物';
+          var description     = gift_name;
+         } else {
+           var body            = '影像v2礼金红包';
+           var description     = '影像v2礼金红包';
+         }
+         
+         var name       = $('#payment_name').html();
+         var product_id        = '';
+         $.post('index.php?c=view&a=getOutTradeNo', {yt_domain:yt_domain,name:name,price:price,scenecode_varchar:scenecode_varchar,pay_type:notifi_type,gift_id:gift_id},function(data){
+          _self.removeAttr('disabled');
+          if(data.status == false) {
+            $(".ac_bg").html(data.msg).addClass("active")
+              setTimeout(function(){
+              $(".ac_bg").removeClass("active")
+            },3000)
+            return false;
+          } else {
+            if(price == 0 && (gift_id == 1 || gift_id == 2 || gift_id == 3)) {
+              $(".ac_bg").html('送礼物成功！').addClass("active")
+                setTimeout(function(){
+                window.location.href=window.location.href;
+              },3000)
+              return false;
+            }
+            product_id   = data.outTradeNo;
+            var goto_url = PREFIX_URL+'v/U80513564HDQ';
+            var url      = WX_SITE_URL+yt_domain+'/ts/wxpay/index.html?paydomain='+yt_domain+'&total_fee='+(price*100)+'&product_id='+product_id+'&body='+encodeURI(body)+'&description='+encodeURI(description)+'&goto_url='+encodeURI(goto_url)+'&notifi_type='+notifi_type;
+
+            window.location = url;
+          }
+         },'json');
+
+        
+    })
+     
+</script>
+</body>
+</html>

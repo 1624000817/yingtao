@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#wrapper{
+			position: relative;
+			width: auto;
+			height: 400px;
+			border: 1px solid #333;
+			border-radius: 4px;
+			box-sizing:border-box;
+			overflow: hidden;
+		}
+		@keyframes move{
+			to{
+				left: -200px;
+			}
+		}
+	</style>
+	<body>
+			<div id="wrapper">
+
+	</div>
+	</body>
+	<script type="text/javascript">
+		var $ = function(id){
+			return document.getElementById(id);
+		};
+
+		// data
+		var playList = []
+		var aa = [{
+			// 内容
+			text: '欢迎欢迎~\\(≧▽≦)/~',
+		},
+		{
+			text: '这里是何帅帅的小弹幕DEMO',
+		},
+		{
+			text: '这里是何帅帅的小弹幕DEMO',
+		},
+		{
+			text: '这里是何帅帅的小弹幕DEMO',
+		},
+		{
+			text: '我的博客：sammieho.github.io 要来参观噢',
+		},
+		{
+			text: '我的博客：sammieho.github.io 要来参观噢',
+		}];
+
+		// variable
+		var LEFT = document.body.clientWidth;
+		console.log(LEFT);
+		const playerColors = ["#33B5E5", "#0099CC", "#AA66CC", "#9933CC", "#99CC00", "#669900", "#FFBB33", "#FF8800", "#FF4444", "#CC0000"];
+		var actorList = " ";
+
+
+		(function(){
+
+			
+				render();
+
+
+		})();
+
+
+
+		// 添加演员
+		function addActors( text ){
+
+			this.text = text;
+			var addActor = {
+				text: this.text,
+				color: playerColors[ Math.floor( Math.random() * playerColors.length )],
+				size: Math.ceil( Math.random() * 14 ) + 10 + "px",
+				time: Math.ceil( Math.random() * 50 ),
+				duration: Math.ceil( Math.random() * 10 ) +3,
+				top: Math.floor( Math.random() * 300 )
+			};
+
+			playList.push(addActor);
+			console.log(playList)
+			updateRender();
+		}
+		
+ for(var i =0; i<aa.length; i++){
+ 	addActors(aa[i].text)
+ }
+
+		// 渲染舞台stage
+		function render(){
+			$("wrapper").innerHTML = " ";
+			for(var i = 0; i < playList.length; i++){
+				actorList +="<div style=\"color:" + playList[i].color + ";font-size: " + playList[i].size + "px;position: absolute;min-width:400px;animation-iteration-count: infinite;animation-name: move;animation-duration:" + playList[i].duration + "s;" + "left:" + LEFT + "px;top: " + playList[i].top + "px;\" class=\"danmu\">" + playList[i].text + "</div>"
+			}
+
+			$("wrapper").innerHTML += actorList;
+			actorList = "";
+ 		}
+
+ 		// update insert
+ 		function updateRender(){
+ 			var newNode = document.createElement("div");
+ 			newNode.innerHTML = playList[playList.length-1].text;
+ 			newNode.style.color = playList[playList.length-1].color;
+ 			newNode.style.fontSize = playList[playList.length-1].size;
+ 			newNode.style.position = "absolute";
+ 			newNode.style.left = LEFT + "px";
+ 			newNode.style.top = playList[playList.length-1].top + "px";
+ 			newNode.style.minWidth = "400px";
+ 			newNode.style.animation = "move" + " " + playList[playList.length-1].duration + "s";
+ 			newNode.style.animationIterationCount = "infinite";
+ 			$("wrapper").appendChild(newNode);
+ 		}
+
+ 
+
+
+	</script>
+</html>

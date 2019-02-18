@@ -1,0 +1,61 @@
+@font-face{
+	font-family: 'G';
+	src:url('../fonts/G.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+[class^="i_"], [class*=" i_"]{
+    font-family:'G' !important;
+    speak:none;
+    font-style:normal;
+    font-weight:normal;
+    font-variant:normal;
+    text-transform:none;
+    line-height:1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	}
+
+.i_fail:before {
+  content: "\e904";
+}
+.i_urgent:before {
+  content: "\e905";
+}
+.i_lightning_o:before {
+  content: "\e908";
+}
+.i_discount:before {
+  content: "\e900";
+}
+.i_right:before {
+  content: "\e901";
+}
+.i_close:before {
+  content: "\e902";
+}
+.i_time:before {
+  content: "\e903";
+}
+.i_date:before {
+  content: "\e91b";
+}
+.i_gift:before {
+  content: "\e911";
+}
+.i_more:before {
+  content: "\e910";
+}
+.i_lightning:before {
+  content: "\e90c";
+}
+.i_user:before {
+  content: "\e906";
+}
+.i_mobile:before {
+  content: "\e907";
+}
+.i_horn:before {
+  content: "\e90e";
+}

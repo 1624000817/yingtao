@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_484708_l675u2i50yjpp66r.css">
+<link rel="stylesheet" href="http://h5.yingtaoyun.com/yingtao/wx/v3/css/app.css">
+<link rel="stylesheet" type="text/css" href="css/app.css">
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+<!-- <link href="http://h5.yingtaoyun.com/yingtao/wx/1711/app.css" rel="stylesheet"> -->
+</head>
+<body>
+<article>
+	<div class="addIndex2_banner" style="background-image: url(img/pic1big.png)">
+		
+		<div class="logo" style="background-image:url(img/logo.png)"></div>
+		<div class="banner_box">
+			<div class="swiper-container scroll_content">
+	            <div class="swiper-wrapper">
+	                <div class="swiper-slide">
+	                   <a href="" class="pic" style="background-image: url(img/pic1.png);"></a>
+	                   <div class="pic_detail">
+							<p class="name">Black friday</p>
+							<p class="title">黑色星期五狂欢节</p>
+							<p class="detail">
+								<span>
+									<a href="" class="collect">
+										<i class="iconfont icon-xinxing"></i>
+										<i class="iconfont icon-shoucang"></i>
+										<b>已收藏</b>
+									</a>
+								</span>
+								<span class="hot" style="background-image: url(img/jiao.png);">Hot</span>
+							</p>
+	                   </div>
+	                </div>
+	                <div class="swiper-slide">
+	                 	<a href="" class="pic" style="background-image: url(img/pic2.png);"></a>
+	                 	<div class="pic_detail">
+							<p class="name">Black friday</p>
+							<p class="title">黑色星期五狂欢节</p>
+							<p class="detail">
+								<span>
+									<a href="" class="collect">
+										<i class="iconfont icon-xinxing"></i>
+										<i class="iconfont icon-shoucang"></i>
+										<b>已收藏</b>
+									</a>
+								</span>
+								<span class="hot" style="background-image: url(img/jiao.png);">New</span>
+							</p>
+	                   </div>
+	                </div>
+	                 <div class="swiper-slide">
+	                 	<a href="" class="pic" style="background-image: url(img/pic3.png);"></a>
+	                 	<div class="pic_detail">
+							<p class="name">Black friday</p>
+							<p class="title">黑色星期五狂欢节</p>
+							<p class="detail">
+								<span>
+									<a href="" class="collect">
+										<i class="iconfont icon-xinxing"></i>
+										<i class="iconfont icon-shoucang"></i>
+										<b>已收藏</b>
+									</a>
+								</span>
+								<span class="hot" style="background-image: url(img/jiao.png);">New</span>
+							</p>
+	                   </div>
+	                </div>
+	                 <div class="swiper-slide">
+	                   <a href="" class="pic" style="background-image: url(img/pic4.png);"></a>
+	                   <div class="pic_detail">
+							<p class="name">Black friday</p>
+							<p class="title">黑色星期五狂欢节</p>
+							<p class="detail">
+								<span>
+									<a href="" class="collect">
+										<i class="iconfont icon-xinxing"></i>
+										<i class="iconfont icon-shoucang"></i>
+										<b>已收藏</b>
+									</a>
+								</span>
+								<span class="hot" style="background-image: url(img/jiao.png);">Hot</span>
+							</p>
+	                   </div>
+	                </div>
+	            </div>
+	        </div>
+		</div>
+		<a href="" class="addIndex2_viewer">
+			<span>热门活动</span>
+			<small>ACTIVITY</small>
+			<i class="iconfont icon-sanjiao"></i>
+		</a>
+	</div>
+
+	<!-- 样片 -->
+	<div class="addIndex2_sample">
+		<ul id="elasticstack" class="elasticstack">
+			<li>
+				<a href="" class="pic" style="background-image: url(img/pic5.png);"></a>
+				<a href="" class="pic_detail">
+					<p class="title">Alena Kopas</p>
+					<p class="name">落入凡尘的天使</p>
+					<span>Read</span>
+				</a>
+			</li>
+			<li>
+				<a href="" class="pic" style="background-image: url(img/pic6.png);"></a>
+				<a href="" class="pic_detail">
+					<p class="title">Alena Kopas</p>
+					<p class="name">落入凡尘的天使</p>
+					<span>Read</span>
+				</a>
+			</li>
+			<li>
+				<a href="" class="pic" style="background-image: url(img/pic7.png);"></a>
+				<a href="" class="pic_detail">
+					<p class="title">Alena Kopas</p>
+					<p class="name">落入凡尘的天使</p>
+					<span>Read</span>
+				</a>
+			</li>
+		</ul>
+		<div class="cricle">
+			<span class="active"></span>
+			<span></span>
+			<span></span>
+		</div>
+		<a href="" class="addIndex2_viewer new_viewer">
+			<span>查看样片</span>
+			<small>SAMPLE</small>
+			<i class="iconfont icon-sanjiao"></i>
+		</a>
+	</div>
+	<!-- 客片 -->
+	<div class="addIndex2_show">
+		<div class="show_scroll">
+			<a href="" class="pic_box">
+				<div class="pic_bg">
+					<div class="pic" style="background-image:url(img/pic5.png)">
+						<span style="background-image:url(img/read.png)">Read</span>
+					</div>
+				</div>
+				<p class="title">Alena Kopas</p>
+				<p class="name">落入凡尘的天使</p>
+			</a>
+			<a href="" class="pic_box">
+				<div class="pic_bg">
+					<div class="pic" style="background-image:url(img/pic6.png)">
+						<span style="background-image:url(img/read.png)">Read</span>
+					</div>
+				</div>
+				<p class="title">Alena Kopas</p>
+				<p class="name">落入凡尘的天使</p>
+			</a>
+			<a href="" class="pic_box">
+				<div class="pic_bg">
+					<div class="pic" style="background-image:url(img/pic7.png)">
+						<span style="background-image:url(img/read.png)">Read</span>
+					</div>
+				</div>
+				<p class="title">Alena Kopas</p>
+				<p class="name">落入凡尘的天使</p>
+			</a>
+		</div>
+		<a href="" class="addIndex2_viewer new_viewer">
+			<span>查看客照</span>
+			<small>GUEAT PHOTOS</small>
+			<i class="iconfont icon-sanjiao"></i>
+		</a>
+	</div>
+	<!-- 套系 -->
+	<div class="addIndex2_goods">
+		<div class="goods_scroll">
+			<a href="" class="pic_box">
+				<div class="pic" style="background-image:url(img/pic5.png)"></div>
+				<div class="pic_detail">
+					<div class="left">
+						<p class="title">Alena Kopas</p>
+						<p class="name">落入凡尘的天使</p>
+					</div>
+					<div class="right">
+
+					<!-- 折扣价 -->
+						<!-- <del>￥:000</del>
+						<span><sup>￥</sup>000</span> -->
+						<!-- 预定价 -->
+						<span class="yuding">预订:￥000</span>
+					</div>
+				</div>
+			</a>
+			<a href="" class="pic_box">
+				<div class="pic" style="background-image:url(img/pic5.png)"></div>
+				<div class="pic_detail">
+					<div class="left">
+						<p class="title">Alena Kopas</p>
+						<p class="name">落入凡尘的天使</p>
+					</div>
+					<div class="right">
+
+						<!-- 折扣价 -->
+						<del>￥:000</del>
+						<span class="discount"><sup>￥</sup>000</span>
+
+
+						<!-- 预定价 -->
+						<!-- <span class="yuding">预订:￥000</span> -->
+					</div>
+				</div>
+			</a>
+			<a href="" class="pic_box">
+				<div class="pic" style="background-image:url(img/pic5.png)"></div>
+				<div class="pic_detail">
+					<div class="left">
+						<p class="title">Alena Kopas</p>
+						<p class="name">落入凡尘的天使</p>
+					</div>
+					<div class="right">
+
+					<!-- 折扣价 -->
+						<!-- <del>￥:000</del>
+						<span><sup>￥</sup>000</span> -->
+						<!-- 预定价 -->
+						<span class="yuding">预订:￥000</span>
+					</div>
+				</div>
+			</a>
+		</div>
+		<a href="" class="addIndex2_viewer new_viewer">
+			<span>查看套系</span>
+			<small>SERIES</small>
+			<i class="iconfont icon-sanjiao"></i>
+		</a>
+	</div>
+	<div id="get_offer">
+		<offer-component v-bind:data="offer" v-on:offer="postFn"></offer-component>
+	</div>
+	
+	
+	
+	<section class="WX_V3_poweredby">© Powered by 樱桃互动</section>
+	<div class="YT_Children_WX_footer">
+		<a href="" class="active"><i class="iconfont icon-shouye"></i>首页</a>
+		<a href=""><i class="iconfont icon-huodong"></i>活动</a>
+		<a href=""><i class="iconfont icon-yuyue"></i>预约</a>
+		<a href=""><i class="iconfont icon-bangzhushouce"></i>助手</a>
+		<a href=""><i class="iconfont icon-wode"></i>我的</a>
+	</div>
+</article>
+
+
+<script src="js/zepto.min.js"></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/vue.min.js "></script>
+<script src="http://h5.yingtaoyun.com/yingtao/wx/v3/js/app.js "></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/draggabilly.pkgd.min.js"></script>
+<script src="js/elastiStack.js"></script>
+<script>
+new ElastiStack( document.getElementById( 'elasticstack' ),{
+	 onUpdateStack : function( index ) {
+	 		$(".cricle span").eq(index).addClass("active").siblings("span").removeClass("active")
+	   }
+} );
+ var mySwiper = new Swiper('.swiper-container', {
+        slidesPerView: "auto",
+        paginationClickable: true,
+        observer: true,
+        observeParents: true,
+        // loop:true,
+        centeredSlides: true,
+        onSlideChangeEnd: function(mySwiper){
+        	var myIndex=mySwiper.activeIndex;
+        	console.log(myIndex)
+        	var style=$(".swiper-slide").eq(myIndex).children(".pic").css("background-image");
+        	 if(style.indexOf("/")>0){
+        	 	filename=style.substr(style.lastIndexOf("/")+1,4);
+  
+        	 }     
+        	 $(".addIndex2_banner").css("background-image","url(img/"+filename+"big.png)")
+        }
+   
+    });
+
+/*收藏*/
+ $(".icon-shoucang").hide();
+ var L=$(".swiper-wrapper .swiper-slide").length/3;
+$(".collect").on("click",function(e){
+		 e.preventDefault(); 
+		if(!$(this).is(".active")){
+			$(this).addClass("active");
+			$(this).children(".icon-xinxing").hide();
+			$(this).children(".icon-shoucang").show();
+			
+		}
+		$(this).children("b").addClass("click");
+	})
+
+//分享
+  $('.share').on('click',function(e){
+    e.preventDefault();
+    var url = $(this).attr('data-url');
+    var title = $(this).attr('data-title');
+    window.open('http://www.jiathis.com/share?url='+ url +'&title='+ encodeURIComponent(title));
+  });
+  
+
+var	APP = new Vue({
+	el: '#get_offer',
+	data: {
+		offer: {
+			"banner": "img/pic1.jpg",
+			"btnTitle": "获取报价",
+			"offerData": [{
+				"name": ["c_ff7394","icon-hunshalifu","礼服", "dress"],
+				"items": [
+					["男女各三套", true],
+					["男女各四套", false],
+					["男女各五套", false]
+				],
+				"type": 1
+			}, {
+				"name": ["c_58b6ff","icon-fengge","风格", "style"],
+				"items": [
+					["韩式", true],
+					["个性", false],
+					["法式", false]
+				],
+				"type": 1
+			}, {
+				"name": ["c_ff414e","icon-tubiao-","场景", "location"],
+				"items": [
+					["厦门", true],
+					["三亚", false]
+				],
+				"type": 0
+
+			}, {
+				"name": ["c_ff7394","icon-xiangce","相册", "Photo"],
+				"items": [
+					["1本", true],
+					["2本", false]
+				],
+				"type": 0
+
+			}],
+			"offerInput": [{
+				"name": ["c_ff7394","icon-hunshalifu","家长姓名", "dress"],
+				"id": "a"
+			}, {
+				"name": ["c_ff7394","icon-hunshalifu","联系方式", "dress"],
+				"id": "b"
+			}]
+		}
+	},
+	components: {
+		'offer-component': offerComponent
+	},
+	methods: {
+		postFn: function(arr) { //报价提交
+			console.log(arr)
+
+			$.post('/', {
+				data: arr
+			}, function() {
+
+
+			})
+		}
+	}
+});
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+ <link rel="stylesheet" href="css/app.css"> 
+<!--<link rel="stylesheet" href="http://h5.yingtaoyun.com/yingtao/body/css/app.css">-->
+
+
+
+</head>
+<body>
+<article>
+<a href="javascript:;" class="Indiana_Jones_kindergarten_home"></a>
+</article>
+
+</body>
+<script>
+
+    var img = new Image();
+    img.src = 'img/home.jpg';
+    var a = document.getElementsByClassName('Indiana_Jones_kindergarten_home')[0];
+    a.appendChild(img);
+ 		img.onload=function(){
+   			setTimeout(function(){
+	    	window.location.href="https://www.baidu.com/"
+	    },300)
+ 		}
+    
+    </script>
+
+</html>

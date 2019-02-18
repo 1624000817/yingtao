@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta charset="utf-8">
+    <title>设置</title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<!-- <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css"> -->
+
+<link rel="stylesheet" type="text/css" href="css/iview.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_462588_p8pv5kh5jiofxbt9.css">
+
+
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
+<script type="text/javascript" src="js/iview.min.js"></script>
+<!-- <script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script> -->
+  
+</head>
+<body>
+    <article>
+      <div id="app">
+        
+         <div class="set_page">
+              
+              <my-tabs v-bind:data="set"></my-tabs>
+         </div>
+       </div>
+    </article>
+  
+   
+  
+<script type="text/javascript">
+	
+
+var setPage={
+  props: ['data'],
+  template:'\
+        <Tabs value="name2">\
+           <TabPane :label="data.name[0]"  name="name1">\
+                <ul class="movement">\
+                    <li v-for="item in data.showData">\
+                        <div class="icon"><i :class="item.icon"></i></div>\
+                        <div class="font">{{item.title}}</div>\
+                        <div class="select_box">\
+                            <label class="button">\
+                                <input type="checkbox" :checked="item.isChecked"   v-on:click="openFn(item)">\
+                                <span></span>\
+                                <span></span>\
+                                <span></span>\
+                            </label>\
+                         </div>\
+                    </li>\
+                </ul>\
+          </TabPane>\
+          <TabPane v-bind:label="data.name[1]" name="name2">\
+              <ul class="movement">\
+                  <li>\
+                      <div class="icon"><i class="iconfont icon-shizhong"></i></div>\
+                      <div class="font">推送时间</div>\
+                      <div class="select_box">\
+                          <div class="times">\
+                              <select  v-on:change="timesData"  v-model="data.val1">\
+                                  <option v-for="item in data.timesData" v-bind:value="item.indexId">{{item.name}}</option>\
+                              </select>\
+                          </div>\
+                      </div>\
+                  </li>\
+                  <li>\
+                      <div class="icon"><i class="iconfont icon-shuju"></i></div>\
+                      <div class="font">默认数据</div>\
+                      <div class="select_box">\
+                          <div class="datas">\
+                              <select v-on:change="defaultData"  v-model="data.val2">\
+                                  <option v-for="item in data.defaultData"  v-bind:value="item.indexId">{{item.name}}</option>\
+                              </select>\
+                          </div>\
+                      </div>\
+                  </li>\
+                  <li>\
+                      <div class="icon"><i class="iconfont icon-rili"></i></div>\
+                      <div class="font">默认维度</div>\
+                          <div class="select_box" v-model="data.val">\
+                          <div class="dimensionality">\
+                              <select v-on:change="dimensionalitySelect" v-model="data.val3">\
+                                    <option v-for="item in data.dimensionality" v-bind:value="item.indexId">{{item.name}}</option>\
+                              </select>\
+                          </div>\
+                      </div>\
+                  </li>\
+              </ul>\
+          </TabPane>\
+      <Tabs>',
+      methods:{
+           openFn(item){ //开关点击时触发函数
+               item.isChecked=!item.isChecked;
+               console.log(item.isChecked);
+
+           },
+           timesData(event){  //推送事件改变时触发函数
+              console.log("现在数据选中的是"+event.target.value);
+           },
+           defaultData(event){ //数据值改变时触发函数
+              console.log("现在数据选中的是"+event.target.value);
+           },
+          dimensionalitySelect(event){  //维度值改变时触发函数
+          　　console.log("现在维度选中的是"+event.target.value);
+          },
+      },
+}
+
+
+
+
+
+//indexId  是 value值
+//name     是内容
+
+var vm=new Vue({
+        data:{
+            set:{
+              name: ["显示设置","推送设置"],
+              val3:"2",  //维度默认选择值
+              val2:"3",  //维度数据选择值
+              val1:"5",  //维度数据选择值
+              showData:[
+                     {
+                      icon:"iconfont icon-kehuziliao",
+                      title:"客资数据漏斗图",
+                      isChecked:false
+                    },
+                    {
+                      icon:"iconfont icon-mubiao",
+                      title:"目标完成雷达图",
+                      isChecked:true
+                    },
+                    {
+                      icon:"iconfont icon-iconset0357",
+                      title:"网络数据",
+                      isChecked:false
+                    },
+                    {
+                      icon:"iconfont icon-shuju1",
+                      title:"成交数据",
+                      isChecked:true
+                    }
+               ],
+              timesData:[],  //推送时间数据
+              defaultData:[  //默认数据
+                    {
+                  　　"indexId":1,
+                  　　"name": "客资数据漏斗图"
+                　　}, 
+                    {
+                  　　"indexId":2,
+                  　　"name": "目标完成雷达图"
+                　　},
+                    {
+                    　"indexId":3,
+                    　"name": "网络数据"
+                    },
+                    {
+                  　　"indexId":4,
+                  　　"name": "成交数据"
+                　　}
+              ],
+              dimensionality: [  //默认维度数据
+                    {
+                　　"indexId":1,
+                　　"name": "天维度"
+                　　}, 
+                    {
+                　　"indexId":2,
+                　　"name": "月维度"
+                　　}
+                ]
+            }
+        },
+       mounted: function () {
+            console.log("默认数据是"+this.set.val2);
+            console.log("默认维度是"+this.set.val3);
+            console.log("推送时间是"+this.set.val1);
+            for(let i=0;i<25;i++){
+              let id=i;
+              i=  i<10 ? "0"+i : i;
+              let times=i+":00";
+              this.set.timesData.push({  // 向推送时间数组 追加时间和value值
+                  "indexId": id,
+                  "name":times
+              })
+            }
+          },
+      components:{
+          'myTabs': setPage
+        },
+  }).$mount('#app')
+
+    $(".button input").on("click",function(){
+      var name=$(this).parent().parent().siblings(".font").html();
+      console.log(name)
+    })
+
+    </script>
+</body>

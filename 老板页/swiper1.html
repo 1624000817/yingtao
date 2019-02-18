@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta charset="utf-8">
+    <title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<title></title>
+
+	</head>
+<script type="text/javascript">
+var browserInfo = function (userAgent) {
+    var u = userAgent || navigator.userAgent;
+    var self = this;
+    var match = {
+        //浏览器
+        'Safari': u.indexOf('Safari') > 0,
+        'Chrome': u.indexOf('Chrome') > 0 || u.indexOf('CriOS') > 0,
+        'IE': u.indexOf('MSIE') > 0 || u.indexOf('Trident') > 0,
+        'Edge': u.indexOf('Edge') > 0,
+        'Firefox': u.indexOf('Firefox') > 0,
+        'Opera': u.indexOf('Opera') > 0 || u.indexOf('OPR') > 0,
+        'Vivaldi': u.indexOf('Vivaldi') > 0,
+        'UC': u.indexOf('UC') > 0 || u.indexOf(' UBrowser') > 0,
+        'QQBrowser': u.indexOf('QQBrowser') > 0,
+        'QQ': u.indexOf('QQ/') > 0,
+        'Baidu': u.indexOf('Baidu') > 0 || u.indexOf('BIDUBrowser') > 0,
+        'Maxthon': u.indexOf('Maxthon') > 0,
+        'LBBROWSER': u.indexOf('LBBROWSER') > 0,
+        '2345Explorer': u.indexOf('2345Explorer') > 0,
+        'Sogou': u.indexOf('MetaSr') > 0 || u.indexOf('Sogou') > 0,
+        'Wechat': u.indexOf('MicroMessenger') > 0,
+        'Taobao': u.indexOf('AliApp(TB') > 0,
+        'Alipay': u.indexOf('AliApp(AP') > 0,
+        'Weibo': u.indexOf('Weibo') > 0,
+        'Suning': u.indexOf('SNEBUY-APP') > 0,
+        'iQiYi': u.indexOf('IqiyiApp') > 0,
+    };
+
+    //基本信息
+    var hash = {
+        browser: ['Safari', 'Chrome', 'IE', 'Edge', 'Firefox', 'Opera', 'Vivaldi', 'UC', 'QQBrowser', 'QQ', 'Baidu', 'Maxthon', 'Sogou', 'LBBROWSER', '2345Explorer', 'Wechat', 'Taobao', 'Alipay', 'Weibo', 'Suning', 'iQiYi'], 
+    };
+};
+</script>
+
+	<body>
+		 <form id="form1" runat="server">
+        <div id="divInfo">
+        </div>
+        <script type="text/javascript">
+            var browserInfo = new browserInfo();
+            var html = "<table>"
+                         + "<thead><tr>"
+                         + "<th>浏览器</th></tr></thead>"
+                        + "<tr>"
+                        + "<td>" + browserInfo.browser + "</td></tr></table>";
+            document.getElementById("divInfo").outerHTML = html;
+        </script>
+    </form>
+	</body>
+</html>

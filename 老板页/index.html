@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta charset="utf-8">
+    <title>首页</title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_462588_p8pv5kh5jiofxbt9.css">
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+ 
+</head>
+<body>
+    <article>
+        <div class="bj" style="background-image:url(img/bj.jpg)">
+           <a href="set.html" class="iconfont icon-shezhi"></a>
+            <div class="index_top">
+                <div class="page" style="background-image: url(img/page.png);"></div>
+                <div class="logo">POWERED BY 樱桃互动</div>
+            </div>
+            <div class="index_tabs">
+                <span data-id="0"  class="active">客资</span>
+                <span data-id="1">进店</span>
+                <span data-id="2">成交</span>
+            </div>
+            <div id="main"></div>
+         </div>
+    </article>
+  
+    <script type="text/javascript" src="js/echarts.min.js" ></script>
+  
+    <script type="text/javascript">
+
+$('body').bind('touchstart',function(e){
+    startX = e.originalEvent.changedTouches[0].pageX,
+    startY = e.originalEvent.changedTouches[0].pageY;
+});
+
+$('body').bind('touchmove',function(e){
+    //获取滑动屏幕时的X,Y
+    moveEndX = e.originalEvent.changedTouches[0].pageX,
+    moveEndY = e.originalEvent.changedTouches[0].pageY;
+　　
+var distanceX = moveEndX - startX;
+var distanceY = moveEndY - startY;
+console.log(distanceX)
+console.log(distanceY)
+if (Math.abs(distanceX) > Math.abs(distanceY) && distanceX >40) {
+  console.log("您向 右 滑动！");
+  window.location="swiper.html"
+}
+else if (Math.abs(distanceX) > Math.abs(distanceY) && distanceX <-40) {
+  console.log("您向 左 滑动！");
+  window.location="swiper.html"
+}
+
+});
+
+
+
+
+
+
+
+
+
+
+var values=[[10, 32, 41,84, 90, 30, 10],[78, 46, 41,88, 90,120, 20],[20, 82, 91, 34, 100,30, 10]];
+
+
+ var myzhu = echarts.init(document.getElementById("main"));
+
+function _ajax(values){
+       var option = {
+    title: {
+        text: ''
+    },
+    tooltip : {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            label: {
+                backgroundColor: '#6a7985'
+            }
+        }
+    },
+    legend: {
+        left:"center",
+        selectedMode: 'single', 
+        itemWidth:0,
+        textStyle: {color: '#98825f'},
+        data:['客资','进店','成交'],
+
+         selected: {  
+               '进店' : false,             
+               '成交' : false,             
+          } 
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    grid: {
+        left: '0%',
+        right: '0%',
+        bottom: '-2%',
+        containLabel: false,
+    },
+   
+    xAxis : [
+        {
+            type : 'category',
+            zlevel:1,
+            boundaryGap : false,
+            axisTick : {
+                inside: false,
+                length: 0,
+            },
+             axisLine:{
+                lineStyle:{
+                  width:0
+                }
+             },
+             splitLine:{  
+                show:true,
+                 offset:0,
+                lineStyle:{
+                    color:'#1e1e1b',
+                    width: 1,
+
+                }
+            
+            },
+            data : ['        10.11','10.12','10.13','10.14','10.15','10.20','10.21        '],
+            axisLabel:{
+                     interval:0,
+                     rotate:0,
+                     margin:-20,
+                     textStyle:{
+                        color:"#816740",
+                       fontSize:12
+                     },
+                     
+                 },
+           
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value',
+            zlevel:1,
+            min: 0,
+            margin:0,
+             axisTick : {
+                inside: false,
+                length: 0,
+            },
+            axisLine:{
+                lineStyle:{
+                  width:0
+                }
+             },
+             splitLine:{  
+                show:true  ,
+                 lineStyle:{
+                color:'rgba(28,27,23,0)',
+                width:0
+                }
+            },
+             axisLabel:{ 
+                    margin:-30,
+                      textStyle:{
+                        color:"#816740",
+                        left:"left"
+                     },
+                }
+
+           
+        }
+    ],
+    series : [
+
+            {
+                name:'客资',
+                type:'line',
+                stack: '总量',
+                lineWidth:10,
+                label: {
+                normal: {
+                    show: true,
+                    position: 'top'
+                }
+            },
+                areaStyle: {normal: {}},
+                data:values,
+                smooth:true,
+                symbol:'none',
+                itemStyle: {
+                 normal: {
+                    color:"rgba(28,27,23,0)",
+                     areaStyle: {
+                         type: 'default',
+                         opacity: 1, // 图表中各个图区域的透明度
+                         color: "rgba(28,27,23,.8)" // 图表中各个图区域的颜色
+                     }
+                 }
+             },
+        },
+       
+       
+    ]
+};
+$(window).resize(function(){
+       myzhu.setOption(option);
+  });
+    myzhu.setOption(option);
+
+}
+
+$(".index_tabs span").on("click",function(){
+    $(this).addClass("active").siblings("span").removeClass("active");
+    var id=$(this).attr("data-id");
+     _ajax(values[id])
+})
+
+   _ajax(values[0])  
+
+
+    </script>
+</body>

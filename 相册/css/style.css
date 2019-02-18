@@ -1,0 +1,120 @@
+﻿body,button, input, select, textarea, h1, h2, h3, h4, h5, h6{
+	font-family:sans-serif;
+	font-weight:100;
+	font-size:24px
+	}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary{
+    display:block;
+	}
+*, *:before, *:after{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+	}
+body,figure,p{
+	margin:0
+	}
+a{
+	text-decoration:none
+	}
+button,a{
+	-webkit-tap-highlight-color:rgba(0,0,0,0)
+	}
+ul{
+	padding:0
+	}
+body{
+	background-color:#f7f7f7;
+	}
+li{
+	list-style:none;
+	}
+article{
+	position:relative;
+	margin:auto;
+	width:640px;
+	}
+article > section{
+	overflow:hidden;
+	width: 100%;
+	}
+.hidden{
+	overflow:hidden
+	}
+section > div{
+	-webkit-transform-style:preserve-3d;
+	}
+figure > img{
+	max-width:100%;
+	vertical-align:middle
+	}
+#swipe{
+	background: #fff;
+	padding: 13px 13px 0 13px;
+}
+.p_1{
+	height: 1073px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+}
+.p_1 .photo_banner{
+	width: 468px;
+	height: 468px;
+	margin: auto;
+	position: absolute;
+	top: 288px;
+	left:50%;
+	margin-left: -220px;
+	border-radius: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.p_1 .photo_banner div{
+	width: 476px;
+	height: 291px;
+	position: absolute;
+	bottom: -80px;
+	left: 36px;
+}
+.p_1 .photo_person{
+	width: 340px;
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin: auto;
+	bottom: 90px;
+
+}
+.p_1 .photo_person h1{
+	width: 100%;
+	white-space: normal;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0;
+	text-align: center;
+	font-size: 23px;
+	color: #010101;
+	font-weight: 400;
+}
+#swipe img{
+	width: 100%;
+	display: block;
+	margin-bottom: 13px;
+}
+#Album_introduction{
+	background: #fff;
+	padding: 13px 50px 80px 30px;
+	display: block;
+	width: 100%;
+}
+#Album_introduction a{
+	display: block;
+	width: 100%;
+}
+#Album_introduction a img{
+	display: block;
+	width: 100%;
+}

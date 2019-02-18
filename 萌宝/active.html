@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<title></title>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_721375_9hxtj5c9ej5.css">
+<link rel="stylesheet" href="css/iview.css">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<article>
+
+<div class="lovely_baby_active">
+  <div class="lovely_baby_hug_flags" style="background-image: url(img/pic1.png);"></div>
+  <div class="lovely_baby_active_text" style="background-image: url(img/pic5.png);"></div>
+  <template v-for="(item,index) in box">
+    <div class="lovely_baby_active_content">
+      <div class="lovely_baby_active_content_pic" 
+      :class="item.value==100 ? 'complete':''"
+      :style="{backgroundImage: 'url('+item.url+')'}">
+          <i class="iconfont icon-suo" v-if="item.value!=100"></i>
+      </div>
+      <div class="lovely_baby_active_content_process">
+        <i-progress :percent="item.value" hide-info></i-progress>
+        <p class="status">
+          <template v-if="item.value == 100">已解锁</template>
+          <template v-else>暂未解锁</template>
+        </p>
+        <p class="number">现已收集{{item.number}}个爱心</p>
+        <p class="name">{{item.name}}</p>
+      </div>
+    </div>
+  </template>
+<div class="love" style="background-image: url(img/love.png);">126</div>
+  
+  <div class="lovely_baby_active_awesome"><img src="img/拳头.png" alt="">叔叔阿姨们都很给力</div>
+  <div class="lovely_baby_active_scroll">
+      <div class="scroll">
+        <div>
+          <p class="avatar" style="background-image:url(img/pic4.jpg);"></p>
+          <p class="members"><span>宝儿妈妈</span>为宝宝点赞成功</p>
+        </div>
+        <div>
+          <p class="avatar" style="background-image:url(img/pic5.jpg);"></p>
+          <p class="members"><span>饭小饭的春天</span>为宝宝点赞成功</p>
+        </div>
+       <div>
+          <p class="avatar" style="background-image:url(img/pic6.jpg);"></p>
+          <p class="members"><span>qingtian、、雨</span>为宝宝点赞成功</p>
+        </div>
+      </div>
+      <div class="scroll"> </div>
+  </div>
+</div>
+</article>
+
+
+<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+<script src="js/jquery-3.1.1.js"></script>
+<script src="js/iview.min.js"></script>
+<script type="text/javascript">
+new Vue({
+  data(){
+    return{
+     box:[
+        {
+          url:'img/pic1.jpg',
+          value:'100',
+          number:'100',
+          name:'8寸水晶摆台一个'
+        },
+        {
+          url:'img/pic2.jpg',
+          value:'55',
+          number:'55',
+          name:'四连框一个'
+        },
+        {
+          url:'img/pic3.jpg',
+          value:'30',
+          number:'30',
+          name:'20海报一副'
+        }
+     ]
+      
+    }
+  },
+  methods:{
+  },
+   mounted: function () {
+
+   },
+}).$mount('article')
+
+
+var colee2=document.getElementsByClassName("scroll")[1];
+var colee1=document.getElementsByClassName("scroll")[0];
+var colee=document.getElementsByClassName("lovely_baby_active_scroll")[0];
+
+colee2.innerHTML=colee1.innerHTML;
+function fun(){
+      if(colee.scrollTop>=colee1.scrollHeight){
+        colee.scrollTop=0;
+      }else{
+        colee.scrollTop++;
+      }
+    }
+    
+    function move(){
+      colee.scrollTop++;
+      setInterval(fun,20)
+    }
+    move();
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta charset="utf-8">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="applicable-devive" content="mobile">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_723967_9zjesg0lvk6.css">
+<link rel="stylesheet" href="css/iview.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+ <link rel="stylesheet" href="css/app.css"> 
+<!--<link rel="stylesheet" href="http://h5.yingtaoyun.com/yingtao/body/css/app.css">-->
+
+
+
+</head>
+<body>
+<article>
+  <div class="Indiana_Jones_kindergarten_index">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(img/pic1.jpg);"></div>
+        <div class="swiper-slide" style="background-image:url(img/pic2.jpg);"></div>
+        <div class="swiper-slide" style="background-image:url(img/pic3.jpg);"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="divider"></div>
+    <div class="group_name">
+    <!-- 
+    status_no 未开始
+    0未开始
+    1进行中
+     -->
+      <span class="status" :class="{ status_no: status ==0 }">
+      <template v-if="status == 0">
+        <img  src="http://productimg.yingtaoyun.com/3f/23/3f23512681bf83bf675f819a6b98a26b.png"> 未开始
+      </template>
+      <template v-else>
+        <img src="http://productimg.yingtaoyun.com/72/c2/72c2a129b00ed1fabbe8634b1da4b902.png"> 进行中
+      </template>
+       
+      </span>
+      <span class="name">一元夺宝</span>
+      <span class="price_box">
+        <sub>有机会获得<i>￥</i></sub><b>6999</b>
+      </span>
+    </div>
+    <div class="countdown_box">
+      <template v-if="status == 0">
+        <div class="countdown_pic" style="background-image: url(http://productimg.yingtaoyun.com/1e/10/1e10bd1519099c99e6fa660b47a7b894.png);">
+            <span class="day">00</span>
+            <span class="time">00</span>
+            <span class="points">00</span>
+            <span class="seconds">00</span>
+        </div>
+      </template>
+      <template v-else>
+        <div class="countdown_pic" style="background-image: url(http://productimg.yingtaoyun.com/65/75/6575569c30e529a076747e406e02f98c.png);">
+            <span class="day">00</span>
+            <span class="time">00</span>
+            <span class="points">00</span>
+            <span class="seconds">00</span>
+        </div>
+      </template>
+      <div class="tips">
+        <template v-if="status == 0">童鞋，本期未参加，请期待下期吧~</template>
+        <template v-else>你还没参加，点击下方按钮，参与就有机会获奖</template>  
+      </div>
+    </div>
+    <!-- 个人红花榜 获取幸运码显示 -->
+    <template v-if="status ==2">
+      <div class="my_red_box">
+          <div class="my_red_title">
+              <div class="avatar_box" style="background-image:url(img/avatar1.png)"></div>
+              <div class="my_munber_box">
+                  <p class="title">累计夺得小红花 <span>
+                  <img src="http://productimg.yingtaoyun.com/3b/1d/3b1d85153bef9b6b4089a4918bd28a56.png" alt="">126</span></p>
+                  <p class="number">
+                    共26个童鞋鼓励，+ 89朵小红花
+                    <a href="">查看幸运码</a>
+                  </p>
+              </div>
+          </div>
+          <div class="my_red_detail_box">
+            <div class="my_red_detail_title">朋友关系大揭秘，看看Ta们的实际行动</div>
+            <div class="my_red_scroll">
+              <div class="my_red_scroll_box">
+              <template v-for="item in 6">
+                <div class="my_red_list">
+                  <div class="avatar_box" style="background-image:url(img/avatar1.png)"></div>
+                  <div class="my_red_scroll_text">
+                      <b>鹰击长空<span class="tag">闺蜜</span></b>
+                      <p>幼稚园的友谊，共同进步，为<span>徐小小 +6朵小红花</span><img src="http://productimg.yingtaoyun.com/03/a0/03a05522aa04e9e649c310a6829c575e.png" alt=""></p>
+                      <div class="time">2018-6-12  16：20</div>
+                  </div>
+                </div>
+              </template>
+            </div>
+            <i class="iconfont icon-jiantou9"></i>
+          </div>
+      </div>
+    </template>
+    <!-- 商品详情 -->
+    <div class="shoop_detail">
+      <div class="shoop_title">
+        <img src="http://productimg.yingtaoyun.com/a5/85/a585e6b8ce7005b91e220623ca99d1c2.png" alt="">商品详情
+      </div>
+      <div class="shoop_title_box">
+        <b>套系：快乐儿童</b>
+        <div class="pic_box" style="background-image:url(img/pic3.jpg);"></div>
+        <b>原价：6999</b>
+        <b>产品：</b>
+        <p>精修照片30张</p>
+        <p>20寸水晶相册一本</p>
+        <p>12寸小相册一本</p>
+        <p>32寸挂件一个</p>
+        <p>12寸摆台一个</p>
+        <p>钥匙扣一张</p>
+      </div>
+    </div>
+    <!-- 红花榜 -->
+    <template v-if="status == 1 || status == 2">
+    <div class="red_list">
+      <div class="red_title">
+        <img src="http://productimg.yingtaoyun.com/03/a0/03a05522aa04e9e649c310a6829c575e.png" alt=""> 红花榜
+      </div>
+      <div class="red_scroll">
+          <div class="scroll_box">
+            <div class="box_list">
+                <div class="avatar_box" style="background-image:url(img/avatar1.png);"></div>
+                <div class="text_box">
+                    <p class="name">鹰击长空</p>
+                    <p class="number">累计<span>022朵</span><img src="http://productimg.yingtaoyun.com/03/a0/03a05522aa04e9e649c310a6829c575e.png" alt="">, 童鞋鼓励<span>008次</span></p>
+                </div>
+                <a href="">幸运小红花</a>
+            </div>
+            <div class="box_list">
+                <div class="avatar_box" style="background-image:url(img/avatar2.png);"></div>
+                 <div class="text_box">
+                    <p class="name">土豆、、、泥</p>
+                    <p class="number">累计<span>022朵</span><img src="http://productimg.yingtaoyun.com/03/a0/03a05522aa04e9e649c310a6829c575e.png" alt="">, 童鞋鼓励<span>008次</span></p>
+                </div>
+                <a href="">幸运小红花</a>
+            </div>
+            <div class="box_list">
+                <div class="avatar_box" style="background-image:url(img/avatar3.png);"></div>
+                 <div class="text_box">
+                    <p class="name">饭小饭的春天</p>
+                    <p class="number">累计<span>022朵</span><img src="http://productimg.yingtaoyun.com/03/a0/03a05522aa04e9e649c310a6829c575e.png" alt="">, 童鞋鼓励<span>008次</span></p>
+                </div>
+                <a href="">幸运小红花</a>
+            </div>
+          </div>
+          <div class="scroll_box"></div>
+      </div>
+    </div>
+    </template>
+    <!-- 奖项设置 -->
+    <div class="award_detail">
+      <div class="award_title">
+        <img src="http://productimg.yingtaoyun.com/18/fb/18fbf5cf00430c4efab7d261e27f2c91.png" alt=""> 奖项设置
+      </div>
+      <div class="award_box">
+        <p>一等奖：平衡车一辆</p>
+        <p>二等奖：3000元套系一套</p>
+        <p>三等奖：相册一套</p>
+      </div>
+    </div>
+    <!-- 活动说明 -->
+    <div class="instructions_detail">
+      <div class="instructions_title">
+        <img src="http://productimg.yingtaoyun.com/0c/97/0c97d1eaee6e6c5b06d865e7f6871a37.png" alt=""> 活动说明
+      </div>
+      <div class="instructions_box">
+        <div class="instructions_list">
+            <b>参与流程： </b>
+            <div>１.一元参与</div>
+            <p>轻松支付1元即可获得一个幸运号码。同时支付成功后，参与者还有一次获得多拿幸运号码的机会！</p>
+            <div>2.一元参与</div>
+            <p>轻松支付1元即可获得一个幸运号码。同时支付成功后，参与者还有一次获得多拿幸运号码的机会！</p>
+            <div>3.一元参与</div>
+            <p>轻松支付1元即可获得一个幸运号码。同时支付成功后，参与者还有一次获得多拿幸运号码的机会！</p>
+        </div>
+        <div class="instructions_list">
+          <b>中奖规则（建议）： </b>
+          <p>轻松支付1元即可获得一个幸运号码。同时支付成功后，参与者还有一次获得多拿幸运号码的机会！</p>
+          <p>轻松支付1元即可获得一个幸运号码。同时支付成功后，参与者还有一次获得多拿幸运号码的机会！</p>
+          <p>轻松支付1元即可获得一个幸运号码。同时支付成功后，参与者还有一次获得多拿幸运号码的机会！</p>
+        </div>
+        <div class="small_tip">*时时彩的开奖规则：每天10:00开奖。10:00-22:00(10分钟一期，共72期)，22:00-02:00(5分钟一期,</div>
+      </div>
+    </div>
+    <!-- 按钮 -->
+    <template v-if="status == 1">
+      <a href="javascript:;" class="btn_box" @click="onPay(money)">
+          <div class="left">
+            <sub>￥</sub>
+            <b>{{money}}</b>
+            夺得小红花
+          </div>
+          <div class="right">剩628朵小红花</div>
+      </a>
+    </template>
+    <template v-else-if="status == 0">
+      <a href="javascript:;" class="btn_box btn_box_no">
+        揭晓倒计时中
+      </a>
+    </template>
+    <template v-else-if=" status ==2">
+      <a href="javascript:;" class="btn_box btn_box_lucky">
+          <div class="bubbles">最高得999朵小红花</div>
+          <div class="lucky_box" style="background-image: url(http://productimg.yingtaoyun.com/49/78/497831ac1239c6b452e882df4b784bd3.png);">已加入</div>
+          <img src="http://productimg.yingtaoyun.com/1e/91/1e912541a49cc2dd624a0865e39c30c1.png" alt="">寻求鼓励，夺得更多小红花
+      </a>
+    </template>
+    <!-- 幸运码弹框 -->
+    <template v-if="status ==2">
+      <div class="mask_box"  v-cloak v-if="isShowLucky">
+        <div class="model">
+          <div class="model_close" @click="onClose">
+            <i class="iconfont icon-guanbi"></i>
+          </div>
+          <div class="model_title" style="background-image: url(http://productimg.yingtaoyun.com/7d/08/7d0852909af31d1573d53f2094046f33.png);"></div>
+          <div class="model_content">
+              <div class="model_scroll_text">
+                <p>100029</p>
+                <p>100030</p>
+                <p>100031</p>
+                <p>100032</p>
+                <p>100033</p>
+                <p>100034</p>
+                <p>100035</p>
+                <p>100036</p>
+                <p>100037</p>
+                <p>100038</p>
+              </div>
+          </div>
+          <div class="model_btn" @click="onClose">关闭</div>
+        </div>
+      </div>
+    </template>
+    <!-- 支付弹框 -->
+    <div class="pay_mask"  v-cloak v-if="isShowPay">
+      <div class="pay_model_box">
+        <div class="pay_model_content">
+          <div class="clsoe" @click="onClosePay"><i class="iconfont icon-guanbi"></i></div>
+          <div class="pay_model_title" style="background-image:url(img/bj2.png);"></div>
+          <div class="pay_money">￥1.00</div>
+        </div>
+        <div class="pay_btn" @click="onConfirm">确认支付</div>
+      </div>
+    </div>
+    <!-- 兑换码弹框 -->
+    <div class="pay_mask confirm_pay_mask code_pay_mask" v-cloak v-if="isShowCode">
+        <div class="pay_model_box">
+          <div class="pay_model_content">
+            <div class="clsoe" @click="onCloseCode"><i class="iconfont icon-guanbi"></i></div>
+            <div class="pay_model_title" style="background-image:url(img/bj2.png);"></div>
+            <div class="confirm_pay_tip">宝宝提醒：请确认填写信息真实有效哦，以便获取中奖通知</div>
+            <div class="input_box">
+              <label>
+                <img src="http://productimg.yingtaoyun.com/42/77/42772efe14323a07d676d7d9b7534621.png" alt="">
+                <input type="text" placeholder="请输入姓名">
+              </label>
+               <label>
+                <img src="http://productimg.yingtaoyun.com/67/05/6705f575f10ae9f48871f873cccc31ac.png" alt="">
+                <input type="text" placeholder="请输入手机号">
+              </label>
+               <label>
+                <img src="http://productimg.yingtaoyun.com/c7/9f/c79f451c0be6d2d29b0d58e57b091c2c.png" alt="">
+                <input id="date" :class="{full:isAdd}" 
+                v-model="date" type="date" @change="onChange(date)" placeholder="拍摄时间">
+                <i class="iconfont icon-jiantou9 arrow"></i>
+              </label>
+              <label>
+                <img src="http://productimg.yingtaoyun.com/c7/9f/c79f451c0be6d2d29b0d58e57b091c2c.png" alt="">
+                <input type="text" placeholder="请在此输入活动码">
+              </label>
+              <label class="agreement"><input type="checkbox" class="checkbox" checked="checked"> 同意一元夺宝<a href="">服务协议</a></label>
+            </div>
+          </div>
+           <a href="javascript:;" class="pay_btn">立即兑换使用</a>
+        </div>
+    </div>
+  <!-- 确认支付弹框 -->
+    <div class="pay_mask confirm_pay_mask" v-cloak v-if="isShowConfirmPay">
+        <div class="pay_model_box">
+          <div class="pay_model_content">
+            <div class="clsoe" @click="onCloseConfirm"><i class="iconfont icon-guanbi"></i></div>
+            <div class="pay_model_title" style="background-image:url(img/bj2.png);"></div>
+            <div class="confirm_pay_tip">宝宝提醒：请确认填写信息真实有效哦，以便获取中奖通知</div>
+            <div class="input_box">
+              <label>
+                <img src="http://productimg.yingtaoyun.com/fd/a0/fda0abf2fcc70780f0c00ce652c6c102.png" alt="">
+                <input type="text"  :value="'￥'+money" readonly>
+              </label>
+               <label>
+                <img src="http://productimg.yingtaoyun.com/42/77/42772efe14323a07d676d7d9b7534621.png" alt="">
+                <input type="text" placeholder="请输入姓名">
+              </label>
+              <label>
+                <img src="http://productimg.yingtaoyun.com/67/05/6705f575f10ae9f48871f873cccc31ac.png" alt="">
+                <input type="text" placeholder="请输入手机号">
+              </label>
+              <label>
+                <img src="http://productimg.yingtaoyun.com/c7/9f/c79f451c0be6d2d29b0d58e57b091c2c.png" alt="">
+                <input id="date" :class="{full:isAdd}" 
+                v-model="date" 
+                type="date" placeholder="拍摄时间" @change="onChange(date)">
+                <i class="iconfont icon-jiantou9 arrow"></i>
+              </label>
+              <label class="agreement"><input type="checkbox" class="checkbox" > 同意一元夺宝<a href="">服务协议</a></label>
+            </div>
+          </div>
+           <a href="javascript:;" class="pay_btn">立即兑换使用</a>
+        </div>
+    </div>
+    <!-- 收到邀请弹框 -->
+    <div class="invitation_mask" v-cloak v-if="isShowInvitation">
+      <div class="invitation_model">
+          <div class="invitation_close" @click="onCloseInvitation"><i class="iconfont icon-guanbi"></i></div>
+          <div class="invitation_model_pic" style="background-image: url(img/hi.png);"></div>
+          <p>你收到了徐小小童鞋的助力邀请  能否摘得小红花就看你啦~</p>
+          <a href="">接受邀请</a>
+      </div>
+    </div>
+  </div>
+  
+
+</article>
+
+
+<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+<script src="js/jquery-3.1.1.js"></script>
+ <script src="js/swiper.min.js"></script>
+
+
+<script src="js/iview.min.js"></script>
+<script type="text/javascript">
+//0未开始
+//1进行中
+//2分享进入页面(个人)
+var status;
+new Vue({
+  data(){
+    return{
+      money:1,
+      date:null,
+      status:1,
+      isAdd:false,
+      isShowInvitation:true,//是否显示邀请弹框
+      isShowCode:false,//是否显示兑换码弹框
+      isShowConfirmPay:false,//是否显示支付确认弹框
+      isShowPay:false,//是否显示支付弹框
+      isShowLucky:true, //是否显示幸运码弹框
+    }
+  },
+  methods:{
+    onChange (date) {
+      if(date !=null){
+        this.isAdd = true
+      }else{
+        this.isAdd = false
+      }
+      console.log("a", date)
+    },
+    onClose(){
+      this.isShowLucky = false
+    },
+    onPay (i) {
+        console.log('i', typeof i)
+        if(typeof i == 'number'){ //如果是数字
+            this.isShowPay = true
+        }else{
+          this.isShowCode = true
+        }
+    },
+    onConfirm () {
+        this.isShowPay = false
+        this.isShowConfirmPay = true
+    },
+    onClosePay () {
+      this.isShowPay = false
+    },
+    onCloseCode () {
+      this.isShowCode = false
+    },
+    onCloseConfirm () {
+      this.isShowConfirmPay = false
+    },
+    onCloseInvitation () {
+      this.isShowInvitation = false
+    }
+  },
+   mounted: function () {
+      this.onChange(this.date)
+      status = this.status
+   },
+}).$mount('article')
+
+ var swiper = new Swiper('.swiper-container', {
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+});
+// 获取倒计时
+    function time(){
+      var tm1=new Date();
+      var tm2=new Date("2018/07/15");
+      console.log("tm1", tm1)
+      console.log("tm2", tm2)
+      var myt=tm2.getTime()-tm1.getTime();
+      console.log("myt", myt)
+      var s=Math.floor(myt/1000);//剩余多少秒
+      var d=Math.floor(s/(60*60*24));//天数
+      var h=Math.floor((s-d*60*60*24)/(60*60));//剩余小时
+      var m=Math.floor((s-d*60*60*24-h*60*60)/60)//分钟
+      var sc=s-d*24*60*60-h*60*60-m*60;
+      d = d<10? '0'+d : d
+      h = h<10? '0'+h : h
+      m = m<10? '0'+m : m
+      sc = sc<10? '0'+sc : sc
+      if(status != 0){
+        $(".countdown_pic .day").html(d)
+        $(".countdown_pic .time").html(h)
+        $(".countdown_pic .points").html(m)
+        $(".countdown_pic .seconds").html(sc)
+      }
+      setTimeout("time()",1000)
+    }
+    time()
+ // 如果参加调用 
+ // 红花榜滚动
+ if(status != 0){
+  var colee2=document.getElementsByClassName("scroll_box")[1];
+  var colee1=document.getElementsByClassName("scroll_box")[0];
+  var colee=document.getElementsByClassName("red_scroll")[0];
+
+  colee2.innerHTML=colee1.innerHTML;
+  function fun(){
+        if(colee.scrollTop>=colee1.scrollHeight){
+          colee.scrollTop=0;
+        }else{
+          colee.scrollTop++;
+        }
+      }
+      
+      function move(){
+        colee.scrollTop++;
+        setInterval(fun,30)
+      }
+  move();
+ }
+ 
+</script>
+
+
+</body>
+</html>
